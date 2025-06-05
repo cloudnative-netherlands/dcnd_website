@@ -187,9 +187,10 @@ const ImageSlider = ({ images }) => {
 
 const Venue = ({
   images = [
-    'https://lightroom.adobe.com/v2c/spaces/42d27333b09147bba84e9ed1fb859739/assets/200c0e80e3ce4d879e13914be9b8893f/revisions/7fb60a50c4c24304b09e46c1865ad139/renditions/cf803484d4c9185bb7e3bef1890e610f',
-    'https://lightroom.adobe.com/v2c/spaces/42d27333b09147bba84e9ed1fb859739/assets/7f5815893db1972ef9ae44f387e14ab6/revisions/94992f627ab828172e0f33b01788f0b6/renditions/1a8eb83f682f28bfb4255d92e7a86eea',
-    'https://lightroom.adobe.com/v2c/spaces/42d27333b09147bba84e9ed1fb859739/assets/d967558d7c374ca29db41b309e113594/revisions/1ee9249d967b4d4c984bde2153b77079/renditions/b89705cd93eaa91a943682ca8948bdae',
+    'https://www.jaarbeurs.nl/wp-content/uploads/2024/08/20221004-Red-hat-by-MichielTon-websize73.jpg',
+    'https://www.jaarbeurs.nl/wp-content/uploads/2024/08/20230921-Frankwatching-CC-by-MichielTon-websize79.jpg',
+    'https://www.jaarbeurs.nl/wp-content/uploads/2024/08/2023.10.19-Enactus-competition-day-1-3-by-MichielTon-18.jpg',
+    "https://www.jaarbeurs.nl/wp-content/uploads/2024/08/20221004-Red-hat-by-MichielTon-websize51.jpg"
   ],
 }) => {
   return (
