@@ -87,7 +87,7 @@ const Hero = () => {
                   <StaticImage
                     src="./images/hero-illustration.png"
                     alt="Hero"
-                    formats={['auto', 'webp', 'avif']}
+                    formats={['auto', 'webp']}
                   />
                 </div>
               </div>
