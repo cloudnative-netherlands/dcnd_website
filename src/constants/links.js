@@ -35,18 +35,13 @@ export default {
     target: '_blank',
     external: true,
   },
-  mission: {
-    to: '/mission-statement',
-    target: '_blank',
-    external: true,
-  },
   vision: {
     to: '/vision',
     target: '_blank',
     external: true,
   },
   conduct: {
-    to: 'https://cloudnativenetherlands.nl/coc/',
+    to: '/conduct',
     target: '_blank',
     external: true,
   },
