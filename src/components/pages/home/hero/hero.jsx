@@ -41,7 +41,7 @@ const Hero = () => {
               </ul>
 
               <p className="hero-description">
-                After Amsterdam 2024, DCND is back!...Utrecht, here we come!
+                After Amsterdam 2024, Dutch Cloud Native Day (DCND) is back!...Utrecht, here we come!
               </p>
               {/* CTA Buttons */}
               <div className="hero-cta-container">
@@ -87,7 +87,7 @@ const Hero = () => {
                   <StaticImage
                     src="./images/hero-illustration.png"
                     alt="Hero"
-                    formats={['auto', 'webp', 'avif']}
+                    formats={['auto', 'webp']}
                   />
                 </div>
               </div>

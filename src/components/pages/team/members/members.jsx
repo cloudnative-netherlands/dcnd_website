@@ -10,6 +10,14 @@ import CatalinPhoto from './images/catalin_j.jpg';
 import KarlaPhoto from './images/karla_f.jpg';
 import MarcelPhoto from './images/marcel_k.jpg';
 import PacoPhoto from './images/paco_b.jpeg';
+import RonaldPhoto from './images/ronald_k.jpg';
+import SeviPhoto from './images/sevi_k.jpg';
+import LucaPhoto from './images/luca_c.jpg';
+import FahdPhoto from './images/fahd_e.png';
+import PavelPhoto from './images/pavel_c.jpg';
+import CarlosPhoto from './images/carlos_m.jpg';
+import JosPhoto from './images/jos_s.jpg';
+import SaifPhoto from './images/saif_r.webp';
 
 
 const ITEMS = [
@@ -38,11 +46,63 @@ const ITEMS = [
     url: 'https://www.linkedin.com/in/mkerker/',
   },
   {
+    name: 'Ronald Kers',
+    position: 'De Nederlandse Kubernetes Podcast',
+    photo: RonaldPhoto,
+    url: 'https://nl.linkedin.com/in/ronaldkers',
+  },
+  {
     name: 'Paco Bernabé',
     position: 'Senior DevOps & Cloud Consultant - Independent',
     photo: PacoPhoto,
-    url: 'https://www.linkedin.com/in/maxkoerbaecher/',
+    url: 'https://www.linkedin.com/in/pacobernab%C3%A9/',
   },
+  {
+    name: 'Sevi Karakulak',
+    position: 'Engineering Manager - Booking.com',
+    photo: SeviPhoto,
+    url: 'https://www.linkedin.com/in/sevikarakulak/',
+  },
+  {
+    name: 'Luca Camphuisen',
+    position: 'Software Engineer - CodeSquad/adesso',
+    photo: LucaPhoto,
+    url: 'https://www.linkedin.com/in/luca-camphuisen/',
+  },
+  {
+    name: 'Fahd Ekadioin',
+    position: 'Partner Engineer - Google',
+    photo: FahdPhoto,
+    url: 'https://www.linkedin.com/in/fahdekadioin/',
+  },
+  {
+    name: 'Pavel Chunyayev',
+    position: 'DevOps Manager - Datenna',
+    photo: PavelPhoto,
+    url: 'https://www.linkedin.com/in/pavelchunyayev/',
+  },
+  {
+    name: 'Carlos Mestre del Pino',
+    position: 'Cloud Solution Architect - Microsoft',
+    photo: CarlosPhoto,
+    url: 'https://www.linkedin.com/in/mestredelpino/',
+  },
+  {
+    name: 'Jos van Schouten',
+    position: 'Lead Engineer - OGD',
+    photo: JosPhoto,
+    url: 'https://www.linkedin.com/in/josvanschouten/',
+  },
+  {
+    name: ' Saif Rajhi',
+    position: 'Platformer | SRE | Tech blogger ',
+    photo: SaifPhoto,
+    url: 'https://www.linkedin.com/in/rajhi-saif/',
+  },
+
+
+  
+
 ];
 
 const LOGOS = [

@@ -41,7 +41,7 @@ export default {
     external: true,
   },
   conduct: {
-    to: 'https://events.linuxfoundation.org/about/code-of-conduct/',
+    to: 'https://cloudnativenetherlands.nl/coc/',
     target: '_blank',
     external: true,
   },

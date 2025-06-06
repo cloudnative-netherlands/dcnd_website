@@ -47,7 +47,7 @@ const Header = ({ isMobileMenuOpen, onBurgerClick, additionalClassName }) => {
           <StaticImage
             src="./images/logo.png"
             alt="logo"
-            formats={['auto', 'webp', 'avif']}
+            formats={['auto', 'webp']}
             className="navbar-logo"
             onClick={() => {
               window.location.href = `/`;

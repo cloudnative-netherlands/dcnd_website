@@ -56,7 +56,7 @@ const Footer = () => {
           <StaticImage
             src="./images/logo.png"
             alt="logo"
-            formats={['auto', 'webp', 'avif']}
+            formats={['auto', 'webp']}
             className="navbar-logo"
           />
         </Link>

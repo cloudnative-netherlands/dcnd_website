@@ -1,24 +1,29 @@
 import clsx from 'clsx';
 import React from 'react';
 
-import Adn from 'icons/adn_logo.png';
-import ApeFactory from 'icons/apefactory.svg';
-import Cncf from 'icons/cncf.svg';
-import Kubecareers from 'icons/kubecareers.svg';
-import Kubeevents from 'icons/kubeevents_2.svg';
-import liquid from 'icons/liquid.png';
-import MetalStack from 'icons/metalstackcloud.webp';
-import PlatformEngineeringLabs from 'icons/platformengineeringlabs.png';
-import QAware from 'icons/QAware_p.png';
-import solarwinds from 'icons/solarwinds.webp';
-import Steadforce from 'icons/steadforce_logo.png';
-import SysEleven from 'icons/syseleven.png';
-import whiteduck from 'icons/whiteduck.png';
-import ReadHat from 'icons/red-hat.svg';
-import aws from 'icons/aws.svg';
-import PerfectScale from 'icons/PerfectScale.png';
-import vCluster from 'icons/vCluster.svg';
-import ItSchulungenCom from 'icons/its_logo_2020_tt_2_raw.png';
+import Exoscale from 'icons/exoscale_logo.png';
+import HCS_Company from 'icons/hcs_logo.png';
+import Mirantis from 'icons/mirantis_logo.png';
+import Isovalent from 'icons/isovalent_logo.jpeg';
+import Rabobank from 'icons/Rabobank_logo.png';
+import Devoteam from 'icons/devoteam_logo.png';
+import Innovations from 'icons/eg_logo.png';
+import IShare from 'icons/i-share_logo.png';
+import ATComputing from 'icons/AT_logo.png';
+import TrueFullstaq from 'icons/True-fullstaq_logo.png';
+import Booking from 'icons/Booking_com_logo.png';
+import itq from 'icons/ITQ_logo.webp';
+import mogenius from 'icons/mogenius_logo.png';
+import nirmata from 'icons/nirmata_logo.webp';
+import qstarsIT from 'icons/QStars_logo.png';
+import surf from 'icons/SURF_logo.png';
+import leaseweb from 'icons/leaseweb_logo.png';
+import fikaworks from 'icons/fikaworks_logo.png';
+import controlplane from 'icons/controlplane_logo.png';
+import amsterdamdev from 'icons/amsterdamdev_logo.png';
+import learnk8s from 'icons/learnk8s_logo.png';
+import certdirectory from 'icons/cert_logo.png';
+
 import './sponsor.css';
 
 const CARD_STYLES = 'w-[200px] h-[100px]';
@@ -26,6 +31,11 @@ const CARD_STYLES = 'w-[200px] h-[100px]';
 const SHOW_SPONSORS = true;
 
 const tierConfig = {
+  platinum: {
+    title: 'Platinum',
+    class: 'bg-white shadow-sm',
+    badgeClass: 'bg-purple-50 text-purple-500',
+  },
   gold: {
     title: 'Gold',
     class: 'bg-white shadow-sm',
@@ -41,18 +51,8 @@ const tierConfig = {
     class: 'bg-white shadow-sm',
     badgeClass: 'bg-orange-50 text-orange-500',
   },
-  evening: {
-    title: 'Evening Event',
-    class: 'bg-white shadow-sm',
-    badgeClass: 'bg-purple-50 text-purple-500',
-  },
-  organizer: {
-    title: 'Organizers',
-    class: 'bg-white shadow-sm',
-    badgeClass: 'bg-blue-50 text-blue-500',
-  },
   partner: {
-    title: 'Community & Media Partners',
+    title: 'Community Partners',
     class: 'bg-white shadow-sm',
     badgeClass: 'bg-green-50 text-green-500',
   },
@@ -60,160 +60,185 @@ const tierConfig = {
 
 const sponsorsList = [
   {
-    name: 'APE Factory',
-    icon: ApeFactory,
-    url: 'https://www.apefactory.com/de',
-    tier: 'gold',
-    logoWidth: 100,
-    logoHeight: 90,
+    name: 'Exoscale',
+    icon: Exoscale,
+    url: 'https://www.exoscale.com',
+    tier: 'platinum',
+    logoWidth: 170,
+    logoHeight: 120,
   },
   {
-    name: 'solarwinds',
-    icon: solarwinds,
-    url: 'https://www.solarwinds.com/',
+    name: 'HCS_Company',
+    icon: HCS_Company,
+    url: 'https://www.hcs-company.com',
+    tier: 'platinum',
+    logoWidth: 220,
+    logoHeight: 170,
+  },
+  {
+    name: 'Mirantis',
+    icon: Mirantis,
+    url: 'https://www.mirantis.com',
+    tier: 'platinum',
+    logoWidth: 100,
+    logoHeight: 80,
+  },
+  {
+    name: 'Isovalent',
+    icon: Isovalent,
+    url: 'https://www.isovalent.com',
+    tier: 'gold',
+    logoWidth: 150,
+    logoHeight: 100,
+  },
+  {
+    name: 'Rabobank',
+    icon: Rabobank,
+    url: 'https://www.rabobank.nl/particulieren',
     tier: 'gold',
     logoWidth: 120,
-    logoHeight: 100,
+    logoHeight: 90,
   },
   {
-    name: 'aws',
-    icon: aws,
-    url: 'https://aws.amazon.com/',
-    tier: 'silver',
-    logoWidth: 90,
-    logoHeight: 45,
-  },
-  {
-    name: 'MetalStack',
-    icon: MetalStack,
-    url: 'https://metalstack.cloud/de',
-    tier: 'silver',
+    name: 'Devoteam',
+    icon: Devoteam,
+    url: 'https://www.devoteam.com/',
+    tier: 'gold',
     logoWidth: 150,
     logoHeight: 100,
   },
   {
-    name: 'QAware',
-    icon: QAware,
-    url: 'https://www.qaware.de/',
-    tier: 'silver',
+    name: 'EG-Innovations',
+    icon: Innovations, 
+    url: 'https://www.eginnovations.com/',
+    tier: 'gold',
+    logoWidth: 200,
+    logoHeight: 150,
+  },
+  {
+    name: 'I-Share',
+    icon: IShare,
+    url: 'https://www.i-share.nl/',
+    tier: 'gold',
     logoWidth: 100,
-    logoHeight: 75,
+    logoHeight: 70,
   },
   {
-    name: 'PerfectScale',
-    icon: PerfectScale,
-    url: 'https://www.perfectscale.io/',
+    name: 'AT-Computing',
+    icon: ATComputing,
+    url: 'https://www.atcomputing.nl',
     tier: 'silver',
     logoWidth: 150,
     logoHeight: 100,
   },
   {
-    name: 'RedHat',
-    icon: ReadHat,
-    url: 'https://www.redhat.com/',
+  name: 'TrueFullstaq',
+  icon: TrueFullstaq,
+  url: 'https://www.fullstaq.com',
+  tier: 'silver',
+  logoWidth: 150,
+  logoHeight: 100,
+  },
+  {
+    name: 'Booking',
+    icon: Booking,
+    url: 'https://www.booking.com',
     tier: 'silver',
     logoWidth: 150,
     logoHeight: 100,
   },
   {
-    name: 'Steadforce',
-    icon: Steadforce,
-    url: 'https://www.steadforce.com/',
+    name: 'itq',
+    icon: itq,
+    url: 'https://itq.eu/nl',
     tier: 'silver',
     logoWidth: 150,
     logoHeight: 100,
   },
   {
-    name: 'vCluster',
-    icon: vCluster,
-    url: 'https://www.vcluster.com/',
+    name: 'mogenius',
+    icon: mogenius,
+    url: 'https://mogenius.com',
     tier: 'silver',
     logoWidth: 150,
     logoHeight: 100,
   },
   {
-    name: 'ADN',
-    icon: Adn,
-    url: 'https://www.adn.de/',
+    name: 'nirmata',
+    icon: nirmata,
+    url: 'https://nirmata.com',
+    tier: 'silver',
+    logoWidth: 150,
+    logoHeight: 100,
+  },
+  {
+    name: 'qstarsIT',
+    icon: qstarsIT,
+    url: 'https://www.qstars.nl',
+    tier: 'silver',
+    logoWidth: 150,
+    logoHeight: 100,
+  },
+  {
+    name: 'surf',
+    icon: surf,
+    url: 'https://www.surf.nl/en',
+    tier: 'silver',
+    logoWidth: 150,
+    logoHeight: 100,
+  },
+  {
+    name: 'leaseweb',
+    icon: leaseweb,
+    url: 'https://www.leaseweb.com/nl',
+    tier: 'silver',
+    logoWidth: 200,
+    logoHeight: 120,
+  },
+  {
+    name: 'fikaworks',
+    icon: fikaworks,
+    url: 'https://fika.works',
     tier: 'bronze',
     logoWidth: 130,
-    logoHeight: 100,
+    logoHeight: 90,
   },
   {
-    name: 'Platform Engineering Labs',
-    icon: PlatformEngineeringLabs,
-    url: 'https://platform.engineering/',
-    tier: 'bronze',
-    logoWidth: 100,
-    logoHeight: 100,
-  },
-  {
-    name: 'SysEleven',
-    icon: SysEleven,
-    url: 'https://www.syseleven.de/',
+    name: 'controlplane',
+    icon: controlplane,
+    url: 'https://control-plane.io',
     tier: 'bronze',
     logoWidth: 150,
     logoHeight: 100,
   },
   {
-    name: 'Liquid Reply',
-    icon: liquid,
-    url: 'https://www.reply.com/liquid-reply/en/',
-    tier: 'organizer',
-    logoWidth: 135,
-    logoHeight: 100,
-  },
-  {
-    name: 'white duck',
-    icon: whiteduck,
-    url: 'https://whiteduck.de/',
-    tier: 'organizer',
-    logoWidth: 150,
-    logoHeight: 100,
-  },
-  {
-    name: 'Kube Careers',
-    icon: Kubecareers,
+    name: 'learnk8s',
+    icon: learnk8s,
     url: 'https://kube.careers/',
     tier: 'partner',
-    logoWidth: 100,
+    logoWidth: 150,
     logoHeight: 100,
   },
   {
-    name: 'Kube Events',
-    icon: Kubeevents,
-    url: 'https://kube.events/',
-    tier: 'partner',
-    logoWidth: 115,
-    logoHeight: 100,
-  },
-  {
-    name: 'IT-Schulungen.com',
-    icon: ItSchulungenCom,
-    url: 'https://www.it-schulungen.com/',
+    name: 'amsterdamdev',
+    icon: amsterdamdev,
+    url: 'https://amsterdam.dev',
     tier: 'partner',
     logoWidth: 150,
     logoHeight: 100,
   },
   {
-    name: 'APE Factory',
-    icon: ApeFactory,
-    url: 'https://www.apefactory.com/de',
-    tier: 'evening',
-    logoWidth: 90,
-    logoHeight: 90,
+    name: 'certdirectory',
+    icon: certdirectory,
+    url: 'https://certdirectory.io',
+    tier: 'partner',
+    logoWidth: 150,
+    logoHeight: 100,
   },
-  {
-    name: 'CNCF',
-    icon: Cncf,
-    url: 'https://www.cncf.io/',
-    tier: 'evening',
-    logoWidth: 160,
-    logoHeight: 90,
-  },
+
 ];
 
-const contactEmail = 'team@cloudnativesummit.de';
+const contactEmail = 'info@dutchcloudnativeday.nl';
 
 const DEFAULT_LOGO_WIDTH = 150;
 const DEFAULT_LOGO_HEIGHT = 70;
@@ -262,11 +287,11 @@ const Sponsors = () => {
       <h2 className="section-title">Our sponsors</h2>
       <div className="mb-16 text-center">
         <p className="mb-8 text-lg text-gray-500">
-          Support our local cloud native community by sponsoring CNS Munich
+          Support our local cloud native community by sponsoring Dutch Cloud Native Day
         </p>
         <div className="flex flex-col items-center justify-center gap-4">
           <a
-            href="https://docs.google.com/presentation/d/1NhUXEXdfWjAt1DmFLjMPolwkuE6Y_BZiNQKWYvVmK5Q/edit?usp=sharing"
+            href="https://drive.google.com/file/d/1hbDPRG4_WNLUFIM2aHEOmD-jvno1356p/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-lg bg-primary-1 px-6 py-3 text-white transition-all"

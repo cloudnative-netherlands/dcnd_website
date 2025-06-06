@@ -5,28 +5,26 @@ slug: vision
 
 ## Dutch Cloud Native Day
 
-Dutch Cloud Native Days is a community driven event dedicated to bringing together cloud native enthusiasts, AI practitioners and Plaform Gurus from across Europe...and beyond. Our mission is to create a welcoming and inclusive environment for attendees of all experience levels—whether you're just starting out or have years of expertise. We aim to foster the adoption of cloud-native technologies and provide a platform for the community to share experiences, learn from each other, and explore best practices. Above all, we believe in the power of collaboration and community to drive innovation and the future of cloud computing.
+Dutch Cloud Native Days is a community driven event dedicated to bringing together cloud native enthusiasts, AI practitioners and plaform gurus from across Europe...and beyond. Our mission is to create a welcoming and inclusive environment for attendees of all experience levels—whether you're just starting out or have years of expertise. We aim to foster the adoption of cloud-native technologies and provide a platform for the community to share experiences, learn from each other, and explore best practices. Above all, we believe in the power of collaboration and community to drive innovation and the future of cloud computing.
 
 Inclusivity and diversity are at the heart of Dutch Cloud Native Day. We warmly welcome attendees from all backgrounds and identities to join us in creating an inspiring and supportive space for everyone.
 
-## Continuing Our Journey – New Name, Same Spirit
+## A New Chapter for a Trusted Community Event
 
-Although the name has changed, the heart of the event remains the same: the same organizing team, the same passionate community, and the same inspiring location. Over the past three years, we’ve grown into a vibrant event with over 500 participants, driven by the community's enthusiasm and curiosity.
+After several successful editions as a community-driven event, we have chosen to organize this year’s edition under a new name: Dutch Cloud Native Days (DCND). This decision reflects our continued commitment to serving the Dutch cloud native community through an open, inclusive, and vendor-neutral event—organized by the community, for the community. The format, quality, and values you’ve come to expect remain unchanged.
 
-This growth has shaped our decision to operate independently, while maintaining close connections with other similar community driven events across Europe. We believe our independent approach allows us to continue fostering innovation and to support emerging events around the world by sharing our experience and resources.
+This year’s conference will feature the same high-quality content and speakers selected through our CFP process, and we will continue to uphold our commitment to transparency with a post-event report and a strong Code of Conduct to ensure a safe and welcoming environment for all.
 
-### Beyond Kubernetes – A True Cloud Native Summit
-
-This shift was made after careful reflection and numerous discussions. Our focus remains on the community and the incredible ecosystem built around cloud-native technologies and open-source collaboration. We are committed to bringing together the brightest minds, the most curious thinkers, and the most passionate innovators to share their ideas and build the future of cloud-native technology—together.
+We thank our community, sponsors, and partners for their ongoing support during this transition. While we are moving forward as DCND this year, we remain open to exploring future editions under the [KCD](https://www.cncf.io/kcds/) banner, depending on the evolving needs and opportunities within our community.
 
 ### Strengthening the Community
 
-We would like to use this change to put ourselves on a solid base for the future. Therefore, we have decided to found a non-profit organization called "Förderverein Open Source, Cloud Native und Künstliche Intelligenz Bayern e.V." to host any future Cloud Native Summits starting with the 2025 edition.
+We would like to use this change as an opportunity to lay a solid foundation for the future. That’s why, starting with the 2025 edition, the event will be hosted with the support of [Stichting Cloud Native Netherlands](https://cloudnativenetherlands.nl/), a non-profit organization that acts as a supporter and fiscal sponsor for the Dutch cloud native community.
 
 ### Onward and Upward
 
-Follow us on [LinkedIn](https://www.linkedin.com/company/cloudnativenl/), [X/Twitter](https://x.com/cnsmunich), or Instagram to stay up to date.
+Follow us on [LinkedIn](https://www.linkedin.com/company/cloudnativenl/) or [bsky](https://bsky.app/profile/cloudnativeday-nl.bsky.social) to stay up to date.
 
 If you are interested in sponsoring you will find all the details [here](https:/dutchcloudnativeday.nl/#sponsors).
 
-Feel free to contact us for any questions! We can't wait to welcome you again in Utrecht!
+Feel free to contact us for any questions! We can't wait to welcome you in Utrecht!

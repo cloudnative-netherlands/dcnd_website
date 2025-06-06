@@ -48,7 +48,8 @@ export default function HotelList() {
           <p style={{ fontSize: '14px', color: '#777' }}>📍 {highlightedHotel.distance}</p>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <a
-              href="mailto:info@hotel-arabellapark.de"
+              href="https://www.nh-hotels.com/en/hotel/nh-utrecht"
+              target="_blank" // Opens the link in a new window
               style={{
                 display: 'block',
                 textAlign: 'center',
