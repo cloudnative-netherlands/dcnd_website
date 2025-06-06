@@ -15,7 +15,7 @@ import Booking from 'icons/Booking_com_logo.png';
 import itq from 'icons/ITQ_logo.webp';
 import mogenius from 'icons/mogenius_logo.png';
 import nirmata from 'icons/nirmata_logo.webp';
-import qstarsIT from 'icons/Qstars_logo.png';
+import qstarsIT from 'icons/QStars_logo.png';
 import surf from 'icons/SURF_logo.png';
 import leaseweb from 'icons/leaseweb_logo.png';
 import fikaworks from 'icons/fikaworks_logo.png';
