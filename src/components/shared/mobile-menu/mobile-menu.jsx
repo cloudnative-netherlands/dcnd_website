@@ -69,7 +69,7 @@ const MobileMenu = ({ isOpen, onButtonClick }) => {
               alignItems: 'center',
             }}
             onClick={() =>
-              window.open('https://cnsmunich.ticketbutler.io/en/e/cnsmunich-2025/', '_blank')
+              window.open('https://dutch-cloud-native-day-2025.eventbrite.nl/', '_blank')
             }
           >
             Get your Ticket
