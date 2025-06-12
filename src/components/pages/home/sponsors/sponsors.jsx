@@ -109,7 +109,7 @@ const sponsorsList = [
   },
   {
     name: 'EG-Innovations',
-    icon: Innovations, 
+    icon: Innovations,
     url: 'https://www.eginnovations.com/',
     tier: 'gold',
     logoWidth: 200,
@@ -132,12 +132,12 @@ const sponsorsList = [
     logoHeight: 100,
   },
   {
-  name: 'TrueFullstaq',
-  icon: TrueFullstaq,
-  url: 'https://www.fullstaq.com',
-  tier: 'silver',
-  logoWidth: 150,
-  logoHeight: 100,
+    name: 'TrueFullstaq',
+    icon: TrueFullstaq,
+    url: 'https://www.truefullstaq.com/',
+    tier: 'silver',
+    logoWidth: 150,
+    logoHeight: 100,
   },
   {
     name: 'Booking',
