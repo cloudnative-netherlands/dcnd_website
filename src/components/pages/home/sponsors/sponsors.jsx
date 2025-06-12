@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import React from 'react';
 
 import Exoscale from 'icons/exoscale_logo.png';
-import HCS_Company from 'icons/hcs_logo.png';
+import HCS_Company from 'icons/HCS-Wordmark.png';
 import Mirantis from 'icons/mirantis_logo.png';
 import Isovalent from 'icons/isovalent_logo.jpeg';
 import Rabobank from 'icons/Rabobank_logo.png';
@@ -16,7 +16,7 @@ import itq from 'icons/ITQ_logo.webp';
 import mogenius from 'icons/mogenius_logo.png';
 import nirmata from 'icons/nirmata_logo.webp';
 import qstarsIT from 'icons/QStars_logo.png';
-import surf from 'icons/SURF_logo.png';
+import cyso from 'icons/Cyso-Logo.png';
 import leaseweb from 'icons/leaseweb_logo.png';
 import fikaworks from 'icons/fikaworks_logo.png';
 import controlplane from 'icons/controlplane_logo.png';
@@ -72,8 +72,8 @@ const sponsorsList = [
     icon: HCS_Company,
     url: 'https://www.hcs-company.com',
     tier: 'platinum',
-    logoWidth: 220,
-    logoHeight: 170,
+    logoWidth: 190,
+    logoHeight: 120,
   },
   {
     name: 'Mirantis',
@@ -180,9 +180,9 @@ const sponsorsList = [
     logoHeight: 100,
   },
   {
-    name: 'surf',
-    icon: surf,
-    url: 'https://www.surf.nl/en',
+    name: 'cyso',
+    icon: cyso,
+    url: 'https://cyso.cloud/',
     tier: 'silver',
     logoWidth: 150,
     logoHeight: 100,
