@@ -9,9 +9,13 @@ import Rabobank from 'icons/Rabobank_logo.png';
 import Devoteam from 'icons/devoteam_logo.png';
 import Innovations from 'icons/eg_logo.png';
 import IShare from 'icons/i-share_logo.png';
+import SUSE from 'icons/SUSE.png';
 import ATComputing from 'icons/AT_logo.png';
 import TrueFullstaq from 'icons/True-fullstaq_logo.png';
 import Booking from 'icons/Booking_com_logo.png';
+import varonis from 'icons/varonis.png';
+import scaleway from 'icons/scaleway.png';
+import sysdig from 'icons/sysdig.png';
 import itq from 'icons/ITQ_logo.webp';
 import mogenius from 'icons/mogenius_logo.png';
 import nirmata from 'icons/nirmata_logo.webp';
@@ -98,6 +102,14 @@ const sponsorsList = [
     tier: 'gold',
     logoWidth: 120,
     logoHeight: 90,
+  },
+  {
+    name: 'SUSE', 
+    icon: SUSE,
+    url: 'https://www.suse.com/',
+    tier: 'gold',
+    logoWidth: 150,
+    logoHeight: 100,
   },
   {
     name: 'Devoteam',
@@ -194,6 +206,30 @@ const sponsorsList = [
     tier: 'silver',
     logoWidth: 200,
     logoHeight: 120,
+  },
+  {
+    name: 'Sysdig',
+    icon: sysdig,
+    url: 'https://www.sysdig.com/',
+    tier: 'silver',
+    logoWidth: 100,
+    logoHeight: 60,
+  },
+  {
+    name: 'Varonis',
+    icon: varonis,
+    url: 'https://www.varonis.com/',
+    tier: 'silver',
+    logoWidth: 150,
+    logoHeight: 100,
+  },
+  {
+    name: 'Scaleway',
+    icon: scaleway,
+    url: 'https://www.scaleway.com/',
+    tier: 'silver',
+    logoWidth: 150,
+    logoHeight: 100,
   },
   {
     name: 'fikaworks',
