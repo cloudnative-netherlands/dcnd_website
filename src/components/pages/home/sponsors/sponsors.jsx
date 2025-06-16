@@ -12,7 +12,7 @@ import IShare from 'icons/i-share_logo.png';
 import SUSE from 'icons/SUSE.png';
 import ATComputing from 'icons/AT_logo.png';
 import TrueFullstaq from 'icons/True-fullstaq_logo.png';
-import Booking from 'icons/Booking_com_logo.png';
+import Booking from 'icons/Booking_logo.png';
 import varonis from 'icons/varonis.png';
 import scaleway from 'icons/scaleway.png';
 import sysdig from 'icons/sysdig.png';
@@ -156,8 +156,8 @@ const sponsorsList = [
     icon: Booking,
     url: 'https://www.booking.com',
     tier: 'silver',
-    logoWidth: 150,
-    logoHeight: 100,
+    logoWidth: 200,
+    logoHeight: 120,
   },
   {
     name: 'itq',
