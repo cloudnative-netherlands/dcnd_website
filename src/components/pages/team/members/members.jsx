@@ -18,9 +18,16 @@ import PavelPhoto from './images/pavel_c.jpg';
 import CarlosPhoto from './images/carlos_m.jpg';
 import JosPhoto from './images/jos_s.jpg';
 import SaifPhoto from './images/saif_r.webp';
+import WouterPhoto from './images/wouter_l.jpg';
 
 
 const ITEMS = [
+  {
+    name: 'Wouter Ligtenberg',
+    position: 'IT Lead - ING',
+    photo: WouterPhoto,
+    url: 'https://www.linkedin.com/in/wouterligtenberg/',
+  },
   {
     name: 'William Rizzo',
     position: 'Strategy Lead - Mirantis',

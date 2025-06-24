@@ -27,6 +27,7 @@ import controlplane from 'icons/controlplane_logo.png';
 import amsterdamdev from 'icons/amsterdamdev_logo.png';
 import learnk8s from 'icons/learnk8s_logo.png';
 import certdirectory from 'icons/cert_logo.png';
+import pyladies from 'icons/pyladies.png';
 
 import './sponsor.css';
 
@@ -267,6 +268,14 @@ const sponsorsList = [
     name: 'certdirectory',
     icon: certdirectory,
     url: 'https://certdirectory.io',
+    tier: 'partner',
+    logoWidth: 150,
+    logoHeight: 100,
+  },
+  {
+    name: 'pyladies',
+    icon: pyladies,
+    url: 'https://pyladies.com',
     tier: 'partner',
     logoWidth: 150,
     logoHeight: 100,
