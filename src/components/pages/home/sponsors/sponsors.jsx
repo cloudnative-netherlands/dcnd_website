@@ -275,7 +275,7 @@ const sponsorsList = [
   {
     name: 'pyladies',
     icon: pyladies,
-    url: 'https://pyladies.com',
+    url: 'https://amsterdam.pyladies.com',
     tier: 'partner',
     logoWidth: 150,
     logoHeight: 100,
