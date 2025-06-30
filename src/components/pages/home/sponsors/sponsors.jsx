@@ -28,6 +28,7 @@ import amsterdamdev from 'icons/amsterdamdev_logo.png';
 import learnk8s from 'icons/learnk8s_logo.png';
 import certdirectory from 'icons/cert_logo.png';
 import pyladies from 'icons/pyladies.png';
+import dutchcloudnativemeetup from 'icons/dutchcloudnativemeetup.jpg';
 
 import './sponsor.css';
 
@@ -276,6 +277,14 @@ const sponsorsList = [
     name: 'pyladies',
     icon: pyladies,
     url: 'https://amsterdam.pyladies.com',
+    tier: 'partner',
+    logoWidth: 150,
+    logoHeight: 100,
+  },
+  {
+    name: 'dutchcloudnativemeetup',
+    icon: dutchcloudnativemeetup,
+    url: 'https://www.meetup.com/dutch-cloud-native',
     tier: 'partner',
     logoWidth: 150,
     logoHeight: 100,
