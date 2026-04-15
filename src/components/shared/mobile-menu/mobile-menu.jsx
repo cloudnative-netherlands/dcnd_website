@@ -45,35 +45,50 @@ const MobileMenu = ({ isOpen, onButtonClick }) => {
       >
         <div className="scrollbar-hidden my-auto flex h-full w-full overflow-x-hidden overflow-y-scroll">
           <ul className="mx-auto flex flex-col justify-center space-y-3 text-center text-xl font-semibold text-primary-1">
-            {MENUS.mobile.map(({ text, to, id }, index) => (
-              <li key={index}>
-                <Button
-                  className="block py-4"
-                  theme="link-primary"
-                  to={to || `/#${id}`}
-                  onClick={onButtonClick}
-                >
-                  {text}
-                </Button>
-              </li>
-            ))}
+            {MENUS.mobile.map((item, index) => {
+              const { text, to, id, children } = item;
+
+              if (children) {
+                return (
+                  <li key={index}>
+                    <div className="block py-4 text-primary-1">{text}</div>
+                    <ul className="flex flex-col space-y-2 text-lg">
+                      {children.map((child, ci) => (
+                        <li key={ci}>
+                          <Button
+                            className="block py-2"
+                            theme="link-primary"
+                            to={child.to}
+                            target={child.target}
+                            rel={child.target === '_blank' ? 'noopener noreferrer' : undefined}
+                            onClick={onButtonClick}
+                          >
+                            {child.text}
+                          </Button>
+                        </li>
+                      ))}
+                    </ul>
+                  </li>
+                );
+              }
+
+              return (
+                <li key={index}>
+                  <Button
+                    className="block py-4"
+                    theme="link-primary"
+                    to={to || `/#${id}`}
+                    onClick={onButtonClick}
+                  >
+                    {text}
+                  </Button>
+                </li>
+              );
+            })}
           </ul>
         </div>
         <div className="flex items-center justify-center">
-          <button
-            type="button"
-            className="button"
-            style={{
-              cursor: 'pointer',
-              display: 'flex',
-              alignItems: 'center',
-            }}
-            onClick={() =>
-              window.open('https://dutch-cloud-native-day-2025.eventbrite.nl/', '_blank')
-            }
-          >
-            Get your Ticket
-          </button>
+          <p className="text-center text-sm text-gray-500">Tickets for 2026 — coming soon</p>
         </div>
       </m.nav>
     </LazyMotion>

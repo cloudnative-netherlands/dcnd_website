@@ -222,15 +222,10 @@ const SAMPLE_VIDEOS = [
 const Proposal = () => {
   const [videos, setVideos] = useState(SAMPLE_VIDEOS);
 
-  // Termine
-  const openDate = new Date('2025-01-12T00:00:00');
-  const closeDate = new Date('2025-04-09T23:59:00');
-  const now = new Date();
-  const total = closeDate.getTime() - openDate.getTime();
-  const progress = Math.max(0, Math.min(100, ((now.getTime() - openDate.getTime()) / total) * 100));
-
-  // Flag, ob die Proposal-Phase geschlossen ist
-  const isClosed = now > closeDate;
+  // CFP for 2026 has not opened yet — dates TBA.
+  const isNotYetOpen = true;
+  const isClosed = false;
+  const progress = 0;
 
   const sessions = [
     { type: 'Presentation', duration: '30min' },
@@ -265,11 +260,11 @@ const Proposal = () => {
               <div className="flex justify-between text-sm">
                 <div>
                   <div className="text-gray-500">Opens</div>
-                  <div className="font-medium">12 Jan 2025 12:00 AM</div>
+                  <div className="font-medium">TBA</div>
                 </div>
                 <div className="text-right">
                   <div className="text-gray-500">Closes</div>
-                  <div className="font-medium">09 Apr 2025 11:59 PM</div>
+                  <div className="font-medium">TBA</div>
                 </div>
               </div>
 
@@ -283,7 +278,12 @@ const Proposal = () => {
                 W. Europe Daylight Time (UTC+02:00)
               </div>
 
-              {/* Anzeige für geschlossene Proposals */}
+              {isNotYetOpen && (
+                <div className="mt-4 rounded-md p-3 text-center text-sm font-medium">
+                  The 2026 Call for Speakers is not open yet — dates will be announced soon.
+                </div>
+              )}
+
               {isClosed && (
                 <div className="mt-4 rounded-md p-3 text-center text-sm font-medium">
                   Submissions are closed. Thank you for your participation!
@@ -293,8 +293,8 @@ const Proposal = () => {
           </div>
         </div>
 
-        {/* Guidelines Card nur anzeigen, wenn Proposal-Phase aktiv ist */}
-        {!isClosed && (
+        {/* Guidelines Card: shown only while CFP is actively open */}
+        {!isClosed && !isNotYetOpen && (
           <div className="rounded-lg border bg-white shadow-sm">
             <div className="border-b p-6">
               <h2 className="flex items-center gap-2 text-lg font-semibold">

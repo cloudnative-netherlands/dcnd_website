@@ -32,7 +32,7 @@ const Info = () => (
           </div>
           <div className="about-text">
             <p>
-              This is the second edition of DCND in the Netherlands, aiming to bring the community together. The
+              This is the 3rd edition of DCND in the Netherlands, aiming to bring the community together. The
               event provides a platform for professionals and experts from all levels and
               backgrounds to learn, network, and share their knowledge about cloud native
               technologies.
@@ -76,13 +76,7 @@ const Info = () => (
         </div>
       </div>
       {/* What to Expect Section */}
-      <div className="expect-section" id="tickets">
-        <h2 className="section-title">Get your Ticket now!</h2>
-        <div className="expect-section">
-          {/* Ticket Section */}
-          <Tickets />
-        </div>
-      </div>
+
     </div>
   </section>
 );

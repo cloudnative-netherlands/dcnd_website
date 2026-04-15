@@ -1,6 +1,16 @@
 import { ChevronLeft, ChevronRight, Users, Calendar, MapPin } from 'lucide-react';
 import React, { useState, useEffect } from 'react';
 
+import venue1 from './images/DCND-RM-008.jpg';
+import venue2 from './images/DCND-RM-023.jpg';
+import venue3 from './images/DCND-RM-024.jpg';
+import venue4 from './images/DCND-RM-037.jpg';
+import venue5 from './images/DCND-RM-071.jpg';
+import venue6 from './images/DCND-RM-073.jpg';
+import venue7 from './images/DCND-RM-185.jpg';
+import venue8 from './images/DCND-YM-19.jpg';
+import venue9 from './images/DCND-YM-150.jpg';
+
 // Icons aus dem ursprünglichen Code
 const IconMapPin = () => (
   <svg
@@ -185,17 +195,23 @@ const ImageSlider = ({ images }) => {
   );
 };
 
-const Venue = ({
-  images = [
-    'https://www.jaarbeurs.nl/wp-content/uploads/2024/08/20221004-Red-hat-by-MichielTon-websize73.jpg',
-    'https://www.jaarbeurs.nl/wp-content/uploads/2024/08/20230921-Frankwatching-CC-by-MichielTon-websize79.jpg',
-    'https://www.jaarbeurs.nl/wp-content/uploads/2024/08/2023.10.19-Enactus-competition-day-1-3-by-MichielTon-18.jpg',
-    "https://www.jaarbeurs.nl/wp-content/uploads/2024/08/20221004-Red-hat-by-MichielTon-websize51.jpg"
-  ],
-}) => {
+const VENUE_IMAGES = [
+  venue1,
+  venue2,
+  venue3,
+  venue4,
+  venue5,
+  venue6,
+  venue7,
+  venue8,
+  venue9,
+];
+
+const Venue = () => {
+  const images = VENUE_IMAGES;
   return (
     <div className="mx-auto max-w-7xl p-4">
-      <h2 className="section-title">Venue Information</h2>
+      <h2 className="section-title">DCND 2025 Vibe</h2>
       <div className="gap-8 ">
         <div className="flex flex-col gap-6">
           <div className="relative aspect-video overflow-hidden rounded-xl bg-gray-100">
@@ -210,7 +226,7 @@ const Venue = ({
                 className="mb-4"
                 style={{ display: 'flex', alignItems: 'center', flexDirection: 'column' }}
               >
-                <h2 className="text-2xl font-bold text-[#004258]">Supernova Jaarbeurs</h2>
+                <h2 className="text-2xl font-bold text-[#21468B]">Supernova Jaarbeurs</h2>
                 <h3 className="text-xl text-gray-600">at Utrecht Jaarbeurs</h3>
               </div>
 
@@ -227,7 +243,7 @@ const Venue = ({
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-lg px-6 py-3 text-white transition-all"
-                style={{ backgroundColor: '#004258' }}
+                style={{ backgroundColor: '#21468B' }}
               >
                 Open in Google Maps
               </a>
@@ -249,7 +265,7 @@ const Venue = ({
             <div className="feature-item">
               <Calendar className="feature-icon" />
               <div className="feature-content">
-                <h3 className="feature-title">1-Day Event</h3>
+                <h3 className="feature-title">2-Day Event</h3>
                 <p className="feature-text">With many activities</p>
               </div>
             </div>

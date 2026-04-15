@@ -4,4 +4,13 @@
     @apply min-w-[320px] font-sans antialiased;
     -webkit-tap-highlight-color: transparent;
   }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading;
+  }
 }

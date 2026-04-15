@@ -1,4 +1,6 @@
-/* TODO: Import fonts. Please keep in mind we use only woff2 format! */
+/* Google Fonts: Inter (body) and DM Sans (headings) */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
 @layer base {
   @font-face {
     font-family: 'Plus Jakarta Sans';

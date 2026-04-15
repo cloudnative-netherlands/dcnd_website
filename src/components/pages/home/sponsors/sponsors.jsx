@@ -34,7 +34,7 @@ import './sponsor.css';
 
 const CARD_STYLES = 'w-[200px] h-[100px]';
 
-const SHOW_SPONSORS = true;
+const SHOW_SPONSORS = false;
 
 const tierConfig = {
   platinum: {
@@ -304,26 +304,28 @@ const Sponsors = () => {
         <div className="mb-16 text-center">
           <h2 className="mb-4 text-4xl font-bold text-gray-900">Become a Sponsor</h2>
           <p className="mb-8 text-lg text-gray-500">
-            Support our local cloud native community by sponsoring CNS Munich
+            Support our local cloud native community by sponsoring Dutch Cloud Native Day
           </p>
 
           <div className="flex flex-col items-center justify-center gap-4">
-            <button
-              type="button"
-              className="button"
-              style={{ cursor: 'pointer' }}
-              onClick={() => {
-                window.location.href = `mailto:${contactEmail}`;
-              }}
-            >
-              Contact Us
-            </button>
+            <div className="flex flex-wrap items-center justify-center gap-4">
+              <a
+                href="/2026-Sponsorship-Prospectus-DCND.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="button"
+                style={{ cursor: 'pointer', textDecoration: 'none' }}
+              >
+                Sponsorship Prospectus
+              </a>
+
+            </div>
             <p className="text-sm text-gray-600">
               Contact us at{' '}
               <a
                 href={`mailto:${contactEmail}`}
                 className=" hover:underline"
-                style={{ color: '#004258', fontWeight: 'bold' }}
+                style={{ color: '#21468B', fontWeight: 'bold' }}
               >
                 {contactEmail}
               </a>{' '}
