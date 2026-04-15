@@ -310,7 +310,7 @@ const Sponsors = () => {
           <div className="flex flex-col items-center justify-center gap-4">
             <div className="flex flex-wrap items-center justify-center gap-4">
               <a
-                href="/2026-Sponsorship-Prospectus-DCND.pdf"
+                href="https://drive.google.com/file/d/1LaEV0V7Qb4eIWn60K_dMuaKCfcf-cZSE/view"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="button"
