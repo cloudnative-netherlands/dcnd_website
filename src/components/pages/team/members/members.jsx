@@ -9,7 +9,7 @@ import WilliamPhoto from './images/william-rizzo.jpg';
 import CatalinPhoto from './images/catalin_j.jpg';
 import MarcelPhoto from './images/marcel_k.jpg';
 import PacoPhoto from './images/paco_b.jpeg';
-import RonaldPhoto from './images/ronald_k.jpg';
+import AndyPhoto from './images/andy_r.jpg';
 import FahdPhoto from './images/fahd_e.png';
 import PavelPhoto from './images/pavel_c.jpg';
 import CarlosPhoto from './images/carlos_m.jpg';
@@ -38,10 +38,10 @@ const ITEMS = [
     url: 'https://www.linkedin.com/in/mkerker/',
   },
   {
-    name: 'Ronald Kers',
-    position: 'De Nederlandse Kubernetes Podcast',
-    photo: RonaldPhoto,
-    url: 'https://nl.linkedin.com/in/ronaldkers',
+    name: 'Andy Repton',
+    position: 'Senior Black Belt - Red Hat',
+    photo: AndyPhoto,
+    url: 'https://www.linkedin.com/in/andy-repton/',
   },
   {
     name: 'Paco Bernabé',
