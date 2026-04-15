@@ -1,9 +1,9 @@
 .Link {
-  color: #004258;
+  color: #21468B;
   text-decoration: none;
 }
 
 .Link:hover {
-  color: #004258; 
+  color: #21468B; 
   text-decoration: underline; 
 }

@@ -13,13 +13,32 @@ const styles = {
   },
 };
 
-const Link = ({ className: additionalClassName, size, theme, to, children, ...props }) => {
+const isExternalHref = (to) =>
+  typeof to === 'string' && (/^(https?:)?\/\//.test(to) || to.startsWith('/2025'));
+
+const Link = ({
+  className: additionalClassName,
+  size,
+  theme,
+  to,
+  external,
+  children,
+  ...props
+}) => {
   const className = clsx(
     styles.base,
     size && styles.size[size],
     theme && styles.theme[theme],
     additionalClassName
   );
+
+  if (external || isExternalHref(to)) {
+    return (
+      <a href={to} className={className} {...props}>
+        {children}
+      </a>
+    );
+  }
 
   return (
     <GatsbyLink to={to} className={className} {...props}>

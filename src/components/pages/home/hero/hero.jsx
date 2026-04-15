@@ -14,25 +14,27 @@ const Hero = () => {
             {/* Left column - Content */}
             <div className="hero-left-column fade-in-up">
               {/* Date Badge */}
-              <span className="hero-badge">July 3rd 2025</span>
+              <span className="hero-badge">29 &amp; 30 October 2026</span>
 
               {/* Title */}
               <h1 className="hero-title">Dutch Cloud Native Day</h1>
 
               {/* Description */}
               <p className="hero-description">
-                On July 3rd 2025, the cloud native community will gather in Utrecht. Come and join us!
+                On 29 and 30 October 2026, the cloud native community will gather at Jaarbeurs in
+                Utrecht for two full days of talks, workshops and hallway conversations. Come and
+                join us!
               </p>
 
               {/* Feature List */}
               <ul className="hero-feature-list">
                 <li className="hero-feature-item">
                   <Calendar className="hero-icon" />
-                  <span>A Full Day of technical talks and Workshops</span>
+                  <span>Two full days of technical talks and workshops</span>
                 </li>
                 <li className="hero-feature-item">
                   <MapPin className="hero-icon" />
-                  <span>Utrecht, The Netherlands</span>
+                  <span>Jaarbeurs, Utrecht — The Netherlands</span>
                 </li>
                 <li className="hero-feature-item">
                   <Users className="hero-icon" />
@@ -41,36 +43,29 @@ const Hero = () => {
               </ul>
 
               <p className="hero-description">
-                After Amsterdam 2024, Dutch Cloud Native Day (DCND) is back!...Utrecht, here we come!
+                After a great 2025 edition in Utrecht, Dutch Cloud Native Day returns in 2026. See
+                you there!
               </p>
               {/* CTA Buttons */}
               <div className="hero-cta-container">
-                <button
-                  type="button"
+                <a
+                  href="https://sessionize.com/dutch-cloud-native-day-2026/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="button"
-                  style={{ cursor: 'pointer' }}
-                  onClick={() => (window.location.href = '#tickets')}
+                  style={{ cursor: 'pointer', textDecoration: 'none' }}
                 >
-                  Get your Ticket
-                </button>
-                {
-                  <button
-                    type="button"
-                    className="hero-cta-secondary"
-                    onClick={() => (window.location.href = '#agenda')}
-                  >
-                    Our Agenda
-                  </button>
-                }
-                {
-                  <button
-                    type="button"
-                    className="hero-cta-secondary"
-                    onClick={() => (window.location.href = '#sponsors')}
-                  >
-                    Become a Sponsor
-                  </button>
-                }
+                 Submit a Talk
+                </a>
+                <a
+                  href="https://drive.google.com/file/d/1LaEV0V7Qb4eIWn60K_dMuaKCfcf-cZSE/view"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="button"
+                  style={{ cursor: 'pointer', textDecoration: 'none' }}
+                >
+                  Become a Sponsor
+                </a>
               </div>
             </div>
 

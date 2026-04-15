@@ -2,23 +2,17 @@
 import React from 'react';
 
 import Hero from 'components/pages/home/hero';
-import HotelList from 'components/pages/home/hotels';
 import Info from 'components/pages/home/info';
 import Sponsors from 'components/pages/home/sponsors';
 import Venue from 'components/pages/home/venue';
 import Layout from 'components/shared/layout';
 import SEO from 'components/shared/seo';
-import Speakers from 'components/pages/home/speakers';
-import Schedule from 'components/pages/home/schedule';
 
-const HomePage = ({ location }) => (
+const HomePage = () => (
   <Layout homepage>
     <Hero />
     <Info />
-    <Speakers location={location} />
-    <Schedule />
     <Venue />
-    <HotelList />
     <Sponsors />
   </Layout>
 );

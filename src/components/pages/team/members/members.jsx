@@ -7,27 +7,18 @@ import whiteduck from 'icons/whiteduck.png';
 
 import WilliamPhoto from './images/william-rizzo.jpg';
 import CatalinPhoto from './images/catalin_j.jpg';
-import KarlaPhoto from './images/karla_f.jpg';
 import MarcelPhoto from './images/marcel_k.jpg';
 import PacoPhoto from './images/paco_b.jpeg';
 import RonaldPhoto from './images/ronald_k.jpg';
-import SeviPhoto from './images/sevi_k.jpg';
-import LucaPhoto from './images/luca_c.jpg';
 import FahdPhoto from './images/fahd_e.png';
 import PavelPhoto from './images/pavel_c.jpg';
 import CarlosPhoto from './images/carlos_m.jpg';
 import JosPhoto from './images/jos_s.jpg';
 import SaifPhoto from './images/saif_r.webp';
-import WouterPhoto from './images/wouter_l.jpg';
+import ShivaPhoto from './images/shiva_f.jpg';
 
 
 const ITEMS = [
-  {
-    name: 'Wouter Ligtenberg',
-    position: 'IT Lead - ING',
-    photo: WouterPhoto,
-    url: 'https://www.linkedin.com/in/wouterligtenberg/',
-  },
   {
     name: 'William Rizzo',
     position: 'Strategy Lead - Mirantis',
@@ -39,12 +30,6 @@ const ITEMS = [
     position: 'Cloud Native Consultant - FikaWorks',
     photo: CatalinPhoto,
     url: 'https://www.linkedin.com/in/jocatalin/',
-  },
-  {
-    name: 'Karla Feijoo',
-    position: 'Sr Marketing Manager EMEA - Isovalent at Cisco',
-    photo: KarlaPhoto,
-    url: 'https://www.linkedin.com/in/karla-valeria-feijoo-54934422/',
   },
   {
     name: 'Marcel Kerker',
@@ -63,18 +48,6 @@ const ITEMS = [
     position: 'Senior DevOps & Cloud Consultant - Independent',
     photo: PacoPhoto,
     url: 'https://www.linkedin.com/in/pacobernab%C3%A9/',
-  },
-  {
-    name: 'Sevi Karakulak',
-    position: 'Engineering Manager - Booking.com',
-    photo: SeviPhoto,
-    url: 'https://www.linkedin.com/in/sevikarakulak/',
-  },
-  {
-    name: 'Luca Camphuisen',
-    position: 'Software Engineer - CodeSquad/adesso',
-    photo: LucaPhoto,
-    url: 'https://www.linkedin.com/in/luca-camphuisen/',
   },
   {
     name: 'Fahd Ekadioin',
@@ -106,6 +79,12 @@ const ITEMS = [
     photo: SaifPhoto,
     url: 'https://www.linkedin.com/in/rajhi-saif/',
   },
+   {
+     name: 'Shiva Farbod',
+     position: 'Event Manager | Isovalent at Cisco',
+     photo: ShivaPhoto,
+     url: 'https://www.linkedin.com/in/shivafarbod/',
+   }
 
 
   
@@ -129,7 +108,7 @@ const Members = () => (
 
             <p
               className="mt-2.5 text-2xl font-bold leading-normal sm:text-left"
-              style={{ color: '#004258' }}
+              style={{ color: '#21468B' }}
             >
               {name}
             </p>
@@ -138,7 +117,7 @@ const Members = () => (
 
             <Link
               className="leading-norma mt-2.5 text-base font-semibold"
-              style={{ color: '#004258' }}
+              style={{ color: '#21468B' }}
               to={url}
               target="_blank"
             >

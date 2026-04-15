@@ -48,7 +48,7 @@
 }
 
 .schedule-day-btn.active {
-  background: #004258;
+  background: #21468B;
   color: #fff;
   font-weight: 600;
 }
@@ -83,7 +83,7 @@
 }
 
 .schedule-filter-pill.active {
-  background: #004258;
+  background: #21468B;
   color: #fff;
   font-weight: 600;
   box-shadow: none;
@@ -106,7 +106,7 @@
   width: 50px;
   height: 50px;
   border: 3px solid #f3f3f3;
-  border-top: 3px solid #004258;
+  border-top: 3px solid #21468B;
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }

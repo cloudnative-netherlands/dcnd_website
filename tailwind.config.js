@@ -9,7 +9,8 @@ module.exports = {
   },
   theme: {
     fontFamily: {
-      sans: ['Plus Jakarta Sans', 'Plus Jakarta Sans Fallback', ...defaultTheme.fontFamily.sans],
+      sans: ['Inter', 'Plus Jakarta Sans', 'Plus Jakarta Sans Fallback', ...defaultTheme.fontFamily.sans],
+      heading: ['DM Sans', 'Inter', ...defaultTheme.fontFamily.sans],
       mono: ['', ...defaultTheme.fontFamily.mono],
     },
     fontSize: {
@@ -120,8 +121,15 @@ module.exports = {
       // Custom colors
       black: '#000000',
       white: '#ffffff',
+      // Dutch flag brand palette
+      dutch: {
+        orange: '#FF7900',
+        red: '#AE1C28',
+        white: '#FFFFFF',
+        blue: '#21468B',
+      },
       primary: {
-        1: '#004258',
+        1: '#21468B',
       },
       lightYellow: 'rgba(255, 234, 125, 0.3)',
       lightGreen: 'rgba(125, 255, 208, 0.2)',

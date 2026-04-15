@@ -57,21 +57,70 @@ const Header = ({ isMobileMenuOpen, onBurgerClick, additionalClassName }) => {
 
         <nav>
           <ul className=" flex space-x-8 text-white lg:space-x-6 md:hidden">
-            {MENUS.header.map(({ text, to, homeTo }, index) => (
-              <li
-                className="text-[15px] font-semibold"
-                key={index}
-                style={{ color: '#004258', cursor: 'pointer' }}
-              >
-                <Link
-                  to={to || `/#${homeTo}`}
-                  className="text-primary hover:text-primary-dark cursor-pointer transition-colors duration-200"
-                  onClick={handleAnchorClick}
+            {MENUS.header.map((item, index) => {
+              const { text, to, homeTo, external, target, children } = item;
+
+              if (children) {
+                return (
+                  <li
+                    key={index}
+                    className="group relative text-[15px] font-semibold"
+                    style={{ color: '#21468B', cursor: 'pointer' }}
+                  >
+                    <span className="text-primary hover:text-primary-dark inline-flex items-center gap-1 transition-colors duration-200">
+                      {text}
+                      <svg
+                        className="h-3 w-3"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M5.23 7.21a.75.75 0 011.06.02L10 11.06l3.71-3.83a.75.75 0 111.08 1.04l-4.24 4.38a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </span>
+                    <div className="invisible absolute left-0 top-full z-50 w-auto pt-2 opacity-0 transition-opacity duration-150 group-hover:visible group-hover:opacity-100">
+                      <ul className="rounded-md border border-gray-200 bg-white py-2 shadow-lg">
+                        {children.map((child, ci) => (
+                          <li key={ci}>
+                            <Link
+                              to={child.to}
+                              external={child.external}
+                              target={child.target}
+                              rel={child.target === '_blank' ? 'noopener noreferrer' : undefined}
+                              className="text-primary hover:text-primary-dark block whitespace-nowrap px-3 py-1.5 text-[15px] font-semibold transition-colors duration-200 hover:bg-gray-50"
+                            >
+                              {child.text}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </li>
+                );
+              }
+
+              return (
+                <li
+                  className="text-[15px] font-semibold"
+                  key={index}
+                  style={{ color: '#21468B', cursor: 'pointer' }}
                 >
-                  {text}
-                </Link>
-              </li>
-            ))}
+                  <Link
+                    to={to || `/#${homeTo}`}
+                    external={external}
+                    target={target}
+                    className="text-primary hover:text-primary-dark cursor-pointer transition-colors duration-200"
+                    onClick={handleAnchorClick}
+                  >
+                    {text}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </nav>
 
