@@ -80,8 +80,8 @@ const Hero = () => {
                   }}
                 >
                   <StaticImage
-                    src="./images/hero-illustration.png"
-                    alt="Hero"
+                    src="./images/CND-NL-Buildings.png"
+                    alt="Dutch Cloud Native Day illustration"
                     formats={['auto', 'webp']}
                   />
                 </div>
