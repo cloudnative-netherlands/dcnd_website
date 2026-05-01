@@ -58,7 +58,7 @@ const Hero = () => {
                  Submit a Talk
                 </a>
                 <a
-                  href="https://drive.google.com/file/d/1LaEV0V7Qb4eIWn60K_dMuaKCfcf-cZSE/view"
+                  href="https://drive.google.com/file/d/1pmfb1SrN77O9qqoincRnnVsluhhDmk8e/view"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="button"
