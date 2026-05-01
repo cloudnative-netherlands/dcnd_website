@@ -310,7 +310,7 @@ const Sponsors = () => {
           <div className="flex flex-col items-center justify-center gap-4">
             <div className="flex flex-wrap items-center justify-center gap-4">
               <a
-                href="https://drive.google.com/file/d/1LaEV0V7Qb4eIWn60K_dMuaKCfcf-cZSE/view"
+                href="https://drive.google.com/file/d/1pmfb1SrN77O9qqoincRnnVsluhhDmk8e/view"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="button"
@@ -347,7 +347,7 @@ const Sponsors = () => {
         </p>
         <div className="flex flex-col items-center justify-center gap-4">
           <a
-            href="https://drive.google.com/file/d/1hbDPRG4_WNLUFIM2aHEOmD-jvno1356p/view?usp=sharing"
+            href="https://drive.google.com/file/d/1pmfb1SrN77O9qqoincRnnVsluhhDmk8e/view"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-lg bg-primary-1 px-6 py-3 text-white transition-all"
