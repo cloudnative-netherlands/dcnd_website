@@ -75,17 +75,15 @@ const Hero = () => {
                   href="https://sessionize.com/dutch-cloud-native-day-2026/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="button"
-                  style={{ cursor: 'pointer', textDecoration: 'none' }}
+                  className="hero-cta-button"
                 >
-                 Submit a Talk
+                  Submit a Talk
                 </a>
                 <a
                   href="https://drive.google.com/file/d/1pmfb1SrN77O9qqoincRnnVsluhhDmk8e/view"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="button"
-                  style={{ cursor: 'pointer', textDecoration: 'none' }}
+                  className="hero-cta-button"
                 >
                   Become a Sponsor
                 </a>
@@ -94,7 +92,7 @@ const Hero = () => {
                     Buy Tickets on Eventbrite
                   </a>
                 </noscript>
-                <button id={EVENTBRITE_MODAL_TRIGGER_ID} type="button" className="button">
+                <button id={EVENTBRITE_MODAL_TRIGGER_ID} type="button" className="hero-cta-button">
                   Buy Tickets
                 </button>
               </div>
