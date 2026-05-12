@@ -1,9 +1,32 @@
 import { StaticImage } from 'gatsby-plugin-image';
 import { Calendar, MapPin, Users } from 'lucide-react';
-import React from 'react';
+import React, { useEffect } from 'react';
 import './hero.css';
 
+import { EVENTBRITE_EVENT_ID, loadEventbriteWidget } from '../eventbrite';
+
+const EVENTBRITE_MODAL_TRIGGER_ID = `eventbrite-widget-modal-trigger-${EVENTBRITE_EVENT_ID}`;
+const EVENTBRITE_TICKETS_URL = `https://www.eventbrite.nl/e/dutch-cloud-native-day-2026-tickets-${EVENTBRITE_EVENT_ID}`;
+
 const Hero = () => {
+  useEffect(() => {
+    const createEventbriteModal = () => {
+      if (!window.EBWidgets) {
+        return;
+      }
+
+      window.EBWidgets.createWidget({
+        widgetType: 'checkout',
+        eventId: EVENTBRITE_EVENT_ID,
+        modal: true,
+        modalTriggerElementId: EVENTBRITE_MODAL_TRIGGER_ID,
+        onOrderComplete: () => {},
+      });
+    };
+
+    return loadEventbriteWidget(createEventbriteModal);
+  }, []);
+
   return (
     <div className="hero-container">
       <section className="hero-section">
@@ -66,6 +89,14 @@ const Hero = () => {
                 >
                   Become a Sponsor
                 </a>
+                <noscript>
+                  <a href={EVENTBRITE_TICKETS_URL} rel="noopener noreferrer" target="_blank">
+                    Buy Tickets on Eventbrite
+                  </a>
+                </noscript>
+                <button id={EVENTBRITE_MODAL_TRIGGER_ID} type="button" className="button">
+                  Buy Tickets
+                </button>
               </div>
             </div>
 
