@@ -1,6 +1,4 @@
 import { Users, Calendar, MapPin } from 'lucide-react';
-import Tickets from 'components/pages/home/tickets/tickets';
-
 import React from 'react';
 import './info.css';
 

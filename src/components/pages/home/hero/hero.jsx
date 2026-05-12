@@ -1,9 +1,32 @@
 import { StaticImage } from 'gatsby-plugin-image';
 import { Calendar, MapPin, Users } from 'lucide-react';
-import React from 'react';
+import React, { useEffect } from 'react';
 import './hero.css';
 
+import { EVENTBRITE_EVENT_ID, loadEventbriteWidget } from '../eventbrite';
+
+const EVENTBRITE_MODAL_TRIGGER_ID = `eventbrite-widget-modal-trigger-${EVENTBRITE_EVENT_ID}`;
+const EVENTBRITE_TICKETS_URL = `https://www.eventbrite.nl/e/dutch-cloud-native-day-2026-tickets-${EVENTBRITE_EVENT_ID}`;
+
 const Hero = () => {
+  useEffect(() => {
+    const createEventbriteModal = () => {
+      if (!window.EBWidgets) {
+        return;
+      }
+
+      window.EBWidgets.createWidget({
+        widgetType: 'checkout',
+        eventId: EVENTBRITE_EVENT_ID,
+        modal: true,
+        modalTriggerElementId: EVENTBRITE_MODAL_TRIGGER_ID,
+        onOrderComplete: () => {},
+      });
+    };
+
+    return loadEventbriteWidget(createEventbriteModal);
+  }, []);
+
   return (
     <div className="hero-container">
       <section className="hero-section">
@@ -52,20 +75,26 @@ const Hero = () => {
                   href="https://sessionize.com/dutch-cloud-native-day-2026/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="button"
-                  style={{ cursor: 'pointer', textDecoration: 'none' }}
+                  className="hero-cta-button"
                 >
-                 Submit a Talk
+                  Submit a Talk
                 </a>
                 <a
                   href="https://drive.google.com/file/d/1pmfb1SrN77O9qqoincRnnVsluhhDmk8e/view"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="button"
-                  style={{ cursor: 'pointer', textDecoration: 'none' }}
+                  className="hero-cta-button"
                 >
                   Become a Sponsor
                 </a>
+                <noscript>
+                  <a href={EVENTBRITE_TICKETS_URL} rel="noopener noreferrer" target="_blank">
+                    Buy Tickets on Eventbrite
+                  </a>
+                </noscript>
+                <button id={EVENTBRITE_MODAL_TRIGGER_ID} type="button" className="hero-cta-button">
+                  Buy Tickets
+                </button>
               </div>
             </div>
 
