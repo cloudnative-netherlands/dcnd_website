@@ -51,7 +51,7 @@ const Footer = () => {
   };
   return (
     <footer className="safe-paddings border-t border-t-gray-10 bg-white">
-      <div className="container flex items-center justify-between gap-4 pb-5 pt-5 sm:flex-col sm:justify-around">
+      <div className="footer-container container">
         <Link className="z-50 ml-2" to="/">
           <StaticImage
             src="./images/logo.png"
@@ -61,27 +61,18 @@ const Footer = () => {
           />
         </Link>
 
-        <nav className="mt-4 flex">
-          <ul className="grid min-w-fit grid-cols-2 grid-rows-2 gap-x-3 gap-y-4 xl:gap-x-1 lg:mr-6 lg:gap-x-4 sm:mx-auto">
+        <nav className="footer-nav" aria-label="Footer navigation">
+          <ul className="footer-nav-list">
             {MENUS.footer.map(({ text, to, target }, index) => (
-              <li
-                className="w-fit max-w-min text-sm font-semibold"
-                key={index}
-                style={{ color: '#' }}
-              >
-                <Button
-                  className="Link flex sm:flex-wrap"
-                  to={to}
-                  target={target}
-                  onClick={handleAnchorClick}
-                >
+              <li className="footer-nav-item" key={index}>
+                <Button className="Link" to={to} target={target} onClick={handleAnchorClick}>
                   {text}
                 </Button>
               </li>
             ))}
           </ul>
         </nav>
-        <div className="mt-4">
+        <div className="footer-contact">
           <div className="flex h-full items-center justify-center">
             <Link
               className="Link ml-2 font-semibold transition-colors duration-200"
@@ -92,7 +83,7 @@ const Footer = () => {
             </Link>
           </div>
 
-          <ul className="mt-4 flex min-w-fit gap-x-2.5">
+          <ul className="footer-social-list">
             {items.map(({ icon, iconClassName, url }, index) => {
               const Icon = icon;
 

@@ -330,9 +330,6 @@ const Sponsors = () => {
       <section className="mx-auto max-w-7xl px-4 py-16">
         <div className="mb-16 text-center">
           <h2 className="mb-4 text-4xl font-bold text-gray-900">Become a Sponsor</h2>
-          <p className="mb-8 text-lg text-gray-500">
-            Support our local cloud native community by sponsoring Dutch Cloud Native Day
-          </p>
 
           <div className="flex flex-col items-center justify-center gap-4">
             <div className="flex flex-wrap items-center justify-center gap-4">
@@ -345,7 +342,18 @@ const Sponsors = () => {
               >
                 Sponsorship Prospectus
               </a>
+              <a
+                href={`mailto:${contactEmail}?subject=Dutch%20Cloud%20Native%20Day%202026%20sponsorship`}
+                className="button"
+                style={{ cursor: 'pointer', textDecoration: 'none' }}
+              >
+                Become a Sponsor
+              </a>
             </div>
+            <p className="text-lg text-gray-500">
+              Support our local cloud native community and help make Dutch Cloud Native Day
+              possible.
+            </p>
             <p className="text-sm text-gray-600">
               Contact us at{' '}
               <a
@@ -429,19 +437,27 @@ const Sponsors = () => {
 
       <div className="mt-12 text-center">
         <h3 className="mb-4 text-2xl font-bold text-gray-900">Become a Sponsor</h3>
-        <p className="mb-8 text-lg text-gray-500">
-          Support our local cloud native community and help make Dutch Cloud Native Day possible.
-        </p>
 
         <div className="flex flex-col items-center justify-center gap-4">
-          <a
-            href="https://drive.google.com/file/d/1pmfb1SrN77O9qqoincRnnVsluhhDmk8e/view"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-lg bg-primary-1 px-6 py-3 text-white transition-all"
-          >
-            Sponsorship Prospectus
-          </a>
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <a
+              href="https://drive.google.com/file/d/1pmfb1SrN77O9qqoincRnnVsluhhDmk8e/view"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-lg bg-primary-1 px-6 py-3 text-white transition-all"
+            >
+              Sponsorship Prospectus
+            </a>
+            <a
+              href={`mailto:${contactEmail}?subject=Dutch%20Cloud%20Native%20Day%202026%20sponsorship`}
+              className="inline-flex items-center gap-2 rounded-lg bg-primary-1 px-6 py-3 text-white transition-all"
+            >
+              Become a Sponsor
+            </a>
+          </div>
+          <p className="text-lg text-gray-500">
+            Support our local cloud native community and help make Dutch Cloud Native Day possible.
+          </p>
           <p className="text-sm text-gray-600">
             Contact us at{' '}
             <a

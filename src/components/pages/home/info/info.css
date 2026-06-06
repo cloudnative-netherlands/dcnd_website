@@ -14,7 +14,7 @@
   font-weight: 700;
   color: #000;
   margin-bottom: 2.5rem;
-  color: #21468B;
+  color: #21468b;
 }
 
 /* About Section */
@@ -30,7 +30,7 @@
 /* Features Grid */
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
   margin-top: 3rem;
 }
@@ -57,7 +57,7 @@
   font-weight: 600;
   color: #000;
   margin-bottom: 0.5rem;
-  color: #21468B;
+  color: #21468b;
 }
 
 .feature-text {

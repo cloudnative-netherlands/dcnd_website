@@ -31,7 +31,12 @@ export default {
     to: '/team',
   },
   tickets: {
-    to: '',
+    to: `/#${getAnchor('tickets')}`,
+    id: getAnchor('tickets'),
+    homeTo: null,
+  },
+  cfp: {
+    to: 'https://sessionize.com/dutch-cloud-native-day-2026/',
     target: '_blank',
     external: true,
   },

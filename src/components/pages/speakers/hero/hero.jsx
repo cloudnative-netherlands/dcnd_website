@@ -1,9 +1,8 @@
 import React from 'react';
 
-import Button from 'components/shared/button';
-
-const TITLE = 'Speaker Lineup';
-const DESCRIPTION = 'Meet our fantastic speakers and learn from their experience.';
+const TITLE = 'Call for Speakers';
+const DESCRIPTION =
+  'The Dutch Cloud Native Day 2026 CFP is open. Submit your talk or workshop proposal via Sessionize.';
 
 const Hero = () => (
   <section className="safe-paddings pb-10 pt-24 lg:pt-[4.5rem] md:pb-4 md:pt-16 sm:py-8">

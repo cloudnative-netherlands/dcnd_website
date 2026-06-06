@@ -1,36 +1,38 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './tickets.css';
 
-import { EVENTBRITE_EVENT_ID, loadEventbriteWidget } from '../eventbrite';
-
-const EVENTBRITE_WIDGET_CONTAINER_ID = `eventbrite-widget-container-${EVENTBRITE_EVENT_ID}`;
+import EventbriteCheckoutButton from '../eventbrite-checkout-button';
 
 const Tickets = () => {
-  useEffect(() => {
-    const createEventbriteWidget = () => {
-      if (!window.EBWidgets) {
-        return;
-      }
-
-      window.EBWidgets.createWidget({
-        widgetType: 'checkout',
-        eventId: EVENTBRITE_EVENT_ID,
-        iframeContainerId: EVENTBRITE_WIDGET_CONTAINER_ID,
-        iframeContainerHeight: 425,
-        onOrderComplete: () => {},
-      });
-    };
-
-    return loadEventbriteWidget(createEventbriteWidget);
-  }, []);
-
   return (
     <section className="tickets-section" id="tickets">
       <div className="tickets-container">
         <h2 className="section-title">Tickets</h2>
 
         <div className="tickets-card">
-          <div id={EVENTBRITE_WIDGET_CONTAINER_ID} />
+          <div className="tickets-card-content">
+            <h3>Dutch Cloud Native Day 2026</h3>
+            <p>Tickets are handled by Eventbrite in a secure checkout window.</p>
+            <EventbriteCheckoutButton
+              triggerId="eventbrite-ticket-section-checkout-trigger"
+              className="tickets-checkout-button"
+            >
+              Buy Tickets
+            </EventbriteCheckoutButton>
+            <p className="tickets-privacy-note">
+              Ticket checkout is handled by Eventbrite. When you continue, Eventbrite may process
+              your personal data and use cookies or similar technologies for checkout, payment,
+              security, analytics, and related services. See{' '}
+              <a
+                href="https://www.eventbrite.com/help/en-us/articles/460838/eventbrite-privacy-policy/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Eventbrite's privacy and cookie information
+              </a>
+              .
+            </p>
+          </div>
         </div>
 
         <div className="diversity-ticket-card">
