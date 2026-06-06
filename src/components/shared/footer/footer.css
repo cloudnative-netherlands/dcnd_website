@@ -1,9 +1,61 @@
 .Link {
-  color: #21468B;
+  color: #21468b;
   text-decoration: none;
 }
 
 .Link:hover {
-  color: #21468B; 
-  text-decoration: underline; 
+  color: #21468b;
+  text-decoration: underline;
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-bottom: 1.25rem;
+  padding-top: 1.25rem;
+}
+
+.footer-nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.footer-nav-item {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.footer-contact {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-social-list {
+  display: flex;
+  min-width: fit-content;
+  gap: 0.625rem;
+}
+
+@media (max-width: 1023px) {
+  .footer-container {
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.25rem;
+    text-align: center;
+  }
+
+  .footer-nav-list {
+    flex-wrap: wrap;
+    gap: 1rem 1.5rem;
+  }
+
+  .footer-contact {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
 }

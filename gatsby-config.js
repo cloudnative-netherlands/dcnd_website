@@ -5,12 +5,13 @@ require('dotenv').config();
 module.exports = {
   flags: { DEV_SSR: process.env.GATSBY_DEV_SSR || false },
   siteMetadata: {
-    siteTitle: 'Pixel Point Gatsby Tailwind Starter',
-    siteDescription: 'Site Description',
+    siteTitle: 'Dutch Cloud Native Day 2026',
+    siteDescription:
+      'A two-day community-organized cloud native conference in Utrecht on 29 and 30 October 2026.',
     siteImage: '/images/social-preview.jpg',
     siteLanguage: 'en',
     siteUrl: process.env.GATSBY_DEFAULT_SITE_URL || 'http://localhost:8000',
-    authorName: 'Pixel Point',
+    authorName: 'Dutch Cloud Native Day',
   },
   plugins: [
     {
@@ -42,8 +43,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
+        name: 'Dutch Cloud Native Day',
+        short_name: 'DCND',
         start_url: '/',
         display: 'minimal-ui',
         icon: 'src/images/favicon.png',
