@@ -29,42 +29,70 @@ import learnk8s from 'icons/learnk8s_logo.png';
 import certdirectory from 'icons/cert_logo.png';
 import pyladies from 'icons/pyladies.png';
 import dutchcloudnativemeetup from 'icons/dutchcloudnativemeetup.jpg';
+import Clastix from 'icons/clastix-logo.png';
 
 import './sponsor.css';
 
-const CARD_STYLES = 'w-[200px] h-[100px]';
-
-const SHOW_SPONSORS = false;
+const SHOW_SPONSORS = true;
 
 const tierConfig = {
   platinum: {
     title: 'Platinum',
     class: 'bg-white shadow-sm',
     badgeClass: 'bg-purple-50 text-purple-500',
+    cardClass: '',
+    cardWidth: 260,
+    cardHeight: 130,
+    containerClass: 'flex flex-wrap justify-center gap-4',
   },
   gold: {
     title: 'Gold',
     class: 'bg-white shadow-sm',
     badgeClass: 'bg-yellow-50 text-yellow-500',
+    cardClass: '',
+    cardWidth: 190,
+    cardHeight: 105,
+    containerClass: 'flex flex-wrap justify-center gap-4',
   },
   silver: {
     title: 'Silver',
     class: 'bg-white shadow-sm',
     badgeClass: 'bg-gray-50 text-gray-500',
+    cardClass: '',
+    cardWidth: 180,
+    cardHeight: 100,
+    containerClass: 'flex flex-wrap justify-center gap-4',
   },
   bronze: {
     title: 'Bronze',
     class: 'bg-white shadow-sm',
     badgeClass: 'bg-orange-50 text-orange-500',
+    cardClass: '',
+    cardWidth: 180,
+    cardHeight: 90,
+    containerClass: 'flex flex-wrap justify-center gap-4',
   },
   partner: {
     title: 'Community Partners',
     class: 'bg-white shadow-sm',
     badgeClass: 'bg-green-50 text-green-500',
+    cardClass: '',
+    cardWidth: 180,
+    cardHeight: 90,
+    containerClass: 'flex flex-wrap justify-center gap-4',
   },
 };
 
 const sponsorsList = [
+  {
+    name: 'Clastix',
+    icon: Clastix,
+    url: 'https://www.clastix.io/',
+    tier: 'platinum',
+    logoWidth: 215,
+    logoHeight: 115,
+    isCurrent: true,
+  },
   {
     name: 'Exoscale',
     icon: Exoscale,
@@ -106,7 +134,7 @@ const sponsorsList = [
     logoHeight: 90,
   },
   {
-    name: 'SUSE', 
+    name: 'SUSE',
     icon: SUSE,
     url: 'https://www.suse.com/',
     tier: 'gold',
@@ -289,7 +317,6 @@ const sponsorsList = [
     logoWidth: 150,
     logoHeight: 100,
   },
-
 ];
 
 const contactEmail = 'info@dutchcloudnativeday.nl';
@@ -318,7 +345,6 @@ const Sponsors = () => {
               >
                 Sponsorship Prospectus
               </a>
-
             </div>
             <p className="text-sm text-gray-600">
               Contact us at{' '}
@@ -339,29 +365,16 @@ const Sponsors = () => {
 
   // Show the full sponsors section when SHOW_SPONSORS is true
   return (
-    <section className="mx-auto max-w-7xl px-4 py-16">
+    <section id="sponsors" className="mx-auto max-w-7xl px-4 py-16">
       <h2 className="section-title">Our sponsors</h2>
-      <div className="mb-16 text-center">
+      <div className="mb-10 text-center">
         <p className="mb-8 text-lg text-gray-500">
-          Support our local cloud native community by sponsoring Dutch Cloud Native Day
+          Thank you to the organizations supporting Dutch Cloud Native Day 2026.
         </p>
-        <div className="flex flex-col items-center justify-center gap-4">
-          <a
-            href="https://drive.google.com/file/d/1pmfb1SrN77O9qqoincRnnVsluhhDmk8e/view"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-lg bg-primary-1 px-6 py-3 text-white transition-all"
-          >
-            Sponsor Prospectus
-          </a>
-          <p className="mb-8 text-lg text-gray-500" style={{ textAlign: 'center' }}>
-            Thank you to our amazing sponsors who make this event possible
-          </p>
-        </div>
       </div>
 
       {Object.entries(tierConfig).map(([tier, config]) => {
-        const tierSponsors = sponsorsList.filter((s) => s.tier === tier);
+        const tierSponsors = sponsorsList.filter((s) => s.isCurrent && s.tier === tier);
 
         if (tierSponsors.length === 0) return null;
 
@@ -378,39 +391,70 @@ const Sponsors = () => {
             </div>
 
             <div className={config.containerClass}>
-              <div className="flex flex-wrap justify-center gap-4">
-                {tierSponsors.map((sponsor, index) => (
-                  <a
-                    key={index}
-                    href={sponsor.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={clsx(
-                      'flex items-center justify-center rounded-lg transition-all duration-200',
-                      'hover:scale-[1.02] hover:shadow-md',
-                      CARD_STYLES,
-                      config.class
-                    )}
-                  >
-                    <div className="relative flex h-full w-full items-center justify-center">
-                      <img
-                        src={sponsor.icon}
-                        alt={sponsor.name}
-                        loading="lazy"
-                        className="object-contain"
-                        style={{
-                          maxWidth: sponsor.logoWidth ? sponsor.logoWidth : DEFAULT_LOGO_WIDTH,
-                          maxHeight: sponsor.logoHeight ? sponsor.logoHeight : DEFAULT_LOGO_HEIGHT,
-                        }}
-                      />
-                    </div>
-                  </a>
-                ))}
-              </div>
+              {tierSponsors.map((sponsor, index) => (
+                <a
+                  key={index}
+                  href={sponsor.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={clsx(
+                    'flex items-center justify-center rounded-lg transition-all duration-200',
+                    'hover:scale-[1.02] hover:shadow-md',
+                    config.cardClass,
+                    config.class
+                  )}
+                  style={{
+                    width: config.cardWidth,
+                    height: config.cardHeight,
+                  }}
+                >
+                  <div className="relative flex h-full w-full items-center justify-center">
+                    <img
+                      src={sponsor.icon}
+                      alt={sponsor.name}
+                      loading="lazy"
+                      className="object-contain"
+                      style={{
+                        maxWidth: sponsor.logoWidth ? sponsor.logoWidth : DEFAULT_LOGO_WIDTH,
+                        maxHeight: sponsor.logoHeight ? sponsor.logoHeight : DEFAULT_LOGO_HEIGHT,
+                      }}
+                    />
+                  </div>
+                </a>
+              ))}
             </div>
           </div>
         );
       })}
+
+      <div className="mt-12 text-center">
+        <h3 className="mb-4 text-2xl font-bold text-gray-900">Become a Sponsor</h3>
+        <p className="mb-8 text-lg text-gray-500">
+          Support our local cloud native community and help make Dutch Cloud Native Day possible.
+        </p>
+
+        <div className="flex flex-col items-center justify-center gap-4">
+          <a
+            href="https://drive.google.com/file/d/1pmfb1SrN77O9qqoincRnnVsluhhDmk8e/view"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-lg bg-primary-1 px-6 py-3 text-white transition-all"
+          >
+            Sponsorship Prospectus
+          </a>
+          <p className="text-sm text-gray-600">
+            Contact us at{' '}
+            <a
+              href={`mailto:${contactEmail}`}
+              className=" hover:underline"
+              style={{ color: '#21468B', fontWeight: 'bold' }}
+            >
+              {contactEmail}
+            </a>{' '}
+            to learn more about sponsorship opportunities
+          </p>
+        </div>
+      </div>
     </section>
   );
 };
