@@ -4,6 +4,16 @@ import { EVENTBRITE_EVENT_ID, EVENTBRITE_TICKETS_URL, loadEventbriteWidget } fro
 
 const CHECKOUT_CONTAINER_ID = 'eventbrite-inline-checkout';
 
+const countEventbriteOpen = () => {
+  if (window.goatcounter && typeof window.goatcounter.count === 'function') {
+    window.goatcounter.count({
+      path: 'eventbrite-open',
+      title: 'Eventbrite checkout opened',
+      event: true,
+    });
+  }
+};
+
 const EventbriteEmbeddedCheckout = () => {
   const [status, setStatus] = useState('loading');
   const hasInitialized = useRef(false);
@@ -22,6 +32,7 @@ const EventbriteEmbeddedCheckout = () => {
       }
 
       hasInitialized.current = true;
+      countEventbriteOpen();
 
       window.EBWidgets.createWidget({
         widgetType: 'checkout',

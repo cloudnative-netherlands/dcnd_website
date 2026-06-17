@@ -38,6 +38,12 @@ const HTML = ({
       {preBodyComponents}
       <div key="body" id="___gatsby" dangerouslySetInnerHTML={{ __html: body }} />
       {postBodyComponents}
+      {/* Cookie-free aggregate analytics. */}
+      <script
+        data-goatcounter="https://dcnd.goatcounter.com/count"
+        src="https://gc.zgo.at/count.js"
+        async
+      />
     </body>
   </html>
 );
