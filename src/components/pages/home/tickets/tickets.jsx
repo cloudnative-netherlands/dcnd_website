@@ -3,8 +3,8 @@ import './tickets.css';
 
 import { useCookieConsent } from 'components/shared/cookie-consent';
 
-import EventbriteEmbeddedCheckout from '../eventbrite-embedded-checkout';
 import { EVENTBRITE_TICKETS_URL } from '../eventbrite';
+import EventbriteEmbeddedCheckout from '../eventbrite-embedded-checkout';
 
 const Tickets = () => {
   const { hasTicketCheckoutConsent, openCookiePreferences } = useCookieConsent();
@@ -24,6 +24,8 @@ const Tickets = () => {
                 <button
                   type="button"
                   className="tickets-checkout-button"
+                  data-goatcounter-click="ticket-click"
+                  data-goatcounter-title="Ticket click"
                   onClick={openCookiePreferences}
                 >
                   Allow ticket checkout
@@ -33,6 +35,8 @@ const Tickets = () => {
                   href={EVENTBRITE_TICKETS_URL}
                   target="_blank"
                   rel="noopener noreferrer"
+                  data-goatcounter-click="eventbrite-open"
+                  data-goatcounter-title="Eventbrite checkout opened"
                 >
                   Open on Eventbrite
                 </a>
@@ -67,6 +71,8 @@ const Tickets = () => {
             <a
               href="mailto:info@dutchcloudnativeday.nl"
               className="text-primary font-bold hover:underline"
+              data-goatcounter-click="contact-click"
+              data-goatcounter-title="Contact click"
             >
               info@dutchcloudnativeday.nl
             </a>{' '}

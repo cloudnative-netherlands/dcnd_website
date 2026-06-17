@@ -99,8 +99,9 @@ const CookieConsent = ({ children }) => {
           <div className="cookie-banner__content">
             <h2>Cookie choices</h2>
             <p>
-              Dutch Cloud Native Day does not use analytics or advertising cookies. We only load
-              Eventbrite when you allow the ticket checkout service.
+              Dutch Cloud Native Day uses cookie-free aggregate analytics and does not use
+              advertising cookies. We only load Eventbrite when you allow the ticket checkout
+              service.
             </p>
           </div>
           <div className="cookie-banner__actions">

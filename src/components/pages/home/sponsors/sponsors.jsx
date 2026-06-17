@@ -350,6 +350,8 @@ const Sponsors = () => {
                 rel="noopener noreferrer"
                 className="button"
                 style={{ cursor: 'pointer', textDecoration: 'none' }}
+                data-goatcounter-click="sponsor-click"
+                data-goatcounter-title="Sponsor click"
               >
                 Sponsorship Prospectus
               </a>
@@ -357,6 +359,8 @@ const Sponsors = () => {
                 href={`mailto:${contactEmail}?subject=Dutch%20Cloud%20Native%20Day%202026%20sponsorship`}
                 className="button"
                 style={{ cursor: 'pointer', textDecoration: 'none' }}
+                data-goatcounter-click="sponsor-click"
+                data-goatcounter-title="Sponsor click"
               >
                 Become a Sponsor
               </a>
@@ -371,6 +375,8 @@ const Sponsors = () => {
                 href={`mailto:${contactEmail}`}
                 className=" hover:underline"
                 style={{ color: '#21468B', fontWeight: 'bold' }}
+                data-goatcounter-click="contact-click"
+                data-goatcounter-title="Contact click"
               >
                 {contactEmail}
               </a>{' '}
@@ -422,6 +428,8 @@ const Sponsors = () => {
                     config.cardClass,
                     config.class
                   )}
+                  data-goatcounter-click="sponsor-click"
+                  data-goatcounter-title="Sponsor click"
                   style={{
                     width: config.cardWidth,
                     height: config.cardHeight,
@@ -456,12 +464,16 @@ const Sponsors = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-lg bg-primary-1 px-6 py-3 text-white transition-all"
+              data-goatcounter-click="sponsor-click"
+              data-goatcounter-title="Sponsor click"
             >
               Sponsorship Prospectus
             </a>
             <a
               href={`mailto:${contactEmail}?subject=Dutch%20Cloud%20Native%20Day%202026%20sponsorship`}
               className="inline-flex items-center gap-2 rounded-lg bg-primary-1 px-6 py-3 text-white transition-all"
+              data-goatcounter-click="sponsor-click"
+              data-goatcounter-title="Sponsor click"
             >
               Become a Sponsor
             </a>
@@ -475,6 +487,8 @@ const Sponsors = () => {
               href={`mailto:${contactEmail}`}
               className=" hover:underline"
               style={{ color: '#21468B', fontWeight: 'bold' }}
+              data-goatcounter-click="contact-click"
+              data-goatcounter-title="Contact click"
             >
               {contactEmail}
             </a>{' '}

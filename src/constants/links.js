@@ -50,6 +50,11 @@ export default {
     target: '_blank',
     external: true,
   },
+  privacy: {
+    to: '/privacy',
+    target: '_blank',
+    external: true,
+  },
   past2025: {
     to: '/2025/',
     target: '_blank',
