@@ -14,6 +14,7 @@ import LinkedIn from 'icons/linkedin-logo.inline.svg';
 import { StaticImage } from 'gatsby-plugin-image';
 
 import Button from '../button';
+import { useCookieConsent } from '../cookie-consent';
 import Link from '../link';
 
 import './footer.css';
@@ -32,6 +33,8 @@ const items = [
 ];
 
 const Footer = () => {
+  const { openCookiePreferences } = useCookieConsent();
+
   const handleAnchorClick = (e) => {
     const getAnchor = (str) => slugify(str).toLocaleLowerCase();
 
@@ -100,6 +103,9 @@ const Footer = () => {
               );
             })}
           </ul>
+          <button type="button" className="footer-cookie-link" onClick={openCookiePreferences}>
+            Cookie settings
+          </button>
         </div>
       </div>
     </footer>
