@@ -8,7 +8,6 @@ import { EVENTBRITE_TICKETS_URL } from '../eventbrite';
 
 const Tickets = () => {
   const { hasTicketCheckoutConsent, openCookiePreferences } = useCookieConsent();
-
   return (
     <section className="tickets-section" id="tickets">
       <div className="tickets-container">
