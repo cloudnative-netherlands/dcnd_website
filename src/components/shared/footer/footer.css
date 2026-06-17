@@ -41,6 +41,13 @@
   gap: 0.625rem;
 }
 
+.footer-cookie-link {
+  color: #21468b;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-align: center;
+}
+
 @media (max-width: 1023px) {
   .footer-container {
     flex-direction: column;

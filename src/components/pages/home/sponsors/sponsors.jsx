@@ -16,7 +16,8 @@ import Booking from 'icons/Booking_logo.png';
 import varonis from 'icons/varonis.png';
 import scaleway from 'icons/scaleway.png';
 import sysdig from 'icons/sysdig.png';
-import itq from 'icons/ITQ_logo.webp';
+import itq from 'icons/itq-logo.png';
+import BBTG from 'icons/bbtg-logo-full.svg';
 import mogenius from 'icons/mogenius_logo.png';
 import nirmata from 'icons/nirmata_logo.webp';
 import qstarsIT from 'icons/QStars_logo.png';
@@ -118,6 +119,15 @@ const sponsorsList = [
     logoHeight: 80,
   },
   {
+    name: 'Building Beyond Technology Group',
+    icon: BBTG,
+    url: 'https://bbtg.com/',
+    tier: 'gold',
+    logoWidth: 150,
+    logoHeight: 100,
+    isCurrent: true,
+  },
+  {
     name: 'Isovalent',
     icon: Isovalent,
     url: 'https://www.isovalent.com',
@@ -190,12 +200,13 @@ const sponsorsList = [
     logoHeight: 120,
   },
   {
-    name: 'itq',
+    name: 'ITQ',
     icon: itq,
     url: 'https://itq.eu/nl',
     tier: 'silver',
     logoWidth: 150,
     logoHeight: 100,
+    isCurrent: true,
   },
   {
     name: 'mogenius',
