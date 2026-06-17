@@ -81,6 +81,8 @@ const Footer = () => {
               className="Link ml-2 font-semibold transition-colors duration-200"
               theme="primary"
               to="mailto:info@dutchcloudnativeday.nl"
+              data-goatcounter-click="contact-click"
+              data-goatcounter-title="Contact click"
             >
               Contact us
             </Link>

@@ -52,6 +52,8 @@ const Hero = () => (
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hero-cta-button"
+                data-goatcounter-click="cfp-click"
+                data-goatcounter-title="CFP click"
               >
                 Submit a Talk
               </a>
@@ -60,10 +62,17 @@ const Hero = () => (
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hero-cta-button"
+                data-goatcounter-click="sponsor-click"
+                data-goatcounter-title="Sponsor click"
               >
                 Become a Sponsor
               </a>
-              <a href="/#tickets" className="hero-cta-button">
+              <a
+                href="/#tickets"
+                className="hero-cta-button"
+                data-goatcounter-click="ticket-click"
+                data-goatcounter-title="Ticket click"
+              >
                 Buy Tickets
               </a>
             </div>
