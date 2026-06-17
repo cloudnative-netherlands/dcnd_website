@@ -1,4 +1,4 @@
-import { Users, Calendar, MapPin } from 'lucide-react';
+import { Calendar, Coffee, Mic2, Users } from 'lucide-react';
 import React from 'react';
 import './info.css';
 
@@ -12,8 +12,9 @@ const Info = () => (
         <div className="about-content">
           <div className="about-text">
             <p>
-              Dutch Cloud Native Day is a local (and International), community-organized event that gathers
-              adopters and technologists from open source and cloud native communities.
+              Dutch Cloud Native Day is a community-organized event for cloud native adopters,
+              technologists, platform engineers and open source practitioners from the Netherlands,
+              Europe and beyond.
             </p>
             <div className="text-start">
               <button
@@ -30,10 +31,9 @@ const Info = () => (
           </div>
           <div className="about-text">
             <p>
-              This is the 3rd edition of DCND in the Netherlands, aiming to bring the community together. The
-              event provides a platform for professionals and experts from all levels and
-              backgrounds to learn, network, and share their knowledge about cloud native
-              technologies.
+              The event is supported by Stichting Cloud Native Netherlands and remains vendor
+              neutral, inclusive and community first. Expect practical content, open CFP sessions
+              and space to meet peers across the cloud native ecosystem.
             </p>
           </div>
         </div>
@@ -44,37 +44,48 @@ const Info = () => (
 
       {/* What to Expect Section */}
       <div className="expect-section">
-        <h2 className="section-title">What to Expect?</h2>
+        <h2 className="section-title">What's included</h2>
         <div className="features-grid">
-          <div className="feature-item">
-            <Users className="feature-icon" />
-            <div className="feature-content">
-              <h3 className="feature-title">Community Networking</h3>
-              <p className="feature-text">Connect with peers from the cloud native community</p>
-            </div>
-          </div>
-
           <div className="feature-item">
             <Calendar className="feature-icon" />
             <div className="feature-content">
-              <h3 className="feature-title">Technical Talks</h3>
-              <p className="feature-text">Engaging presentations from industry experts</p>
+              <h3 className="feature-title">Workshop day</h3>
+              <p className="feature-text">Hands-on sessions planned for Thursday 29 October</p>
             </div>
           </div>
 
           <div className="feature-item">
-            <MapPin className="feature-icon" />
+            <Mic2 className="feature-icon" />
             <div className="feature-content">
-              <h3 className="feature-title">Unique Venue</h3>
+              <h3 className="feature-title">Conference day</h3>
               <p className="feature-text">
-                A fantastic multi-room venue with ample space for activities
+                Practical talks selected through the open CFP on Friday 30 October
+              </p>
+            </div>
+          </div>
+
+          <div className="feature-item">
+            <Coffee className="feature-icon" />
+            <div className="feature-content">
+              <h3 className="feature-title">Food included</h3>
+              <p className="feature-text">
+                Vegetarian and vegan-friendly catering during the conference day
+              </p>
+            </div>
+          </div>
+
+          <div className="feature-item">
+            <Users className="feature-icon" />
+            <div className="feature-content">
+              <h3 className="feature-title">Community space</h3>
+              <p className="feature-text">
+                Hallway conversations, sponsors and a welcoming vendor-neutral crowd
               </p>
             </div>
           </div>
         </div>
       </div>
       {/* What to Expect Section */}
-
     </div>
   </section>
 );

@@ -2,9 +2,9 @@
 import { useStaticQuery, graphql } from 'gatsby';
 import React from 'react';
 
-const defaultTitle = 'DCND Utrecht';
+const defaultTitle = 'Dutch Cloud Native Day 2026';
 const defaultDescription =
-  'Experience the power of community at the Dutch Cloud Native Day Utrecht!';
+  'A two-day community-organized cloud native conference in Utrecht on 29 and 30 October 2026.';
 
 const SEO = ({ title, description, pathname }) => {
   const {

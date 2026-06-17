@@ -1,6 +1,8 @@
 export const EVENTBRITE_EVENT_ID = '1988815582946';
 export const EVENTBRITE_WIDGET_SCRIPT_ID = 'eventbrite-widget-script';
-export const EVENTBRITE_WIDGET_SCRIPT_SRC = 'https://www.eventbrite.nl/static/widgets/eb_widgets.js';
+export const EVENTBRITE_WIDGET_SCRIPT_SRC =
+  'https://www.eventbrite.nl/static/widgets/eb_widgets.js';
+export const EVENTBRITE_TICKETS_URL = `https://www.eventbrite.nl/e/dutch-cloud-native-day-2026-tickets-${EVENTBRITE_EVENT_ID}`;
 
 export const loadEventbriteWidget = (onLoad) => {
   const existingScript = document.getElementById(EVENTBRITE_WIDGET_SCRIPT_ID);
