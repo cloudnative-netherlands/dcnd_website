@@ -164,9 +164,9 @@ const CookieConsent = ({ children }) => {
               <div>
                 <h3>Ticket checkout - Eventbrite</h3>
                 <p>
-                  Loads the embedded Eventbrite checkout. Eventbrite may process personal data and
-                  use cookies or similar technologies for checkout, payment, security, analytics,
-                  and related services.
+                  The only consent-controlled third-party embed on this website is the Eventbrite
+                  checkout. Eventbrite may process personal data and use cookies or similar
+                  technologies for checkout, payment, security, analytics, and related services.
                 </p>
               </div>
             </div>

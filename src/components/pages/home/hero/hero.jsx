@@ -10,6 +10,14 @@ const Hero = () => (
 
       <div className="hero-content-container">
         <div className="hero-grid">
+          <div className="hero-mobile-illustration fade-in-scale">
+            <StaticImage
+              src="./images/CND-NL-Buildings.png"
+              alt="Dutch Cloud Native Day buildings"
+              formats={['auto', 'webp']}
+            />
+          </div>
+
           {/* Left column - Content */}
           <div className="hero-left-column fade-in-up">
             {/* Date Badge */}
@@ -19,7 +27,43 @@ const Hero = () => (
             <h1 className="hero-title">Dutch Cloud Native Day</h1>
 
             {/* Description */}
-            <p className="hero-description">
+            <p className="hero-description hero-short-description">
+              Two days of cloud native talks, workshops and community in Utrecht.
+            </p>
+
+            {/* CTA Buttons */}
+            <div className="hero-cta-container">
+              <a
+                href="/#tickets"
+                className="hero-cta-button hero-cta-button--primary"
+                data-goatcounter-click="ticket-click"
+                data-goatcounter-title="Ticket click"
+              >
+                Buy Tickets
+              </a>
+              <a
+                href="https://sessionize.com/dutch-cloud-native-day-2026/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hero-cta-button hero-cta-button--secondary"
+                data-goatcounter-click="cfp-click"
+                data-goatcounter-title="CFP click"
+              >
+                Submit a Talk
+              </a>
+              <a
+                href="https://drive.google.com/file/d/1pmfb1SrN77O9qqoincRnnVsluhhDmk8e/view"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hero-cta-button hero-cta-button--secondary"
+                data-goatcounter-click="sponsor-click"
+                data-goatcounter-title="Sponsor click"
+              >
+                Become a Sponsor
+              </a>
+            </div>
+
+            <p className="hero-description hero-detail-description">
               On 29 and 30 October 2026, the cloud native community will gather at Jaarbeurs in
               Utrecht for two full days of talks, workshops and hallway conversations. Come and join
               us!
@@ -45,37 +89,6 @@ const Hero = () => (
               After a great 2025 edition in Utrecht, Dutch Cloud Native Day returns in 2026. See you
               there!
             </p>
-            {/* CTA Buttons */}
-            <div className="hero-cta-container">
-              <a
-                href="https://sessionize.com/dutch-cloud-native-day-2026/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hero-cta-button"
-                data-goatcounter-click="cfp-click"
-                data-goatcounter-title="CFP click"
-              >
-                Submit a Talk
-              </a>
-              <a
-                href="https://drive.google.com/file/d/1pmfb1SrN77O9qqoincRnnVsluhhDmk8e/view"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hero-cta-button"
-                data-goatcounter-click="sponsor-click"
-                data-goatcounter-title="Sponsor click"
-              >
-                Become a Sponsor
-              </a>
-              <a
-                href="/#tickets"
-                className="hero-cta-button"
-                data-goatcounter-click="ticket-click"
-                data-goatcounter-title="Ticket click"
-              >
-                Buy Tickets
-              </a>
-            </div>
           </div>
 
           <div className="hero-right-column fade-in-scale">
