@@ -34,4 +34,6 @@ assert.match(checkout, /event: true/);
 
 assert.match(privacy, /privacy-friendly, cookie-free analytics/);
 assert.match(privacy, /We use GoatCounter, an open-source privacy-friendly analytics tool/);
+assert.match(privacy, /The embedded Eventbrite checkout is loaded only after you allow/);
+assert.match(privacy, /Eventbrite may process your personal data and use cookies/);
 assert.match(menus, /Privacy/);
