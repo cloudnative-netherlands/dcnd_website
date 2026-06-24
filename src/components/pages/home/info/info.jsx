@@ -32,8 +32,8 @@ const Info = () => (
           <div className="about-text">
             <p>
               The event is supported by Stichting Cloud Native Netherlands and remains vendor
-              neutral, inclusive and community first. Expect practical content, open CFP sessions
-              and space to meet peers across the cloud native ecosystem.
+              neutral, inclusive and community first. Expect practical content, open space sessions
+              and plenty of room to meet peers across the cloud native ecosystem.
             </p>
           </div>
         </div>
@@ -44,7 +44,7 @@ const Info = () => (
 
       {/* What to Expect Section */}
       <div className="expect-section">
-        <h2 className="section-title">What's included</h2>
+        <h2 className="section-title">What is included</h2>
         <div className="features-grid">
           <div className="feature-item">
             <Calendar className="feature-icon" />
@@ -59,7 +59,7 @@ const Info = () => (
             <div className="feature-content">
               <h3 className="feature-title">Conference day</h3>
               <p className="feature-text">
-                Practical talks selected through the open CFP on Friday 30 October
+                Practical talks, panels and community sessions on Friday 30 October
               </p>
             </div>
           </div>

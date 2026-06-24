@@ -6,7 +6,7 @@ const Speakers = () => (
       <h2 className="section-title">Speakers</h2>
       <p className="mx-auto mt-4 max-w-2xl text-gray-600">
         The Dutch Cloud Native Day 2026 lineup is still taking shape. Speakers will be announced
-        here as soon as the Call for Speakers closes.
+        when the selection process is complete.
       </p>
     </div>
   </section>

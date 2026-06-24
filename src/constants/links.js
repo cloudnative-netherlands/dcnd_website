@@ -13,9 +13,14 @@ export default {
     to: '/',
   },
   schedule: {
-    to: '/schedule',
-    id: getAnchor('Schedule'),
-    homeTo: '/schedule',
+    to: '/program',
+    id: getAnchor('Program'),
+    homeTo: '/program',
+  },
+  program: {
+    to: '/program',
+    id: getAnchor('Program'),
+    homeTo: '/program',
   },
   sponsors: {
     to: `/#${getAnchor('sponsors')}`,
@@ -35,6 +40,11 @@ export default {
     id: getAnchor('tickets'),
     homeTo: null,
   },
+  diversityTickets: {
+    to: '/#diversity-tickets',
+    id: getAnchor('diversity tickets'),
+    homeTo: null,
+  },
   cfp: {
     to: 'https://sessionize.com/dutch-cloud-native-day-2026/',
     target: '_blank',
@@ -52,6 +62,11 @@ export default {
   },
   privacy: {
     to: '/privacy',
+    target: '_blank',
+    external: true,
+  },
+  community: {
+    to: 'https://www.linkedin.com/company/cloudnativenl',
     target: '_blank',
     external: true,
   },
