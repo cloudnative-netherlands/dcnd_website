@@ -21,14 +21,16 @@ const Hero = () => (
           {/* Left column - Content */}
           <div className="hero-left-column fade-in-up">
             {/* Date Badge */}
-            <span className="hero-badge">29 &amp; 30 October 2026</span>
+            <span className="hero-badge">29–30 October 2026</span>
 
             {/* Title */}
             <h1 className="hero-title">Dutch Cloud Native Day</h1>
+            <p className="hero-theme">2026 Theme: Cloud Native in the Age of AI</p>
 
             {/* Description */}
             <p className="hero-description hero-short-description">
-              Two days of cloud native talks, workshops and community in Utrecht.
+              Two days of cloud native talks, workshops and community in Utrecht, exploring how AI
+              is changing the way we build, run and scale modern platforms.
             </p>
 
             {/* CTA Buttons */}
@@ -42,16 +44,6 @@ const Hero = () => (
                 Buy Tickets
               </a>
               <a
-                href="https://sessionize.com/dutch-cloud-native-day-2026/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hero-cta-button hero-cta-button--secondary"
-                data-goatcounter-click="cfp-click"
-                data-goatcounter-title="CFP click"
-              >
-                Submit a Talk
-              </a>
-              <a
                 href="https://drive.google.com/file/d/1pmfb1SrN77O9qqoincRnnVsluhhDmk8e/view"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -61,19 +53,29 @@ const Hero = () => (
               >
                 Become a Sponsor
               </a>
+              <a
+                href="/program"
+                className="hero-cta-button hero-cta-button--secondary"
+                data-goatcounter-click="program-click"
+                data-goatcounter-title="Program click"
+              >
+                CFP Closed
+              </a>
             </div>
+            <p className="hero-support-text">
+              CFP is now closed. We’re reviewing submissions and building the 2026 program.
+            </p>
 
             <p className="hero-description hero-detail-description">
-              On 29 and 30 October 2026, the cloud native community will gather at Jaarbeurs in
-              Utrecht for two full days of talks, workshops and hallway conversations. Come and join
-              us!
+              On 29–30 October 2026, the cloud native community will gather at Jaarbeurs in Utrecht
+              for two full days of talks, workshops and hallway conversations. Come and join us!
             </p>
 
             {/* Feature List */}
             <ul className="hero-feature-list">
               <li className="hero-feature-item">
                 <Calendar className="hero-icon" />
-                <span>29 October workshops, 30 October conference talks</span>
+                <span>Workshops on 29 October, conference talks on 30 October</span>
               </li>
               <li className="hero-feature-item">
                 <MapPin className="hero-icon" />
@@ -81,13 +83,17 @@ const Hero = () => (
               </li>
               <li className="hero-feature-item">
                 <Users className="hero-icon" />
-                <span>Developers, Platform Engineers, AI Wizards and Cloud Native Enthusiasts</span>
+                <span>
+                  Developers, platform engineers, DevOps engineers, SREs, AI infrastructure
+                  engineers and cloud native enthusiasts.
+                </span>
               </li>
             </ul>
 
             <p className="hero-description">
-              After a great 2025 edition in Utrecht, Dutch Cloud Native Day returns in 2026. See you
-              there!
+              Expect sessions on using AI tools and agents to develop, operate, secure and
+              troubleshoot cloud-native production infrastructure, alongside practical lessons on
+              running modern AI workloads.
             </p>
           </div>
 

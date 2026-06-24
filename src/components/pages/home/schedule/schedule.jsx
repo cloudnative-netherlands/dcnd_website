@@ -7,8 +7,8 @@ const Schedule = () => (
     <div className="container mx-auto px-4 text-center">
       <h2 className="section-title">Schedule</h2>
       <p className="mx-auto mt-4 max-w-2xl text-gray-600">
-        The 2026 program will appear here once the Call for Speakers closes and sessions are
-        confirmed. In the meantime, check out{' '}
+        The full schedule will be published once the selection process is complete. In the meantime,
+        check out{' '}
         <a
           href="/2025/"
           target="_blank"

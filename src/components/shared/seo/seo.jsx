@@ -4,7 +4,7 @@ import React from 'react';
 
 const defaultTitle = 'Dutch Cloud Native Day 2026';
 const defaultDescription =
-  'A two-day community-organized cloud native conference in Utrecht on 29 and 30 October 2026.';
+  'A two-day community-organized cloud native conference in Utrecht on 29–30 October 2026.';
 
 const SEO = ({ title, description, pathname }) => {
   const {

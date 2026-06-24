@@ -1,8 +1,8 @@
 import React from 'react';
 
-const TITLE = 'Call for Speakers';
+const TITLE = 'Program Coming Soon';
 const DESCRIPTION =
-  'The Dutch Cloud Native Day 2026 CFP is open. Submit your talk or workshop proposal via Sessionize.';
+  'The Dutch Cloud Native Day 2026 CFP is now closed. We are reviewing submissions and shaping the program.';
 
 const Hero = () => (
   <section className="safe-paddings pb-10 pt-24 lg:pt-[4.5rem] md:pb-4 md:pt-16 sm:py-8">

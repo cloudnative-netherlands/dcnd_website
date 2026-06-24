@@ -7,7 +7,7 @@ module.exports = {
   siteMetadata: {
     siteTitle: 'Dutch Cloud Native Day 2026',
     siteDescription:
-      'A two-day community-organized cloud native conference in Utrecht on 29 and 30 October 2026.',
+      'A two-day community-organized cloud native conference in Utrecht on 29–30 October 2026.',
     siteImage: '/images/social-preview.jpg',
     siteLanguage: 'en',
     siteUrl: process.env.GATSBY_DEFAULT_SITE_URL || 'http://localhost:8000',

@@ -1,8 +1,13 @@
 export default {
   schedule: {
-    title: 'Dutch Cloud Native Day 2026 — 29 & 30 October, Jaarbeurs Utrecht',
+    title: 'Dutch Cloud Native Day 2026 — 29–30 October, Jaarbeurs Utrecht',
     description:
-      'Dutch Cloud Native Day 2026 takes place on 29 and 30 October at Jaarbeurs in Utrecht. Two full days of talks, workshops and community for Kubernetes and Cloud Native professionals.',
+      'Dutch Cloud Native Day 2026 takes place on 29–30 October at Jaarbeurs in Utrecht. Two full days of talks, workshops and community for Kubernetes and Cloud Native professionals.',
+  },
+  program: {
+    title: 'Program Coming Soon — Dutch Cloud Native Day 2026',
+    description:
+      'The Dutch Cloud Native Day 2026 CFP is closed. The full schedule will be published once the selection process is complete.',
   },
   /* workshops: {
     title: 'Workshops — Kubernetes Community Days',

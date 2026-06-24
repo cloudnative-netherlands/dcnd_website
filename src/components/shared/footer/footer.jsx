@@ -1,17 +1,11 @@
+import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
 import slugify from 'slugify';
 
 import LINKS from 'constants/links.js';
 import MENUS from 'constants/menus';
 import GoogleMaps from 'icons/google-maps-icon.inline.svg';
-
 import LinkedIn from 'icons/linkedin-logo.inline.svg';
-///import Twitter from 'icons/twitter-logo.inline.svg';
-///import Youtube from 'icons/youtube.inline.svg';
-///import { FaDiscord } from 'react-icons/fa';
-///import { FaBluesky } from 'react-icons/fa6';
-
-import { StaticImage } from 'gatsby-plugin-image';
 
 import Button from '../button';
 import { useCookieConsent } from '../cookie-consent';
@@ -22,14 +16,6 @@ import './footer.css';
 const items = [
   { icon: GoogleMaps, iconClassName: 'w-4 h-9', url: LINKS.googlemaps.to },
   { icon: LinkedIn, iconClassName: 'w-5 h-9', url: LINKS.linkedin.to },
-  ///{ icon: Twitter, iconClassName: 'w-5 h-9', url: LINKS.twitter.to },
-  ///{ icon: Youtube, iconClassName: 'w-7 h-9', url: LINKS.youtube.to },
-  ///{ icon: FaDiscord, iconClassName: 'w-7 h-9', url: 'https://discord.com/invite/Ht3upbGey9' },
-  ///{
-  ///  icon: FaBluesky,
-  ///  iconClassName: 'w-5 h-9',
-  ///  url: 'https://bsky.app/profile/cnsmunich.bsky.social',
-  ///},
 ];
 
 const Footer = () => {
@@ -65,15 +51,41 @@ const Footer = () => {
         </Link>
 
         <nav className="footer-nav" aria-label="Footer navigation">
-          <ul className="footer-nav-list">
-            {MENUS.footer.map(({ text, to, target }, index) => (
-              <li className="footer-nav-item" key={index}>
-                <Button className="Link" to={to} target={target} onClick={handleAnchorClick}>
-                  {text}
-                </Button>
-              </li>
-            ))}
-          </ul>
+          {[
+            ['Conference', MENUS.footer.conference],
+            ['Community', MENUS.footer.community],
+            ['Legal', MENUS.footer.legal],
+          ].map(([title, links]) => (
+            <div className="footer-nav-column" key={title}>
+              <h2 className="footer-nav-heading">{title}</h2>
+              <ul className="footer-nav-list">
+                {links.map(({ text, to, target, external, children }, index) => (
+                  <li className="footer-nav-item" key={index}>
+                    <Button
+                      className="Link"
+                      to={to || children?.[0]?.to}
+                      target={target || children?.[0]?.target}
+                      external={external || children?.[0]?.external}
+                      onClick={handleAnchorClick}
+                    >
+                      {text}
+                    </Button>
+                  </li>
+                ))}
+                {title === 'Legal' && (
+                  <li className="footer-nav-item">
+                    <button
+                      type="button"
+                      className="footer-cookie-link"
+                      onClick={openCookiePreferences}
+                    >
+                      Cookie settings
+                    </button>
+                  </li>
+                )}
+              </ul>
+            </div>
+          ))}
         </nav>
         <div className="footer-contact">
           <div className="flex h-full items-center justify-center">
@@ -105,9 +117,6 @@ const Footer = () => {
               );
             })}
           </ul>
-          <button type="button" className="footer-cookie-link" onClick={openCookiePreferences}>
-            Cookie settings
-          </button>
         </div>
       </div>
     </footer>

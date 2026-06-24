@@ -1,5 +1,5 @@
 import { CalendarDays, Info, Clock } from 'lucide-react';
-import React, { useState, useEffect } from 'react';
+import React, { useCallback, useState, useEffect } from 'react';
 import './proposal.css';
 
 const PLAYLIST_ID = 'PL54A_DPe8WtBuSp7sqpxeuy_UoTTlKB1O';
@@ -222,9 +222,9 @@ const SAMPLE_VIDEOS = [
 const Proposal = () => {
   const [videos, setVideos] = useState(SAMPLE_VIDEOS);
 
-  // CFP for 2026 has not opened yet — dates TBA.
-  const isNotYetOpen = true;
-  const isClosed = false;
+  // CFP for 2026 is closed while the program is being prepared.
+  const isNotYetOpen = false;
+  const isClosed = true;
   const progress = 0;
 
   const sessions = [
@@ -235,18 +235,18 @@ const Proposal = () => {
     { type: 'Panel Discussion', duration: '45min' },
   ];
 
-  const shuffleVideos = () => {
-    setVideos([...videos].sort(() => Math.random() - 0.5));
-  };
+  const shuffleVideos = useCallback(() => {
+    setVideos((currentVideos) => [...currentVideos].sort(() => Math.random() - 0.5));
+  }, []);
 
   useEffect(() => {
     shuffleVideos();
-  }, []);
+  }, [shuffleVideos]);
 
   return (
     <div className="mx-auto max-w-7xl p-4" id="proposal">
       <div className="mx-auto max-w-7xl space-y-8">
-        <h2 className="section-title">Submit a Talk</h2>
+        <h2 className="section-title">Program Coming Soon</h2>
         {/* Timeline Card */}
         <div className="rounded-lg border bg-white shadow-sm">
           <div className="border-b p-6">
@@ -260,11 +260,11 @@ const Proposal = () => {
               <div className="flex justify-between text-sm">
                 <div>
                   <div className="text-gray-500">Opens</div>
-                  <div className="font-medium">TBA</div>
+                  <div className="font-medium">Closed</div>
                 </div>
                 <div className="text-right">
                   <div className="text-gray-500">Closes</div>
-                  <div className="font-medium">TBA</div>
+                  <div className="font-medium">Closed</div>
                 </div>
               </div>
 
@@ -280,13 +280,13 @@ const Proposal = () => {
 
               {isNotYetOpen && (
                 <div className="mt-4 rounded-md p-3 text-center text-sm font-medium">
-                  The 2026 Call for Speakers is not open yet — dates will be announced soon.
+                  The 2026 Call for Papers is not open yet.
                 </div>
               )}
 
               {isClosed && (
                 <div className="mt-4 rounded-md p-3 text-center text-sm font-medium">
-                  Submissions are closed. Thank you for your participation!
+                  The Call for Papers is now closed. Thank you to everyone who submitted.
                 </div>
               )}
             </div>
@@ -303,7 +303,7 @@ const Proposal = () => {
               </h2>
             </div>
             <div className="space-y-4 p-6">
-              <p className="text-lg font-medium">First time submitting? Don't feel intimidated.</p>
+              <p className="text-lg font-medium">First time submitting? Don&apos;t feel intimidated.</p>
               <p className="text-gray-600">
                 This CNS is an excellent way to get to know the community and share your ideas.
               </p>
@@ -337,6 +337,7 @@ const Proposal = () => {
               >
                 <button
                   className="button"
+                  type="button"
                   onClick={() =>
                     window.open('https://sessionize.com/cloud-native-summit-munich-2025/', '_blank')
                   }
@@ -356,6 +357,7 @@ const Proposal = () => {
                 <div className="relative w-full bg-black pt-[56.25%]">
                   <button
                     className="absolute inset-0 flex h-full w-full items-center justify-center"
+                    type="button"
                     onClick={() =>
                       window.open(`https://www.youtube.com/watch?v=${video.id}`, '_blank')
                     }
@@ -374,8 +376,8 @@ const Proposal = () => {
                         <path
                           d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"
                           fill="#f00"
-                        ></path>
-                        <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+                        />
+                        <path d="M 45,24 27,14 27,34" fill="#fff" />
                       </svg>
                     </div>
                   </button>
@@ -407,8 +409,9 @@ const Proposal = () => {
               View Full Playlist
             </a>
             <button
-              onClick={shuffleVideos}
               className="inline-flex items-center gap-2 rounded-md border border-gray-200 bg-white px-4 py-2 text-gray-600 hover:bg-gray-50"
+              type="button"
+              onClick={shuffleVideos}
             >
               <svg
                 className="h-4 w-4"
