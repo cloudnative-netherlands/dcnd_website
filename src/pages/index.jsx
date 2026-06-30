@@ -19,23 +19,6 @@ const HomePage = () => (
   </Layout>
 );
 
-/*
-<Speakers location={location} />
-<FloorPlan />
-<GoldSponsor />
-<Proposal />
-<Schedule />
-<Venue />
-<Details />
-<Partners />
-<Proposal />
-<Tickets />
-<Speakers />
-<Sponsors />
-<Details />
-<Proposal />
-*/
-
 export default HomePage;
 
 export const Head = ({ location: { pathname } }) => <SEO pathname={pathname} />;
