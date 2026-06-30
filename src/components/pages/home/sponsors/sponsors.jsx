@@ -1,49 +1,33 @@
 import clsx from 'clsx';
 import React from 'react';
 
-import Exoscale from 'icons/exoscale_logo.png';
-import HCS_Company from 'icons/HCS-Wordmark.png';
-import Mirantis from 'icons/mirantis_logo.png';
-import Isovalent from 'icons/isovalent_logo.jpeg';
-import Rabobank from 'icons/Rabobank_logo.png';
-import Devoteam from 'icons/devoteam_logo.png';
-import Innovations from 'icons/eg_logo.png';
-import IShare from 'icons/i-share_logo.png';
-import SUSE from 'icons/SUSE.png';
-import ATComputing from 'icons/AT_logo.png';
-import TrueFullstaq from 'icons/True-fullstaq_logo.png';
-import Booking from 'icons/Booking_logo.png';
-import varonis from 'icons/varonis.png';
-import scaleway from 'icons/scaleway.png';
-import sysdig from 'icons/sysdig.png';
-import itq from 'icons/itq-logo.png';
-import BBTG from 'icons/bbtg-logo-full.svg';
-import mogenius from 'icons/mogenius_logo.png';
-import nirmata from 'icons/nirmata_logo.webp';
-import qstarsIT from 'icons/QStars_logo.png';
-import cyso from 'icons/Cyso-Logo.png';
-import leaseweb from 'icons/leaseweb_logo.png';
-import fikaworks from 'icons/fikaworks_logo.png';
-import controlplane from 'icons/controlplane_logo.png';
-import amsterdamdev from 'icons/amsterdamdev_logo.png';
-import learnk8s from 'icons/learnk8s_logo.png';
-import certdirectory from 'icons/cert_logo.png';
-import pyladies from 'icons/pyladies.png';
-import dutchcloudnativemeetup from 'icons/dutchcloudnativemeetup.jpg';
 import Clastix from 'icons/clastix-logo.png';
+import Dash0 from 'icons/dash0-logo.svg';
+import Exoscale from 'icons/exoscale-logo.png';
+import Grafana from 'icons/grafanalabs.webp';
+import itq from 'icons/itq-logo.png';
+import learnk8s from 'icons/learnk8s-logo.png';
+import Rubicon from 'icons/rubicon-logo.svg';
+import SUSE from 'icons/suse-logo.png';
+import sysdig from 'icons/sysdig.png';
 
 import './sponsor.css';
 
 const SHOW_SPONSORS = true;
 
+// Sponsor prominence is set by tier card dimensions. Per-logo scale only compensates
+// for source artwork whitespace and aspect ratio so logos look optically balanced.
 const tierConfig = {
   platinum: {
     title: 'Platinum',
     class: 'bg-white shadow-sm',
     badgeClass: 'bg-purple-50 text-purple-500',
     cardClass: '',
-    cardWidth: 260,
-    cardHeight: 130,
+    cardWidth: 352,
+    cardHeight: 156,
+    logoBoxWidth: 260,
+    logoBoxHeight: 82,
+    headingClass: 'text-2xl',
     containerClass: 'flex flex-wrap justify-center gap-4',
   },
   gold: {
@@ -51,8 +35,11 @@ const tierConfig = {
     class: 'bg-white shadow-sm',
     badgeClass: 'bg-yellow-50 text-yellow-500',
     cardClass: '',
-    cardWidth: 190,
-    cardHeight: 105,
+    cardWidth: 304,
+    cardHeight: 132,
+    logoBoxWidth: 224,
+    logoBoxHeight: 68,
+    headingClass: 'text-[1.35rem]',
     containerClass: 'flex flex-wrap justify-center gap-4',
   },
   silver: {
@@ -60,8 +47,11 @@ const tierConfig = {
     class: 'bg-white shadow-sm',
     badgeClass: 'bg-gray-50 text-gray-500',
     cardClass: '',
-    cardWidth: 180,
-    cardHeight: 100,
+    cardWidth: 248,
+    cardHeight: 112,
+    logoBoxWidth: 170,
+    logoBoxHeight: 50,
+    headingClass: 'text-xl',
     containerClass: 'flex flex-wrap justify-center gap-4',
   },
   bronze: {
@@ -69,8 +59,11 @@ const tierConfig = {
     class: 'bg-white shadow-sm',
     badgeClass: 'bg-orange-50 text-orange-500',
     cardClass: '',
-    cardWidth: 180,
-    cardHeight: 90,
+    cardWidth: 220,
+    cardHeight: 96,
+    logoBoxWidth: 164,
+    logoBoxHeight: 46,
+    headingClass: 'text-xl',
     containerClass: 'flex flex-wrap justify-center gap-4',
   },
   partner: {
@@ -78,255 +71,79 @@ const tierConfig = {
     class: 'bg-white shadow-sm',
     badgeClass: 'bg-green-50 text-green-500',
     cardClass: '',
-    cardWidth: 180,
-    cardHeight: 90,
+    cardWidth: 220,
+    cardHeight: 96,
+    logoBoxWidth: 164,
+    logoBoxHeight: 46,
+    headingClass: 'text-xl',
     containerClass: 'flex flex-wrap justify-center gap-4',
   },
 };
 
 const sponsorsList = [
   {
-    name: 'Clastix',
+    name: 'CLASTIX',
     icon: Clastix,
     url: 'https://www.clastix.io/',
     tier: 'platinum',
-    logoWidth: 215,
-    logoHeight: 115,
-    isCurrent: true,
+    logoScale: 1.1,
   },
   {
-    name: 'Exoscale',
+    name: 'Dash0',
+    icon: Dash0,
+    url: 'https://www.dash0.com/',
+    tier: 'platinum',
+    logoScale: 0.9,
+  },
+  {
+    name: 'Exoscale (A1.digital)',
     icon: Exoscale,
     url: 'https://www.exoscale.com',
-    tier: 'platinum',
-    logoWidth: 170,
-    logoHeight: 120,
-  },
-  {
-    name: 'HCS_Company',
-    icon: HCS_Company,
-    url: 'https://www.hcs-company.com',
-    tier: 'platinum',
-    logoWidth: 190,
-    logoHeight: 120,
-  },
-  {
-    name: 'Mirantis',
-    icon: Mirantis,
-    url: 'https://www.mirantis.com',
-    tier: 'platinum',
-    logoWidth: 100,
-    logoHeight: 80,
-  },
-  {
-    name: 'Building Beyond Technology Group',
-    icon: BBTG,
-    url: 'https://bbtg.com/',
     tier: 'gold',
-    logoWidth: 150,
-    logoHeight: 100,
-    isCurrent: true,
-  },
-  {
-    name: 'Isovalent',
-    icon: Isovalent,
-    url: 'https://www.isovalent.com',
-    tier: 'gold',
-    logoWidth: 150,
-    logoHeight: 100,
-  },
-  {
-    name: 'Rabobank',
-    icon: Rabobank,
-    url: 'https://www.rabobank.nl/particulieren',
-    tier: 'gold',
-    logoWidth: 120,
-    logoHeight: 90,
+    logoScale: 0.92,
   },
   {
     name: 'SUSE',
     icon: SUSE,
     url: 'https://www.suse.com/',
-    tier: 'gold',
-    logoWidth: 150,
-    logoHeight: 100,
-  },
-  {
-    name: 'Devoteam',
-    icon: Devoteam,
-    url: 'https://www.devoteam.com/',
-    tier: 'gold',
-    logoWidth: 150,
-    logoHeight: 100,
-  },
-  {
-    name: 'EG-Innovations',
-    icon: Innovations,
-    url: 'https://www.eginnovations.com/',
-    tier: 'gold',
-    logoWidth: 200,
-    logoHeight: 150,
-  },
-  {
-    name: 'I-Share',
-    icon: IShare,
-    url: 'https://www.i-share.nl/',
-    tier: 'gold',
-    logoWidth: 100,
-    logoHeight: 70,
-  },
-  {
-    name: 'AT-Computing',
-    icon: ATComputing,
-    url: 'https://www.atcomputing.nl',
-    tier: 'silver',
-    logoWidth: 150,
-    logoHeight: 100,
-  },
-  {
-    name: 'TrueFullstaq',
-    icon: TrueFullstaq,
-    url: 'https://www.truefullstaq.com/',
-    tier: 'silver',
-    logoWidth: 150,
-    logoHeight: 100,
-  },
-  {
-    name: 'Booking',
-    icon: Booking,
-    url: 'https://www.booking.com',
-    tier: 'silver',
-    logoWidth: 200,
-    logoHeight: 120,
+    tier: 'platinum',
+    logoScale: 1.04,
   },
   {
     name: 'ITQ',
     icon: itq,
     url: 'https://itq.eu/nl',
     tier: 'silver',
-    logoWidth: 150,
-    logoHeight: 100,
-    isCurrent: true,
+    logoScale: 0.94,
   },
   {
-    name: 'mogenius',
-    icon: mogenius,
-    url: 'https://mogenius.com',
+    name: 'Grafana',
+    icon: Grafana,
+    url: 'https://grafana.com/',
     tier: 'silver',
-    logoWidth: 150,
-    logoHeight: 100,
-  },
-  {
-    name: 'nirmata',
-    icon: nirmata,
-    url: 'https://nirmata.com',
-    tier: 'silver',
-    logoWidth: 150,
-    logoHeight: 100,
-  },
-  {
-    name: 'qstarsIT',
-    icon: qstarsIT,
-    url: 'https://www.qstars.nl',
-    tier: 'silver',
-    logoWidth: 150,
-    logoHeight: 100,
-  },
-  {
-    name: 'cyso',
-    icon: cyso,
-    url: 'https://cyso.cloud/',
-    tier: 'silver',
-    logoWidth: 150,
-    logoHeight: 100,
-  },
-  {
-    name: 'leaseweb',
-    icon: leaseweb,
-    url: 'https://www.leaseweb.com/nl',
-    tier: 'silver',
-    logoWidth: 200,
-    logoHeight: 120,
+    logoScale: 1.1,
   },
   {
     name: 'Sysdig',
     icon: sysdig,
     url: 'https://www.sysdig.com/',
     tier: 'silver',
-    logoWidth: 100,
-    logoHeight: 60,
+    logoScale: 0.86,
   },
   {
-    name: 'Varonis',
-    icon: varonis,
-    url: 'https://www.varonis.com/',
-    tier: 'silver',
-    logoWidth: 150,
-    logoHeight: 100,
-  },
-  {
-    name: 'Scaleway',
-    icon: scaleway,
-    url: 'https://www.scaleway.com/',
-    tier: 'silver',
-    logoWidth: 150,
-    logoHeight: 100,
-  },
-  {
-    name: 'fikaworks',
-    icon: fikaworks,
-    url: 'https://fika.works',
-    tier: 'bronze',
-    logoWidth: 130,
-    logoHeight: 90,
-  },
-  {
-    name: 'controlplane',
-    icon: controlplane,
-    url: 'https://control-plane.io',
-    tier: 'bronze',
-    logoWidth: 150,
-    logoHeight: 100,
-  },
-  {
-    name: 'learnk8s',
+    name: 'Learnk8s',
     icon: learnk8s,
     url: 'https://kube.careers/',
     tier: 'partner',
-    logoWidth: 150,
-    logoHeight: 100,
+    logoScale: 0.92,
   },
   {
-    name: 'amsterdamdev',
-    icon: amsterdamdev,
-    url: 'https://amsterdam.dev',
-    tier: 'partner',
-    logoWidth: 150,
-    logoHeight: 100,
-  },
-  {
-    name: 'certdirectory',
-    icon: certdirectory,
-    url: 'https://certdirectory.io',
-    tier: 'partner',
-    logoWidth: 150,
-    logoHeight: 100,
-  },
-  {
-    name: 'pyladies',
-    icon: pyladies,
-    url: 'https://amsterdam.pyladies.com',
-    tier: 'partner',
-    logoWidth: 150,
-    logoHeight: 100,
-  },
-  {
-    name: 'dutchcloudnativemeetup',
-    icon: dutchcloudnativemeetup,
-    url: 'https://www.meetup.com/dutch-cloud-native',
-    tier: 'partner',
-    logoWidth: 150,
-    logoHeight: 100,
+    name: 'Rubicon',
+    icon: Rubicon,
+    url: 'https://rubicon.nl/',
+    tier: 'gold',
+    // Dense wordmark; reduced within the shared Gold logo box for optical balance.
+    logoScale: 0.86,
   },
 ];
 
@@ -398,16 +215,17 @@ const Sponsors = () => {
         </p>
       </div>
 
-      {Object.entries(tierConfig).map(([tier, config]) => {
-        const tierSponsors = sponsorsList.filter((s) => s.isCurrent && s.tier === tier);
+      {Object.entries(tierConfig).map(([tier, config], index) => {
+        const tierSponsors = sponsorsList.filter((s) => s.tier === tier);
 
         if (tierSponsors.length === 0) return null;
 
         return (
-          <div key={tier} className="mb-12">
-            <div className="mb-16 text-center" />
-            <div className="mb-6 flex items-center justify-center gap-2">
-              <h3 className="text-xl font-semibold text-gray-900">{config.title}</h3>
+          <div key={tier} className={clsx('mb-12', index > 0 && 'pt-8')}>
+            <div className="mb-4 flex items-center justify-center gap-2">
+              <h3 className={clsx('font-semibold text-gray-900', config.headingClass)}>
+                {config.title}
+              </h3>
               <span
                 className={clsx('rounded-full px-2 py-0.5 text-xs font-medium', config.badgeClass)}
               >
@@ -431,21 +249,35 @@ const Sponsors = () => {
                   data-goatcounter-click="sponsor-click"
                   data-goatcounter-title="Sponsor click"
                   style={{
-                    width: config.cardWidth,
+                    width: `min(100%, ${config.cardWidth}px)`,
                     height: config.cardHeight,
                   }}
                 >
-                  <div className="relative flex h-full w-full items-center justify-center">
-                    <img
-                      src={sponsor.icon}
-                      alt={sponsor.name}
-                      loading="lazy"
-                      className="object-contain"
-                      style={{
-                        maxWidth: sponsor.logoWidth ? sponsor.logoWidth : DEFAULT_LOGO_WIDTH,
-                        maxHeight: sponsor.logoHeight ? sponsor.logoHeight : DEFAULT_LOGO_HEIGHT,
-                      }}
-                    />
+                  <div className="relative flex h-full w-full items-center justify-center px-4">
+                    {sponsor.icon ? (
+                      <span
+                        className="flex items-center justify-center"
+                        style={{
+                          width: config.logoBoxWidth || DEFAULT_LOGO_WIDTH,
+                          height: config.logoBoxHeight || DEFAULT_LOGO_HEIGHT,
+                          transform: `translate(${sponsor.logoX || 0}px, ${
+                            sponsor.logoY || 0
+                          }px) scale(${sponsor.logoScale || 1})`,
+                          transformOrigin: 'center',
+                        }}
+                      >
+                        <img
+                          src={sponsor.icon}
+                          alt={sponsor.name}
+                          loading="lazy"
+                          className="h-full w-full object-contain"
+                        />
+                      </span>
+                    ) : (
+                      <span className="px-4 text-center text-xl font-semibold text-gray-900">
+                        {sponsor.name}
+                      </span>
+                    )}
                   </div>
                 </a>
               ))}

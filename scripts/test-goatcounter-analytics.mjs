@@ -19,7 +19,7 @@ assert.match(html, /src="https:\/\/gc\.zgo\.at\/count\.js"/);
 [
   ['ticket-click', 'Ticket click', `${hero}\n${tickets}`],
   ['eventbrite-open', 'Eventbrite checkout opened', `${tickets}\n${checkout}`],
-  ['cfp-click', 'CFP click', hero],
+  ['program-click', 'Program click', hero],
   ['sponsor-click', 'Sponsor click', `${hero}\n${sponsors}`],
   ['contact-click', 'Contact click', `${tickets}\n${sponsors}\n${footer}`],
 ].forEach(([path, title, source]) => {
