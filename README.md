@@ -1,4 +1,4 @@
-# Pixel Point Gatsby Tailwind Starter
+# Dutch Cloud Native Day Website
 
 ## Table of Contents
 
@@ -16,10 +16,10 @@
 
 ## Getting Started
 
-1. Clone this repository or hit "Use this template" button
+1. Clone this repository
 
 ```bash
-git clone git@github.com:KCDMunich/website.git
+git clone git@github.com:cloudnative-netherlands/dcnd_website.git
 ```
 
 2. Install dependencies
@@ -171,3 +171,12 @@ You can navigate to settings.json by using Command Pallete (CMD+Shift+P) and the
 To enable Prettier go to Preferences -> Settings -> type "Format". Then check that you have esbenp.prettier-vscode as default formatter, and also enable "Format On Save".
 
 Reload VS Code and auto-format will work for you.
+
+## Sponsor Logo Sizing
+
+Sponsor prominence is determined only by sponsorship tier. Each tier uses one
+fixed card size, one fixed logo bounding box, and one shared visual treatment.
+Individual logo scale values are used only for optical normalization.
+
+See [docs/sponsor-logo-sizing.md](docs/sponsor-logo-sizing.md) for the full
+policy.

@@ -1,6 +1,6 @@
 {
-  "name": "gatsby-tailwind-starter",
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "name": "dcnd-website",
+  "description": "Dutch Cloud Native Day website",
   "version": "0.1.0",
   "author": "Alex Barashkov <alex@pixelpoint.io>",
   "engines": {
@@ -100,9 +100,9 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pixel-point/gatsby-tailwind-starter"
+    "url": "https://github.com/cloudnative-netherlands/dcnd_website"
   },
   "bugs": {
-    "url": "https://github.com/pixel-point/gatsby-tailwind-starter/issues"
+    "url": "https://github.com/cloudnative-netherlands/dcnd_website/issues"
   }
 }
