@@ -5,6 +5,7 @@ import Clastix from 'icons/clastix-logo.png';
 import Dash0 from 'icons/dash0-logo.svg';
 import Exoscale from 'icons/exoscale-logo.png';
 import Grafana from 'icons/grafanalabs.webp';
+import Isovalent from 'icons/isovalent.svg';
 import itq from 'icons/itq-logo.png';
 import learnk8s from 'icons/learnk8s-logo.png';
 import Rubicon from 'icons/rubicon-logo.svg';
@@ -99,6 +100,13 @@ const sponsorsList = [
     name: 'Exoscale (A1.digital)',
     icon: Exoscale,
     url: 'https://www.exoscale.com',
+    tier: 'gold',
+    logoScale: 0.92,
+  },
+  {
+    name: 'Isovalent',
+    icon: Isovalent,
+    url: 'https://isovalent.com/',
     tier: 'gold',
     logoScale: 0.92,
   },
