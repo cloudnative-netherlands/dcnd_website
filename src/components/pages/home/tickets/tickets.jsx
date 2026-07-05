@@ -62,7 +62,7 @@ const Tickets = () => {
         {hasTicketCheckoutConsent && (
           <p className="tickets-cookie-note">
             Ticket checkout is loaded from Eventbrite because you allowed the ticket checkout
-            service. You can change this in Cookie settings.
+            service. You can change this in Privacy and cookie settings.
           </p>
         )}
 

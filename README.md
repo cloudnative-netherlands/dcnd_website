@@ -60,6 +60,8 @@ npm run serve
 npm run clean
 ```
 
+Analytics setup is documented in [docs/analytics.md](docs/analytics.md).
+
 ## Project Structure
 
 ```text
