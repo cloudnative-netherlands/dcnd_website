@@ -38,10 +38,12 @@ GATSBY_GTM_ID=GTM-WGZC5SKF npm run start
 GTM still loads only after accepting `Additional analytics — Google Analytics`.
 This uses the production GTM container and may create local test traffic in GA4.
 
-When that consent is granted, the site queues Google Consent Mode with
-`analytics_storage: granted` before GTM loads. All advertising-related consent
-states remain denied. Withdrawing Google Analytics queues an analytics denial,
-removes known GA cookies and reloads so GTM is absent from the new page.
+When that consent is granted, the site locally queues the Google Consent Mode
+default denial followed immediately by `analytics_storage: granted`, before
+GTM loads. All advertising-related consent states remain denied. The standard
+GTM bootstrap event and the site-specific consent event then follow in the
+data layer. Withdrawing Google Analytics queues an analytics denial, removes
+known GA cookies and reloads so GTM is absent from the new page.
 
 ## Production Configuration
 
@@ -139,7 +141,9 @@ and cookies:
 - Accept Additional analytics — Google Analytics: `window.dataLayer` includes
   `dcnd_analytics_consent_granted`.
 - In GTM Preview or Tag Assistant, GA4 measurement ID `G-L2BFB87LQ2` fires from
-  GTM after consent.
+  GTM after consent. Because GTM is intentionally absent before consent, start
+  the debug session after consent has been stored or retry the connection after
+  accepting the banner.
 - Accept Eventbrite only: the Eventbrite checkout loads while GTM does not.
 - Withdraw Google Analytics and reload: GTM no longer loads while GoatCounter
   remains active.

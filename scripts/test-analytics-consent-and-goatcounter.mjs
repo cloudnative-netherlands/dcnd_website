@@ -28,6 +28,7 @@ const consentStorage = loadModule('src/utils/consent-storage.js', [
 const gtm = loadModule('src/utils/google-tag-manager.js', [
   'GTM_SCRIPT_ID',
   'GTM_CONSENT_EVENT',
+  'GTM_BOOTSTRAP_EVENT',
   'getConfiguredGtmId',
   'isValidGtmId',
   'updateGoogleConsent',
@@ -190,10 +191,20 @@ assert.equal(gtm.loadGoogleTagManager('GTM-WGZC5SKF'), true);
 assert.equal(gtm.loadGoogleTagManager('GTM-WGZC5SKF'), true);
 assert.equal(getGtmScripts().length, 1);
 assert.equal(getGtmScripts()[0].src, 'https://www.googletagmanager.com/gtm.js?id=GTM-WGZC5SKF');
-assert.equal(window.dataLayer.length, 2);
+assert.equal(window.dataLayer.length, 4);
 assert.deepEqual([...window.dataLayer[0]], [
   'consent',
   'default',
+  {
+    analytics_storage: 'denied',
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+  },
+]);
+assert.deepEqual([...window.dataLayer[1]], [
+  'consent',
+  'update',
   {
     analytics_storage: 'granted',
     ad_storage: 'denied',
@@ -201,9 +212,11 @@ assert.deepEqual([...window.dataLayer[0]], [
     ad_personalization: 'denied',
   },
 ]);
-assert.deepEqual(window.dataLayer[1], { event: gtm.GTM_CONSENT_EVENT });
+assert.equal(window.dataLayer[2].event, gtm.GTM_BOOTSTRAP_EVENT);
+assert.equal(typeof window.dataLayer[2]['gtm.start'], 'number');
+assert.deepEqual(window.dataLayer[3], { event: gtm.GTM_CONSENT_EVENT });
 assert.equal(gtm.updateGoogleConsent('denied'), true);
-assert.deepEqual([...window.dataLayer[2]], [
+assert.deepEqual([...window.dataLayer[4]], [
   'consent',
   'update',
   {
@@ -218,8 +231,8 @@ teardownDom();
 setupDom();
 window.dataLayer = { stale: true };
 assert.equal(gtm.loadGoogleTagManager('GTM-WGZC5SKF'), true);
-assert.equal(window.dataLayer.length, 2);
-assert.deepEqual(window.dataLayer[1], { event: gtm.GTM_CONSENT_EVENT });
+assert.equal(window.dataLayer.length, 4);
+assert.deepEqual(window.dataLayer[3], { event: gtm.GTM_CONSENT_EVENT });
 assert.equal(getGtmScripts().length, 1);
 teardownDom();
 
@@ -258,8 +271,8 @@ assertGoatCounterIsConfigured();
 assert.equal(returningConsent.googleAnalytics, true);
 assert.equal(returningConsent.eventbrite, false);
 assert.equal(gtm.loadGoogleTagManager('GTM-WGZC5SKF'), true);
-assert.equal(window.dataLayer.length, 2);
-assert.deepEqual(window.dataLayer[1], { event: gtm.GTM_CONSENT_EVENT });
+assert.equal(window.dataLayer.length, 4);
+assert.deepEqual(window.dataLayer[3], { event: gtm.GTM_CONSENT_EVENT });
 teardownDom();
 
 setupDom();

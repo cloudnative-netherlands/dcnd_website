@@ -1,7 +1,9 @@
 export const GTM_SCRIPT_ID = 'dcnd-google-tag-manager';
 export const GTM_CONSENT_EVENT = 'dcnd_analytics_consent_granted';
 export const GTM_CONSENT_EVENT_FLAG = '__dcndGtmConsentEventPushed';
-export const GTM_DEFAULT_CONSENT_FLAG = '__dcndGtmDefaultConsentQueued';
+export const GTM_BOOTSTRAP_EVENT = 'gtm.js';
+export const GTM_BOOTSTRAP_FLAG = '__dcndGtmBootstrapPushed';
+export const GTM_CONSENT_INITIALIZED_FLAG = '__dcndGtmConsentInitialized';
 export const GTM_ID_PATTERN = /^GTM-[A-Z0-9]+$/;
 
 const grantedGoogleConsent = {
@@ -76,10 +78,19 @@ export const loadGoogleTagManager = (gtmId = getConfiguredGtmId()) => {
     window.dataLayer = [];
   }
 
-  if (!window[GTM_DEFAULT_CONSENT_FLAG]) {
-    // GTM reads this queued state as it starts, before Google tags can execute.
-    gtag('consent', 'default', grantedGoogleConsent);
-    window[GTM_DEFAULT_CONSENT_FLAG] = true;
+  if (!window[GTM_CONSENT_INITIALIZED_FLAG]) {
+    // This remains local until GTM starts. The user has already opted in.
+    gtag('consent', 'default', deniedGoogleConsent);
+    gtag('consent', 'update', grantedGoogleConsent);
+    window[GTM_CONSENT_INITIALIZED_FLAG] = true;
+  }
+
+  if (!window[GTM_BOOTSTRAP_FLAG]) {
+    window.dataLayer.push({
+      'gtm.start': Date.now(),
+      event: GTM_BOOTSTRAP_EVENT,
+    });
+    window[GTM_BOOTSTRAP_FLAG] = true;
   }
 
   if (!document.getElementById(GTM_SCRIPT_ID)) {
