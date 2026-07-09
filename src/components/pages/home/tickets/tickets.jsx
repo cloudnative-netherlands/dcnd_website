@@ -6,8 +6,6 @@ import { useCookieConsent } from 'components/shared/cookie-consent';
 import { EVENTBRITE_TICKETS_URL } from '../eventbrite';
 import EventbriteEmbeddedCheckout from '../eventbrite-embedded-checkout';
 
-import IdealPaymentWarning from './IdealPaymentWarning';
-
 const Tickets = () => {
   const { hasTicketCheckoutConsent, openCookiePreferences } = useCookieConsent();
   return (
@@ -19,7 +17,6 @@ const Tickets = () => {
           <div className="tickets-card-heading">
             <h3>Dutch Cloud Native Day 2026</h3>
           </div>
-          <IdealPaymentWarning />
           {hasTicketCheckoutConsent ? (
             <EventbriteEmbeddedCheckout />
           ) : (
