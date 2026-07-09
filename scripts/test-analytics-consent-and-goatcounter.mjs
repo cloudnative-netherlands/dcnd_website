@@ -30,6 +30,7 @@ const gtm = loadModule('src/utils/google-tag-manager.js', [
   'GTM_CONSENT_EVENT',
   'getConfiguredGtmId',
   'isValidGtmId',
+  'updateGoogleConsent',
   'loadGoogleTagManager',
 ]);
 
@@ -60,6 +61,7 @@ const tickets = read('src/components/pages/home/tickets/tickets.jsx');
 const checkout = read('src/components/pages/home/eventbrite-embedded-checkout.jsx');
 const sponsors = read('src/components/pages/home/sponsors/sponsors.jsx');
 const footer = read('src/components/shared/footer/footer.jsx');
+const cookieConsent = read('src/components/shared/cookie-consent/cookie-consent.jsx');
 const gatsbyNode = read('gatsby-node.js');
 
 const assertGoatCounterIsConfigured = () => {
@@ -113,7 +115,7 @@ const runtimeSource = sourceFiles
   .map((path) => readFileSync(path, 'utf8'))
   .join('\n');
 
-assert.doesNotMatch(runtimeSource, /gtag\(|gtag\.js|google-analytics\.com/);
+assert.doesNotMatch(runtimeSource, /gtag\.js|google-analytics\.com/);
 assert.doesNotMatch(read('src/html.jsx'), /googletagmanager|gtag|noscript/);
 assert.match(searchableSource, /GoatCounter|goatcounter|gc\.zgo\.at|data-goatcounter/);
 assertGoatCounterIsConfigured();
@@ -139,6 +141,10 @@ assert.match(read('docs/analytics.md'), /GoatCounter is the limited aggregate tr
 assert.match(read('docs/analytics.md'), /dcnd_analytics_consent_granted/);
 assert.match(read('docs/analytics.md'), /GoatCounter does not need a Netlify/);
 assert.match(read('docs/analytics.md'), /Google Tag Manager is disabled when `GATSBY_GTM_ID` is not set/);
+assert.match(cookieConsent, /updateGoogleConsent\(/);
+assert.match(cookieConsent, /writeStoredConsent\(nextConsent\)/);
+assert.match(cookieConsent, /removeGoogleAnalyticsCookies\(\)/);
+assert.match(cookieConsent, /window\.location\.reload\(\)/);
 assert.match(
   read('content/static-pages/privacy.md'),
   /Limited Aggregate Analytics With GoatCounter/
@@ -184,13 +190,36 @@ assert.equal(gtm.loadGoogleTagManager('GTM-WGZC5SKF'), true);
 assert.equal(gtm.loadGoogleTagManager('GTM-WGZC5SKF'), true);
 assert.equal(getGtmScripts().length, 1);
 assert.equal(getGtmScripts()[0].src, 'https://www.googletagmanager.com/gtm.js?id=GTM-WGZC5SKF');
-assert.deepEqual(window.dataLayer, [{ event: gtm.GTM_CONSENT_EVENT }]);
+assert.equal(window.dataLayer.length, 2);
+assert.deepEqual([...window.dataLayer[0]], [
+  'consent',
+  'default',
+  {
+    analytics_storage: 'granted',
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+  },
+]);
+assert.deepEqual(window.dataLayer[1], { event: gtm.GTM_CONSENT_EVENT });
+assert.equal(gtm.updateGoogleConsent('denied'), true);
+assert.deepEqual([...window.dataLayer[2]], [
+  'consent',
+  'update',
+  {
+    analytics_storage: 'denied',
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+  },
+]);
 teardownDom();
 
 setupDom();
 window.dataLayer = { stale: true };
 assert.equal(gtm.loadGoogleTagManager('GTM-WGZC5SKF'), true);
-assert.deepEqual(window.dataLayer, [{ event: gtm.GTM_CONSENT_EVENT }]);
+assert.equal(window.dataLayer.length, 2);
+assert.deepEqual(window.dataLayer[1], { event: gtm.GTM_CONSENT_EVENT });
 assert.equal(getGtmScripts().length, 1);
 teardownDom();
 
@@ -229,7 +258,8 @@ assertGoatCounterIsConfigured();
 assert.equal(returningConsent.googleAnalytics, true);
 assert.equal(returningConsent.eventbrite, false);
 assert.equal(gtm.loadGoogleTagManager('GTM-WGZC5SKF'), true);
-assert.deepEqual(window.dataLayer, [{ event: gtm.GTM_CONSENT_EVENT }]);
+assert.equal(window.dataLayer.length, 2);
+assert.deepEqual(window.dataLayer[1], { event: gtm.GTM_CONSENT_EVENT });
 teardownDom();
 
 setupDom();
@@ -254,6 +284,11 @@ document.cookie = '_ga=GA1.1.123; path=/';
 document.cookie = '_ga_ABC123=GS1.1.456; path=/';
 document.cookie = 'dcnd_session=keep; path=/';
 const withdrawnConsent = persist({ eventbrite: true });
+window.dataLayer = [];
+assert.equal(
+  gtm.updateGoogleConsent('denied'),
+  true
+);
 consentStorage.removeGoogleAnalyticsCookies();
 assertGoatCounterIsConfigured();
 assert.equal(withdrawnConsent.googleAnalytics, false);
@@ -261,6 +296,16 @@ assert.equal(withdrawnConsent.eventbrite, true);
 assert.doesNotMatch(document.cookie, /(^|; )_ga=/);
 assert.doesNotMatch(document.cookie, /(^|; )_ga_ABC123=/);
 assert.match(document.cookie, /dcnd_session=keep/);
+assert.deepEqual([...window.dataLayer[0]], [
+  'consent',
+  'update',
+  {
+    analytics_storage: 'denied',
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+  },
+]);
 setupDom();
 window.localStorage.setItem(
   consentStorage.CONSENT_STORAGE_KEY,
@@ -282,6 +327,7 @@ assert.equal(gtm.isValidGtmId('GTM-WGZC5SKF'), true);
 assert.equal(gtm.isValidGtmId(' GTM-WGZC5SKF '), false);
 assert.equal(gtm.loadGoogleTagManager(''), false);
 assert.equal(gtm.loadGoogleTagManager('not-a-gtm-id'), false);
+assert.equal(gtm.updateGoogleConsent('denied'), false);
 assertGoatCounterIsConfigured();
 assertNoGtm();
 teardownDom();

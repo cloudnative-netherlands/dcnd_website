@@ -38,6 +38,11 @@ GATSBY_GTM_ID=GTM-WGZC5SKF npm run start
 GTM still loads only after accepting `Additional analytics — Google Analytics`.
 This uses the production GTM container and may create local test traffic in GA4.
 
+When that consent is granted, the site queues Google Consent Mode with
+`analytics_storage: granted` before GTM loads. All advertising-related consent
+states remain denied. Withdrawing Google Analytics queues an analytics denial,
+removes known GA cookies and reloads so GTM is absent from the new page.
+
 ## Production Configuration
 
 Configure this public Gatsby environment variable in Netlify under **Site

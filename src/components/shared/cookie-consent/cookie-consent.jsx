@@ -1,5 +1,13 @@
 import PropTypes from 'prop-types';
-import React, { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react';
+import React, {
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
 
 import {
   CONSENT_STORAGE_KEY,
@@ -8,7 +16,7 @@ import {
   removeGoogleAnalyticsCookies,
   writeStoredConsent,
 } from 'utils/consent-storage';
-import { loadGoogleTagManager } from 'utils/google-tag-manager';
+import { loadGoogleTagManager, updateGoogleConsent } from 'utils/google-tag-manager';
 
 const CookieConsentContext = createContext({
   hasMadeChoice: false,
@@ -23,6 +31,7 @@ export const useCookieConsent = () => useContext(CookieConsentContext);
 
 const CookieConsent = ({ children }) => {
   const [consent, setConsent] = useState(defaultConsent);
+  const consentRef = useRef(defaultConsent);
   const [selectedConsent, setSelectedConsent] = useState({
     googleAnalytics: false,
     eventbrite: false,
@@ -32,6 +41,7 @@ const CookieConsent = ({ children }) => {
 
   useEffect(() => {
     const storedConsent = readStoredConsent();
+    consentRef.current = storedConsent;
     setConsent(storedConsent);
     setSelectedConsent({
       googleAnalytics: storedConsent.googleAnalytics,
@@ -54,6 +64,7 @@ const CookieConsent = ({ children }) => {
       }
 
       const storedConsent = readStoredConsent();
+      consentRef.current = storedConsent;
       setConsent(storedConsent);
       setSelectedConsent({
         googleAnalytics: storedConsent.googleAnalytics,
@@ -69,19 +80,27 @@ const CookieConsent = ({ children }) => {
   }, []);
 
   const saveConsent = useCallback((nextConsent) => {
-    setConsent((previousConsent) => {
-      const savedConsent = writeStoredConsent(nextConsent);
+    const previousConsent = consentRef.current;
+    const isWithdrawingGoogleAnalytics =
+      previousConsent.googleAnalytics && !nextConsent.googleAnalytics;
 
-      if (previousConsent.googleAnalytics && !savedConsent.googleAnalytics) {
-        removeGoogleAnalyticsCookies();
-      }
+    if (isWithdrawingGoogleAnalytics) {
+      updateGoogleConsent('denied');
+    }
 
-      return savedConsent;
-    });
+    const savedConsent = writeStoredConsent(nextConsent);
+    consentRef.current = savedConsent;
+    setConsent(savedConsent);
+
+    if (isWithdrawingGoogleAnalytics) {
+      removeGoogleAnalyticsCookies();
+      window.location.reload();
+      return;
+    }
 
     setSelectedConsent({
-      googleAnalytics: nextConsent.googleAnalytics,
-      eventbrite: nextConsent.eventbrite,
+      googleAnalytics: savedConsent.googleAnalytics,
+      eventbrite: savedConsent.eventbrite,
     });
     setIsPreferencesOpen(false);
   }, []);
