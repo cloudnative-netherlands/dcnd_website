@@ -79,7 +79,7 @@ const Footer = () => {
                       className="footer-cookie-link"
                       onClick={openCookiePreferences}
                     >
-                      Cookie settings
+                      Privacy and cookie settings
                     </button>
                   </li>
                 )}

@@ -141,6 +141,22 @@
   border-radius: 999px;
 }
 
+.cookie-modal__choice {
+  cursor: pointer;
+}
+
+.cookie-modal__choice input {
+  flex: 0 0 auto;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: 0.2rem;
+  accent-color: #ff7900;
+}
+
+.cookie-modal__choice span {
+  display: block;
+}
+
 @media (max-width: 767px) {
   .cookie-banner {
     flex-direction: column;
