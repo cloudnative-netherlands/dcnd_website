@@ -9,6 +9,7 @@ import Isovalent from 'icons/isovalent.svg';
 import itq from 'icons/itq-logo.png';
 import learnk8s from 'icons/learnk8s-logo.png';
 import Rubicon from 'icons/rubicon-logo.svg';
+import Studio618 from 'icons/studio618co-logo.png';
 import SUSE from 'icons/suse-logo.png';
 import sysdig from 'icons/sysdig.png';
 
@@ -144,6 +145,13 @@ const sponsorsList = [
     url: 'https://kube.careers/',
     tier: 'partner',
     logoScale: 0.92,
+  },
+  {
+    name: 'Studio 618 & Co.',
+    icon: Studio618,
+    url: 'https://www.instagram.com/studio618co/',
+    tier: 'partner',
+    logoScale: 0.9,
   },
   {
     name: 'Rubicon',
