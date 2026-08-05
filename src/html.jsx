@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types, jsx-a11y/html-has-lang */
+import { withPrefix } from 'gatsby';
 import React from 'react';
 
 const fontsBasePath = '/fonts';
@@ -25,7 +26,7 @@ const HTML = ({
       {fontsPaths.map((fontPath, index) => (
         <link
           rel="preload"
-          href={`${fontsBasePath}${fontPath}`}
+          href={withPrefix(`${fontsBasePath}${fontPath}`)}
           as="font"
           type="font/woff2"
           crossOrigin="anonymous"

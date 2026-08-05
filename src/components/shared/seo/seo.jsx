@@ -26,7 +26,11 @@ const SEO = ({ title, description, pathname }) => {
 
   const currentTitle = title || defaultTitle || siteTitle;
   const currentDescription = description || defaultDescription || siteDescription;
-  const currentUrl = pathname !== '/' ? `${siteUrl}${pathname}` : siteUrl;
+  // Resolved rather than concatenated: under a GitHub Pages path prefix,
+  // `pathname` already carries the prefix that `siteUrl` also ends with.
+  // Resolving an absolute path against the origin keeps it from being doubled,
+  // and is identical to concatenation when the site is served from the root.
+  const currentUrl = pathname !== '/' ? new URL(pathname, siteUrl).href : siteUrl;
 
   return (
     <>

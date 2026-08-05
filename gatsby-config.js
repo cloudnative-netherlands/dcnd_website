@@ -2,7 +2,23 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 require('dotenv').config();
 
+// GitHub Pages serves a project site from https://<org>.github.io/<repo>/ and a
+// custom-domain site from /. The deploy workflow passes the base path reported
+// by actions/configure-pages, so the same build works in both states. Empty
+// (the default) means "served from the domain root", which is what local
+// builds, `gatsby develop` and www.dutchcloudnativeday.nl need.
+const pathPrefix = (process.env.PATH_PREFIX || '').replace(/\/+$/, '');
+
+// Trailing slashes are stripped as well, because canonical/OG URLs and the
+// sitemap are built as `siteUrl + pathname` and the deploy workflow takes this
+// value straight from actions/configure-pages.
+const siteUrl = (process.env.GATSBY_DEFAULT_SITE_URL || 'http://localhost:8000').replace(
+  /\/+$/,
+  ''
+);
+
 module.exports = {
+  pathPrefix,
   flags: { DEV_SSR: process.env.GATSBY_DEV_SSR || false },
   siteMetadata: {
     siteTitle: 'Dutch Cloud Native Day 2026',
@@ -10,7 +26,7 @@ module.exports = {
       'A two-day community-organized cloud native conference in Utrecht on 29–30 October 2026.',
     siteImage: '/images/social-preview.jpg',
     siteLanguage: 'en',
-    siteUrl: process.env.GATSBY_DEFAULT_SITE_URL || 'http://localhost:8000',
+    siteUrl,
     authorName: 'Dutch Cloud Native Day',
   },
   plugins: [
