@@ -47,26 +47,34 @@ known GA cookies and reloads so GTM is absent from the new page.
 
 ## Production Configuration
 
-Configure this public Gatsby environment variable in Netlify under **Site
-configuration > Environment variables** for the production build context:
+Production is built and deployed by GitHub Actions
+([.github/workflows/pages.yml](../.github/workflows/pages.yml)). Configure this
+public Gatsby environment variable as a repository **variable** (not a secret)
+under **Settings > Secrets and variables > Actions > Variables**:
 
 ```bash
 GATSBY_GTM_ID=GTM-WGZC5SKF
 ```
 
-This is needed only for Google Tag Manager. GoatCounter does not need a Netlify
-environment variable. Gatsby embeds `GATSBY_*` values during build time, so
-changing this variable requires a new deployment before browser code sees it.
+The GTM container ID is public by design — it ships in the served HTML — so it
+is kept configurable rather than secret. The deploy workflow passes it to the
+build as `GATSBY_GTM_ID: ${{ vars.GATSBY_GTM_ID }}`.
 
-Recommended Netlify context policy:
+This is needed only for Google Tag Manager.
+GoatCounter does not need a repository variable or any other build
+configuration: it is loaded from a hard-coded script tag in
+[src/html.jsx](../src/html.jsx). Gatsby embeds `GATSBY_*` values during build
+time, so changing this variable requires a new deployment before browser code
+sees it.
 
-- Production: configure the real GTM ID.
-- Deploy previews: leave disabled unless actively testing consent/GTM.
-- Branch deploys: leave disabled.
+If the variable is unset when the workflow runs, the deployed site simply has no
+GTM and no GA4; GoatCounter is unaffected.
 
-If the production Netlify build has no valid `GATSBY_GTM_ID`, the build prints a
+If a production deploy build has no valid `GATSBY_GTM_ID`, the build prints a
 warning and the site continues without GTM or GA4. This keeps the website
-available while making accidental analytics misconfiguration visible.
+available while making accidental analytics misconfiguration visible. The
+warning fires when `CI=true` and `NODE_ENV=production`, so it covers the GitHub
+Actions deploy without firing on local `npm run build`.
 
 GA4 measurement ID `G-L2BFB87LQ2` and stream ID `15203939146` are configured
 remotely inside the GTM container. GTM is loaded only after Google Analytics

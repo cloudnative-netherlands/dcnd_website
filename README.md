@@ -8,6 +8,7 @@
   - [Build the website](#build-the-website)
   - [Run the built website](#run-the-built-website)
   - [Clean Gatsby cache](#clean-gatsby-cache)
+- [Deployment](#deployment)
 - [Project Structure](#project-structure)
 - [Code Style](#code-style)
   - [ESLint](#eslint)
@@ -61,6 +62,17 @@ npm run clean
 ```
 
 Analytics setup is documented in [docs/analytics.md](docs/analytics.md).
+
+## Deployment
+
+Pushes to `main` are built by GitHub Actions
+([.github/workflows/pages.yml](.github/workflows/pages.yml)) and published to
+GitHub Pages, which serves <https://www.dutchcloudnativeday.nl>. The generated
+`public/` directory is never committed.
+
+Deployment, required repository settings, DNS records and the Netlify migration
+are documented in
+[docs/github-pages-migration.md](docs/github-pages-migration.md).
 
 ## Project Structure
 

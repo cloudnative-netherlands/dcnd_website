@@ -8,11 +8,15 @@ exports.onCreateNode = require('./gatsby/on-create-node');
 exports.createSchemaCustomization = require('./gatsby/create-schema-customization');
 
 exports.onPreBootstrap = ({ reporter }) => {
-  const isProductionNetlifyBuild =
-    process.env.NETLIFY === 'true' && process.env.CONTEXT === 'production';
+  // Deploy builds run in CI (GitHub Actions sets CI=true, as does Netlify while
+  // that deployment still exists) and `gatsby build` sets NODE_ENV=production.
+  // Local production builds stay quiet, exactly as with the previous
+  // NETLIFY/CONTEXT check this replaced.
+  const isProductionDeployBuild =
+    process.env.CI === 'true' && process.env.NODE_ENV === 'production';
   const gtmId = (process.env.GATSBY_GTM_ID || '').trim();
 
-  if (isProductionNetlifyBuild && !GTM_ID_PATTERN.test(gtmId)) {
+  if (isProductionDeployBuild && !GTM_ID_PATTERN.test(gtmId)) {
     reporter.warn(
       'Production build has no valid GATSBY_GTM_ID; consent-gated Google Analytics will be disabled.'
     );
