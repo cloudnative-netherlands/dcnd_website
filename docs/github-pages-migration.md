@@ -369,6 +369,24 @@ Rollback at any point before step 11: restore the previous Netlify DNS records.
 Nothing in this repository depends on GitHub Pages, so a redeploy on Netlify
 keeps working.
 
+### State of the Netlify site at the time of writing (2026-08-05)
+
+`https://www.dutchcloudnativeday.nl/` and the apex both return **HTTP 503** from
+Netlify with the body `{"error":"usage_exceeded","message":"Usage exceeded"}`.
+The public site is therefore already down, which changes two things:
+
+- Steps 10 and 11 are formalities rather than a safety net. The DNS rollback
+  described above restores a site that is currently serving errors, so it is not
+  a real fallback — move through the cutover promptly instead of waiting out a
+  long soak on the temporary URL.
+- Both `www` and the apex are currently plain `A` records
+  (`63.176.8.218`, `35.157.26.135`) hosted on NS1 nameservers. `www` therefore
+  needs its `A` records **deleted** before the `CNAME` above can be created — a
+  `CNAME` cannot coexist with other records on the same name.
+
+Re-check the live status before starting, in case the Netlify account has been
+restored in the meantime.
+
 ## Validation commands
 
 Local build validation:
