@@ -349,23 +349,29 @@ leaving both sets in place produces non-deterministic routing.
    one thing that cannot be fully validated before the domain moves.
 5. Add `www.dutchcloudnativeday.nl` as the custom domain in Settings → Pages and
    wait for GitHub's DNS check.
-6. Change DNS: point `www` at `cloudnative-netherlands.github.io` and the apex
+6. **Re-run the workflow.** This step is not optional: the artifact deployed in
+   step 3 was built with the `/dcnd_website` prefix, and setting the custom
+   domain does not rebuild anything. Only a run started _after_ the domain is
+   configured sees `base_path: /` from `actions/configure-pages` and produces
+   root-relative assets. Skipping it leaves the custom domain serving a site
+   whose CSS, JavaScript and images all 404.
+7. Change DNS: point `www` at `cloudnative-netherlands.github.io` and the apex
    at the GitHub A/AAAA addresses; remove the Netlify records. Lower the TTL a
    day in advance if the provider allows it.
-7. Wait for DNS propagation, GitHub's domain validation and certificate
+8. Wait for DNS propagation, GitHub's domain validation and certificate
    provisioning (usually minutes, occasionally up to ~24 hours).
-8. Enable **Enforce HTTPS**.
-9. Verify apex → `www` redirection and re-run the page checks from step 4 —
-   including `/2025/` and `/2025/schedule/`, which are only fully correct at the
-   domain root.
-10. Leave the Netlify site deployed and untouched throughout propagation so that
+9. Enable **Enforce HTTPS**.
+10. Verify apex → `www` redirection and re-run the page checks from step 4 —
+    including `/2025/` and `/2025/schedule/`, which are only fully correct at the
+    domain root.
+11. Leave the Netlify site deployed and untouched throughout propagation so that
     reverting DNS is an instant rollback.
-11. Only once GitHub Pages has been stable for at least a full propagation
+12. Only once GitHub Pages has been stable for at least a full propagation
     window: unlink the repository from Netlify (or stop auto-publishing) and
     finally delete the Netlify site. Record the Netlify environment variables
     before deleting anything.
 
-Rollback at any point before step 11: restore the previous Netlify DNS records.
+Rollback at any point before step 12: restore the previous Netlify DNS records.
 Nothing in this repository depends on GitHub Pages, so a redeploy on Netlify
 keeps working.
 
@@ -375,7 +381,7 @@ keeps working.
 Netlify with the body `{"error":"usage_exceeded","message":"Usage exceeded"}`.
 The public site is therefore already down, which changes two things:
 
-- Steps 10 and 11 are formalities rather than a safety net. The DNS rollback
+- Steps 11 and 12 are formalities rather than a safety net. The DNS rollback
   described above restores a site that is currently serving errors, so it is not
   a real fallback — move through the cutover promptly instead of waiting out a
   long soak on the temporary URL.
