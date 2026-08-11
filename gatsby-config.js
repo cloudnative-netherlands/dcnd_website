@@ -24,7 +24,7 @@ module.exports = {
     siteTitle: 'Dutch Cloud Native Day 2026',
     siteDescription:
       'A two-day community-organized cloud native conference in Utrecht on 29–30 October 2026.',
-    siteImage: '/images/social-preview.jpg',
+    siteImage: '/images/social-preview-2026.jpg',
     siteLanguage: 'en',
     siteUrl,
     authorName: 'Dutch Cloud Native Day',
