@@ -9,11 +9,9 @@ import WilliamPhoto from './images/william-rizzo.jpg';
 import CatalinPhoto from './images/catalin_j.jpg';
 import MarcelPhoto from './images/marcel_k.jpg';
 import PacoPhoto from './images/paco_b.jpeg';
-import AndyPhoto from './images/andy_r.jpg';
 import FahdPhoto from './images/fahd_e.png';
 import PavelPhoto from './images/pavel_c.jpg';
 import CarlosPhoto from './images/carlos_m.jpg';
-import JosPhoto from './images/jos_s.jpg';
 import SaifPhoto from './images/saif_r.webp';
 import ShivaPhoto from './images/shiva_f.jpg';
 
@@ -38,12 +36,6 @@ const ITEMS = [
     url: 'https://www.linkedin.com/in/mkerker/',
   },
   {
-    name: 'Andy Repton',
-    position: 'Senior Black Belt - Red Hat',
-    photo: AndyPhoto,
-    url: 'https://www.linkedin.com/in/andy-repton/',
-  },
-  {
     name: 'Paco Bernabé',
     position: 'Senior DevOps & Cloud Consultant - Independent',
     photo: PacoPhoto,
@@ -66,12 +58,6 @@ const ITEMS = [
     position: 'Cloud Solution Architect - Microsoft',
     photo: CarlosPhoto,
     url: 'https://www.linkedin.com/in/mestredelpino/',
-  },
-  {
-    name: 'Jos van Schouten',
-    position: 'Lead Engineer - OGD',
-    photo: JosPhoto,
-    url: 'https://www.linkedin.com/in/josvanschouten/',
   },
   {
     name: ' Saif Rajhi',
