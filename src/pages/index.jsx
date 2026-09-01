@@ -3,6 +3,8 @@ import React from 'react';
 
 import Hero from 'components/pages/home/hero';
 import Info from 'components/pages/home/info';
+import Schedule from 'components/pages/home/schedule';
+import Speakers from 'components/pages/home/speakers';
 import Sponsors from 'components/pages/home/sponsors';
 import Tickets from 'components/pages/home/tickets';
 import Venue from 'components/pages/home/venue';
@@ -13,6 +15,8 @@ const HomePage = () => (
   <Layout homepage>
     <Hero />
     <Info />
+    <Speakers />
+    <Schedule />
     <Tickets />
     <Venue />
     <Sponsors />

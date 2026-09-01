@@ -5,8 +5,12 @@ import Clastix from 'icons/clastix-logo.png';
 import Dash0 from 'icons/dash0-logo.svg';
 import Exoscale from 'icons/exoscale-logo.png';
 import Grafana from 'icons/grafanalabs.webp';
+import HCS from 'icons/HCS-Wordmark.png';
 import Isovalent from 'icons/isovalent.svg';
 import itq from 'icons/itq-logo.png';
+import K8sPodcast from 'icons/k8spodcast-logo.png';
+import Kubermatic from 'icons/kubermatic-logo.png';
+import KundoLabs from 'icons/kundolabs-logo.png';
 import learnk8s from 'icons/learnk8s-logo.png';
 import Rubicon from 'icons/rubicon-logo.svg';
 import Studio618 from 'icons/studio618co-logo.png';
@@ -160,6 +164,36 @@ const sponsorsList = [
     tier: 'gold',
     // Dense wordmark; reduced within the shared Gold logo box for optical balance.
     logoScale: 0.86,
+  },
+  {
+    name: 'Kubermatic',
+    icon: Kubermatic,
+    url: 'https://www.kubermatic.com/',
+    tier: 'gold',
+    // Horizontal wordmark from the official media kit; matched to the other Gold wordmarks.
+    logoScale: 0.92,
+  },
+  {
+    name: 'HCS Company',
+    icon: HCS,
+    url: 'https://www.hcs-company.com/',
+    tier: 'gold',
+  },
+  {
+    name: 'KundoLabs',
+    icon: KundoLabs,
+    url: 'https://kundolabs.com/',
+    tier: 'partner',
+    // Very wide wordmark; enlarged so it reads at partner-card size.
+    logoScale: 1.15,
+  },
+  {
+    name: 'De Nederlandse Kubernetes Podcast',
+    icon: K8sPodcast,
+    url: 'https://www.k8spodcast.nl/',
+    tier: 'partner',
+    // Official logo incl. "Powered by ACC ICT"; enlarged within the partner logo box.
+    logoScale: 1.15,
   },
 ];
 

@@ -7,6 +7,7 @@ export const defaultConsent = {
   version: CONSENT_VERSION,
   consentRevision: CONSENT_REVISION,
   googleAnalytics: false,
+  linkedInAds: false,
   eventbrite: false,
   updatedAt: null,
   hasMadeChoice: false,
@@ -24,29 +25,37 @@ const isValidTimestamp = (value) => {
   return Number.isFinite(timestamp) && timestamp <= Date.now() + 60 * 1000;
 };
 
+// linkedInAds was added after launch; stored consents without it remain valid and the
+// missing choice is treated as declined.
 const isValidStoredConsent = (value) =>
   value &&
   value.version === CONSENT_VERSION &&
   value.consentRevision === CONSENT_REVISION &&
   typeof value.googleAnalytics === 'boolean' &&
+  (typeof value.linkedInAds === 'boolean' || value.linkedInAds === undefined) &&
   typeof value.eventbrite === 'boolean' &&
   isValidTimestamp(value.updatedAt);
 
 const withChoiceFlag = (consent, hasMadeChoice = true) => ({
   ...consent,
+  linkedInAds: Boolean(consent.linkedInAds),
   hasMadeChoice,
 });
 
-const createStoredConsent = ({ googleAnalytics, eventbrite }) => ({
+const createStoredConsent = ({ googleAnalytics, linkedInAds, eventbrite }) => ({
   version: CONSENT_VERSION,
   consentRevision: CONSENT_REVISION,
   googleAnalytics: Boolean(googleAnalytics),
+  linkedInAds: Boolean(linkedInAds),
   eventbrite: Boolean(eventbrite),
   updatedAt: new Date().toISOString(),
 });
 
-export const createConsent = ({ googleAnalytics = false, eventbrite = false } = {}) =>
-  withChoiceFlag(createStoredConsent({ googleAnalytics, eventbrite }));
+export const createConsent = ({
+  googleAnalytics = false,
+  linkedInAds = false,
+  eventbrite = false,
+} = {}) => withChoiceFlag(createStoredConsent({ googleAnalytics, linkedInAds, eventbrite }));
 
 const readLegacyConsent = () => {
   const value = window.localStorage.getItem(LEGACY_CONSENT_STORAGE_KEY);
@@ -61,6 +70,7 @@ const readLegacyConsent = () => {
     if (parsed && parsed.hasMadeChoice === true && typeof parsed.tickets === 'boolean') {
       return createStoredConsent({
         googleAnalytics: false,
+        linkedInAds: false,
         eventbrite: parsed.tickets,
       });
     }
@@ -98,8 +108,12 @@ export const readStoredConsent = () => {
   return defaultConsent;
 };
 
-export const writeStoredConsent = ({ googleAnalytics = false, eventbrite = false }) => {
-  const consent = createConsent({ googleAnalytics, eventbrite });
+export const writeStoredConsent = ({
+  googleAnalytics = false,
+  linkedInAds = false,
+  eventbrite = false,
+}) => {
+  const consent = createConsent({ googleAnalytics, linkedInAds, eventbrite });
 
   if (!isBrowser()) {
     return consent;
@@ -111,6 +125,7 @@ export const writeStoredConsent = ({ googleAnalytics = false, eventbrite = false
       version: consent.version,
       consentRevision: consent.consentRevision,
       googleAnalytics: consent.googleAnalytics,
+      linkedInAds: consent.linkedInAds,
       eventbrite: consent.eventbrite,
       updatedAt: consent.updatedAt,
     })
@@ -119,7 +134,7 @@ export const writeStoredConsent = ({ googleAnalytics = false, eventbrite = false
   return consent;
 };
 
-export const removeGoogleAnalyticsCookies = () => {
+const removeCookiesMatching = (matchesName) => {
   if (typeof document === 'undefined') {
     return;
   }
@@ -127,7 +142,7 @@ export const removeGoogleAnalyticsCookies = () => {
   const cookieNames = document.cookie
     .split(';')
     .map((cookie) => cookie.trim().split('=')[0])
-    .filter((name) => name === '_ga' || name.startsWith('_ga_'));
+    .filter(matchesName);
 
   if (cookieNames.length === 0) {
     return;
@@ -152,3 +167,11 @@ export const removeGoogleAnalyticsCookies = () => {
     });
   });
 };
+
+export const removeGoogleAnalyticsCookies = () =>
+  removeCookiesMatching((name) => name === '_ga' || name.startsWith('_ga_'));
+
+// First-party cookies set by the LinkedIn Insight Tag. LinkedIn's own third-party cookies
+// live on linkedin.com and cannot be removed from here.
+export const removeLinkedInCookies = () =>
+  removeCookiesMatching((name) => name === 'li_fat_id' || name === 'ln_or');

@@ -79,7 +79,7 @@ const Info = () => (
             <div className="feature-content">
               <h3 className="feature-title">Community space</h3>
               <p className="feature-text">
-                Hallway conversations, sponsors and a welcoming vendor-neutral crowd
+                Hallway conversations, sponsor booths, and community networking
               </p>
             </div>
           </div>

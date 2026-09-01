@@ -1,6 +1,7 @@
 # Analytics
 
-The site uses a two-tier analytics model.
+The site uses a two-tier analytics model, plus a separately consented marketing
+layer.
 
 ## Summary
 
@@ -11,8 +12,12 @@ consent banner.
 Google Analytics 4 is the additional analytics layer. It runs through Google Tag
 Manager only after a visitor enables `Additional analytics — Google Analytics`.
 
+The LinkedIn Insight Tag is the marketing layer. It runs through Google Tag
+Manager only after a visitor enables `Marketing — LinkedIn Insight Tag`.
+
 Do not route GoatCounter through GTM. Do not add a direct `gtag.js` or GA4
-snippet to the site.
+snippet to the site. Do not add the LinkedIn Insight Tag snippet directly to the
+site either — it is managed inside the GTM container.
 
 ## Normal Development
 
@@ -84,6 +89,35 @@ consent. The GTM container must listen for the custom event:
 dcnd_analytics_consent_granted
 ```
 
+## LinkedIn Insight Tag
+
+The LinkedIn Insight Tag (partner ID `9678148`) is installed inside the GTM
+container, not in the site code. GTM loads when a visitor enables Google
+Analytics consent, LinkedIn marketing consent, or both; Google Consent Mode
+grants `analytics_storage` and the advertising states
+(`ad_storage`, `ad_user_data`, `ad_personalization`) independently per choice.
+
+When LinkedIn marketing consent is granted, the site pushes this custom event
+into the data layer:
+
+```text
+dcnd_marketing_consent_granted
+```
+
+Whoever manages the GTM container (`GTM-WGZC5SKF`) must configure the LinkedIn
+tag like this:
+
+1. Add a tag using the built-in **LinkedIn Insight Tag 2.0** template with
+   partner ID `9678148`.
+2. Trigger it on the custom event `dcnd_marketing_consent_granted` — never on
+   All Pages or on `dcnd_analytics_consent_granted`, because those can fire for
+   visitors who consented to analytics but not to marketing.
+3. Leave the site code alone: consent collection, Consent Mode and the event
+   push are already wired.
+
+Withdrawing LinkedIn marketing consent queues an advertising denial, removes the
+known first-party LinkedIn cookies (`li_fat_id`, `ln_or`) and reloads the page.
+
 ## Consent Storage
 
 Optional-service consent is stored in `localStorage` under
@@ -94,13 +128,16 @@ Optional-service consent is stored in `localStorage` under
   "version": 2,
   "consentRevision": 1,
   "googleAnalytics": false,
+  "linkedInAds": false,
   "eventbrite": false,
   "updatedAt": "2026-07-05T00:00:00.000Z"
 }
 ```
 
-The `googleAnalytics` property means Google Analytics only. GoatCounter is not
-represented in this optional consent structure. `consentRevision` is separate
+The `googleAnalytics` property means Google Analytics only. The `linkedInAds`
+property means the LinkedIn Insight Tag. Stored consents from before
+`linkedInAds` existed remain valid; the missing choice is treated as declined.
+GoatCounter is not represented in this optional consent structure. `consentRevision` is separate
 from the storage schema version and can be increased if the meaning of optional
 consent materially changes.
 

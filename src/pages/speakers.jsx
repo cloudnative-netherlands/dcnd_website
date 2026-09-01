@@ -17,5 +17,5 @@ const SpeakersPage = ({ location }) => (
 export default SpeakersPage;
 
 export const Head = ({ location: { pathname } }) => (
-  <SEO {...SEO_DATA.schedule} pathname={pathname} />
+  <SEO {...SEO_DATA.speakers} pathname={pathname} />
 );

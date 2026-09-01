@@ -69,6 +69,7 @@ jobs:
             public/program/index.html
             public/schedule/index.html
             public/speakers/index.html
+            public/workshops/index.html
             public/team/index.html
             public/vision/index.html
             public/privacy/index.html

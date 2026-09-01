@@ -23,11 +23,13 @@ const consentStorage = loadModule('src/utils/consent-storage.js', [
   'readStoredConsent',
   'writeStoredConsent',
   'removeGoogleAnalyticsCookies',
+  'removeLinkedInCookies',
 ]);
 
 const gtm = loadModule('src/utils/google-tag-manager.js', [
   'GTM_SCRIPT_ID',
   'GTM_CONSENT_EVENT',
+  'GTM_MARKETING_CONSENT_EVENT',
   'GTM_BOOTSTRAP_EVENT',
   'getConfiguredGtmId',
   'isValidGtmId',
@@ -76,8 +78,8 @@ const assertNoGtm = () => {
   assert.deepEqual(window.dataLayer, undefined);
 };
 
-const persist = ({ googleAnalytics = false, eventbrite = false } = {}) =>
-  consentStorage.writeStoredConsent({ googleAnalytics, eventbrite });
+const persist = ({ googleAnalytics = false, linkedInAds = false, eventbrite = false } = {}) =>
+  consentStorage.writeStoredConsent({ googleAnalytics, linkedInAds, eventbrite });
 
 const sourceFiles = [];
 const collectSourceFiles = (directory) => {
@@ -140,6 +142,9 @@ assert.match(read('.env.example'), /Leave unset for normal local development and
 assert.match(read('README.md'), /docs\/analytics\.md/);
 assert.match(read('docs/analytics.md'), /GoatCounter is the limited aggregate traffic layer/);
 assert.match(read('docs/analytics.md'), /dcnd_analytics_consent_granted/);
+assert.match(read('docs/analytics.md'), /dcnd_marketing_consent_granted/);
+assert.match(read('docs/analytics.md'), /LinkedIn Insight Tag/);
+assert.match(read('docs/analytics.md'), /9678148/);
 assert.match(read('docs/analytics.md'), /GoatCounter does not need a repository variable/);
 assert.match(read('docs/analytics.md'), /Google Tag Manager is disabled when `GATSBY_GTM_ID` is not set/);
 assert.match(cookieConsent, /updateGoogleConsent\(/);
@@ -150,16 +155,23 @@ assert.match(
   read('content/static-pages/privacy.md'),
   /Limited Aggregate Analytics With GoatCounter/
 );
+assert.match(read('content/static-pages/privacy.md'), /LinkedIn Insight Tag/);
 assert.match(
   read('src/components/shared/cookie-consent/cookie-consent.jsx'),
   /Additional analytics — Google Analytics/
 );
+assert.match(
+  read('src/components/shared/cookie-consent/cookie-consent.jsx'),
+  /Marketing — LinkedIn Insight Tag/
+);
+assert.match(cookieConsent, /removeLinkedInCookies\(\)/);
 
 setupDom();
 assert.deepEqual(consentStorage.readStoredConsent(), {
   version: 2,
   consentRevision: consentStorage.CONSENT_REVISION,
   googleAnalytics: false,
+  linkedInAds: false,
   eventbrite: false,
   updatedAt: null,
   hasMadeChoice: false,
@@ -174,6 +186,7 @@ const rejectedConsent = persist();
 assertGoatCounterIsConfigured();
 assert.equal(rejectedConsent.hasMadeChoice, true);
 assert.equal(rejectedConsent.googleAnalytics, false);
+assert.equal(rejectedConsent.linkedInAds, false);
 assert.equal(rejectedConsent.eventbrite, false);
 assert.equal(
   JSON.parse(window.localStorage.getItem(consentStorage.CONSENT_STORAGE_KEY)).googleAnalytics,
@@ -215,7 +228,7 @@ assert.deepEqual([...window.dataLayer[1]], [
 assert.equal(window.dataLayer[2].event, gtm.GTM_BOOTSTRAP_EVENT);
 assert.equal(typeof window.dataLayer[2]['gtm.start'], 'number');
 assert.deepEqual(window.dataLayer[3], { event: gtm.GTM_CONSENT_EVENT });
-assert.equal(gtm.updateGoogleConsent('denied'), true);
+assert.equal(gtm.updateGoogleConsent({ analytics: false, ads: false }), true);
 assert.deepEqual([...window.dataLayer[4]], [
   'consent',
   'update',
@@ -226,6 +239,41 @@ assert.deepEqual([...window.dataLayer[4]], [
     ad_personalization: 'denied',
   },
 ]);
+teardownDom();
+
+setupDom();
+const marketingOnlyConsent = persist({ linkedInAds: true });
+assert.equal(marketingOnlyConsent.googleAnalytics, false);
+assert.equal(marketingOnlyConsent.linkedInAds, true);
+assert.equal(gtm.loadGoogleTagManager('GTM-WGZC5SKF', { analytics: false, ads: true }), true);
+assert.equal(gtm.loadGoogleTagManager('GTM-WGZC5SKF', { analytics: false, ads: true }), true);
+assert.equal(getGtmScripts().length, 1);
+assert.equal(window.dataLayer.length, 4);
+assert.deepEqual([...window.dataLayer[1]], [
+  'consent',
+  'update',
+  {
+    analytics_storage: 'denied',
+    ad_storage: 'granted',
+    ad_user_data: 'granted',
+    ad_personalization: 'granted',
+  },
+]);
+assert.deepEqual(window.dataLayer[3], { event: gtm.GTM_MARKETING_CONSENT_EVENT });
+// Enabling analytics afterwards re-pushes consent and appends the analytics event.
+assert.equal(gtm.loadGoogleTagManager('GTM-WGZC5SKF', { analytics: true, ads: true }), true);
+assert.equal(window.dataLayer.length, 6);
+assert.deepEqual([...window.dataLayer[4]], [
+  'consent',
+  'update',
+  {
+    analytics_storage: 'granted',
+    ad_storage: 'granted',
+    ad_user_data: 'granted',
+    ad_personalization: 'granted',
+  },
+]);
+assert.deepEqual(window.dataLayer[5], { event: gtm.GTM_CONSENT_EVENT });
 teardownDom();
 
 setupDom();
@@ -269,6 +317,8 @@ window.localStorage.setItem(
 const returningConsent = consentStorage.readStoredConsent();
 assertGoatCounterIsConfigured();
 assert.equal(returningConsent.googleAnalytics, true);
+// Stored consent predates linkedInAds; it stays valid and the choice defaults to declined.
+assert.equal(returningConsent.linkedInAds, false);
 assert.equal(returningConsent.eventbrite, false);
 assert.equal(gtm.loadGoogleTagManager('GTM-WGZC5SKF'), true);
 assert.equal(window.dataLayer.length, 4);
@@ -283,6 +333,7 @@ window.localStorage.setItem(
 const migratedConsent = consentStorage.readStoredConsent();
 assertGoatCounterIsConfigured();
 assert.equal(migratedConsent.googleAnalytics, false);
+assert.equal(migratedConsent.linkedInAds, false);
 assert.equal(migratedConsent.eventbrite, true);
 assert.equal(
   JSON.parse(window.localStorage.getItem(consentStorage.CONSENT_STORAGE_KEY)).eventbrite,
@@ -292,22 +343,28 @@ assertNoGtm();
 teardownDom();
 
 setupDom();
-persist({ googleAnalytics: true, eventbrite: true });
+persist({ googleAnalytics: true, linkedInAds: true, eventbrite: true });
 document.cookie = '_ga=GA1.1.123; path=/';
 document.cookie = '_ga_ABC123=GS1.1.456; path=/';
+document.cookie = 'li_fat_id=abc123; path=/';
+document.cookie = 'ln_or=d; path=/';
 document.cookie = 'dcnd_session=keep; path=/';
 const withdrawnConsent = persist({ eventbrite: true });
 window.dataLayer = [];
 assert.equal(
-  gtm.updateGoogleConsent('denied'),
+  gtm.updateGoogleConsent({ analytics: false, ads: false }),
   true
 );
 consentStorage.removeGoogleAnalyticsCookies();
+consentStorage.removeLinkedInCookies();
 assertGoatCounterIsConfigured();
 assert.equal(withdrawnConsent.googleAnalytics, false);
+assert.equal(withdrawnConsent.linkedInAds, false);
 assert.equal(withdrawnConsent.eventbrite, true);
 assert.doesNotMatch(document.cookie, /(^|; )_ga=/);
 assert.doesNotMatch(document.cookie, /(^|; )_ga_ABC123=/);
+assert.doesNotMatch(document.cookie, /(^|; )li_fat_id=/);
+assert.doesNotMatch(document.cookie, /(^|; )ln_or=/);
 assert.match(document.cookie, /dcnd_session=keep/);
 assert.deepEqual([...window.dataLayer[0]], [
   'consent',
@@ -340,7 +397,7 @@ assert.equal(gtm.isValidGtmId('GTM-WGZC5SKF'), true);
 assert.equal(gtm.isValidGtmId(' GTM-WGZC5SKF '), false);
 assert.equal(gtm.loadGoogleTagManager(''), false);
 assert.equal(gtm.loadGoogleTagManager('not-a-gtm-id'), false);
-assert.equal(gtm.updateGoogleConsent('denied'), false);
+assert.equal(gtm.updateGoogleConsent({ analytics: false, ads: false }), false);
 assertGoatCounterIsConfigured();
 assertNoGtm();
 teardownDom();
@@ -362,6 +419,7 @@ assert.deepEqual(consentStorage.readStoredConsent(), {
   version: 2,
   consentRevision: consentStorage.CONSENT_REVISION,
   googleAnalytics: false,
+  linkedInAds: false,
   eventbrite: false,
   updatedAt: null,
   hasMadeChoice: false,
@@ -380,6 +438,7 @@ assert.deepEqual(consentStorage.readStoredConsent(), {
   version: 2,
   consentRevision: consentStorage.CONSENT_REVISION,
   googleAnalytics: false,
+  linkedInAds: false,
   eventbrite: false,
   updatedAt: null,
   hasMadeChoice: false,

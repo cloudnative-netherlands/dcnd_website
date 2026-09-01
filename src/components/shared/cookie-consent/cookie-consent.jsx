@@ -14,6 +14,7 @@ import {
   defaultConsent,
   readStoredConsent,
   removeGoogleAnalyticsCookies,
+  removeLinkedInCookies,
   writeStoredConsent,
 } from 'utils/consent-storage';
 import { loadGoogleTagManager, updateGoogleConsent } from 'utils/google-tag-manager';
@@ -21,6 +22,7 @@ import { loadGoogleTagManager, updateGoogleConsent } from 'utils/google-tag-mana
 const CookieConsentContext = createContext({
   hasMadeChoice: false,
   hasAnalyticsConsent: false,
+  hasMarketingConsent: false,
   hasTicketCheckoutConsent: false,
   acceptTicketCheckout: () => {},
   rejectOptionalCookies: () => {},
@@ -34,6 +36,7 @@ const CookieConsent = ({ children }) => {
   const consentRef = useRef(defaultConsent);
   const [selectedConsent, setSelectedConsent] = useState({
     googleAnalytics: false,
+    linkedInAds: false,
     eventbrite: false,
   });
   const [isLoaded, setIsLoaded] = useState(false);
@@ -45,17 +48,22 @@ const CookieConsent = ({ children }) => {
     setConsent(storedConsent);
     setSelectedConsent({
       googleAnalytics: storedConsent.googleAnalytics,
+      linkedInAds: storedConsent.linkedInAds,
       eventbrite: storedConsent.eventbrite,
     });
     setIsLoaded(true);
   }, []);
 
   useEffect(() => {
-    if (isLoaded && consent.googleAnalytics) {
+    if (isLoaded && (consent.googleAnalytics || consent.linkedInAds)) {
       // GTM is injected only after consent so Google receives no pre-consent requests.
-      loadGoogleTagManager();
+      // Consent Mode grants analytics and advertising storage independently per choice.
+      loadGoogleTagManager(undefined, {
+        analytics: consent.googleAnalytics,
+        ads: consent.linkedInAds,
+      });
     }
-  }, [consent.googleAnalytics, isLoaded]);
+  }, [consent.googleAnalytics, consent.linkedInAds, isLoaded]);
 
   useEffect(() => {
     const handleStorageChange = (event) => {
@@ -68,6 +76,7 @@ const CookieConsent = ({ children }) => {
       setConsent(storedConsent);
       setSelectedConsent({
         googleAnalytics: storedConsent.googleAnalytics,
+        linkedInAds: storedConsent.linkedInAds,
         eventbrite: storedConsent.eventbrite,
       });
     };
@@ -83,34 +92,49 @@ const CookieConsent = ({ children }) => {
     const previousConsent = consentRef.current;
     const isWithdrawingGoogleAnalytics =
       previousConsent.googleAnalytics && !nextConsent.googleAnalytics;
+    const isWithdrawingLinkedInAds = previousConsent.linkedInAds && !nextConsent.linkedInAds;
+    const isWithdrawing = isWithdrawingGoogleAnalytics || isWithdrawingLinkedInAds;
 
-    if (isWithdrawingGoogleAnalytics) {
-      updateGoogleConsent('denied');
+    if (isWithdrawing) {
+      updateGoogleConsent({
+        analytics: Boolean(nextConsent.googleAnalytics),
+        ads: Boolean(nextConsent.linkedInAds),
+      });
     }
 
     const savedConsent = writeStoredConsent(nextConsent);
     consentRef.current = savedConsent;
     setConsent(savedConsent);
 
-    if (isWithdrawingGoogleAnalytics) {
-      removeGoogleAnalyticsCookies();
+    if (isWithdrawing) {
+      if (isWithdrawingGoogleAnalytics) {
+        removeGoogleAnalyticsCookies();
+      }
+      if (isWithdrawingLinkedInAds) {
+        removeLinkedInCookies();
+      }
       window.location.reload();
       return;
     }
 
     setSelectedConsent({
       googleAnalytics: savedConsent.googleAnalytics,
+      linkedInAds: savedConsent.linkedInAds,
       eventbrite: savedConsent.eventbrite,
     });
     setIsPreferencesOpen(false);
   }, []);
 
   const acceptTicketCheckout = useCallback(() => {
-    saveConsent({ googleAnalytics: consent.googleAnalytics, eventbrite: true });
-  }, [consent.googleAnalytics, saveConsent]);
+    saveConsent({
+      googleAnalytics: consent.googleAnalytics,
+      linkedInAds: consent.linkedInAds,
+      eventbrite: true,
+    });
+  }, [consent.googleAnalytics, consent.linkedInAds, saveConsent]);
 
   const rejectOptionalCookies = useCallback(() => {
-    saveConsent({ googleAnalytics: false, eventbrite: false });
+    saveConsent({ googleAnalytics: false, linkedInAds: false, eventbrite: false });
   }, [saveConsent]);
 
   const acceptSelected = useCallback(() => {
@@ -118,16 +142,17 @@ const CookieConsent = ({ children }) => {
   }, [saveConsent, selectedConsent]);
 
   const acceptAll = useCallback(() => {
-    saveConsent({ googleAnalytics: true, eventbrite: true });
+    saveConsent({ googleAnalytics: true, linkedInAds: true, eventbrite: true });
   }, [saveConsent]);
 
   const openCookiePreferences = useCallback(() => {
     setSelectedConsent({
       googleAnalytics: consent.googleAnalytics,
+      linkedInAds: consent.linkedInAds,
       eventbrite: consent.eventbrite,
     });
     setIsPreferencesOpen(true);
-  }, [consent.googleAnalytics, consent.eventbrite]);
+  }, [consent.googleAnalytics, consent.linkedInAds, consent.eventbrite]);
 
   const closeCookiePreferences = useCallback(() => {
     setIsPreferencesOpen(false);
@@ -145,6 +170,7 @@ const CookieConsent = ({ children }) => {
     () => ({
       hasMadeChoice: consent.hasMadeChoice,
       hasAnalyticsConsent: consent.googleAnalytics,
+      hasMarketingConsent: consent.linkedInAds,
       hasTicketCheckoutConsent: consent.eventbrite,
       acceptTicketCheckout,
       rejectOptionalCookies,
@@ -154,6 +180,7 @@ const CookieConsent = ({ children }) => {
       acceptTicketCheckout,
       consent.googleAnalytics,
       consent.hasMadeChoice,
+      consent.linkedInAds,
       consent.eventbrite,
       openCookiePreferences,
       rejectOptionalCookies,
@@ -172,8 +199,9 @@ const CookieConsent = ({ children }) => {
             <h2>Cookie choices</h2>
             <p>
               We use GoatCounter for limited, cookie-free aggregate traffic statistics. You can
-              separately choose whether to enable additional Google Analytics and the embedded
-              Eventbrite ticket checkout. See our <a href="/privacy">privacy page</a>.
+              separately choose whether to enable additional Google Analytics, LinkedIn marketing
+              cookies and the embedded Eventbrite ticket checkout. See our{' '}
+              <a href="/privacy">privacy page</a>.
             </p>
           </div>
           <div className="cookie-banner__actions">
@@ -246,6 +274,25 @@ const CookieConsent = ({ children }) => {
                   Allow Google Analytics to collect additional information about website usage, such
                   as campaign attribution, device information, approximate location and interactions
                   with important links. Google Analytics is disabled unless you enable it.
+                </p>
+              </span>
+            </label>
+
+            <label className="cookie-modal__section cookie-modal__choice">
+              <input
+                aria-label="Marketing — LinkedIn Insight Tag"
+                type="checkbox"
+                name="linkedInAds"
+                checked={selectedConsent.linkedInAds}
+                onChange={handleSelectedConsentChange}
+              />
+              <span>
+                <h3>Marketing — LinkedIn Insight Tag</h3>
+                <p>
+                  Allow LinkedIn to measure the performance of our LinkedIn campaigns and to show
+                  you relevant ads on LinkedIn based on your visit to this website (retargeting).
+                  LinkedIn may set cookies and process personal data. Disabled unless you enable
+                  it.
                 </p>
               </span>
             </label>
