@@ -27,6 +27,18 @@ Rejecting optional services disables Google Analytics and Eventbrite, but not th
 
 See [Google's privacy information](https://policies.google.com/privacy) and [Google Analytics information](https://support.google.com/analytics/answer/12159447) for details.
 
+## Marketing With the LinkedIn Insight Tag
+
+We use the LinkedIn Insight Tag through Google Tag Manager only after you give consent for LinkedIn marketing.
+
+When enabled, LinkedIn may process information such as pages visited, IP address, device and browser information and timestamps. We use it to measure the performance of our LinkedIn campaigns (for example whether visitors arriving from an ad view pages or complete key actions) and to show relevant ads on LinkedIn to people who have visited this website (retargeting).
+
+You can decline LinkedIn marketing without losing access to the website, and you can change your choice later through Privacy and cookie settings.
+
+Rejecting optional services also disables the LinkedIn Insight Tag.
+
+See [LinkedIn's privacy policy](https://www.linkedin.com/legal/privacy-policy) and [LinkedIn's Insight Tag information](https://www.linkedin.com/help/lms/answer/a427660) for details.
+
 ## Tickets and Eventbrite
 
 We use Eventbrite for ticket checkout. The embedded Eventbrite checkout is loaded only after you allow the ticket checkout service in the cookie/settings banner. You can also use the fallback link to open Eventbrite directly.
@@ -35,9 +47,11 @@ Eventbrite may process your personal data and use cookies or similar technologie
 
 ## Cookies and Local Storage
 
-We use essential local storage to remember your optional privacy choices. This stores your Google Analytics and Eventbrite preferences, the consent schema version, the consent policy revision, and when the preference was updated. GoatCounter is not represented as an optional consent field.
+We use essential local storage to remember your optional privacy choices. This stores your Google Analytics, LinkedIn marketing and Eventbrite preferences, the consent schema version, the consent policy revision, and when the preference was updated. GoatCounter is not represented as an optional consent field.
 
 If you allow additional analytics, Google Analytics may set optional first-party cookies such as `_ga` and `_ga_*`. These cookies are created only after Google Analytics consent is granted.
+
+If you allow LinkedIn marketing, the LinkedIn Insight Tag may set first-party cookies such as `li_fat_id` and LinkedIn may set cookies on its own domain. These are created only after LinkedIn marketing consent is granted. If you withdraw that consent, the website removes known first-party LinkedIn cookies where technically possible and reloads the page to apply the denial fully.
 
 If you allow the embedded ticket checkout, Eventbrite may use cookies or similar technologies for checkout, payment, security, analytics, and related services. The Eventbrite checkout is not loaded unless you allow it.
 
