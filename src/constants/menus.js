@@ -3,7 +3,9 @@ import LINKS from 'constants/links.js';
 const MENUS = {
   header: [
     { text: 'Tickets', ...LINKS.tickets },
-    { text: 'Program', ...LINKS.program },
+    { text: 'Workshops', ...LINKS.workshops },
+    { text: 'Conference', ...LINKS.program },
+    { text: 'Speakers', ...LINKS.speakers },
     { text: 'Sponsors', ...LINKS.sponsors },
     { text: 'Team', ...LINKS.team },
     {
@@ -14,7 +16,9 @@ const MENUS = {
   footer: {
     conference: [
       { text: 'Tickets', ...LINKS.tickets },
-      { text: 'Program', ...LINKS.program },
+      { text: 'Workshops', ...LINKS.workshops },
+      { text: 'Conference', ...LINKS.program },
+      { text: 'Speakers', ...LINKS.speakers },
       { text: 'Sponsors', ...LINKS.sponsors },
       { text: 'Team', ...LINKS.team },
       { text: 'Past editions', children: [{ text: '2025', ...LINKS.past2025 }] },
@@ -29,7 +33,9 @@ const MENUS = {
   },
   mobile: [
     { text: 'Tickets', ...LINKS.tickets },
-    { text: 'Program', ...LINKS.program },
+    { text: 'Workshops', ...LINKS.workshops },
+    { text: 'Conference', ...LINKS.program },
+    { text: 'Speakers', ...LINKS.speakers },
     { text: 'Sponsors', ...LINKS.sponsors },
     { text: 'Team', ...LINKS.team },
     {

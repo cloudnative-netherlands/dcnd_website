@@ -6,20 +6,22 @@ import Layout from 'components/shared/layout';
 import SEO from 'components/shared/seo';
 import SEO_DATA from 'constants/seo-data';
 
-const ProgramPage = () => (
+const WorkshopsPage = () => (
   <Layout headerClassnames="!bg-white">
     <section className="safe-paddings pb-20 pt-24 lg:pt-[4.5rem] md:pb-16 md:pt-16 sm:py-8">
       <div className="container mx-auto px-4 text-center text-primary-1">
-        <h1 className="text-5xl font-bold leading-tight md:text-4xl">Conference</h1>
+        <h1 className="text-5xl font-bold leading-tight md:text-4xl">Workshops</h1>
         <p className="mt-4 text-lg leading-8 text-gray-600">
-          A full day of cloud native talks — Friday 30 October 2026.
+          Hands-on cloud native workshops — Thursday 29 October 2026.
         </p>
       </div>
-      <Schedule dayIndex={1} />
+      <Schedule dayIndex={0} />
     </section>
   </Layout>
 );
 
-export default ProgramPage;
+export default WorkshopsPage;
 
-export const Head = ({ location: { pathname } }) => <SEO {...SEO_DATA.program} pathname={pathname} />;
+export const Head = ({ location: { pathname } }) => (
+  <SEO {...SEO_DATA.workshops} pathname={pathname} />
+);
