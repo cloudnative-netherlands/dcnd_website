@@ -59,11 +59,11 @@ const Hero = () => (
                 data-goatcounter-click="program-click"
                 data-goatcounter-title="Program click"
               >
-                CFP Closed
+                View Agenda
               </a>
             </div>
             <p className="hero-support-text">
-              CFP is now closed. We’re reviewing submissions and building the 2026 program.
+              The agenda is live: workshops on 29 October, conference talks on 30 October.
             </p>
 
             <p className="hero-description hero-detail-description">
