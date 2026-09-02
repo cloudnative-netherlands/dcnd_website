@@ -13,14 +13,14 @@ export default {
     to: '/',
   },
   schedule: {
-    to: '/program',
-    id: getAnchor('Program'),
-    homeTo: '/program',
+    to: '/agenda',
+    id: getAnchor('Agenda'),
+    homeTo: '/agenda',
   },
   program: {
-    to: '/program',
-    id: getAnchor('Program'),
-    homeTo: '/program',
+    to: '/agenda',
+    id: getAnchor('Agenda'),
+    homeTo: '/agenda',
   },
   sponsors: {
     to: `/#${getAnchor('sponsors')}`,

@@ -5,7 +5,14 @@ module.exports = async (options) => {
 
   options.actions.createRedirect({
     fromPath: '/schedule/',
-    toPath: '/program/',
+    toPath: '/agenda/',
+    isPermanent: true,
+    redirectInBrowser: true,
+  });
+
+  options.actions.createRedirect({
+    fromPath: '/program/',
+    toPath: '/agenda/',
     isPermanent: true,
     redirectInBrowser: true,
   });

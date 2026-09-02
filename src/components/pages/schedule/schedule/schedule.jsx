@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 
 import {
   SESSIONIZE_GRID_URL as scriptUrl,
+  SESSIONIZE_SESSIONS_URL as sessionsUrl,
   SESSIONIZE_SPEAKERS_URL as speakerURL,
 } from 'constants/sessionize';
 
@@ -15,18 +16,19 @@ const typeLabels = {
   sponsor: 'Sponsor Talks',
   service: 'Service Sessions',
   keynote: 'Keynotes',
+  lightning: 'Lightning Talks',
 };
 
 const Schedule = ({ dayIndex = null }) => {
   const [speakerData, setSpeakerData] = useState([]);
   const [gridData, setGridData] = useState([]); // Raw grid data
   const [events, setEvents] = useState([]); // Flat list of events
-  const [rooms, setRooms] = useState([]); // List of rooms for selected day
-  const [selectedDay, setSelectedDay] = useState(0);
+  const [initialDay, setInitialDay] = useState(0); // Day section to scroll to on load
   const [selectedType, setSelectedType] = useState('all');
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
+  const [topicsById, setTopicsById] = useState({}); // sessionId -> topic names
   const [currentTime, setCurrentTime] = useState(new Date());
   const [favorites, setFavorites] = useState(() => {
     try {
@@ -41,13 +43,12 @@ const Schedule = ({ dayIndex = null }) => {
     showServiceSessions: true,
   });
 
-  const [sessionTypes, setSessionTypes] = useState([]);
 
-  // Helper: Get date for selectedDay
-  const getDateForSelectedDay = () => gridData[selectedDay] || gridData[0] || null;
+  // Helper: Grid entry for a given day index
+  const getGridDay = (index) => gridData[index] || null;
 
   // Helper: Convert sessions to flat events
-  const convertSessionsToEvents = (data, filters) => {
+  const convertSessionsToEvents = (data, filters, topicsMap = topicsById) => {
     const events = [];
     data.forEach((day) => {
       day.rooms.forEach((room) => {
@@ -55,10 +56,11 @@ const Schedule = ({ dayIndex = null }) => {
           if (filters.showServiceSessions && session.isServiceSession) {
             return true;
           }
+          // isConfirmed is deliberately not required: accepted, informed sessions stay
+          // visible while a speaker's confirmation is still pending in Sessionize
           return (
             session.status === 'Accepted' &&
             session.isInformed === true &&
-            session.isConfirmed === true &&
             !session.isServiceSession
           );
         });
@@ -82,11 +84,32 @@ const Schedule = ({ dayIndex = null }) => {
           start: session.startsAt,
           end: session.endsAt,
           isServiceSession: session.isServiceSession || false,
+          topics: topicsMap[session.id] || [],
         }));
         events.push(...roomEvents);
       });
     });
-    return events;
+    // Talks with nothing running in parallel address the whole audience: before the
+    // parallel tracks start they are keynotes, after that they are lightning talks
+    const isLoneEvent = (event) =>
+      !events.some((other) => other.id !== event.id && eventsOverlap(other, event));
+    const firstParallelStartByDay = {};
+    events.forEach((event) => {
+      if (isLoneEvent(event)) return;
+      const day = new Date(event.start).toDateString();
+      if (
+        !firstParallelStartByDay[day] ||
+        new Date(event.start) < new Date(firstParallelStartByDay[day])
+      ) {
+        firstParallelStartByDay[day] = event.start;
+      }
+    });
+    return events.map((event) => {
+      if (event.type !== 'talk' || !isLoneEvent(event)) return event;
+      const firstParallel = firstParallelStartByDay[new Date(event.start).toDateString()];
+      const isBeforeTracks = !firstParallel || new Date(event.start) < new Date(firstParallel);
+      return { ...event, type: isBeforeTracks ? 'keynote' : 'lightning' };
+    });
   };
 
   // Helper: Calculate duration in minutes
@@ -99,8 +122,12 @@ const Schedule = ({ dayIndex = null }) => {
 
   // Helper: Determine event type by room name or session
   const determineEventType = (room, session) => {
-    if (session && session.isPlenumSession) return 'keynote';
+    // Service first: breaks are flagged as both service and plenum in Sessionize
     if (session && session.isServiceSession) return 'service';
+    if (session && session.isPlenumSession) return 'keynote';
+    // Long-format sessions (90+ min) are hands-on workshops even when Sessionize
+    // records them as regular sessions
+    if (session && calculateDuration(session.startsAt, session.endsAt) >= 90) return 'workshop';
     if (room.trim().toLowerCase() === 'quest') return 'workshop';
     if (room.toLowerCase().includes('workshop')) return 'workshop';
     if (room.toLowerCase().includes('sponsor')) return 'sponsor';
@@ -116,15 +143,35 @@ const Schedule = ({ dayIndex = null }) => {
     return events.filter((event) => event.type === selectedType);
   };
 
-  // Helper: Group events by room
-  const groupEventsByRoom = (events) => {
-    return events.reduce((acc, event) => {
-      if (!acc[event.room]) {
-        acc[event.room] = [];
+  // Helper: Do two events overlap in time?
+  const eventsOverlap = (a, b) => new Date(a.start) < new Date(b.end) && new Date(a.end) > new Date(b.start);
+
+  // Helper: A session with nothing running in parallel (keynotes, breaks, the
+  // single-track morning programme) spans the full timeline width
+  const isFullWidthEvent = (event, allEvents) =>
+    !allEvents.some((other) => other.id !== event.id && eventsOverlap(event, other));
+
+  // Helper: Group events into chronological rows aligned by start time
+  const buildTimeline = (events, roomOrder, fullWidthIds) => {
+    const sorted = [...events].sort(
+      (a, b) =>
+        new Date(a.start) - new Date(b.start) ||
+        Number(fullWidthIds.has(b.id)) - Number(fullWidthIds.has(a.id)) ||
+        roomOrder.indexOf(a.room) - roomOrder.indexOf(b.room)
+    );
+
+    const rows = [];
+    sorted.forEach((event) => {
+      const last = rows[rows.length - 1];
+      if (fullWidthIds.has(event.id)) {
+        rows.push({ kind: 'full', start: event.start, events: [event] });
+      } else if (last && last.kind === 'parallel' && last.start === event.start) {
+        last.events.push(event);
+      } else {
+        rows.push({ kind: 'parallel', start: event.start, events: [event] });
       }
-      acc[event.room].push(event);
-      return acc;
-    }, {});
+    });
+    return rows;
   };
 
   // Helper: Find speaker profile picture
@@ -133,9 +180,9 @@ const Schedule = ({ dayIndex = null }) => {
     return speaker ? speaker.profilePicture : null;
   };
 
-  // Helper: Filter events by selected day
+  // Helper: Filter events by day index
   const filterEventsByDay = (events, day) => {
-    const gridDay = getDateForSelectedDay();
+    const gridDay = getGridDay(day);
     if (!gridDay) return [];
     const gridDate = new Date(gridDay.date).toDateString();
     return events.filter((event) => {
@@ -144,11 +191,30 @@ const Schedule = ({ dayIndex = null }) => {
     });
   };
 
-  // Helper: Get rooms for selected day from gridData
-  const getRoomsForSelectedDay = () => {
-    const gridDay = getDateForSelectedDay();
+  // Helper: Room column order. Sessionize's grid order is kept, except that rooms
+  // sharing a base name ("Mission 1", "Mission 2") are sorted naturally so numbered
+  // rooms always appear in numeric order.
+  const roomBaseName = (room) => room.trim().replace(/\s*\d+$/, '');
+  const orderRooms = (roomList) => {
+    const firstIndexByBase = {};
+    roomList.forEach((room, index) => {
+      const base = roomBaseName(room);
+      if (!(base in firstIndexByBase)) {
+        firstIndexByBase[base] = index;
+      }
+    });
+    return [...roomList].sort(
+      (a, b) =>
+        firstIndexByBase[roomBaseName(a)] - firstIndexByBase[roomBaseName(b)] ||
+        a.localeCompare(b, undefined, { numeric: true })
+    );
+  };
+
+  // Helper: Get rooms for a day index from gridData
+  const getRoomsForDay = (index) => {
+    const gridDay = getGridDay(index);
     if (!gridDay) return [];
-    return gridDay.rooms.map((room) => room.name);
+    return orderRooms(gridDay.rooms.map((room) => room.name));
   };
 
   // Helper: Is event live?
@@ -221,6 +287,13 @@ const Schedule = ({ dayIndex = null }) => {
                     <br />
                     {event.room}
                   </p>
+                  {event.topics?.length > 0 && (
+                    <p>
+                      <strong>Topics</strong>
+                      <br />
+                      {event.topics.join(', ')}
+                    </p>
+                  )}
                   <p>
                     <strong>Session Type</strong>
                     <br />
@@ -230,6 +303,8 @@ const Schedule = ({ dayIndex = null }) => {
                       <span className="session-label session-label--workshop">Workshop</span>
                     ) : event.type === 'service' ? (
                       <span className="session-label session-label--service">Service Session</span>
+                    ) : event.type === 'lightning' ? (
+                      <span className="session-label session-label--lightning">Lightning Talk</span>
                     ) : event.type === 'talk' ? (
                       <span className="session-label session-label--talk">Talk</span>
                     ) : (
@@ -297,25 +372,50 @@ const Schedule = ({ dayIndex = null }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const [speakersResponse, eventsResponse] = await Promise.all([
+        const [speakersResponse, eventsResponse, sessionsResponse] = await Promise.all([
           fetch(speakerURL),
           fetch(scriptUrl),
+          // Topics are decoration only — never fail the schedule over them
+          fetch(sessionsUrl).catch(() => null),
         ]);
 
         const speakersData = await speakersResponse.json();
         const eventsData = await eventsResponse.json();
 
+        let topicsMap = {};
+        try {
+          const sessionsData = sessionsResponse ? await sessionsResponse.json() : [];
+          sessionsData.forEach((group) => {
+            (group.sessions || []).forEach((session) => {
+              const topics = (session.categories || [])
+                .filter((category) => category.name === 'Topics')
+                .flatMap((category) => (category.categoryItems || []).map((item) => item.name));
+              if (topics.length) {
+                topicsMap[session.id] = topics;
+              }
+            });
+          });
+        } catch {
+          topicsMap = {};
+        }
+        setTopicsById(topicsMap);
+
         setSpeakerData(speakersData);
         // Optionally limit to a single conference day (workshops page vs. conference page)
         const grid = dayIndex === null ? eventsData : eventsData.slice(dayIndex, dayIndex + 1);
         setGridData(grid); // Save raw grid data
-        setEvents(convertSessionsToEvents(grid, sessionFilters));
-        // Default to the current day during the event, otherwise day 1
-        const today = new Date().toDateString();
-        const todayIndex = grid.findIndex(
-          (day) => new Date(day.date).toDateString() === today
-        );
-        setSelectedDay(todayIndex >= 0 ? todayIndex : 0);
+        setEvents(convertSessionsToEvents(grid, sessionFilters, topicsMap));
+        // Day section to scroll to on load: the event day matching today's local
+        // date (29 Oct opens on the workshops, 30 Oct on the conference talks);
+        // before the event the first day, after it the last day. Calendar-date
+        // strings avoid timezone drift.
+        const todayKey = new Date().toLocaleDateString('en-CA');
+        const dayKeys = grid.map((day) => day.date.slice(0, 10));
+        let defaultDay = dayKeys.indexOf(todayKey);
+        if (defaultDay < 0) {
+          defaultDay = todayKey > dayKeys[dayKeys.length - 1] ? grid.length - 1 : 0;
+        }
+        setInitialDay(defaultDay);
         setIsLoading(false);
       } catch (error) {
         console.error('Error fetching data:', error);
@@ -331,16 +431,18 @@ const Schedule = ({ dayIndex = null }) => {
   // NEU: Events neu berechnen, wenn Filter geändert werden
   useEffect(() => {
     if (gridData.length) {
-      setEvents(convertSessionsToEvents(gridData, sessionFilters));
+      setEvents(convertSessionsToEvents(gridData, sessionFilters, topicsById));
     }
     // eslint-disable-next-line
-  }, [sessionFilters, gridData]);
+  }, [sessionFilters, gridData, topicsById]);
 
-  // Update rooms when selectedDay or gridData changes
+  // On the conference day, jump straight to that day's section after load
   useEffect(() => {
-    setRooms(getRoomsForSelectedDay());
+    if (!isLoading && initialDay > 0) {
+      document.getElementById(`schedule-day-${initialDay}`)?.scrollIntoView();
+    }
     // eslint-disable-next-line
-  }, [selectedDay, gridData]);
+  }, [isLoading]);
 
   // Update current time every minute
   useEffect(() => {
@@ -357,12 +459,6 @@ const Schedule = ({ dayIndex = null }) => {
       localStorage.setItem('favorites', JSON.stringify(favorites));
     } catch { }
   }, [favorites]);
-
-  // Dynamisch Session-Typen aus Events extrahieren
-  useEffect(() => {
-    const types = Array.from(new Set(events.map((event) => event.type)));
-    setSessionTypes(types);
-  }, [events]);
 
   if (isLoading) {
     return (
@@ -391,9 +487,61 @@ const Schedule = ({ dayIndex = null }) => {
     );
   }
 
-  // Filter events for selected day and type
-  const filteredEvents = filterEvents(filterEventsByDay(events, selectedDay));
-  const eventsByRoom = groupEventsByRoom(filteredEvents);
+  // Filter pills apply across all rendered days. Service sessions (breaks, sponsor
+  // intros) and the odd lightning talk are shown in the grid but are not worth
+  // filtering by.
+  const sessionTypes = Array.from(new Set(events.map((event) => event.type))).filter(
+    (type) => type !== 'service' && type !== 'lightning'
+  );
+
+  // Per-day timeline data. Full-width rows are determined against the whole day,
+  // so changing the type filter never reshuffles the column layout.
+  const dayInfos = gridData.map((day, index) => {
+    const dayEvents = filterEventsByDay(events, index);
+    const filteredEvents = filterEvents(dayEvents);
+    const fullWidthIds = new Set(
+      dayEvents.filter((event) => isFullWidthEvent(event, dayEvents)).map((event) => event.id)
+    );
+    const parallelRooms = getRoomsForDay(index).filter((room) =>
+      dayEvents.some((event) => event.room === room && !fullWidthIds.has(event.id))
+    );
+    return {
+      day,
+      index,
+      parallelRooms,
+      timelineRows: buildTimeline(filteredEvents, parallelRooms, fullWidthIds),
+      // A day hosting hands-on workshops is the workshop day, the rest is conference
+      suffix: dayEvents.some((event) => event.type === 'workshop') ? 'Workshops' : 'Conference',
+    };
+  });
+
+  const renderEventCard = (event) => {
+    const isFavorite = favorites.includes(event.id);
+    const isLiveEvent = isLive(event.start, event.end);
+    const remainingMinutes = isLiveEvent ? calculateRemainingMinutes(event.end) : 0;
+
+    return (
+      <ScheduleCard
+        key={event.id}
+        startTime={event.time}
+        endTime={event.endTime}
+        duration={`${event.duration} min`}
+        title={event.title}
+        speakers={event.speakers?.map((speaker) => ({
+          name: speaker.name,
+          avatar: findSpeakerProfile(speaker.id),
+        }))}
+        location={event.room}
+        type={event.type}
+        topics={event.topics}
+        isFavorite={isFavorite}
+        remainingMinutes={remainingMinutes}
+        isLive={isLiveEvent}
+        onFavoriteClick={() => toggleFavorite(event.id)}
+        onClick={() => setSelectedEvent(event)}
+      />
+    );
+  };
 
   return (
     <div className="schedule-container">
@@ -401,18 +549,23 @@ const Schedule = ({ dayIndex = null }) => {
       <div className="schedule-header-row">
         {gridData.length > 1 && (
           <div className="schedule-day-tabs">
-            {gridData.map((day, index) => (
+            {dayInfos.map(({ day, index, suffix }) => (
               <button
                 key={day.date}
                 type="button"
-                className={`schedule-day-btn ${selectedDay === index ? 'active' : ''}`}
-                onClick={() => setSelectedDay(index)}
+                className="schedule-day-btn"
+                onClick={() => {
+                  document
+                    .getElementById(`schedule-day-${index}`)
+                    ?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }}
               >
                 {new Date(day.date).toLocaleDateString('en-GB', {
                   weekday: 'short',
                   day: 'numeric',
                   month: 'short',
                 })}
+                {` · ${suffix}`}
               </button>
             ))}
           </div>
@@ -433,15 +586,6 @@ const Schedule = ({ dayIndex = null }) => {
               {typeLabels[type] || type.charAt(0).toUpperCase() + type.slice(1) + 's'}
             </button>
           ))}
-          {/* Add Keynotes button if not present in sessionTypes */}
-          {!sessionTypes.includes('keynote') && (
-            <button
-              className={`schedule-filter-pill ${selectedType === 'keynote' ? 'active' : ''}`}
-              onClick={() => setSelectedType('keynote')}
-            >
-              Keynotes
-            </button>
-          )}
           <div className="filter-divider"></div>
           <button
             className={`schedule-filter-pill ${selectedType === 'favorites' ? 'active' : ''}`}
@@ -452,41 +596,59 @@ const Schedule = ({ dayIndex = null }) => {
         </div>
       </div>
 
-      <div className="schedule-grid">
-        {rooms.map((room) => (
-          <div key={room} className="room-section">
-            <div className="room-header">
-              <h2>{room}</h2>
-            </div>
-            {(eventsByRoom[room] || []).map((event) => {
-              const isFavorite = favorites.includes(event.id);
-              const isLiveEvent = isLive(event.start, event.end);
-              const remainingMinutes = isLiveEvent ? calculateRemainingMinutes(event.end) : 0;
+      {dayInfos.map(({ day, index, parallelRooms, timelineRows, suffix }) => (
+        <section key={day.date} id={`schedule-day-${index}`} className="schedule-day-section">
+          {gridData.length > 1 && (
+            <h2 className="schedule-day-heading">
+              {new Date(day.date).toLocaleDateString('en-GB', {
+                weekday: 'long',
+                day: 'numeric',
+                month: 'long',
+              })}
+              {` — ${suffix}`}
+            </h2>
+          )}
 
-              return (
-                <ScheduleCard
-                  key={event.id}
-                  startTime={event.time}
-                  endTime={event.endTime}
-                  duration={`${event.duration} min`}
-                  title={event.title}
-                  speakers={event.speakers?.map((speaker) => ({
-                    name: speaker.name,
-                    avatar: findSpeakerProfile(speaker.id),
-                  }))}
-                  location={event.room}
-                  type={event.type}
-                  isFavorite={isFavorite}
-                  remainingMinutes={remainingMinutes}
-                  isLive={isLiveEvent}
-                  onFavoriteClick={() => toggleFavorite(event.id)}
-                  onClick={() => setSelectedEvent(event)}
-                />
-              );
-            })}
-          </div>
-        ))}
-      </div>
+          {timelineRows.length === 0 ? (
+            <p className="schedule-day-empty">No matching sessions on this day.</p>
+          ) : (
+            <div className="schedule-timeline">
+              {parallelRooms.length > 1 && (
+                <div
+                  className="timeline-room-headers"
+                  style={{ gridTemplateColumns: `repeat(${parallelRooms.length}, 1fr)` }}
+                >
+                  {parallelRooms.map((room) => (
+                    <div key={room} className="room-header">
+                      <h2>{room}</h2>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {timelineRows.map((row) =>
+                row.kind === 'full' ? (
+                  <div key={`${row.start}-full`} className="timeline-row timeline-row--full">
+                    {row.events.map(renderEventCard)}
+                  </div>
+                ) : (
+                  <div
+                    key={row.start}
+                    className="timeline-row timeline-row--parallel"
+                    style={{ gridTemplateColumns: `repeat(${parallelRooms.length}, 1fr)` }}
+                  >
+                    {parallelRooms.map((room) => (
+                      <div key={room} className="timeline-cell">
+                        {row.events.filter((event) => event.room === room).map(renderEventCard)}
+                      </div>
+                    ))}
+                  </div>
+                )
+              )}
+            </div>
+          )}
+        </section>
+      ))}
 
       <Modal
         isOpen={!!selectedEvent}

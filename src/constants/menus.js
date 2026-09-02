@@ -4,7 +4,7 @@ const MENUS = {
   header: [
     { text: 'Tickets', ...LINKS.tickets },
     { text: 'Workshops', ...LINKS.workshops },
-    { text: 'Conference', ...LINKS.program },
+    { text: 'Agenda', ...LINKS.program },
     { text: 'Speakers', ...LINKS.speakers },
     { text: 'Sponsors', ...LINKS.sponsors },
     { text: 'Team', ...LINKS.team },
@@ -17,7 +17,7 @@ const MENUS = {
     conference: [
       { text: 'Tickets', ...LINKS.tickets },
       { text: 'Workshops', ...LINKS.workshops },
-      { text: 'Conference', ...LINKS.program },
+      { text: 'Agenda', ...LINKS.program },
       { text: 'Speakers', ...LINKS.speakers },
       { text: 'Sponsors', ...LINKS.sponsors },
       { text: 'Team', ...LINKS.team },
@@ -34,7 +34,7 @@ const MENUS = {
   mobile: [
     { text: 'Tickets', ...LINKS.tickets },
     { text: 'Workshops', ...LINKS.workshops },
-    { text: 'Conference', ...LINKS.program },
+    { text: 'Agenda', ...LINKS.program },
     { text: 'Speakers', ...LINKS.speakers },
     { text: 'Sponsors', ...LINKS.sponsors },
     { text: 'Team', ...LINKS.team },

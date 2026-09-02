@@ -66,6 +66,7 @@ jobs:
           # before the artifact is uploaded.
           required_files="
             public/index.html
+            public/agenda/index.html
             public/program/index.html
             public/schedule/index.html
             public/speakers/index.html
