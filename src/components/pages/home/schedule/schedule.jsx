@@ -178,7 +178,7 @@ const Schedule = () => {
                 className="button"
                 style={{ cursor: 'pointer' }}
                 onClick={() => {
-                  window.location.href = '/program';
+                  window.location.href = '/agenda';
                 }}
               >
                 View full schedule
@@ -205,7 +205,7 @@ const Schedule = () => {
                     isFavorite={true}
                     isLive={false}
                     onFavoriteClick={() => { }}
-                    onClick={() => window.location.href = '/program'}
+                    onClick={() => window.location.href = '/agenda'}
                   />
                 ))
               )}

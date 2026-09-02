@@ -23,8 +23,7 @@ const Schedule = ({ dayIndex = null }) => {
   const [speakerData, setSpeakerData] = useState([]);
   const [gridData, setGridData] = useState([]); // Raw grid data
   const [events, setEvents] = useState([]); // Flat list of events
-  const [rooms, setRooms] = useState([]); // List of rooms for selected day
-  const [selectedDay, setSelectedDay] = useState(0);
+  const [initialDay, setInitialDay] = useState(0); // Day section to scroll to on load
   const [selectedType, setSelectedType] = useState('all');
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -45,8 +44,8 @@ const Schedule = ({ dayIndex = null }) => {
   });
 
 
-  // Helper: Get date for selectedDay
-  const getDateForSelectedDay = () => gridData[selectedDay] || gridData[0] || null;
+  // Helper: Grid entry for a given day index
+  const getGridDay = (index) => gridData[index] || null;
 
   // Helper: Convert sessions to flat events
   const convertSessionsToEvents = (data, filters, topicsMap = topicsById) => {
@@ -181,9 +180,9 @@ const Schedule = ({ dayIndex = null }) => {
     return speaker ? speaker.profilePicture : null;
   };
 
-  // Helper: Filter events by selected day
+  // Helper: Filter events by day index
   const filterEventsByDay = (events, day) => {
-    const gridDay = getDateForSelectedDay();
+    const gridDay = getGridDay(day);
     if (!gridDay) return [];
     const gridDate = new Date(gridDay.date).toDateString();
     return events.filter((event) => {
@@ -211,9 +210,9 @@ const Schedule = ({ dayIndex = null }) => {
     );
   };
 
-  // Helper: Get rooms for selected day from gridData
-  const getRoomsForSelectedDay = () => {
-    const gridDay = getDateForSelectedDay();
+  // Helper: Get rooms for a day index from gridData
+  const getRoomsForDay = (index) => {
+    const gridDay = getGridDay(index);
     if (!gridDay) return [];
     return orderRooms(gridDay.rooms.map((room) => room.name));
   };
@@ -406,16 +405,17 @@ const Schedule = ({ dayIndex = null }) => {
         const grid = dayIndex === null ? eventsData : eventsData.slice(dayIndex, dayIndex + 1);
         setGridData(grid); // Save raw grid data
         setEvents(convertSessionsToEvents(grid, sessionFilters, topicsMap));
-        // Default day tab: the event day matching today's local date (29 Oct shows
-        // the workshops, 30 Oct the conference talks); before the event the first
-        // day, after it the last day. Calendar-date strings avoid timezone drift.
+        // Day section to scroll to on load: the event day matching today's local
+        // date (29 Oct opens on the workshops, 30 Oct on the conference talks);
+        // before the event the first day, after it the last day. Calendar-date
+        // strings avoid timezone drift.
         const todayKey = new Date().toLocaleDateString('en-CA');
         const dayKeys = grid.map((day) => day.date.slice(0, 10));
         let defaultDay = dayKeys.indexOf(todayKey);
         if (defaultDay < 0) {
           defaultDay = todayKey > dayKeys[dayKeys.length - 1] ? grid.length - 1 : 0;
         }
-        setSelectedDay(defaultDay);
+        setInitialDay(defaultDay);
         setIsLoading(false);
       } catch (error) {
         console.error('Error fetching data:', error);
@@ -436,11 +436,13 @@ const Schedule = ({ dayIndex = null }) => {
     // eslint-disable-next-line
   }, [sessionFilters, gridData, topicsById]);
 
-  // Update rooms when selectedDay or gridData changes
+  // On the conference day, jump straight to that day's section after load
   useEffect(() => {
-    setRooms(getRoomsForSelectedDay());
+    if (!isLoading && initialDay > 0) {
+      document.getElementById(`schedule-day-${initialDay}`)?.scrollIntoView();
+    }
     // eslint-disable-next-line
-  }, [selectedDay, gridData]);
+  }, [isLoading]);
 
   // Update current time every minute
   useEffect(() => {
@@ -485,23 +487,33 @@ const Schedule = ({ dayIndex = null }) => {
     );
   }
 
-  // Filter events for selected day and type. Full-width rows are determined against
-  // the whole day, so changing the type filter never reshuffles the column layout.
-  const dayEvents = filterEventsByDay(events, selectedDay);
-  const filteredEvents = filterEvents(dayEvents);
-  // Filter pills reflect only the session types present on the selected day.
-  // Service sessions (breaks, sponsor intros) are shown in the grid but are not
-  // worth filtering by.
-  const sessionTypes = Array.from(new Set(dayEvents.map((event) => event.type))).filter(
-    (type) => type !== 'service'
+  // Filter pills apply across all rendered days. Service sessions (breaks, sponsor
+  // intros) and the odd lightning talk are shown in the grid but are not worth
+  // filtering by.
+  const sessionTypes = Array.from(new Set(events.map((event) => event.type))).filter(
+    (type) => type !== 'service' && type !== 'lightning'
   );
-  const fullWidthIds = new Set(
-    dayEvents.filter((event) => isFullWidthEvent(event, dayEvents)).map((event) => event.id)
-  );
-  const parallelRooms = rooms.filter((room) =>
-    dayEvents.some((event) => event.room === room && !fullWidthIds.has(event.id))
-  );
-  const timelineRows = buildTimeline(filteredEvents, parallelRooms, fullWidthIds);
+
+  // Per-day timeline data. Full-width rows are determined against the whole day,
+  // so changing the type filter never reshuffles the column layout.
+  const dayInfos = gridData.map((day, index) => {
+    const dayEvents = filterEventsByDay(events, index);
+    const filteredEvents = filterEvents(dayEvents);
+    const fullWidthIds = new Set(
+      dayEvents.filter((event) => isFullWidthEvent(event, dayEvents)).map((event) => event.id)
+    );
+    const parallelRooms = getRoomsForDay(index).filter((room) =>
+      dayEvents.some((event) => event.room === room && !fullWidthIds.has(event.id))
+    );
+    return {
+      day,
+      index,
+      parallelRooms,
+      timelineRows: buildTimeline(filteredEvents, parallelRooms, fullWidthIds),
+      // A day hosting hands-on workshops is the workshop day, the rest is conference
+      suffix: dayEvents.some((event) => event.type === 'workshop') ? 'Workshops' : 'Conference',
+    };
+  });
 
   const renderEventCard = (event) => {
     const isFavorite = favorites.includes(event.id);
@@ -537,14 +549,15 @@ const Schedule = ({ dayIndex = null }) => {
       <div className="schedule-header-row">
         {gridData.length > 1 && (
           <div className="schedule-day-tabs">
-            {gridData.map((day, index) => (
+            {dayInfos.map(({ day, index, suffix }) => (
               <button
                 key={day.date}
                 type="button"
-                className={`schedule-day-btn ${selectedDay === index ? 'active' : ''}`}
+                className="schedule-day-btn"
                 onClick={() => {
-                  setSelectedDay(index);
-                  setSelectedType('all');
+                  document
+                    .getElementById(`schedule-day-${index}`)
+                    ?.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }}
               >
                 {new Date(day.date).toLocaleDateString('en-GB', {
@@ -552,6 +565,7 @@ const Schedule = ({ dayIndex = null }) => {
                   day: 'numeric',
                   month: 'short',
                 })}
+                {` · ${suffix}`}
               </button>
             ))}
           </div>
@@ -582,40 +596,59 @@ const Schedule = ({ dayIndex = null }) => {
         </div>
       </div>
 
-      <div className="schedule-timeline">
-        {parallelRooms.length > 1 && (
-          <div
-            className="timeline-room-headers"
-            style={{ gridTemplateColumns: `repeat(${parallelRooms.length}, 1fr)` }}
-          >
-            {parallelRooms.map((room) => (
-              <div key={room} className="room-header">
-                <h2>{room}</h2>
-              </div>
-            ))}
-          </div>
-        )}
+      {dayInfos.map(({ day, index, parallelRooms, timelineRows, suffix }) => (
+        <section key={day.date} id={`schedule-day-${index}`} className="schedule-day-section">
+          {gridData.length > 1 && (
+            <h2 className="schedule-day-heading">
+              {new Date(day.date).toLocaleDateString('en-GB', {
+                weekday: 'long',
+                day: 'numeric',
+                month: 'long',
+              })}
+              {` — ${suffix}`}
+            </h2>
+          )}
 
-        {timelineRows.map((row) =>
-          row.kind === 'full' ? (
-            <div key={`${row.start}-full`} className="timeline-row timeline-row--full">
-              {row.events.map(renderEventCard)}
-            </div>
+          {timelineRows.length === 0 ? (
+            <p className="schedule-day-empty">No matching sessions on this day.</p>
           ) : (
-            <div
-              key={row.start}
-              className="timeline-row timeline-row--parallel"
-              style={{ gridTemplateColumns: `repeat(${parallelRooms.length}, 1fr)` }}
-            >
-              {parallelRooms.map((room) => (
-                <div key={room} className="timeline-cell">
-                  {row.events.filter((event) => event.room === room).map(renderEventCard)}
+            <div className="schedule-timeline">
+              {parallelRooms.length > 1 && (
+                <div
+                  className="timeline-room-headers"
+                  style={{ gridTemplateColumns: `repeat(${parallelRooms.length}, 1fr)` }}
+                >
+                  {parallelRooms.map((room) => (
+                    <div key={room} className="room-header">
+                      <h2>{room}</h2>
+                    </div>
+                  ))}
                 </div>
-              ))}
+              )}
+
+              {timelineRows.map((row) =>
+                row.kind === 'full' ? (
+                  <div key={`${row.start}-full`} className="timeline-row timeline-row--full">
+                    {row.events.map(renderEventCard)}
+                  </div>
+                ) : (
+                  <div
+                    key={row.start}
+                    className="timeline-row timeline-row--parallel"
+                    style={{ gridTemplateColumns: `repeat(${parallelRooms.length}, 1fr)` }}
+                  >
+                    {parallelRooms.map((room) => (
+                      <div key={room} className="timeline-cell">
+                        {row.events.filter((event) => event.room === room).map(renderEventCard)}
+                      </div>
+                    ))}
+                  </div>
+                )
+              )}
             </div>
-          )
-        )}
-      </div>
+          )}
+        </section>
+      ))}
 
       <Modal
         isOpen={!!selectedEvent}

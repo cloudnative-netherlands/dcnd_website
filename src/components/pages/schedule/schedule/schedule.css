@@ -8,14 +8,19 @@
   width: 100%;
 }
 
-/* --- Header Row: Tage nebeneinander, Filter daneben --- */
+/* --- Header Row: day jump links + filters, sticky while scrolling both days --- */
 .schedule-header-row {
   display: flex;
   flex-direction: row;
-  margin: 2rem 0;
+  margin: 2rem 0 1rem;
   width: 100%;
   align-items: center;
   justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background-color: #fff;
+  padding: 0.5rem 0;
 }
 
 .schedule-day-tabs {
@@ -26,36 +31,26 @@
   border-right: 1px solid #e5e7eb;
 }
 
+/* Day jump links, styled as obvious buttons */
 .schedule-day-btn {
-  background: #18181b;
+  background: #21468b;
   color: #fff;
   font-weight: 600;
   border: none;
   border-radius: 8px;
   padding: 0.5rem 1.2rem;
   cursor: pointer;
-  transition: background 0.2s, color 0.2s;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
   outline: none;
-  box-shadow: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   font-size: 0.9rem;
   white-space: nowrap;
 }
 
-.schedule-day-btn:not(.active) {
-  background: #f3f4f6;
-  color: #374151;
-  font-weight: 500;
-}
-
-.schedule-day-btn.active {
-  background: #21468B;
-  color: #fff;
-  font-weight: 600;
-}
-
-.schedule-day-btn:not(.active):hover {
-  background: #e5e7eb;
-  color: #222;
+.schedule-day-btn:hover {
+  background: #18325f;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
 }
 
 .schedule-filter-pills {
@@ -846,10 +841,37 @@
   display: grid;
   gap: 1rem;
   position: sticky;
-  top: 0;
+  /* Sits below the sticky header row */
+  top: 3.4rem;
   z-index: 5;
   background-color: #fff;
   padding: 0.5rem 0;
+}
+
+/* Stacked day sections */
+.schedule-day-section {
+  width: 100%;
+  scroll-margin-top: 4.5rem;
+}
+
+.schedule-day-section + .schedule-day-section {
+  margin-top: 4rem;
+}
+
+.schedule-day-heading {
+  margin: 0 0 0.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #e5e7eb;
+  color: #21468b;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+.schedule-day-empty {
+  margin: 2rem 0;
+  text-align: center;
+  color: #6b7280;
 }
 
 .timeline-room-headers .room-header {

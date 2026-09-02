@@ -8,7 +8,7 @@ import SEO_DATA from 'constants/seo-data';
 
 const SchedulePage = () => {
   useEffect(() => {
-    navigate('/program', { replace: true });
+    navigate('/agenda', { replace: true });
   }, []);
 
   return (

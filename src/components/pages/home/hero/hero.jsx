@@ -54,7 +54,7 @@ const Hero = () => (
                 Become a Sponsor
               </a>
               <a
-                href="/program"
+                href="/agenda"
                 className="hero-cta-button hero-cta-button--secondary"
                 data-goatcounter-click="program-click"
                 data-goatcounter-title="Program click"
