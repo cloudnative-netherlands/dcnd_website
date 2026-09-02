@@ -397,8 +397,48 @@
   color: #92400e;
 }
 
+.schedule-card-type-keynote {
+  background-color: #dbeafe;
+  color: #21468b;
+}
+
+.schedule-card-type-lightning {
+  background-color: #ede9fe;
+  color: #5b21b6;
+}
+
+/* Tinted backgrounds so keynotes and service sessions stand out from the white cards */
+.schedule-card--keynote {
+  background-color: #eff6ff;
+  border-left: 3px solid #21468b;
+}
+
+.schedule-card--keynote .schedule-card-footer {
+  background-color: transparent;
+}
+
+.schedule-card--service {
+  background-color: #fffbeb;
+}
+
 .schedule-card-content {
   padding: 1rem;
+}
+
+.schedule-card-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+  margin-top: 0.5rem;
+}
+
+.schedule-card-topic {
+  font-size: 0.7rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 9999px;
+  background-color: #f1f5f9;
+  color: #475569;
+  border: 1px solid #e2e8f0;
 }
 
 .schedule-card-live-indicator {
@@ -781,11 +821,141 @@
   color: #fff;
 }
 
+.session-label--lightning {
+  background: #8b5cf6;
+  color: #fff;
+}
+
 .schedule-empty-message {
   margin: 3rem 0;
   text-align: center;
   font-size: 1.125rem;
   color: #374151;
+}
+
+/* Timeline layout: chronological rows aligned by start time */
+.schedule-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.timeline-room-headers {
+  display: grid;
+  gap: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background-color: #fff;
+  padding: 0.5rem 0;
+}
+
+.timeline-room-headers .room-header {
+  border-radius: 8px;
+  text-align: center;
+}
+
+.timeline-row--parallel {
+  display: grid;
+  gap: 1rem;
+  align-items: start;
+}
+
+.timeline-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.timeline-cell .schedule-card,
+.timeline-row--full .schedule-card {
+  margin: 0;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .timeline-room-headers {
+    display: none;
+  }
+
+  .timeline-row--parallel {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Compact single-row layout for service sessions (breaks, sponsor intros): a
+   5-minute intro should not take the same vertical space as a 30-minute talk */
+.schedule-card--compact {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.25rem 1rem;
+  padding: 0.4rem 1rem;
+}
+
+.schedule-card--compact .schedule-card-header {
+  padding: 0;
+  flex-shrink: 0;
+  gap: 1rem;
+}
+
+.schedule-card--compact .schedule-card-content {
+  padding: 0;
+  flex: 1;
+  min-width: 0;
+}
+
+.schedule-card--compact .schedule-card-title {
+  margin: 0;
+  font-size: 0.95rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.schedule-card--compact .schedule-card-footer {
+  margin-left: auto;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  flex-shrink: 0;
+}
+
+.schedule-card--compact .schedule-card-location {
+  display: none;
+}
+
+/* Inside a room column (or on small screens) there is no space for a single row:
+   keep time and favorite on the first line and let the title wrap below them */
+.timeline-cell .schedule-card--compact .schedule-card-content {
+  order: 3;
+  flex-basis: 100%;
+}
+
+.timeline-cell .schedule-card--compact .schedule-card-footer {
+  order: 2;
+}
+
+.timeline-cell .schedule-card--compact .schedule-card-title {
+  white-space: normal;
+}
+
+@media (max-width: 768px) {
+  .schedule-card--compact .schedule-card-content {
+    order: 3;
+    flex-basis: 100%;
+  }
+
+  .schedule-card--compact .schedule-card-footer {
+    order: 2;
+  }
+
+  .schedule-card--compact .schedule-card-title {
+    white-space: normal;
+  }
 }
 
 .schedule-empty-message a {

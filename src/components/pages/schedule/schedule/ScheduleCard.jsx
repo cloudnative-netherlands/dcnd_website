@@ -13,6 +13,7 @@ const ScheduleCard = ({
   ],
   location = "Top Stage",
   type = "talk",
+  topics = [],
   isFavorite = false,
   remainingMinutes = 12,
   onFavoriteClick,
@@ -21,7 +22,9 @@ const ScheduleCard = ({
 }) => {
   return (
     <div
-      className="schedule-card"
+      className={`schedule-card schedule-card--${type}${
+        type === 'service' ? ' schedule-card--compact' : ''
+      }`}
       onClick={onClick}
     >
       <div className="schedule-card-header">
@@ -46,13 +49,25 @@ const ScheduleCard = ({
             </span>
           )}
         </div>
-        <span className={`schedule-card-type schedule-card-type-${type}`}>
-          {type}
-        </span>
+        {type !== 'service' && (
+          <span className={`schedule-card-type schedule-card-type-${type}`}>
+            {type}
+          </span>
+        )}
       </div>
 
       <div className="schedule-card-content">
         <h3 className="schedule-card-title">{title}</h3>
+
+        {Array.isArray(topics) && topics.length > 0 && (
+          <div className="schedule-card-topics">
+            {topics.map((topic) => (
+              <span key={topic} className="schedule-card-topic">
+                {topic}
+              </span>
+            ))}
+          </div>
+        )}
 
         {Array.isArray(speakers) && speakers.length > 0 && (
           <div className="schedule-card-speakers">
@@ -123,6 +138,7 @@ ScheduleCard.propTypes = {
   ),
   location: PropTypes.string,
   type: PropTypes.string,
+  topics: PropTypes.arrayOf(PropTypes.string),
   isFavorite: PropTypes.bool,
   remainingMinutes: PropTypes.number,
   onFavoriteClick: PropTypes.func,

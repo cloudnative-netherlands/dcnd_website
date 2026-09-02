@@ -5,3 +5,5 @@ const SESSIONIZE_EVENT_ID = process.env.GATSBY_SESSIONIZE_EVENT_ID || 'ek3rx614'
 
 export const SESSIONIZE_GRID_URL = `https://sessionize.com/api/v2/${SESSIONIZE_EVENT_ID}/view/GridSmart`;
 export const SESSIONIZE_SPEAKERS_URL = `https://sessionize.com/api/v2/${SESSIONIZE_EVENT_ID}/view/Speakers`;
+// Carries per-session categories (Topics, Talk Level) that GridSmart omits
+export const SESSIONIZE_SESSIONS_URL = `https://sessionize.com/api/v2/${SESSIONIZE_EVENT_ID}/view/Sessions`;
