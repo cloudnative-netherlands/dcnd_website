@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import React from 'react';
 
+import BBTG from 'icons/bbtg-logo-full.png';
 import Clastix from 'icons/clastix-logo.png';
 import Dash0 from 'icons/dash0-logo.svg';
 import Exoscale from 'icons/exoscale-logo.png';
@@ -12,7 +13,8 @@ import K8sPodcast from 'icons/k8spodcast-logo.png';
 import Kubermatic from 'icons/kubermatic-logo.png';
 import KundoLabs from 'icons/kundolabs-logo.png';
 import learnk8s from 'icons/learnk8s-logo.png';
-import Rubicon from 'icons/rubicon-logo.svg';
+import LucaBerton from 'icons/luca-berton-logo.svg';
+import SCNN from 'icons/scnn-logo.png';
 import Studio618 from 'icons/studio618co-logo.png';
 import SUSE from 'icons/suse-logo.png';
 import sysdig from 'icons/sysdig.png';
@@ -158,12 +160,11 @@ const sponsorsList = [
     logoScale: 0.9,
   },
   {
-    name: 'Rubicon',
-    icon: Rubicon,
-    url: 'https://rubicon.nl/',
+    name: 'BBTG',
+    icon: BBTG,
+    url: 'https://bbtg.com/',
     tier: 'gold',
-    // Dense wordmark; reduced within the shared Gold logo box for optical balance.
-    logoScale: 0.86,
+    logoScale: 1.4,
   },
   {
     name: 'Kubermatic',
@@ -193,7 +194,21 @@ const sponsorsList = [
     url: 'https://www.k8spodcast.nl/',
     tier: 'partner',
     // Official logo incl. "Powered by ACC ICT"; enlarged within the partner logo box.
-    logoScale: 1.15,
+    logoScale: 1.25,
+  },
+  {
+    name: 'Luca Berton',
+    icon: LucaBerton,
+    url: 'https://lucaberton.com/',
+    tier: 'partner',
+    logoScale: 1,
+  },
+  {
+    name: 'Stichting Cloud Native Netherlands',
+    icon: SCNN,
+    url: 'https://cloudnativenetherlands.nl/',
+    tier: 'partner',
+    logoScale: 2.2,
   },
 ];
 
