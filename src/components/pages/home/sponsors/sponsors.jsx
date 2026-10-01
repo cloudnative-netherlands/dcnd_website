@@ -1,10 +1,14 @@
 import clsx from 'clsx';
 import React from 'react';
 
+import ATComputing from 'icons/at-computing-logo.jpg';
 import BBTG from 'icons/bbtg-logo-full.png';
 import Clastix from 'icons/clastix-logo.png';
+import Craci from 'icons/craci.svg';
+import CysoCloud from 'icons/cyso-cloud.png';
 import Dash0 from 'icons/dash0-logo.svg';
 import Exoscale from 'icons/exoscale-logo.png';
+import FikaWorks from 'icons/fikaworks-logo.svg';
 import Grafana from 'icons/grafanalabs.webp';
 import HCS from 'icons/HCS-Wordmark.png';
 import Isovalent from 'icons/isovalent.svg';
@@ -144,6 +148,32 @@ const sponsorsList = [
     url: 'https://www.sysdig.com/',
     tier: 'silver',
     logoScale: 0.86,
+  },
+  {
+    name: 'FikaWorks',
+    icon: FikaWorks,
+    url: 'https://fika.works/',
+    tier: 'silver',
+  },
+  {
+    name: 'Cyso Cloud',
+    icon: CysoCloud,
+    url: 'https://cyso.cloud/',
+    tier: 'silver',
+    logoScale: 1.05,
+  },
+  {
+    name: 'CRACI',
+    icon: Craci,
+    url: 'https://craci.com/',
+    tier: 'silver',
+  },
+  {
+    name: 'AT Computing',
+    icon: ATComputing,
+    url: 'https://www.atcomputing.nl/',
+    tier: 'silver',
+    logoScale: 1.1,
   },
   {
     name: 'Learnk8s',
