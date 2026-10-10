@@ -18,10 +18,13 @@ import Kubermatic from 'icons/kubermatic-logo.png';
 import KundoLabs from 'icons/kundolabs-logo.png';
 import learnk8s from 'icons/learnk8s-logo.png';
 import LucaBerton from 'icons/luca-berton-logo.svg';
+import OpenCommit from 'icons/opencommit-logo.png';
 import SCNN from 'icons/scnn-logo.png';
 import Studio618 from 'icons/studio618co-logo.png';
 import SUSE from 'icons/suse-logo.png';
 import sysdig from 'icons/sysdig.png';
+import TSystems from 'icons/T_systems.png';
+import TrueFullstaq from 'icons/True-fullstaq_logo.png';
 
 import './sponsor.css';
 
@@ -176,6 +179,13 @@ const sponsorsList = [
     logoScale: 1.1,
   },
   {
+    name: 'TrueFullstaq',
+    icon: TrueFullstaq,
+    url: 'https://www.truefullstaq.com/',
+    tier: 'silver',
+    logoScale: 1.1,
+  },
+  {
     name: 'Learnk8s',
     icon: learnk8s,
     url: 'https://kube.careers/',
@@ -194,7 +204,7 @@ const sponsorsList = [
     icon: BBTG,
     url: 'https://bbtg.com/',
     tier: 'gold',
-    logoScale: 1.4,
+    logoScale: 1.2,
   },
   {
     name: 'Kubermatic',
@@ -209,6 +219,13 @@ const sponsorsList = [
     icon: HCS,
     url: 'https://www.hcs-company.com/',
     tier: 'gold',
+  },
+  {
+    name: 'T-Systems',
+    icon: TSystems,
+    url: 'https://www.t-systems.com/nl/nl',
+    tier: 'gold',
+    logoScale: 0.9,
   },
   {
     name: 'KundoLabs',
@@ -239,6 +256,14 @@ const sponsorsList = [
     url: 'https://cloudnativenetherlands.nl/',
     tier: 'partner',
     logoScale: 2.2,
+  },
+  {
+    name: 'OpenCommit',
+    icon: OpenCommit,
+    url: 'https://opencommit.eu/',
+    tier: 'partner',
+    // Wide wordmark; fill the available partner-card width.
+    logoScale: 1.15,
   },
 ];
 

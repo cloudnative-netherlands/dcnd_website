@@ -49,7 +49,7 @@ const ITEMS = [
   },
   {
     name: 'Pavel Chunyayev',
-    position: 'DevOps Manager - Datenna',
+    position: 'Head of Engineering - Datenna',
     photo: PavelPhoto,
     url: 'https://www.linkedin.com/in/pavelchunyayev/',
   },
