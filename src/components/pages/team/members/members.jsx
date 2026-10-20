@@ -14,6 +14,7 @@ import PavelPhoto from './images/pavel_c.jpg';
 import CarlosPhoto from './images/carlos_m.jpg';
 import SaifPhoto from './images/saif_r.webp';
 import ShivaPhoto from './images/shiva_f.jpg';
+import TimPhoto from './images/tim_m.jpg';
 
 
 const ITEMS = [
@@ -70,7 +71,14 @@ const ITEMS = [
      position: 'Event Manager | Isovalent at Cisco',
      photo: ShivaPhoto,
      url: 'https://www.linkedin.com/in/shivafarbod/',
+   },
+   {
+     name: 'Timothy Mamo',
+     position: 'Platform Specialist',
+     photo: TimPhoto,
+     url: 'https://www.linkedin.com/in/timothymamo/',
    }
+
 
 
   
