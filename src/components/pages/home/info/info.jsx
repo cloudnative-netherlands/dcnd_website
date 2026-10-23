@@ -50,7 +50,10 @@ const Info = () => (
             <Calendar className="feature-icon" />
             <div className="feature-content">
               <h3 className="feature-title">Workshop day</h3>
-              <p className="feature-text">Hands-on sessions planned for Thursday 29 October</p>
+              <p className="feature-text">
+                Hands-on sessions on Thursday 29 October.{' '}
+                <strong className="text-[#AE1C28]">Sold out.</strong>
+              </p>
             </div>
           </div>
 
@@ -69,7 +72,7 @@ const Info = () => (
             <div className="feature-content">
               <h3 className="feature-title">Food included</h3>
               <p className="feature-text">
-                Vegetarian and vegan-friendly catering during the conference day
+                Vegetarian and vegan-friendly catering on both the workshop and conference days
               </p>
             </div>
           </div>
@@ -79,7 +82,8 @@ const Info = () => (
             <div className="feature-content">
               <h3 className="feature-title">Community space</h3>
               <p className="feature-text">
-                Hallway conversations, sponsor booths, and community networking
+                Hallway conversations and community networking, with sponsor booths on the
+                conference day
               </p>
             </div>
           </div>

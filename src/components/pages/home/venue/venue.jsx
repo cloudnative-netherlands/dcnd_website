@@ -149,6 +149,7 @@ const Venue = () => {
                 <div>
                   <p>Jaarbeursplein 6</p>
                   <p>3521 AL Utrecht</p>
+                  <p>Second floor of the Jaarbeurs congress building</p>
                 </div>
               </div>
 

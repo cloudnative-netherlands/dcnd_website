@@ -14,6 +14,10 @@ const AgendaPage = () => (
         <p className="mt-4 text-lg leading-8 text-gray-600">
           Workshops on Thursday 29 October, conference talks on Friday 30 October 2026.
         </p>
+        <p className="mt-2 text-base leading-7 text-gray-600">
+          Thursday: doors open 09:00, workshops 09:45–15:30. Friday: doors open 08:45, talks
+          09:30–17:25, followed by drinks (borrel) until 18:00.
+        </p>
       </div>
       <Schedule />
     </section>
