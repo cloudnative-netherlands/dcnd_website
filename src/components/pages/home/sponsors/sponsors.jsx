@@ -3,7 +3,9 @@ import React from 'react';
 
 import ATComputing from 'icons/at-computing-logo.jpg';
 import BBTG from 'icons/bbtg-logo-full.png';
+import Chainguard from 'icons/chainguard-logo.png';
 import Clastix from 'icons/clastix-logo.png';
+import Conf42 from 'icons/conf42-logo.png';
 import Craci from 'icons/craci.svg';
 import CysoCloud from 'icons/cyso-cloud.png';
 import Dash0 from 'icons/dash0-logo.svg';
@@ -186,6 +188,12 @@ const sponsorsList = [
     logoScale: 1.1,
   },
   {
+    name: 'Chainguard',
+    icon: Chainguard,
+    url: 'https://www.chainguard.dev/',
+    tier: 'silver',
+  },
+  {
     name: 'Learnk8s',
     icon: learnk8s,
     url: 'https://kube.careers/',
@@ -265,6 +273,14 @@ const sponsorsList = [
     // Wide wordmark; fill the available partner-card width.
     logoScale: 1.15,
   },
+  {
+    name: 'Conf42',
+    icon: Conf42,
+    url: 'https://www.conf42.com/',
+    tier: 'partner',
+    // Square logo; enlarged so it reads next to the wide partner wordmarks.
+    logoScale: 1.3,
+  },
 ];
 
 const contactEmail = 'info@dutchcloudnativeday.nl';
@@ -281,17 +297,6 @@ const Sponsors = () => {
 
           <div className="flex flex-col items-center justify-center gap-4">
             <div className="flex flex-wrap items-center justify-center gap-4">
-              <a
-                href="https://drive.google.com/file/d/1pmfb1SrN77O9qqoincRnnVsluhhDmk8e/view"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="button"
-                style={{ cursor: 'pointer', textDecoration: 'none' }}
-                data-goatcounter-click="sponsor-click"
-                data-goatcounter-title="Sponsor click"
-              >
-                Sponsorship Prospectus
-              </a>
               <a
                 href={`mailto:${contactEmail}?subject=Dutch%20Cloud%20Native%20Day%202026%20sponsorship`}
                 className="button"
@@ -405,49 +410,6 @@ const Sponsors = () => {
           </div>
         );
       })}
-
-      <div className="mt-12 text-center">
-        <h3 className="mb-4 text-2xl font-bold text-gray-900">Become a Sponsor</h3>
-
-        <div className="flex flex-col items-center justify-center gap-4">
-          <div className="flex flex-wrap items-center justify-center gap-4">
-            <a
-              href="https://drive.google.com/file/d/1pmfb1SrN77O9qqoincRnnVsluhhDmk8e/view"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-lg bg-primary-1 px-6 py-3 text-white transition-all"
-              data-goatcounter-click="sponsor-click"
-              data-goatcounter-title="Sponsor click"
-            >
-              Sponsorship Prospectus
-            </a>
-            <a
-              href={`mailto:${contactEmail}?subject=Dutch%20Cloud%20Native%20Day%202026%20sponsorship`}
-              className="inline-flex items-center gap-2 rounded-lg bg-primary-1 px-6 py-3 text-white transition-all"
-              data-goatcounter-click="sponsor-click"
-              data-goatcounter-title="Sponsor click"
-            >
-              Become a Sponsor
-            </a>
-          </div>
-          <p className="text-lg text-gray-500">
-            Support our local cloud native community and help make Dutch Cloud Native Day possible.
-          </p>
-          <p className="text-sm text-gray-600">
-            Contact us at{' '}
-            <a
-              href={`mailto:${contactEmail}`}
-              className=" hover:underline"
-              style={{ color: '#21468B', fontWeight: 'bold' }}
-              data-goatcounter-click="contact-click"
-              data-goatcounter-title="Contact click"
-            >
-              {contactEmail}
-            </a>{' '}
-            to learn more about sponsorship opportunities
-          </p>
-        </div>
-      </div>
     </section>
   );
 };

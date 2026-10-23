@@ -13,6 +13,11 @@ const Tickets = () => {
       <div className="tickets-container">
         <h2 className="section-title">Tickets</h2>
 
+        <div className="tickets-sold-out">
+          <strong>The workshop day on 29 October is sold out.</strong> Tickets for the conference
+          day on 30 October are still available.
+        </div>
+
         <div className="tickets-card">
           <div className="tickets-card-heading">
             <h3>Dutch Cloud Native Day 2026</h3>
@@ -66,20 +71,37 @@ const Tickets = () => {
           </p>
         )}
 
-        <div className="diversity-ticket-card">
-          <h3 className="mb-2 font-semibold">Diversity Tickets</h3>
-          <p className="text-sm">
-            Contact us at{' '}
+        <div className="special-tickets" id="diversity-tickets">
+          <div className="special-ticket-card">
+            <h3>Student tickets</h3>
+            <p>
+              Students get a discounted ticket. Email us with proof of enrolment and we will send
+              you a discount code.
+            </p>
             <a
-              href="mailto:info@dutchcloudnativeday.nl"
-              className="text-primary font-bold hover:underline"
-              data-goatcounter-click="contact-click"
-              data-goatcounter-title="Contact click"
+              href="mailto:info@dutchcloudnativeday.nl?subject=Student%20ticket%20for%20Dutch%20Cloud%20Native%20Day%202026"
+              className="special-ticket-button"
+              data-goatcounter-click="student-ticket-click"
+              data-goatcounter-title="Student ticket click"
             >
-              info@dutchcloudnativeday.nl
-            </a>{' '}
-            to apply for a diversity ticket - sponsored by Stichting Cloud Native NL.
-          </p>
+              Request a student discount
+            </a>
+          </div>
+          <div className="special-ticket-card">
+            <h3>Free diversity tickets</h3>
+            <p>
+              Free tickets for people from groups underrepresented in tech, sponsored by Stichting
+              Cloud Native NL.
+            </p>
+            <a
+              href="mailto:info@dutchcloudnativeday.nl?subject=Diversity%20ticket%20for%20Dutch%20Cloud%20Native%20Day%202026"
+              className="special-ticket-button"
+              data-goatcounter-click="diversity-ticket-click"
+              data-goatcounter-title="Diversity ticket click"
+            >
+              Apply for a diversity ticket
+            </a>
+          </div>
         </div>
       </div>
     </section>

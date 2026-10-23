@@ -38,6 +38,20 @@
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
   }
+
+  .hero-aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .hero-details {
+    padding: 1.5rem;
+    border: 1px solid rgb(33 70 139 / 14%);
+    border-radius: 0.75rem;
+    background-color: #21468B08;
+  }
 }
 
 /* Left Column */
@@ -166,6 +180,76 @@
   width: 1.25rem;
 }
 
+.hero-days {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  flex: 1;
+}
+
+.hero-day {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.hero-day-title {
+  font-weight: 600;
+  color: #21468B;
+}
+
+.hero-sold-out {
+  display: inline-block;
+  margin-left: 0.35rem;
+  padding: 0.05rem 0.5rem;
+  border-radius: 9999px;
+  background-color: #ae1c28;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+.hero-notice {
+  display: block;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.hero-notice--sold-out {
+  border-left: 4px solid #ae1c28;
+  background-color: #ae1c2814;
+  color: #7a1219;
+}
+
+.hero-notice--offer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1.25rem;
+  border: 2px solid #21468B;
+  background-color: #21468B0d;
+  color: #21468B;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.hero-notice--offer:hover {
+  background-color: #21468B1f;
+}
+
+.hero-offer-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.hero-offer-link {
+  text-decoration: underline;
+}
+
 /* CTA Container */
 .hero-cta-container {
   display: grid;
@@ -182,11 +266,6 @@
 }
 
 /* Support Text */
-.hero-support-text {
-  font-size: 0.875rem;
-  color: var(--text-muted, #666666);
-}
-
 /* Right Column - Illustration */
 .hero-right-column {
   display: none;
@@ -218,6 +297,14 @@
 .hero-illustration-container {
   position: relative;
   width: 100%;
+  /* The artwork has generous white padding; crop it to the drawing itself */
+  aspect-ratio: 612 / 250;
+  overflow: hidden;
+}
+
+.hero-illustration-container .gatsby-image-wrapper {
+  display: block;
+  transform: translateY(-19%);
 }
 
 .hero-illustration-wrapper {

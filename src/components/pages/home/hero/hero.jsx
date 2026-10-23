@@ -1,5 +1,5 @@
 import { StaticImage } from 'gatsby-plugin-image';
-import { Calendar, MapPin, Users } from 'lucide-react';
+import { Calendar, GraduationCap, HeartHandshake, MapPin, Users } from 'lucide-react';
 import React from 'react';
 import './hero.css';
 
@@ -44,16 +44,6 @@ const Hero = () => (
                 Buy Tickets
               </a>
               <a
-                href="https://drive.google.com/file/d/1pmfb1SrN77O9qqoincRnnVsluhhDmk8e/view"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hero-cta-button hero-cta-button--secondary"
-                data-goatcounter-click="sponsor-click"
-                data-goatcounter-title="Sponsor click"
-              >
-                Become a Sponsor
-              </a>
-              <a
                 href="/agenda"
                 className="hero-cta-button hero-cta-button--secondary"
                 data-goatcounter-click="program-click"
@@ -62,33 +52,30 @@ const Hero = () => (
                 View Agenda
               </a>
             </div>
-            <p className="hero-support-text">
-              The agenda is live: workshops on 29 October, conference talks on 30 October.
-            </p>
-
+            <div className="hero-notice hero-notice--sold-out">
+              <strong>The workshop day on 29 October is sold out.</strong> Tickets for the
+              conference day on 30 October are still available.
+            </div>
+            <a
+              href="/#diversity-tickets"
+              className="hero-notice hero-notice--offer"
+              data-goatcounter-click="special-tickets-click"
+              data-goatcounter-title="Student and diversity tickets click"
+            >
+              <span className="hero-offer-item">
+                <GraduationCap className="hero-icon" />
+                Discounted tickets for students
+              </span>
+              <span className="hero-offer-item">
+                <HeartHandshake className="hero-icon" />
+                Free diversity tickets
+              </span>
+              <span className="hero-offer-link">How to apply →</span>
+            </a>
             <p className="hero-description hero-detail-description">
               On 29–30 October 2026, the cloud native community will gather at Jaarbeurs in Utrecht
               for two full days of talks, workshops and hallway conversations. Come and join us!
             </p>
-
-            {/* Feature List */}
-            <ul className="hero-feature-list">
-              <li className="hero-feature-item">
-                <Calendar className="hero-icon" />
-                <span>Workshops on 29 October, conference talks on 30 October</span>
-              </li>
-              <li className="hero-feature-item">
-                <MapPin className="hero-icon" />
-                <span>Jaarbeurs, Utrecht, The Netherlands</span>
-              </li>
-              <li className="hero-feature-item">
-                <Users className="hero-icon" />
-                <span>
-                  Developers, platform engineers, DevOps engineers, SREs, AI infrastructure
-                  engineers and cloud native enthusiasts.
-                </span>
-              </li>
-            </ul>
 
             <p className="hero-description">
               Expect sessions on using AI tools and agents to develop, operate, secure and
@@ -97,22 +84,64 @@ const Hero = () => (
             </p>
           </div>
 
-          <div className="hero-right-column fade-in-scale">
-            <div className="hero-illustration-container">
-              <div
-                style={{
-                  position: 'relative',
-                  aspectRatio: '0.8',
-                  borderRadius: '0.75rem',
-                  overflow: 'hidden',
-                }}
-              >
+          {/* Illustration (desktop only) and event details, centred next to the intro */}
+          <div className="hero-aside">
+            <div className="hero-right-column fade-in-scale">
+              <div className="hero-illustration-container">
                 <StaticImage
                   src="./images/CND-NL-Buildings.png"
                   alt="Dutch Cloud Native Day illustration"
                   formats={['auto', 'webp']}
                 />
               </div>
+            </div>
+
+            <div className="hero-details fade-in-up">
+              <ul className="hero-feature-list">
+                <li className="hero-feature-item">
+                  <Calendar className="hero-icon" />
+                  <div className="hero-days">
+                    <div className="hero-day">
+                      <span className="hero-day-title">
+                        Thursday 29 October <span className="hero-sold-out">Sold out</span>
+                      </span>
+                      <span>Workshops</span>
+                      <span>Doors open 09:00</span>
+                      <span>Workshops start 09:45</span>
+                      <span>Workshops end 15:30</span>
+                    </div>
+                    <div className="hero-day">
+                      <span className="hero-day-title">Friday 30 October</span>
+                      <span>Conference talks</span>
+                      <span>Doors open 08:45</span>
+                      <span>Talks start 09:30</span>
+                      <span>Talks end 17:25</span>
+                      <span>Drinks (borrel) until 18:00</span>
+                    </div>
+                  </div>
+                </li>
+                <li className="hero-feature-item">
+                  <MapPin className="hero-icon" />
+                  <span>
+                    <a
+                      href="https://www.jaarbeurs.nl/location/congreslocatie/mediaplaza/supernova"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:underline"
+                    >
+                      Jaarbeurs Supernova
+                    </a>
+                    , Jaarbeursplein 6, 3521 AL Utrecht, The Netherlands
+                  </span>
+                </li>
+                <li className="hero-feature-item">
+                  <Users className="hero-icon" />
+                  <span>
+                    Developers, platform engineers, DevOps engineers, SREs, AI infrastructure
+                    engineers and cloud native enthusiasts.
+                  </span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
