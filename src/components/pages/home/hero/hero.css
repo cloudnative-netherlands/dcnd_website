@@ -211,43 +211,40 @@
   vertical-align: middle;
 }
 
-.hero-notice {
-  display: block;
-  padding: 0.75rem 1rem;
-  border-radius: 0.5rem;
-  font-size: 0.95rem;
-}
-
-.hero-notice--sold-out {
-  border-left: 4px solid #ae1c28;
-  background-color: #ae1c2814;
-  color: #7a1219;
-}
-
-.hero-notice--offer {
+/* Sold out banner */
+.hero-sold-out-banner {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.5rem 1.25rem;
-  border: 2px solid #21468B;
-  background-color: #21468B0d;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 1.25rem 1.5rem;
+  border-left: 6px solid #ae1c28;
+  border-radius: 0.75rem;
+  background-color: #ae1c2814;
+}
+
+.hero-sold-out-banner-label {
+  padding: 0.2rem 0.75rem;
+  border-radius: 9999px;
+  background-color: #ae1c28;
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.hero-sold-out-banner-title {
   color: #21468B;
+  font-size: clamp(1.5rem, 6vw, 2.25rem);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.hero-sold-out-banner-text {
+  color: #7a1219;
+  font-size: 1rem;
   font-weight: 600;
-  transition: background-color 0.2s;
-}
-
-.hero-notice--offer:hover {
-  background-color: #21468B1f;
-}
-
-.hero-offer-item {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-}
-
-.hero-offer-link {
-  text-decoration: underline;
 }
 
 /* CTA Container */

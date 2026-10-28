@@ -88,7 +88,7 @@ const MobileMenu = ({ isOpen, onButtonClick }) => {
           </ul>
         </div>
         <div className="flex items-center justify-center">
-          <p className="text-center text-sm text-gray-500">Tickets for 2026 are available now</p>
+          <p className="text-center text-sm text-gray-500">Dutch Cloud Native Day 2026 is sold out</p>
         </div>
       </m.nav>
     </LazyMotion>
