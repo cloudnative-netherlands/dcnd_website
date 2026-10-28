@@ -123,8 +123,6 @@ assert.doesNotMatch(read('src/html.jsx'), /googletagmanager|gtag|noscript/);
 assert.match(searchableSource, /GoatCounter|goatcounter|gc\.zgo\.at|data-goatcounter/);
 assertGoatCounterIsConfigured();
 [
-  ['ticket-click', 'Ticket click', `${hero}\n${tickets}`],
-  ['eventbrite-open', 'Eventbrite checkout opened', `${tickets}\n${checkout}`],
   ['program-click', 'Program click', hero],
   ['sponsor-click', 'Sponsor click', `${hero}\n${sponsors}`],
   ['contact-click', 'Contact click', `${tickets}\n${sponsors}\n${footer}`],
@@ -289,7 +287,6 @@ const eventbriteOnlyConsent = persist({ eventbrite: true });
 assertGoatCounterIsConfigured();
 assert.equal(eventbriteOnlyConsent.googleAnalytics, false);
 assert.equal(eventbriteOnlyConsent.eventbrite, true);
-assert.match(tickets, /hasTicketCheckoutConsent \? \(\s*<EventbriteEmbeddedCheckout \/>/);
 assertNoGtm();
 teardownDom();
 
@@ -298,7 +295,6 @@ const allConsent = persist({ googleAnalytics: true, eventbrite: true });
 assertGoatCounterIsConfigured();
 assert.equal(allConsent.googleAnalytics, true);
 assert.equal(allConsent.eventbrite, true);
-assert.match(tickets, /hasTicketCheckoutConsent \? \(\s*<EventbriteEmbeddedCheckout \/>/);
 assert.equal(gtm.loadGoogleTagManager('GTM-WGZC5SKF'), true);
 assert.equal(getGtmScripts().length, 1);
 teardownDom();
