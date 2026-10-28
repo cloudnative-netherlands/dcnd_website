@@ -26,7 +26,6 @@ const MENUS = {
     community: [
       { text: 'Our vision', ...LINKS.vision },
       { text: 'Code of Conduct', ...LINKS.conduct },
-      { text: 'Diversity tickets', ...LINKS.diversityTickets },
       { text: 'Join our Community', ...LINKS.community },
     ],
     legal: [{ text: 'Privacy', ...LINKS.privacy }],

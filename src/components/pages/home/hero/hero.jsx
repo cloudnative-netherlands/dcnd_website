@@ -1,5 +1,5 @@
 import { StaticImage } from 'gatsby-plugin-image';
-import { Calendar, GraduationCap, HeartHandshake, MapPin, Users } from 'lucide-react';
+import { Calendar, MapPin, Users } from 'lucide-react';
 import React from 'react';
 import './hero.css';
 
@@ -33,45 +33,27 @@ const Hero = () => (
               is changing the way we build, run and scale modern platforms.
             </p>
 
+            {/* Sold out */}
+            <div className="hero-sold-out-banner">
+              <span className="hero-sold-out-banner-label">Sold out</span>
+              <p className="hero-sold-out-banner-title">Thank you, and see you in Utrecht!</p>
+              <p className="hero-sold-out-banner-text">
+                Both the workshop day on 29 October and the conference day on 30 October are
+                completely sold out.
+              </p>
+            </div>
+
             {/* CTA Buttons */}
             <div className="hero-cta-container">
               <a
-                href="/#tickets"
-                className="hero-cta-button hero-cta-button--primary"
-                data-goatcounter-click="ticket-click"
-                data-goatcounter-title="Ticket click"
-              >
-                Buy Tickets
-              </a>
-              <a
                 href="/agenda"
-                className="hero-cta-button hero-cta-button--secondary"
+                className="hero-cta-button hero-cta-button--primary"
                 data-goatcounter-click="program-click"
                 data-goatcounter-title="Program click"
               >
                 View Agenda
               </a>
             </div>
-            <div className="hero-notice hero-notice--sold-out">
-              <strong>The workshop day on 29 October is sold out.</strong> Tickets for the
-              conference day on 30 October are still available.
-            </div>
-            <a
-              href="/#diversity-tickets"
-              className="hero-notice hero-notice--offer"
-              data-goatcounter-click="special-tickets-click"
-              data-goatcounter-title="Student and diversity tickets click"
-            >
-              <span className="hero-offer-item">
-                <GraduationCap className="hero-icon" />
-                Discounted tickets for students
-              </span>
-              <span className="hero-offer-item">
-                <HeartHandshake className="hero-icon" />
-                Free diversity tickets
-              </span>
-              <span className="hero-offer-link">How to apply →</span>
-            </a>
             <p className="hero-description hero-detail-description">
               On 29–30 October 2026, the cloud native community will gather at Jaarbeurs in Utrecht
               for two full days of talks, workshops and hallway conversations. Come and join us!
@@ -111,7 +93,9 @@ const Hero = () => (
                       <span>Workshops end 15:30</span>
                     </div>
                     <div className="hero-day">
-                      <span className="hero-day-title">Friday 30 October</span>
+                      <span className="hero-day-title">
+                        Friday 30 October <span className="hero-sold-out">Sold out</span>
+                      </span>
                       <span>Conference talks</span>
                       <span>Doors open 08:45</span>
                       <span>Talks start 09:30</span>
