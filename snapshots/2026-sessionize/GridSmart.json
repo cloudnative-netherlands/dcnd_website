@@ -1,0 +1,2325 @@
+[
+  {
+    "date": "2026-10-29T00:00:00Z",
+    "isDefault": false,
+    "rooms": [
+      {
+        "id": 82803,
+        "name": "Progress",
+        "sessions": [
+          {
+            "id": "1306707a-15f5-4578-9970-d8a9e585957f",
+            "title": "Welcome - registration & coffee",
+            "description": null,
+            "startsAt": "2026-10-29T08:00:00Z",
+            "endsAt": "2026-10-29T08:45:00Z",
+            "isServiceSession": true,
+            "isPlenumSession": true,
+            "speakers": [],
+            "categories": [],
+            "roomId": 82803,
+            "room": "Progress",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": null,
+            "isInformed": false,
+            "isConfirmed": false
+          },
+          {
+            "id": "1269410",
+            "title": "Getting started with OpenTelemetry instrumentation: A practical playbook",
+            "description": "OpenTelemetry has become an essential open source framework for standardizing telemetry data. In this beginner-friendly hands-on lab, you’ll walk through the journey of instrumenting an application with OpenTelemetry and sending metrics, logs, and traces to the Grafana LGTM stack (Loki for logs, Grafana for visualization, Tempo for traces, and Prometheus for metrics).\r\n\r\nYou’ll learn common instrumentation approaches, such as adding application-level telemetry using the OpenTelemetry SDK, collecting basic infrastructure metrics with the OpenTelemetry Collector, and implementing cross-service communication with zero-code eBPF instrumentation. You’ll also apply practical customization techniques, such as enriching and sampling spans, tuning metrics, and adding your own signals when auto-instrumentation isn’t enough.\r\n\r\nBy instrumenting a sample application step by step, you’ll leave this lab with a clear roadmap for choosing the right OpenTelemetry instrumentation approach within your own environment.\r\n\r\nBy the end of the three hours, you will:\r\n\r\n- Have a core understanding of the OpenTelemetry project and its key components\r\n- Select the right level of instrumentation based on various use cases\r\n- Understand how zero-code eBPF instrumentation helps reveal cross-service communication\r\n- Instrument applications using OpenTelemetry SDKs\r\n- Apply end-to-end instrumentation patterns to get started quickly and improve over time\r\n- Send telemetry to the Grafana stack and understand how it’s used",
+            "startsAt": "2026-10-29T08:45:00Z",
+            "endsAt": "2026-10-29T11:45:00Z",
+            "isServiceSession": false,
+            "isPlenumSession": false,
+            "speakers": [
+              {
+                "id": "f3cc6737-75bd-408d-9097-0fe33f27cc83",
+                "name": "Imma Valls"
+              },
+              {
+                "id": "274f02db-3992-47d4-a88a-8fd3e42b162f",
+                "name": "Arthur Picerna"
+              }
+            ],
+            "categories": [],
+            "roomId": 82803,
+            "room": "Progress",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": "Accepted",
+            "isInformed": true,
+            "isConfirmed": true
+          },
+          {
+            "id": "9087ac52-5dce-4967-8d1d-7a79231946a7",
+            "title": "Lunch Break",
+            "description": "Meat, vegetarian and vegan options available",
+            "startsAt": "2026-10-29T12:00:00Z",
+            "endsAt": "2026-10-29T13:00:00Z",
+            "isServiceSession": true,
+            "isPlenumSession": true,
+            "speakers": [],
+            "categories": [],
+            "roomId": 82803,
+            "room": "Progress",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": null,
+            "isInformed": false,
+            "isConfirmed": false
+          },
+          {
+            "id": "1363002",
+            "title": "From One Request to One Trace: Hands-On OpenTelemetry - Geertjan Wielenga / Aakansha Priya (Dash0)",
+            "description": "In this hands-on workshop, you'll instrument a small multi-service app (or your own, please feel free bring your own apps) with OpenTelemetry, the vendor-neutral standard for traces, metrics and logs, and explore the results in Dash0. You'll quickly be able to watch individual requests become end-to-end distributed traces.\r\n\r\nAlong the way, you'll investigate deliberate failures the way you would in a real incident, and pick up the practices that matter in production, from keeping metrics under control to defining consistent naming conventions.\r\n\r\nYou'll leave with a clear mental model of observability and a reference project you can apply to your own systems.",
+            "startsAt": "2026-10-29T13:00:00Z",
+            "endsAt": "2026-10-29T14:30:00Z",
+            "isServiceSession": false,
+            "isPlenumSession": false,
+            "speakers": [
+              {
+                "id": "2a4960b0-36d8-439f-ae6e-925b749ff65f",
+                "name": "Aakansha Priya"
+              },
+              {
+                "id": "62dc60e2-6f5e-49ab-8442-5fdd16fd97d9",
+                "name": "GeertJan Wielenga"
+              }
+            ],
+            "categories": [],
+            "roomId": 82803,
+            "room": "Progress",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": "Accepted",
+            "isInformed": true,
+            "isConfirmed": false
+          }
+        ],
+        "hasOnlyPlenumSessions": false
+      },
+      {
+        "id": 82806,
+        "name": "Quest",
+        "sessions": [
+          {
+            "id": "1362997",
+            "title": "SUSE Virtualization Rodeo Hands-On Workshop",
+            "description": "Between skyrocketing hypervisor costs (often 4x to 7x) and compounding vendor lock-in, modernizing your VM infrastructure has never been more urgent. But how do you migrate without breaking your current workflows?\r\n\r\nThe SUSE Virtualization Rodeo is a  hands-on technical workshop explicitly designed to teach you how to confidently migrate and modernize your traditional VM infrastructure using cloud-native technologies.\r\n\r\nSUSE Virtualization provides an open-source, unified way to manage your traditional virtual machines (VMs) and modern container workloads alongside each other on a single platform.\r\n\r\nKey topics that will be covered at the SUSE Virtualization Rodeo include:\r\n\r\n* Node-to-Node VM Workload Operations: Seamlessly move running virtual machines from one cluster node to another, enabling zero-downtime host maintenance, node evac, and cluster rebalancing.\r\n* Core Virtual Machine Operations: Explore the primary VM dashboard to practice instance management, standard operations, and configuration settings.\r\n* Image & Network Management: Navigate how the platform handles OS images and configures underlying virtual networks for instance connectivity.\r\n* Volumes & Storage Foundations: Take a hands-on look at provisioning persistent storage volumes and configuring virtualization storage classes.\r\n* Host & Cluster Settings: Step through the admin interface to inspect cluster health, manage physical hosts, and control global system settings.\r\n\r\nWho Should Attend?\r\nThis technical workshop is built specifically for individual practitioners and technical leaders seeking to future-proof their infrastructure layout.",
+            "startsAt": "2026-10-29T08:45:00Z",
+            "endsAt": "2026-10-29T10:15:00Z",
+            "isServiceSession": false,
+            "isPlenumSession": false,
+            "speakers": [
+              {
+                "id": "1cad993c-d21b-446a-99b6-9f93e6598448",
+                "name": "Hugo de Vries"
+              }
+            ],
+            "categories": [],
+            "roomId": 82806,
+            "room": "Quest",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": "Accepted",
+            "isInformed": true,
+            "isConfirmed": true
+          },
+          {
+            "id": "569a0dd3-3e58-489c-8b26-af456f7a69e5",
+            "title": "Coffee break (snacks)",
+            "description": null,
+            "startsAt": "2026-10-29T10:15:00Z",
+            "endsAt": "2026-10-29T10:30:00Z",
+            "isServiceSession": true,
+            "isPlenumSession": false,
+            "speakers": [],
+            "categories": [],
+            "roomId": 82806,
+            "room": "Quest",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": null,
+            "isInformed": false,
+            "isConfirmed": false
+          },
+          {
+            "id": "1225906",
+            "title": "Building a Managed Kubernetes Service from scratch with Cluster API and Kamaji",
+            "description": "Building a Managed Kubernetes service is not about spinning up clusters and calling it a day. With Cluster API and Kamaji, it is possible to go far beyond the typical \"create machines and YOLO\" approach and design a platform that actually behaves as a proper managed offering.\r\n\r\nThis workshop focuses on what it really takes to operate Kubernetes as a service and how to have proper user/platform space isolation. We will explore the metrics that matter to measure reliability, performance, and tenant isolation, and how to use them to drive engineering decisions. We will also dive into the Day-2 challenges that are often overlooked, from operating systems lifecycle management to addons orchestration, upgrades, and security posture.\r\n\r\nDrawing from hands-on experience working with some of the largest independent cloud providers in Europe (OVHcloud, IONOS, Rackspace), this session brings real-world patterns, trade-offs, and lessons learned into a practical, opinionated guide. The goal is not just to build clusters, but to deliver a resilient, scalable, and truly managed Kubernetes experience built on top of Open Source.",
+            "startsAt": "2026-10-29T10:30:00Z",
+            "endsAt": "2026-10-29T12:00:00Z",
+            "isServiceSession": false,
+            "isPlenumSession": false,
+            "speakers": [
+              {
+                "id": "83922b4e-080d-4c6c-a400-9542ecdc4fc3",
+                "name": "Dario Tranchitella"
+              }
+            ],
+            "categories": [],
+            "roomId": 82806,
+            "room": "Quest",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": "Accepted",
+            "isInformed": true,
+            "isConfirmed": true
+          },
+          {
+            "id": "1363005",
+            "title": "Out of the Mosh Pit: Bare-Metal Kubernetes Without the Hypervisor Tax",
+            "description": "Hardware is scarce, budgets are tight, and the hypervisor has become the most expensive thing on the Kubernetes bill. In this session, CLASTIX CTO Dario Tranchitella starts from the whiteboard to show how multi-tenant Kubernetes on bare metal is normally built – three consoles, three teams, and machines wasted on control planes – then he erases the layers one by one, and you'll be able to do the same in one of our dev environments.",
+            "startsAt": "2026-10-29T13:00:00Z",
+            "endsAt": "2026-10-29T14:30:00Z",
+            "isServiceSession": false,
+            "isPlenumSession": false,
+            "speakers": [
+              {
+                "id": "83922b4e-080d-4c6c-a400-9542ecdc4fc3",
+                "name": "Dario Tranchitella"
+              }
+            ],
+            "categories": [],
+            "roomId": 82806,
+            "room": "Quest",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": "Accepted",
+            "isInformed": true,
+            "isConfirmed": true
+          }
+        ],
+        "hasOnlyPlenumSessions": false
+      },
+      {
+        "id": 89548,
+        "name": "Expedition",
+        "sessions": [
+          {
+            "id": "1260822",
+            "title": "From Building Presentations to Owning the Stage",
+            "description": "In this workshop, we'll discuss all that’s necessary to make your talk a memorable one. From coming up with a title and abstract, building a narrative for the presentation to creating the perfect slides. We will also talk broadly about what to keep in mind when taking the stage.\r\n\r\nYou will be given tips, tricks, and techniques that you will immediately apply in hands-on exercises (if group size allows) and we will end with a fun session of PowerPoint Karaoke.",
+            "startsAt": "2026-10-29T08:45:00Z",
+            "endsAt": "2026-10-29T11:45:00Z",
+            "isServiceSession": false,
+            "isPlenumSession": false,
+            "speakers": [
+              {
+                "id": "1559cccc-ed7c-4296-973d-3b05f3c3d25e",
+                "name": "Lian Li"
+              }
+            ],
+            "categories": [],
+            "roomId": 89548,
+            "room": "Expedition",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": "Accepted",
+            "isInformed": true,
+            "isConfirmed": true
+          },
+          {
+            "id": "1269528",
+            "title": "Kubernetes, Can You Please Speak BGP To Me?",
+            "description": "The widely adopted, highly capable Border Gateway Protocol has won the hearts and minds of the Internet. And, it has made its way into Kubernetes! However, not every workload is a container, and not every VM can make its way into Kubernetes so, how do we ensure every workload can freely talk? If BGP on Cilium is the answer how should we proceed?\r\n\r\n- Why should we care about BGP?\r\n- How do we work with Cilium’s BGP Control Plane?\r\n- How can we get our VMs to communicate with our pods using BGP?\r\n- How can we advertise multiple service IP pools to upstream routers?\r\n- Can we deploy and verify a working BGP setup?\r\n- What does “show ip bgp summary” tell us?\r\n- Who are my neighbours?\r\n\r\nThis workshop allows us to explore BGP internals and history while configuring BGP and seeing it in action, running in Cilium. We’ll become the best neighbours with an upstream router and, we’ll share ALL THE NETWORKS!",
+            "startsAt": "2026-10-29T13:00:00Z",
+            "endsAt": "2026-10-29T14:30:00Z",
+            "isServiceSession": false,
+            "isPlenumSession": false,
+            "speakers": [
+              {
+                "id": "d7100338-7ea1-4f10-84fe-758b7ecbe1e7",
+                "name": "Marino Wijay"
+              }
+            ],
+            "categories": [],
+            "roomId": 89548,
+            "room": "Expedition",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": "Accepted",
+            "isInformed": true,
+            "isConfirmed": true
+          }
+        ],
+        "hasOnlyPlenumSessions": false
+      }
+    ],
+    "timeSlots": [
+      {
+        "slotStart": "08:00:00",
+        "rooms": [
+          {
+            "id": 82803,
+            "name": "Progress",
+            "session": {
+              "id": "1306707a-15f5-4578-9970-d8a9e585957f",
+              "title": "Welcome - registration & coffee",
+              "description": null,
+              "startsAt": "2026-10-29T08:00:00Z",
+              "endsAt": "2026-10-29T08:45:00Z",
+              "isServiceSession": true,
+              "isPlenumSession": true,
+              "speakers": [],
+              "categories": [],
+              "roomId": 82803,
+              "room": "Progress",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": null,
+              "isInformed": false,
+              "isConfirmed": false
+            },
+            "index": 0
+          }
+        ]
+      },
+      {
+        "slotStart": "08:45:00",
+        "rooms": [
+          {
+            "id": 82803,
+            "name": "Progress",
+            "session": {
+              "id": "1269410",
+              "title": "Getting started with OpenTelemetry instrumentation: A practical playbook",
+              "description": "OpenTelemetry has become an essential open source framework for standardizing telemetry data. In this beginner-friendly hands-on lab, you’ll walk through the journey of instrumenting an application with OpenTelemetry and sending metrics, logs, and traces to the Grafana LGTM stack (Loki for logs, Grafana for visualization, Tempo for traces, and Prometheus for metrics).\r\n\r\nYou’ll learn common instrumentation approaches, such as adding application-level telemetry using the OpenTelemetry SDK, collecting basic infrastructure metrics with the OpenTelemetry Collector, and implementing cross-service communication with zero-code eBPF instrumentation. You’ll also apply practical customization techniques, such as enriching and sampling spans, tuning metrics, and adding your own signals when auto-instrumentation isn’t enough.\r\n\r\nBy instrumenting a sample application step by step, you’ll leave this lab with a clear roadmap for choosing the right OpenTelemetry instrumentation approach within your own environment.\r\n\r\nBy the end of the three hours, you will:\r\n\r\n- Have a core understanding of the OpenTelemetry project and its key components\r\n- Select the right level of instrumentation based on various use cases\r\n- Understand how zero-code eBPF instrumentation helps reveal cross-service communication\r\n- Instrument applications using OpenTelemetry SDKs\r\n- Apply end-to-end instrumentation patterns to get started quickly and improve over time\r\n- Send telemetry to the Grafana stack and understand how it’s used",
+              "startsAt": "2026-10-29T08:45:00Z",
+              "endsAt": "2026-10-29T11:45:00Z",
+              "isServiceSession": false,
+              "isPlenumSession": false,
+              "speakers": [
+                {
+                  "id": "f3cc6737-75bd-408d-9097-0fe33f27cc83",
+                  "name": "Imma Valls"
+                },
+                {
+                  "id": "274f02db-3992-47d4-a88a-8fd3e42b162f",
+                  "name": "Arthur Picerna"
+                }
+              ],
+              "categories": [],
+              "roomId": 82803,
+              "room": "Progress",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": "Accepted",
+              "isInformed": true,
+              "isConfirmed": true
+            },
+            "index": 0
+          },
+          {
+            "id": 82806,
+            "name": "Quest",
+            "session": {
+              "id": "1362997",
+              "title": "SUSE Virtualization Rodeo Hands-On Workshop",
+              "description": "Between skyrocketing hypervisor costs (often 4x to 7x) and compounding vendor lock-in, modernizing your VM infrastructure has never been more urgent. But how do you migrate without breaking your current workflows?\r\n\r\nThe SUSE Virtualization Rodeo is a  hands-on technical workshop explicitly designed to teach you how to confidently migrate and modernize your traditional VM infrastructure using cloud-native technologies.\r\n\r\nSUSE Virtualization provides an open-source, unified way to manage your traditional virtual machines (VMs) and modern container workloads alongside each other on a single platform.\r\n\r\nKey topics that will be covered at the SUSE Virtualization Rodeo include:\r\n\r\n* Node-to-Node VM Workload Operations: Seamlessly move running virtual machines from one cluster node to another, enabling zero-downtime host maintenance, node evac, and cluster rebalancing.\r\n* Core Virtual Machine Operations: Explore the primary VM dashboard to practice instance management, standard operations, and configuration settings.\r\n* Image & Network Management: Navigate how the platform handles OS images and configures underlying virtual networks for instance connectivity.\r\n* Volumes & Storage Foundations: Take a hands-on look at provisioning persistent storage volumes and configuring virtualization storage classes.\r\n* Host & Cluster Settings: Step through the admin interface to inspect cluster health, manage physical hosts, and control global system settings.\r\n\r\nWho Should Attend?\r\nThis technical workshop is built specifically for individual practitioners and technical leaders seeking to future-proof their infrastructure layout.",
+              "startsAt": "2026-10-29T08:45:00Z",
+              "endsAt": "2026-10-29T10:15:00Z",
+              "isServiceSession": false,
+              "isPlenumSession": false,
+              "speakers": [
+                {
+                  "id": "1cad993c-d21b-446a-99b6-9f93e6598448",
+                  "name": "Hugo de Vries"
+                }
+              ],
+              "categories": [],
+              "roomId": 82806,
+              "room": "Quest",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": "Accepted",
+              "isInformed": true,
+              "isConfirmed": true
+            },
+            "index": 1
+          },
+          {
+            "id": 89548,
+            "name": "Expedition",
+            "session": {
+              "id": "1260822",
+              "title": "From Building Presentations to Owning the Stage",
+              "description": "In this workshop, we'll discuss all that’s necessary to make your talk a memorable one. From coming up with a title and abstract, building a narrative for the presentation to creating the perfect slides. We will also talk broadly about what to keep in mind when taking the stage.\r\n\r\nYou will be given tips, tricks, and techniques that you will immediately apply in hands-on exercises (if group size allows) and we will end with a fun session of PowerPoint Karaoke.",
+              "startsAt": "2026-10-29T08:45:00Z",
+              "endsAt": "2026-10-29T11:45:00Z",
+              "isServiceSession": false,
+              "isPlenumSession": false,
+              "speakers": [
+                {
+                  "id": "1559cccc-ed7c-4296-973d-3b05f3c3d25e",
+                  "name": "Lian Li"
+                }
+              ],
+              "categories": [],
+              "roomId": 89548,
+              "room": "Expedition",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": "Accepted",
+              "isInformed": true,
+              "isConfirmed": true
+            },
+            "index": 2
+          }
+        ]
+      },
+      {
+        "slotStart": "10:15:00",
+        "rooms": [
+          {
+            "id": 82806,
+            "name": "Quest",
+            "session": {
+              "id": "569a0dd3-3e58-489c-8b26-af456f7a69e5",
+              "title": "Coffee break (snacks)",
+              "description": null,
+              "startsAt": "2026-10-29T10:15:00Z",
+              "endsAt": "2026-10-29T10:30:00Z",
+              "isServiceSession": true,
+              "isPlenumSession": false,
+              "speakers": [],
+              "categories": [],
+              "roomId": 82806,
+              "room": "Quest",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": null,
+              "isInformed": false,
+              "isConfirmed": false
+            },
+            "index": 1
+          }
+        ]
+      },
+      {
+        "slotStart": "10:30:00",
+        "rooms": [
+          {
+            "id": 82806,
+            "name": "Quest",
+            "session": {
+              "id": "1225906",
+              "title": "Building a Managed Kubernetes Service from scratch with Cluster API and Kamaji",
+              "description": "Building a Managed Kubernetes service is not about spinning up clusters and calling it a day. With Cluster API and Kamaji, it is possible to go far beyond the typical \"create machines and YOLO\" approach and design a platform that actually behaves as a proper managed offering.\r\n\r\nThis workshop focuses on what it really takes to operate Kubernetes as a service and how to have proper user/platform space isolation. We will explore the metrics that matter to measure reliability, performance, and tenant isolation, and how to use them to drive engineering decisions. We will also dive into the Day-2 challenges that are often overlooked, from operating systems lifecycle management to addons orchestration, upgrades, and security posture.\r\n\r\nDrawing from hands-on experience working with some of the largest independent cloud providers in Europe (OVHcloud, IONOS, Rackspace), this session brings real-world patterns, trade-offs, and lessons learned into a practical, opinionated guide. The goal is not just to build clusters, but to deliver a resilient, scalable, and truly managed Kubernetes experience built on top of Open Source.",
+              "startsAt": "2026-10-29T10:30:00Z",
+              "endsAt": "2026-10-29T12:00:00Z",
+              "isServiceSession": false,
+              "isPlenumSession": false,
+              "speakers": [
+                {
+                  "id": "83922b4e-080d-4c6c-a400-9542ecdc4fc3",
+                  "name": "Dario Tranchitella"
+                }
+              ],
+              "categories": [],
+              "roomId": 82806,
+              "room": "Quest",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": "Accepted",
+              "isInformed": true,
+              "isConfirmed": true
+            },
+            "index": 1
+          }
+        ]
+      },
+      {
+        "slotStart": "12:00:00",
+        "rooms": [
+          {
+            "id": 82803,
+            "name": "Progress",
+            "session": {
+              "id": "9087ac52-5dce-4967-8d1d-7a79231946a7",
+              "title": "Lunch Break",
+              "description": "Meat, vegetarian and vegan options available",
+              "startsAt": "2026-10-29T12:00:00Z",
+              "endsAt": "2026-10-29T13:00:00Z",
+              "isServiceSession": true,
+              "isPlenumSession": true,
+              "speakers": [],
+              "categories": [],
+              "roomId": 82803,
+              "room": "Progress",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": null,
+              "isInformed": false,
+              "isConfirmed": false
+            },
+            "index": 0
+          }
+        ]
+      },
+      {
+        "slotStart": "13:00:00",
+        "rooms": [
+          {
+            "id": 82803,
+            "name": "Progress",
+            "session": {
+              "id": "1363002",
+              "title": "From One Request to One Trace: Hands-On OpenTelemetry - Geertjan Wielenga / Aakansha Priya (Dash0)",
+              "description": "In this hands-on workshop, you'll instrument a small multi-service app (or your own, please feel free bring your own apps) with OpenTelemetry, the vendor-neutral standard for traces, metrics and logs, and explore the results in Dash0. You'll quickly be able to watch individual requests become end-to-end distributed traces.\r\n\r\nAlong the way, you'll investigate deliberate failures the way you would in a real incident, and pick up the practices that matter in production, from keeping metrics under control to defining consistent naming conventions.\r\n\r\nYou'll leave with a clear mental model of observability and a reference project you can apply to your own systems.",
+              "startsAt": "2026-10-29T13:00:00Z",
+              "endsAt": "2026-10-29T14:30:00Z",
+              "isServiceSession": false,
+              "isPlenumSession": false,
+              "speakers": [
+                {
+                  "id": "2a4960b0-36d8-439f-ae6e-925b749ff65f",
+                  "name": "Aakansha Priya"
+                },
+                {
+                  "id": "62dc60e2-6f5e-49ab-8442-5fdd16fd97d9",
+                  "name": "GeertJan Wielenga"
+                }
+              ],
+              "categories": [],
+              "roomId": 82803,
+              "room": "Progress",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": "Accepted",
+              "isInformed": true,
+              "isConfirmed": false
+            },
+            "index": 0
+          },
+          {
+            "id": 82806,
+            "name": "Quest",
+            "session": {
+              "id": "1363005",
+              "title": "Out of the Mosh Pit: Bare-Metal Kubernetes Without the Hypervisor Tax",
+              "description": "Hardware is scarce, budgets are tight, and the hypervisor has become the most expensive thing on the Kubernetes bill. In this session, CLASTIX CTO Dario Tranchitella starts from the whiteboard to show how multi-tenant Kubernetes on bare metal is normally built – three consoles, three teams, and machines wasted on control planes – then he erases the layers one by one, and you'll be able to do the same in one of our dev environments.",
+              "startsAt": "2026-10-29T13:00:00Z",
+              "endsAt": "2026-10-29T14:30:00Z",
+              "isServiceSession": false,
+              "isPlenumSession": false,
+              "speakers": [
+                {
+                  "id": "83922b4e-080d-4c6c-a400-9542ecdc4fc3",
+                  "name": "Dario Tranchitella"
+                }
+              ],
+              "categories": [],
+              "roomId": 82806,
+              "room": "Quest",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": "Accepted",
+              "isInformed": true,
+              "isConfirmed": true
+            },
+            "index": 1
+          },
+          {
+            "id": 89548,
+            "name": "Expedition",
+            "session": {
+              "id": "1269528",
+              "title": "Kubernetes, Can You Please Speak BGP To Me?",
+              "description": "The widely adopted, highly capable Border Gateway Protocol has won the hearts and minds of the Internet. And, it has made its way into Kubernetes! However, not every workload is a container, and not every VM can make its way into Kubernetes so, how do we ensure every workload can freely talk? If BGP on Cilium is the answer how should we proceed?\r\n\r\n- Why should we care about BGP?\r\n- How do we work with Cilium’s BGP Control Plane?\r\n- How can we get our VMs to communicate with our pods using BGP?\r\n- How can we advertise multiple service IP pools to upstream routers?\r\n- Can we deploy and verify a working BGP setup?\r\n- What does “show ip bgp summary” tell us?\r\n- Who are my neighbours?\r\n\r\nThis workshop allows us to explore BGP internals and history while configuring BGP and seeing it in action, running in Cilium. We’ll become the best neighbours with an upstream router and, we’ll share ALL THE NETWORKS!",
+              "startsAt": "2026-10-29T13:00:00Z",
+              "endsAt": "2026-10-29T14:30:00Z",
+              "isServiceSession": false,
+              "isPlenumSession": false,
+              "speakers": [
+                {
+                  "id": "d7100338-7ea1-4f10-84fe-758b7ecbe1e7",
+                  "name": "Marino Wijay"
+                }
+              ],
+              "categories": [],
+              "roomId": 89548,
+              "room": "Expedition",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": "Accepted",
+              "isInformed": true,
+              "isConfirmed": true
+            },
+            "index": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2026-10-30T00:00:00Z",
+    "isDefault": false,
+    "rooms": [
+      {
+        "id": 82803,
+        "name": "Progress",
+        "sessions": [
+          {
+            "id": "d24730c3-94f7-4018-95aa-7134eea247a5",
+            "title": "Welcome - registration & coffee",
+            "description": null,
+            "startsAt": "2026-10-30T07:45:00Z",
+            "endsAt": "2026-10-30T08:30:00Z",
+            "isServiceSession": true,
+            "isPlenumSession": true,
+            "speakers": [],
+            "categories": [],
+            "roomId": 82803,
+            "room": "Progress",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": null,
+            "isInformed": false,
+            "isConfirmed": false
+          },
+          {
+            "id": "036bef6c-a274-4583-8d65-ad5abf5cfca4",
+            "title": "Intro from the organizers",
+            "description": null,
+            "startsAt": "2026-10-30T08:30:00Z",
+            "endsAt": "2026-10-30T08:45:00Z",
+            "isServiceSession": true,
+            "isPlenumSession": true,
+            "speakers": [],
+            "categories": [],
+            "roomId": 82803,
+            "room": "Progress",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": null,
+            "isInformed": false,
+            "isConfirmed": false
+          },
+          {
+            "id": "cc09d17d-3fb8-41cc-b8d1-0669ebfffde9",
+            "title": "Intro Platinum Sponsor 1 (Dash0)",
+            "description": null,
+            "startsAt": "2026-10-30T08:45:00Z",
+            "endsAt": "2026-10-30T08:50:00Z",
+            "isServiceSession": true,
+            "isPlenumSession": true,
+            "speakers": [],
+            "categories": [],
+            "roomId": 82803,
+            "room": "Progress",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": null,
+            "isInformed": false,
+            "isConfirmed": false
+          },
+          {
+            "id": "1245630",
+            "title": "The AI Adoption Ladder: From First Licences to the Dark Factory",
+            "description": "AI coding tools make individual developers faster, but many teams discover that delivery does not improve at the same rate. PR volume rises, review queues grow, tests become less convincing, context gets messy, and eventually product and platform bottlenecks become visible. AI did not remove the constraint; it moved it.\r\nThis talk introduces the AI Coding Adoption Ladder: a practical model for how engineering teams move from first licences to structured adoption, agentic workflows, and eventually software factory patterns. We will look at the order things usually break — coordination, review, testing, context, security boundaries, ownership, CI/CD, and product flow — and what software and DevOps engineers need to fix before AI-generated code can safely scale.\r\nThe core message: licences create activity; platforms create durable advantage.\r\n",
+            "startsAt": "2026-10-30T08:50:00Z",
+            "endsAt": "2026-10-30T09:05:00Z",
+            "isServiceSession": false,
+            "isPlenumSession": false,
+            "speakers": [
+              {
+                "id": "8f398417-82f0-467a-b234-08e82f7f9acd",
+                "name": "Pini Reznik"
+              }
+            ],
+            "categories": [],
+            "roomId": 82803,
+            "room": "Progress",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": "Accepted",
+            "isInformed": true,
+            "isConfirmed": true
+          },
+          {
+            "id": "1204c6a2-f0a7-4b94-877e-c05aa4be5f0a",
+            "title": "Intro Platinum Sponsor 2 (Bert Boerland - SUSE)",
+            "description": "Three minutes, one sponsor, zero slides about boxes of Linux at the Bruna. SUSE, the oldest open source company in the world and Europe's largest, tells you in a few minutes what it does today: enterprise Linux, virtualization, but mostly K8S management with RKE2 and Rancher. Come for the pitch, stay for the gecko at our booth.",
+            "startsAt": "2026-10-30T09:05:00Z",
+            "endsAt": "2026-10-30T09:10:00Z",
+            "isServiceSession": true,
+            "isPlenumSession": true,
+            "speakers": [],
+            "categories": [],
+            "roomId": 82803,
+            "room": "Progress",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": null,
+            "isInformed": false,
+            "isConfirmed": false
+          },
+          {
+            "id": "1268587",
+            "title": "Two Standards Walk Into an Agent: Runtime Agent Control with OpenTelemetry and OpenFeature",
+            "description": "Autonomous agents are being deployed without runtime control. No open, vendor-neutral way to change what they do. No visibility into why they decided. We can fix that. A physical party game. A Raspberry Pi. An agent that adapts and evolves the game in real time. Without a single proprietary platform.\r\n\r\nSounds fun. But it's also the argument. We've been here before.\r\n\r\nEvery vendor built their own observability stack. We paid the price - so we built OpenTelemetry. Same with feature flags - we built OpenFeature.\r\n\r\nNow agents are here. The control layer is emerging again, often as vendor-specific infrastructure.\r\n\r\nNobody designed OpenTelemetry to be an agent's eyes. Nobody designed OpenFeature to be its conscience. Turns out they work anyway: OpenTelemetry becomes observation, OpenFeature becomes control.\r\n\r\nThis talk explores agent control on open standards — physical system control, infrastructure management, live model switching, permission changes, and rollback without redeployment.\r\n\r\nEvery autonomous agent needs a control layer. Vendors are racing to own it. You already have it.",
+            "startsAt": "2026-10-30T09:10:00Z",
+            "endsAt": "2026-10-30T09:25:00Z",
+            "isServiceSession": false,
+            "isPlenumSession": false,
+            "speakers": [
+              {
+                "id": "5260003f-39d6-48ac-8ec9-a49197f3c691",
+                "name": "Simon Schrottner"
+              }
+            ],
+            "categories": [],
+            "roomId": 82803,
+            "room": "Progress",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": "Accepted",
+            "isInformed": true,
+            "isConfirmed": true
+          },
+          {
+            "id": "44939986-ed4a-4b02-81e4-820b3fc2e437",
+            "title": "Intro Platinum Sponsor 3 (Clastix)",
+            "description": null,
+            "startsAt": "2026-10-30T09:25:00Z",
+            "endsAt": "2026-10-30T09:30:00Z",
+            "isServiceSession": true,
+            "isPlenumSession": true,
+            "speakers": [],
+            "categories": [],
+            "roomId": 82803,
+            "room": "Progress",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": null,
+            "isInformed": false,
+            "isConfirmed": false
+          },
+          {
+            "id": "1306789",
+            "title": "kubectl apply -f european-sovereignty.yaml",
+            "description": "European cloud market share dropped from 16% to 13% between 2020 and 2022 — while the market nearly doubled. The reason isn't quality. It's integration cost: without shared API standards, every new provider is a rewrite.\r\n\r\nNeoNephos Foundation launched in April 2025 under Linux Foundation Europe as the open-source answer to this problem — a neutral home for 13 production-proven cloud infrastructure projects, where founding members StackIT, SAP, Deutsche Telekom, and others donated full IP so no single company can close the door.\r\n\r\nThe EU Technological Sovereignty Package (June 2026) now mandates what engineers already knew: you can't regulate your way to sovereignty on a proprietary stack.\r\n\r\nWhat NeoNephos is, why Europe needs it, and how its projects map directly to the EC's requirements — signed supply chain integrity via OCM, Kubernetes-native IaaS via IronCore, machine-readable service discovery via ORD, and cross-provider interoperability via Platform Mesh.\r\n\r\nSovereignty isn't a data center location. It's a verifiable stack property. \r\n\r\nCome and and build it with us!",
+            "startsAt": "2026-10-30T09:30:00Z",
+            "endsAt": "2026-10-30T09:45:00Z",
+            "isServiceSession": false,
+            "isPlenumSession": false,
+            "speakers": [
+              {
+                "id": "bbf16dd9-0741-4a11-abdd-2ed308489674",
+                "name": "Orlin Vasilev"
+              }
+            ],
+            "categories": [],
+            "roomId": 82803,
+            "room": "Progress",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": "Accepted",
+            "isInformed": true,
+            "isConfirmed": true
+          },
+          {
+            "id": "80445c61-a33c-4f9a-9732-08ad17a0667a",
+            "title": "Coffee break (snacks)",
+            "description": null,
+            "startsAt": "2026-10-30T09:45:00Z",
+            "endsAt": "2026-10-30T10:05:00Z",
+            "isServiceSession": true,
+            "isPlenumSession": true,
+            "speakers": [],
+            "categories": [],
+            "roomId": 82803,
+            "room": "Progress",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": null,
+            "isInformed": false,
+            "isConfirmed": false
+          },
+          {
+            "id": "1243612",
+            "title": "From GPUs to Endpoints: A Crossplane Control Plane for Self-Hosted Inference",
+            "description": "Running your own models instead of paying for a SaaS API sounds simple until you actually have to do it. You have a fleet of GPU clusters spread across regions, providers, and hardware generations. Someone has to decide which model lands on which hardware, how capacity is shared, and what happens when a cluster fills up. Application developers, AI product engineers, and ML teams alike just want a single endpoint they can point their app at. The platform team wants to manage the fleet without becoming an on-call inference helpdesk for the rest of the company. The result is usually a pile of bespoke scripts, hand-rolled operators, and a lot of Slack messages asking \"who owns this cluster again?\"\r\n\r\nIn this session, we'll explore Modelplane, an open source control plane that extends Crossplane to manage AI model inference across a fleet of GPU clusters. The pitch comes down to three things.\r\n\r\nFirst, **a unified inference endpoint across a heterogeneous fleet.** OpenAI-compatible APIs are already a de facto standard; what's missing is one endpoint that sits in front of many clusters and many hardware classes, with traffic routed to the right replicas automatically through Envoy Gateway. Consumers don't care which cluster their request lands on, and they don't have to.\r\n\r\nSecond, **platform teams as internal service providers.** Platform engineers describe their GPU fleet through `InferenceClusters` and define hardware recipes (GPU type, count, topology) as `InferenceClasses`. They set the rules of the road — what hardware exists, where, in which tier — without becoming the bottleneck for every model deployment.\r\n\r\nThird, **self-service self-hosted inference for anyone who needs it.** Anyone in the org can create a `ModelDeployment` and get back a working endpoint: ML teams, AI product engineers, backend developers building AI features, internal tooling teams, research groups — anyone who wants the model running on the company's infrastructure instead of someone else's. They don't need to know the difference between an H100 and an A100, which cluster has capacity, or how to wire Envoy. Modelplane's scheduler picks where each replica lands based on capacity and topology and composes the resources underneath.\r\n\r\nModelplane doesn't try to reinvent the per-cluster serving layer. On each workload cluster it composes a KServe `LLMInferenceService`, which in turn runs an inference engine like vLLM (and LeaderWorkerSet for multi-node topologies). The fleet, scheduling, and unified endpoint are what Modelplane adds on top.\r\n\r\nThrough live demos, we'll provision a multi-cluster GPU fleet, deploy a model across it with a few lines of YAML, and watch traffic land on the right hardware automatically. We'll cover the design decisions behind the API, how Crossplane composition makes the architecture extensible, and how Modelplane relates to projects like KServe, vLLM, and Dynamo — composing the per-cluster stack rather than replacing it, and adding the fleet-level layer that nobody else ships today.",
+            "startsAt": "2026-10-30T10:05:00Z",
+            "endsAt": "2026-10-30T10:35:00Z",
+            "isServiceSession": false,
+            "isPlenumSession": false,
+            "speakers": [
+              {
+                "id": "97fd9697-d280-4391-8e99-0e4698bc76db",
+                "name": "Viktor Farcic"
+              }
+            ],
+            "categories": [],
+            "roomId": 82803,
+            "room": "Progress",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": "Accepted",
+            "isInformed": true,
+            "isConfirmed": true
+          },
+          {
+            "id": "1262036",
+            "title": "No Token Budget: What Breaks When Agentic Software Factories Run on Kubernetes",
+            "description": "A technical case study from OpenAI on using Kubernetes and CNCF-stack patterns to operate agentic software factories across the full SDLC when token budget is entirely removed as a constraint.\r\n\r\nAt OpenAI, we explored what happens when agentic software factories process tens of millions of tokens per minute across the full software development lifecycle: design, planning, implementation, testing, review, release, production monitoring, incident triage, and remediation.\r\n\r\nAt this scale, agentic software development stops looking like a chatbot and starts looking like a distributed cloud-native control plane. Agents do not just write code; they explore designs, implement changes, run tests, review diffs, coordinate releases, inspect production signals, explain failures, and propose remediations. The development model changes from sequential human execution to massively parallel, hermetic, continuously evaluated software delivery.\r\n\r\nThis talk shares a technical case study of running these systems on Kubernetes and CNCF ecosystem components: workflow orchestration, event-driven queues, Kubernetes workers, hermetic sandboxes, MCP-style tool gateways, workload identity, policy gates, eval systems, release controls, trace pipelines, production-monitoring integrations, and human approval flows.\r\n\r\nOnce token budget disappears as a constraint, the bottlenecks move to cluster capacity, queue fairness, sandbox isolation, repository contention, flaky tests, release safety, production feedback loops, agent alignment, multi-agent consensus, and human review. Attendees will learn what breaks after tokens stop being scarce, and how to design cloud-native agent platforms that prioritize development velocity without sacrificing isolation, observability, policy, or production safety.",
+            "startsAt": "2026-10-30T10:45:00Z",
+            "endsAt": "2026-10-30T11:15:00Z",
+            "isServiceSession": false,
+            "isPlenumSession": false,
+            "speakers": [
+              {
+                "id": "9c4ba405-5f72-441e-ac27-586a96ae5fc6",
+                "name": "Alex Kotliarskyi"
+              }
+            ],
+            "categories": [],
+            "roomId": 82803,
+            "room": "Progress",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": "Accepted",
+            "isInformed": true,
+            "isConfirmed": false
+          },
+          {
+            "id": "1269243",
+            "title": "Running Out of IPs Before You Run Out of GPUs: IPv6 for AI-Scale Kubernetes",
+            "description": "You've provisioned the GPU nodes and sized the power, cooling, and storage. But have you planned the IP addresses? In a dense AI cluster, with dozens of pods per GPU node across a large fleet, a private range that looked endless on the whiteboard runs dry fast.\r\n\r\nIt usually isn't public IPv4 scarcity that forces the move. It's the quiet exhaustion of RFC1918 space inside the flat, multi-account networks AI platforms grow into. Add autoscaling and constant rebuilds, and your address plan becomes what caps your scale.\r\nSo is IPv6 the answer, and is it worth the cost? This talk argues that for AI-scale Kubernetes, IPv6 is the substrate that makes the architecture work. We'll look at teams running it in production, stay honest about the sharp edges, and close with a live demo: IPv6 IP pools advertised over BGP, plus the capacity math to size it yourself.",
+            "startsAt": "2026-10-30T11:25:00Z",
+            "endsAt": "2026-10-30T11:55:00Z",
+            "isServiceSession": false,
+            "isPlenumSession": false,
+            "speakers": [
+              {
+                "id": "d7100338-7ea1-4f10-84fe-758b7ecbe1e7",
+                "name": "Marino Wijay"
+              }
+            ],
+            "categories": [],
+            "roomId": 82803,
+            "room": "Progress",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": "Accepted",
+            "isInformed": true,
+            "isConfirmed": true
+          },
+          {
+            "id": "4225011e-3009-46a6-94a4-28efd3f07e33",
+            "title": "Lunch break",
+            "description": "Meat, vegetarian and vegan options available",
+            "startsAt": "2026-10-30T11:55:00Z",
+            "endsAt": "2026-10-30T13:00:00Z",
+            "isServiceSession": true,
+            "isPlenumSession": true,
+            "speakers": [],
+            "categories": [],
+            "roomId": 82803,
+            "room": "Progress",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": null,
+            "isInformed": false,
+            "isConfirmed": false
+          },
+          {
+            "id": "1266203",
+            "title": "How We Operate VISTA: ING’s Self-Service Data, AI, and Agentic Platform",
+            "description": "How do you move fast with data and AI in a heavily regulated enterprise, without compromising governance, security, or reliability?\r\n\r\nIntroducing VISTA: ING’s Google Cloud-based Data and AI platform designed to give teams true self-service with guardrails by default. Instead of every team rebuilding platform capabilities, VISTA offers reusable building blocks and paved roads that accelerate delivery of data, analytics, machine learning, and emerging agentic AI use cases.\r\n\r\nIn this session, we will show how VISTA works end-to-end: from self-service tenant provisioning and standardized deployment templates to data ingestion and persistent storage, including how Data Scientists and Data Engineers are enabled to securely and responsibly access production data. We will share how we enable dozens of tenant teams to deliver consistently at scale, what worked immediately, and where we had to rethink our platform assumptions as new requirements introduced new operational and risk patterns.\r\n\r\nWe will also cover how ING governance is codified directly into platform automation, including IAM compliance enforcement and automated detection of unauthorized security events.\r\n",
+            "startsAt": "2026-10-30T13:00:00Z",
+            "endsAt": "2026-10-30T13:30:00Z",
+            "isServiceSession": false,
+            "isPlenumSession": false,
+            "speakers": [
+              {
+                "id": "105bdef9-00ed-4cdd-b104-3c3321b5d217",
+                "name": "Avinash Pancham"
+              },
+              {
+                "id": "d11da01d-d4b4-442a-97d3-78ea81b07b1f",
+                "name": "Yeachan Park"
+              }
+            ],
+            "categories": [],
+            "roomId": 82803,
+            "room": "Progress",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": "Accepted",
+            "isInformed": true,
+            "isConfirmed": true
+          },
+          {
+            "id": "1253689",
+            "title": "Platform Engineering in the Agentic Engineering Era at RTL Netherlands",
+            "description": "Agentic engineering is accelerating delivery at an unprecedented pace: more code, more services, more deployments. At RTL NL, platform engineering is the key to transforming that velocity into safe, repeatable outcomes. We've built a software delivery system for both developers and autonomous agents using open source foundations: ArgoCD, Crossplane, Kyverno, Helm, Terraform, and the LGTM observability stack. Our architecture delivers four critical capabilities. Coding agents generate production-ready code from task descriptions, accelerating feature development from hours to minutes. Blue-green AKS deployments (powered by dual clusters + Terraform workspaces) enable zero-downtime production flips in seconds. Ephemeral preview environments (via ArgoCD ApplicationSet PR generators + Crossplane Compositions) spin up fully isolated ephemeral environments per pull request where agents and developers test in parallel. Automated first-pass code reviews across every PR free human reviewers from routine checks to focus on architecture and design. Join us for hard-won lessons from scaling platform engineering for an agentic future: what worked, what surprised us, and how to accelerate safely.",
+            "startsAt": "2026-10-30T13:40:00Z",
+            "endsAt": "2026-10-30T14:10:00Z",
+            "isServiceSession": false,
+            "isPlenumSession": false,
+            "speakers": [
+              {
+                "id": "5369d0c4-1473-4aa1-8f75-aae128131d17",
+                "name": "Anna Kosek"
+              }
+            ],
+            "categories": [],
+            "roomId": 82803,
+            "room": "Progress",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": "Accepted",
+            "isInformed": true,
+            "isConfirmed": true
+          },
+          {
+            "id": "f24dc94e-02ed-4244-83df-e6e2f145dbe5",
+            "title": "Coffe break (snacks)",
+            "description": null,
+            "startsAt": "2026-10-30T14:10:00Z",
+            "endsAt": "2026-10-30T14:30:00Z",
+            "isServiceSession": true,
+            "isPlenumSession": true,
+            "speakers": [],
+            "categories": [],
+            "roomId": 82803,
+            "room": "Progress",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": null,
+            "isInformed": false,
+            "isConfirmed": false
+          },
+          {
+            "id": "1227140",
+            "title": "Sit. Stay. Deploy! Teaching a Robot Dog with AI",
+            "description": "Imagine a guiding dog that doesn’t just follow commands, but understands human gestures and acts on them in real time. In this session, we’ll show how we built Project Q9, a cloud-native MLOps platform that trains and deploys gesture-recognition models for a real robot dog (Unitree G2 Pro).\r\n\r\nBehind the demo lies a fully open-source backend: Kubernetes orchestrates GPU workloads, ArgoCD manages GitOps-driven training pipelines, and KServe serves models with low-latency inference. We use Prometheus and Grafana to monitor GPU utilization, system load, and latency — all critical when the difference between success and failure is measured in milliseconds.\r\n\r\nAttendees will learn how to bring advanced AI workloads into production with CNCF projects, how to optimize for real-world robotics use cases, and how cloud-native patterns make these workflows reproducible and portable across environments.",
+            "startsAt": "2026-10-30T14:30:00Z",
+            "endsAt": "2026-10-30T15:00:00Z",
+            "isServiceSession": false,
+            "isPlenumSession": false,
+            "speakers": [
+              {
+                "id": "16b6c0ae-9862-4bf1-8d5d-16c461a3bbc1",
+                "name": "Johan van Amersfoort"
+              }
+            ],
+            "categories": [],
+            "roomId": 82803,
+            "room": "Progress",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": "Accepted",
+            "isInformed": true,
+            "isConfirmed": true
+          },
+          {
+            "id": "1219988",
+            "title": "Data Sovereignty Is Built, Not Bought",
+            "description": "For two decades, hyperscalers have claimed that using modern cloud services requires moving all your data into their datacenters, subjecting it to foreign jurisdictions like the US CLOUD Act.\r\n\r\nThis talk challenges that assumption. We show how cloud-native technologies enable managed cloud services to be delivered where the data already lives: on-premises, in a private cloud, or with trusted public providers.\r\n\r\nUsing Kubernetes and CNCF projects such as Crossplane, Prometheus, and Grafana, we present a platform model where databases, queues, caches, and DevOps tools are delivered as self-service managed services without data relocation or provider lock-in. Data sovereignty, we argue, is not a contract; it’s an architectural decision.",
+            "startsAt": "2026-10-30T15:10:00Z",
+            "endsAt": "2026-10-30T15:40:00Z",
+            "isServiceSession": false,
+            "isPlenumSession": false,
+            "speakers": [
+              {
+                "id": "88bfd3c3-9f0e-40c0-9468-319bf1b40eb6",
+                "name": "Aarno Aukia"
+              }
+            ],
+            "categories": [],
+            "roomId": 82803,
+            "room": "Progress",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": "Accepted",
+            "isInformed": true,
+            "isConfirmed": true
+          },
+          {
+            "id": "f20adb33-5e1f-4772-8cc4-899648abaa30",
+            "title": "Raffles and Closing remarks",
+            "description": "All raffles will happen on the main stage",
+            "startsAt": "2026-10-30T15:55:00Z",
+            "endsAt": "2026-10-30T16:25:00Z",
+            "isServiceSession": true,
+            "isPlenumSession": true,
+            "speakers": [],
+            "categories": [],
+            "roomId": 82803,
+            "room": "Progress",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": null,
+            "isInformed": false,
+            "isConfirmed": false
+          },
+          {
+            "id": "88fd3e23-5be1-477d-9379-319c9e947117",
+            "title": "Drinks (at the venue)",
+            "description": "Closing reception",
+            "startsAt": "2026-10-30T16:30:00Z",
+            "endsAt": "2026-10-30T17:00:00Z",
+            "isServiceSession": true,
+            "isPlenumSession": true,
+            "speakers": [],
+            "categories": [],
+            "roomId": 82803,
+            "room": "Progress",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": null,
+            "isInformed": false,
+            "isConfirmed": false
+          }
+        ],
+        "hasOnlyPlenumSessions": false
+      },
+      {
+        "id": 82805,
+        "name": "Mission 2",
+        "sessions": [
+          {
+            "id": "1268593",
+            "title": "Beyond a Minimum Viable Platform: The Cover Whale Story",
+            "description": "This platform-building case study explores how Cover Whale, a U.S.-based firm specializing in truck insurance, built its internal developer platform (IDP) on Kubernetes and AWS, and the challenges it faced as it scaled beyond an MVP.\r\n\r\nThe talk will highlight some usual MVP limitations, such as scalability, limited integration with non-Kubernetes resources and backend-frontend integration struggles.\r\n\r\nFinally, it will present where platform orchestration tools like Kratix provide a middle ground between writing custom operators and stitching together scripts to build your platform. Key takeaways include:\r\n- Be wary of Helm sprawl; a CRD-driven approach may provide clearer boundaries and reduce complexity.\r\n- Embrace challenges that developers push on you; addressing them will drive adoption.\r\n- Secrets management remains a thorny area; reconciliation and rotation strategies must be tested under real conditions.\r\n",
+            "startsAt": "2026-10-30T10:05:00Z",
+            "endsAt": "2026-10-30T10:35:00Z",
+            "isServiceSession": false,
+            "isPlenumSession": false,
+            "speakers": [
+              {
+                "id": "7aa6ca8b-a54e-41e5-89cd-ac927dccf9c2",
+                "name": "Laurent Sibilla"
+              }
+            ],
+            "categories": [],
+            "roomId": 82805,
+            "room": "Mission 2",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": "Accepted",
+            "isInformed": true,
+            "isConfirmed": true
+          },
+          {
+            "id": "1266201",
+            "title": "If You Feel Behind, You’re Probably Paying Attention",
+            "description": "Impostor syndrome is usually framed as a personal failing: a lack of confidence, a mindset problem, something you need to “work through.” But what if the problem isn't you?\r\n\r\nYou’re not inexperienced. You’re not lazy. You're not bad at your job. I realized something else was going on: no one’s real experience matches the cloud-native story we tell in public.\r\n\r\nIn the cloud-native world, operators and admins are surrounded by a constant narrative of effortless success: platforms that scale cleanly, teams that “just adopt Kubernetes,” architectures that assume infinite time, talent, and budget. Conference talks are polished. Case studies are sanitized. Failure is implied to be a 'you' problem.\r\n\r\nYet privately, most practitioners are struggling. Technology is complex. Platforms and systems are brittle. Toolchains are overwhelming. Upgrades are painful projects. On-call is exhausting. And almost no one’s lived experience matches what the industry claims is normal.\r\n\r\nThis talk argues that what we’re experiencing isn’t just impostor syndrome — it’s pluralistic ignorance amplified by burnout. Everyone is struggling to keep up, but no one admits it, because admitting it feels like failure. So we stay quiet. We internalize the gap. We blame ourselves. We work harder and harder, up to, and beyond our breaking point.\r\n\r\nAt this event, I want to say the quiet part out loud and break that silence together.\r\n\r\nThis talk is for operators who keep real systems running, who are tired of pretending and who want honesty instead of hype. We’ll examine how hype amplifies self-doubt, why feeling “behind” is often a sign of realism, and how collective honesty—not more expertise—is the missing ingredient in the cloud-native ecosystem.\r\n\r\nIf you’ve ever thought “everyone else seems to have this figured out” — this talk is for you.",
+            "startsAt": "2026-10-30T10:45:00Z",
+            "endsAt": "2026-10-30T11:15:00Z",
+            "isServiceSession": false,
+            "isPlenumSession": false,
+            "speakers": [
+              {
+                "id": "5f9b1204-bfa3-4a14-befe-8574a0a38729",
+                "name": "Joep Piscaer"
+              }
+            ],
+            "categories": [],
+            "roomId": 82805,
+            "room": "Mission 2",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": "Accepted",
+            "isInformed": true,
+            "isConfirmed": true
+          },
+          {
+            "id": "1265303",
+            "title": "SBOMbastic: Getting Ready for Upcoming EU Cybersecurity Regulation in Software Supply Chains",
+            "description": "A supply chain attack is a cyber-attack that targets vulnerabilities in the software supply chain to harm organizations or individuals. One recent example is “Shai-Hulud” – a computer worm that managed to spread malware across thousands of npm packages on GitHub. To address the  increasing threat, the EU has introduced a new regulation in the form of the Cyber Resilience Act (CRA), which aims to improve the security posture of all products with digital elements throughout their whole lifecycle.\r\n\r\nIn this talk, Erika & Petteri walk through what new requirements the CRA imposes on companies targeting the EU market already this September. This boils down to improving visibility into what packages, libraries etc. go into your software, as well as continuously monitoring for and reporting actively exploited vulnerabilities.\r\n\r\nTo achieve supply chain visibility, one can utilize standardized and open Software Bill Of Materials (SBOM) formats, such as SPDX and CycloneDX. Erika & Petteri show exactly how open-source tooling and SBOMs help combat supply chain attacks and fulfill the requirements of the CRA in a live demo.",
+            "startsAt": "2026-10-30T11:25:00Z",
+            "endsAt": "2026-10-30T11:55:00Z",
+            "isServiceSession": false,
+            "isPlenumSession": false,
+            "speakers": [
+              {
+                "id": "5cc769db-6993-4dca-8567-451ed3ccd7a2",
+                "name": "Petteri Pulkkinen"
+              },
+              {
+                "id": "03be71f1-577a-46b2-a73e-b6c2d24a6ba1",
+                "name": "Erika Marttinen"
+              }
+            ],
+            "categories": [],
+            "roomId": 82805,
+            "room": "Mission 2",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": "Accepted",
+            "isInformed": true,
+            "isConfirmed": true
+          },
+          {
+            "id": "1222055",
+            "title": "Talk - Building Interoperable Agents: When A2A meets MCP",
+            "description": "It is time to move from isolated chatbots to ecosystems of collaborating agents. But how do we ensure agents can talk to each other without building proprietary silos?\r\n\r\nIn this session, we will break down interoperable AI using two powerful open standards recently donated to the Linux Foundation: the Agent-to-Agent (A2A) protocol and the Model Context Protocol (MCP).\r\n\r\nWe will start with a live demo of a deployed multi agent system, where an orchestrator agent coordinates the collaboration of multiple agents using A2A, while some of those agents share an MCP server. After the demo, we will deconstruct the system architecture. While explaining these Apache 2.0 licensed protocols, we will walk through the engineering process to rebuild the presented agentic system from scratch.\r\n\r\nJoin to see how A2A and MCP work hand in hand to create a new, open platform for Agentic AI, and why you should jump right in!\r\n\r\nDeployed app: https://www.carneiro.dev/ducktaipe\r\nGitHub: https://github.com/carneiroDotDev/ducktAIpe",
+            "startsAt": "2026-10-30T13:00:00Z",
+            "endsAt": "2026-10-30T13:30:00Z",
+            "isServiceSession": false,
+            "isPlenumSession": false,
+            "speakers": [
+              {
+                "id": "2874dccd-57d6-4281-80ad-8c2461f7b957",
+                "name": "Luiz Carneiro"
+              }
+            ],
+            "categories": [],
+            "roomId": 82805,
+            "room": "Mission 2",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": "Accepted",
+            "isInformed": true,
+            "isConfirmed": true
+          },
+          {
+            "id": "1266603",
+            "title": "We GitOps'd Everything Except the Settings That Break Production",
+            "description": "Software teams have a delivery process for code. But what about the runtime configuration around that code? It is often self-service for end users, hidden behind admin screens and custom database tables, and changed outside the delivery process. Feature flags, business rules, and specific domain settings can change production behavior just as much as new code.\r\n\r\nThis talk starts with application settings that broke production. Each one led to the same uncomfortable questions: who made the change, where was it validated, and how do we stop the next one?\r\n\r\nCould the same delivery discipline help application teams too? Could important product configuration live in a separate Git repo, reviewed and promoted like code, while the people who change it never see Git and just use a nice settings screen?\r\n\r\nI built an open source tool to explore this. I'll show the design and where it gets hard: conflicts, concurrency, and putting real authors on Git commits. Then a live demo: a coffee-ordering app, the whole audience as admins, changing settings from their phones. Will you help me find its boundaries?\r\n",
+            "startsAt": "2026-10-30T13:40:00Z",
+            "endsAt": "2026-10-30T14:10:00Z",
+            "isServiceSession": false,
+            "isPlenumSession": false,
+            "speakers": [
+              {
+                "id": "da064424-8d62-40e7-bdf9-c0f082f422e9",
+                "name": "Simon Koudijs"
+              }
+            ],
+            "categories": [],
+            "roomId": 82805,
+            "room": "Mission 2",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": "Accepted",
+            "isInformed": true,
+            "isConfirmed": true
+          },
+          {
+            "id": "1216165",
+            "title": "Your Backstage, Your Problems, Your Metrics",
+            "description": "Backstage is often proposed as the solution to all platform problems. Just deploy it and watch the magic happen. Too good to be true? Exactly. Let's take a step back: which problems are you actually trying to solve? Service discovery? Onboarding? Tool sprawl? Documentation chaos? Your problems are unique. Just as the metrics for your developer portal should be.\r\n\r\nA developer portal without a purpose is only just another piece of software, causing toil and maintenance effort. In this talk, we'll show you how to apply a product mindset to your platform (and Backstage): starting with identifying the specific problems you want to solve before implementing Backstage, define metrics for those problems, and measure whether Backstage actually delivers value and how it can be improved. Think DORA metrics, but for your internal developer portal.\r\n\r\nWe’ll equip you with a framework to validate your platform decisions with data, whether you're considering Backstage or already running it in production.",
+            "startsAt": "2026-10-30T14:30:00Z",
+            "endsAt": "2026-10-30T15:00:00Z",
+            "isServiceSession": false,
+            "isPlenumSession": false,
+            "speakers": [
+              {
+                "id": "0979c01c-b27b-4c4a-be3b-b1d0a927bd6a",
+                "name": "Katharina Sick"
+              },
+              {
+                "id": "2bcb0685-559a-4697-ae6c-0fd55f60e358",
+                "name": "Thomas Schuetz"
+              }
+            ],
+            "categories": [],
+            "roomId": 82805,
+            "room": "Mission 2",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": "Accepted",
+            "isInformed": true,
+            "isConfirmed": true
+          },
+          {
+            "id": "1216601",
+            "title": "Airport Digital Twin - Quickly deploying test environments",
+            "description": "Vanderlande Industries is well known for baggage handling systems at airports. An important part of this is the high level control software that determines the flow of bags through the airport. Given the high complexity of these systems, advanced test tooling with hardware emulation have been developed. \r\n\r\nThe current environment consists a mix of virtual machines (windows+linux) and kubernetes. In production this is running on premise. However, setting up an on-premise deployment is quite time consuming, involving different parts of the organisation and hand-overs, resulting in a total turnaround time of weeks.\r\n\r\nTherefore, we are setting up these environments in a more automated way and using the flexibiilty of kubernetes to set up these environments a lot quicker. This reduces the time it takes to around 30 minutes instead of weeks. \r\n\r\nThis talk will discuss the challenges and experiences in doing this. The techniques used are generally applicable. ",
+            "startsAt": "2026-10-30T15:10:00Z",
+            "endsAt": "2026-10-30T15:40:00Z",
+            "isServiceSession": false,
+            "isPlenumSession": false,
+            "speakers": [
+              {
+                "id": "d3ca0005-a062-44a5-8ad7-77af33899a2d",
+                "name": "Erik Brakkee"
+              },
+              {
+                "id": "7322ff93-d5b3-40f5-bcd1-c75baa3d7371",
+                "name": "Jeroen van der Meulen"
+              }
+            ],
+            "categories": [],
+            "roomId": 82805,
+            "room": "Mission 2",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": "Accepted",
+            "isInformed": true,
+            "isConfirmed": true
+          }
+        ],
+        "hasOnlyPlenumSessions": false
+      },
+      {
+        "id": 82804,
+        "name": "Mission 1",
+        "sessions": [
+          {
+            "id": "1268481",
+            "title": "Worktrace: Real-Time Threat Detection for Kubernetes Workspaces Using eBPF",
+            "description": "Most developer tooling treats Kubernetes as a deployment target for application workloads - but what if it became the development environment itself? Running interactive workspaces natively on Kubernetes offers compelling advantages: developers work in environments that mirror production, teams share cluster resources more efficiently, and ephemeral workspaces can be spun up and torn down on demand. This is the vision driving k8shell, our Kubernetes-native workspace project.\r\n\r\nBut as these environments mature, they introduce a security challenge the ecosystem has yet to fully address. Interactive workspaces are long-lived and user-driven, and they often require elevated privileges by design - making them a high-value target once an attacker gains access to the cluster. Traditional perimeter security offers little protection at this layer.\r\n\r\nThis session introduces Worktrace, a real-time threat detection system we built to address exactly this gap. Worktrace uses eBPF-based kernel observability to identify malicious activity inside live Kubernetes workspaces. It combines three detection strategies: rule-based matching for known attack signatures, multi-step attack path correlation, and behavioral anomaly detection. Detection rules are defined declaratively in YAML, capturing both the detection logic and the instrumentation scope in one place. The system deploys as a Kubernetes DaemonSet alongside Cilium Tetragon and integrates natively into standard monitoring infrastructure.\r\n\r\nWe'll walk through controlled penetration testing results across ten distinct attack techniques, including container escapes via privileged mode, kernel module injection, ptrace-based process injection, and Kubernetes-level privilege escalation. They were all successfully detected at under 3% node CPU overhead and less than 14 MiB of memory per node.",
+            "startsAt": "2026-10-30T10:05:00Z",
+            "endsAt": "2026-10-30T10:35:00Z",
+            "isServiceSession": false,
+            "isPlenumSession": false,
+            "speakers": [
+              {
+                "id": "0f594cf4-d3a0-425e-8322-da7433d45e17",
+                "name": "Tomas Vitvar"
+              },
+              {
+                "id": "2b92af53-5b07-427a-8b42-64bfce4721f4",
+                "name": "Jan Hlaváč"
+              }
+            ],
+            "categories": [],
+            "roomId": 82804,
+            "room": "Mission 1",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": "Accepted",
+            "isInformed": true,
+            "isConfirmed": true
+          },
+          {
+            "id": "1236569",
+            "title": "GitOps is not enough: taming environment promotion in Kubernetes with Kargo",
+            "description": "You adopted GitOps.\r\n\r\nYour deployments are declarative, auditable and reproducible. And yet promoting a release from dev to staging to production is still a mess of shell scripts, manual PRs and Slack messages.\r\n\r\nSound familiar?\r\n\r\nGitOps solves the \"how do I deploy\" problem brilliantly. What it does not solve is the \"how do I safely move an artefact across environments\" problem and that gap is where most teams quietly give up and reintroduce the manual steps they were trying to eliminate.\r\n\r\nIn this talk we will look at why environment promotion is genuinely hard in a GitOps world, and then explore the tools that are finally starting to solve it properly.\r\n\r\nWe will start with the patterns: what does a healthy promotion pipeline actually look like? Single Git repo vs multi-repo, image tags vs digests, who owns the promotion decision and how do you enforce gates (tests, approvals, metrics thresholds)?\r\n\r\nThen we will introduce Kargo (by Akuity, the team behind Argo CD), the first tool designed specifically for Kubernetes-native environment promotion.\r\n\r\nLive demo included\r\n\r\nWe will also briefly compare the Kargo approach against other alternative so you can make an informed choice for your own setup.",
+            "startsAt": "2026-10-30T10:45:00Z",
+            "endsAt": "2026-10-30T11:15:00Z",
+            "isServiceSession": false,
+            "isPlenumSession": false,
+            "speakers": [
+              {
+                "id": "359154c4-1418-48f2-bb6f-b4ed1a27042c",
+                "name": "Evangelista Tragni"
+              }
+            ],
+            "categories": [],
+            "roomId": 82804,
+            "room": "Mission 1",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": "Accepted",
+            "isInformed": true,
+            "isConfirmed": true
+          },
+          {
+            "id": "1254337",
+            "title": "AI Broke Your DevOps Assumptions: Privacy, IP and $40k Idle GPUs",
+            "description": "The rise of AI workloads quietly invalidated a set of habits DevOps has relied on for years. Here's the honest version of the argument, though: most of these were never genuinely safe. They were corners we could afford to cut while the rate, cost and exposure stayed low, and what AI changed is the price of cutting them. This talk works through three, and what we have to change in response, kept deliberately vendor-neutral so the takeaways apply whatever you run.\r\n\r\n\"We can patch on a comfortable schedule.\" Slow patching was always a gamble; we got away with it because vulnerabilities arrived at a human pace. AI compressed the clock at both ends. On discovery: in April 2026 Theori's AI tooling found Copy Fail (CVE-2026-31431), a root-level flaw in the kernel crypto subsystem, in roughly an hour of scanning. On exploitation: Dirty Frag (CVE-2026-43284/43500) had working exploits circulating within hours of disclosure, so the gap from disclosure to in-the-wild attack is collapsing from weeks to hours. And the volume is systemic: the kernel security mailing list has gone from a few reports a week to 5-10 a day, much of it AI-generated, which in May 2026 Linus Torvalds called \"almost entirely unmanageable.\" When vulnerabilities are both found and weaponised faster than humans can hand-patch a fleet, a relaxed cadence stops being survivable, and a fast one is only safe when OS upgrades are atomic and reversible.\r\n\r\n\"Our crown jewels live in a datacenter we control.\" Unlike the others, this is one AI genuinely changed: it raises the stakes of two things attackers want, user data (privacy) and trained model weights (expensive intellectual property), and for the many teams who cannot keep everything in a datacenter they control (edge sites, colos, or GPUs rented from a neocloud), it puts those on hardware they do not physically own. That raises the bar on trusted boot, encryption at rest on untrusted sites, workload isolation, and the ability to recover a node to a known-good state after compromise. Rented hardware goes one step further, because the infrastructure provider itself is now in your threat model, and that is the case confidential computing exists to address.\r\n\r\n\"An idle node is no big deal.\" It was never actually fine to leave hardware idling; it was just cheap enough to ignore. AI ended that: accelerators are scarce and costly, so an idle node is now real money. When workloads change you need to re-purpose, reset, and reinstall machines remotely and quickly, without someone driving to a rack.\r\n\r\nFor each, we'll look at the answers the cloud native ecosystem already offers (immutable, image-based operating systems chief among them, alongside other open source tooling), and end with one open source project, Kairos, that brings them together. We'll also be honest about where the line sits: huge, fast-changing model weights don't belong inside the immutable OS image. They stay versioned on their own axis (an OCI artifact, or a volume) and get pulled onto the node at runtime, which is exactly how immutable infrastructure is meant to separate the system layer from state.\r\n\r\nThe conclusion is not so much about tooling. Open source infrastructure-management software is mostly ready for the AI era; what really needs to keep adapting is our mentality.",
+            "startsAt": "2026-10-30T11:25:00Z",
+            "endsAt": "2026-10-30T11:55:00Z",
+            "isServiceSession": false,
+            "isPlenumSession": false,
+            "speakers": [
+              {
+                "id": "731f75c8-c156-48e5-b420-6523ca1ec939",
+                "name": "Dimitris Karakasilis"
+              }
+            ],
+            "categories": [],
+            "roomId": 82804,
+            "room": "Mission 1",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": "Accepted",
+            "isInformed": true,
+            "isConfirmed": true
+          },
+          {
+            "id": "1268797",
+            "title": "Stop Merging Blind: Argo CD Previews That Make a DIFFerence!",
+            "description": "As organizations adopt GitOps, visualizing manifest changes before they merge has become crucial. Yet many teams still review pull requests by mentally parsing Helm templates and Kustomize patches, effectively merging blind and risking deployment errors.\r\n\r\nThis talk shows how to render accurate Argo CD deployment previews directly on your pull requests. Instead of guessing what a change will do, reviewers can see the exact diff Argo CD will apply before approving a merge.\r\n\r\nBased on experiences from DPG Media and Egmont, two of Northern Europe's largest media companies, we will show how deployment previews enable safer automation, including AI-assisted code reviews and automated Helm chart upgrades with Renovate. We will also compare argocd-diff-preview with Argo CD Source Hydrator and GitOps Promoter, discussing their tradeoffs.\r\n\r\nPlatform and DevOps engineers will learn how to set up Argo CD diff previews and create shorter feedback loops, safer automation, and fewer failed deployments.",
+            "startsAt": "2026-10-30T13:00:00Z",
+            "endsAt": "2026-10-30T13:30:00Z",
+            "isServiceSession": false,
+            "isPlenumSession": false,
+            "speakers": [
+              {
+                "id": "8ede12d4-12f1-4e7b-af7e-488e307091af",
+                "name": "Dag Bjerre Andersen"
+              },
+              {
+                "id": "4d7ede49-da43-4238-befc-8b07f354bb1d",
+                "name": "Tibo Beijen"
+              }
+            ],
+            "categories": [],
+            "roomId": 82804,
+            "room": "Mission 1",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": "Accepted",
+            "isInformed": true,
+            "isConfirmed": true
+          },
+          {
+            "id": "1258753",
+            "title": "Let it be CHAOS!?",
+            "description": "We build on Kubernetes for scale, but how do we know our clusters can survive a network partition, a \"noisy neighbour,\" or a pod that simply refuses to stay alive? \r\nWe will begin with the \"Theory of Chaos\" defining steady states and hypotheses and move on into the \"controlled destruction\" phase. We will go through 2-3 live experiments designed to test common architectural weaknesses.\r\n\r\n1. Network Chaos: Simulating latency and packet loss to test timeout configurations.\r\n2. Pod Faults: Testing service discovery and auto-scaling under sudden pod failure.\r\n3. Stress Scenarios: Forcing CPU/Memory exhaustion to validate resource limits and monitoring.\r\n\r\nFinally, by using Chaos Mesh to minimize the blast radius with surgical precision, we will learn to hunt vulnerabilities on our own terms. This session marks the transition from reactive firefighting to a proactive resilience helping you stop reacting to outages and start preventing them.",
+            "startsAt": "2026-10-30T13:40:00Z",
+            "endsAt": "2026-10-30T14:10:00Z",
+            "isServiceSession": false,
+            "isPlenumSession": false,
+            "speakers": [
+              {
+                "id": "0173b85b-0597-4bb9-86c5-360ac416794d",
+                "name": "Bogdan Stan"
+              }
+            ],
+            "categories": [],
+            "roomId": 82804,
+            "room": "Mission 1",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": "Accepted",
+            "isInformed": true,
+            "isConfirmed": true
+          },
+          {
+            "id": "1251576",
+            "title": "The human side of platform engineering",
+            "description": "Description\r\nWhat is the most important part of your platform? The infra-code? Or the people working on it?\r\n\r\nAlready in the '80s, people realized that the value of a system is not in the code itself. Knowledge can’t be transferred through code and documentation alone. It lives in the brains of the people working on a system. Look at all the \"legacy\" systems, hard to change, not because the docs are missing, but because the people that know them are no longer around and now nobody has the confidence to touch them. Yet as an industry, even though we are suffering badly from this, we insists on finding solutions in tech and tooling, while treating the humans as interchangeable cogs in a machine.\r\n\r\nIf we want to create systems that lasts, we need to encourage human collaboration across disciplines, backgrounds and personalities (including our new AI buddies). Learn how to use your human power skills to better understand the problems you're facing and build systems that last!",
+            "startsAt": "2026-10-30T14:30:00Z",
+            "endsAt": "2026-10-30T15:00:00Z",
+            "isServiceSession": false,
+            "isPlenumSession": false,
+            "speakers": [
+              {
+                "id": "b1065803-74a9-4c8a-b809-8c3b8bf72206",
+                "name": "Jurgen Allewijn"
+              },
+              {
+                "id": "a16df0ee-c590-4503-b584-d2f867cbe369",
+                "name": "Nico Krijnen"
+              }
+            ],
+            "categories": [],
+            "roomId": 82804,
+            "room": "Mission 1",
+            "liveUrl": null,
+            "recordingUrl": null,
+            "status": "Accepted",
+            "isInformed": true,
+            "isConfirmed": true
+          }
+        ],
+        "hasOnlyPlenumSessions": false
+      }
+    ],
+    "timeSlots": [
+      {
+        "slotStart": "07:45:00",
+        "rooms": [
+          {
+            "id": 82803,
+            "name": "Progress",
+            "session": {
+              "id": "d24730c3-94f7-4018-95aa-7134eea247a5",
+              "title": "Welcome - registration & coffee",
+              "description": null,
+              "startsAt": "2026-10-30T07:45:00Z",
+              "endsAt": "2026-10-30T08:30:00Z",
+              "isServiceSession": true,
+              "isPlenumSession": true,
+              "speakers": [],
+              "categories": [],
+              "roomId": 82803,
+              "room": "Progress",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": null,
+              "isInformed": false,
+              "isConfirmed": false
+            },
+            "index": 0
+          }
+        ]
+      },
+      {
+        "slotStart": "08:30:00",
+        "rooms": [
+          {
+            "id": 82803,
+            "name": "Progress",
+            "session": {
+              "id": "036bef6c-a274-4583-8d65-ad5abf5cfca4",
+              "title": "Intro from the organizers",
+              "description": null,
+              "startsAt": "2026-10-30T08:30:00Z",
+              "endsAt": "2026-10-30T08:45:00Z",
+              "isServiceSession": true,
+              "isPlenumSession": true,
+              "speakers": [],
+              "categories": [],
+              "roomId": 82803,
+              "room": "Progress",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": null,
+              "isInformed": false,
+              "isConfirmed": false
+            },
+            "index": 0
+          }
+        ]
+      },
+      {
+        "slotStart": "08:45:00",
+        "rooms": [
+          {
+            "id": 82803,
+            "name": "Progress",
+            "session": {
+              "id": "cc09d17d-3fb8-41cc-b8d1-0669ebfffde9",
+              "title": "Intro Platinum Sponsor 1 (Dash0)",
+              "description": null,
+              "startsAt": "2026-10-30T08:45:00Z",
+              "endsAt": "2026-10-30T08:50:00Z",
+              "isServiceSession": true,
+              "isPlenumSession": true,
+              "speakers": [],
+              "categories": [],
+              "roomId": 82803,
+              "room": "Progress",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": null,
+              "isInformed": false,
+              "isConfirmed": false
+            },
+            "index": 0
+          }
+        ]
+      },
+      {
+        "slotStart": "08:50:00",
+        "rooms": [
+          {
+            "id": 82803,
+            "name": "Progress",
+            "session": {
+              "id": "1245630",
+              "title": "The AI Adoption Ladder: From First Licences to the Dark Factory",
+              "description": "AI coding tools make individual developers faster, but many teams discover that delivery does not improve at the same rate. PR volume rises, review queues grow, tests become less convincing, context gets messy, and eventually product and platform bottlenecks become visible. AI did not remove the constraint; it moved it.\r\nThis talk introduces the AI Coding Adoption Ladder: a practical model for how engineering teams move from first licences to structured adoption, agentic workflows, and eventually software factory patterns. We will look at the order things usually break — coordination, review, testing, context, security boundaries, ownership, CI/CD, and product flow — and what software and DevOps engineers need to fix before AI-generated code can safely scale.\r\nThe core message: licences create activity; platforms create durable advantage.\r\n",
+              "startsAt": "2026-10-30T08:50:00Z",
+              "endsAt": "2026-10-30T09:05:00Z",
+              "isServiceSession": false,
+              "isPlenumSession": false,
+              "speakers": [
+                {
+                  "id": "8f398417-82f0-467a-b234-08e82f7f9acd",
+                  "name": "Pini Reznik"
+                }
+              ],
+              "categories": [],
+              "roomId": 82803,
+              "room": "Progress",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": "Accepted",
+              "isInformed": true,
+              "isConfirmed": true
+            },
+            "index": 0
+          }
+        ]
+      },
+      {
+        "slotStart": "09:05:00",
+        "rooms": [
+          {
+            "id": 82803,
+            "name": "Progress",
+            "session": {
+              "id": "1204c6a2-f0a7-4b94-877e-c05aa4be5f0a",
+              "title": "Intro Platinum Sponsor 2 (Bert Boerland - SUSE)",
+              "description": "Three minutes, one sponsor, zero slides about boxes of Linux at the Bruna. SUSE, the oldest open source company in the world and Europe's largest, tells you in a few minutes what it does today: enterprise Linux, virtualization, but mostly K8S management with RKE2 and Rancher. Come for the pitch, stay for the gecko at our booth.",
+              "startsAt": "2026-10-30T09:05:00Z",
+              "endsAt": "2026-10-30T09:10:00Z",
+              "isServiceSession": true,
+              "isPlenumSession": true,
+              "speakers": [],
+              "categories": [],
+              "roomId": 82803,
+              "room": "Progress",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": null,
+              "isInformed": false,
+              "isConfirmed": false
+            },
+            "index": 0
+          }
+        ]
+      },
+      {
+        "slotStart": "09:10:00",
+        "rooms": [
+          {
+            "id": 82803,
+            "name": "Progress",
+            "session": {
+              "id": "1268587",
+              "title": "Two Standards Walk Into an Agent: Runtime Agent Control with OpenTelemetry and OpenFeature",
+              "description": "Autonomous agents are being deployed without runtime control. No open, vendor-neutral way to change what they do. No visibility into why they decided. We can fix that. A physical party game. A Raspberry Pi. An agent that adapts and evolves the game in real time. Without a single proprietary platform.\r\n\r\nSounds fun. But it's also the argument. We've been here before.\r\n\r\nEvery vendor built their own observability stack. We paid the price - so we built OpenTelemetry. Same with feature flags - we built OpenFeature.\r\n\r\nNow agents are here. The control layer is emerging again, often as vendor-specific infrastructure.\r\n\r\nNobody designed OpenTelemetry to be an agent's eyes. Nobody designed OpenFeature to be its conscience. Turns out they work anyway: OpenTelemetry becomes observation, OpenFeature becomes control.\r\n\r\nThis talk explores agent control on open standards — physical system control, infrastructure management, live model switching, permission changes, and rollback without redeployment.\r\n\r\nEvery autonomous agent needs a control layer. Vendors are racing to own it. You already have it.",
+              "startsAt": "2026-10-30T09:10:00Z",
+              "endsAt": "2026-10-30T09:25:00Z",
+              "isServiceSession": false,
+              "isPlenumSession": false,
+              "speakers": [
+                {
+                  "id": "5260003f-39d6-48ac-8ec9-a49197f3c691",
+                  "name": "Simon Schrottner"
+                }
+              ],
+              "categories": [],
+              "roomId": 82803,
+              "room": "Progress",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": "Accepted",
+              "isInformed": true,
+              "isConfirmed": true
+            },
+            "index": 0
+          }
+        ]
+      },
+      {
+        "slotStart": "09:25:00",
+        "rooms": [
+          {
+            "id": 82803,
+            "name": "Progress",
+            "session": {
+              "id": "44939986-ed4a-4b02-81e4-820b3fc2e437",
+              "title": "Intro Platinum Sponsor 3 (Clastix)",
+              "description": null,
+              "startsAt": "2026-10-30T09:25:00Z",
+              "endsAt": "2026-10-30T09:30:00Z",
+              "isServiceSession": true,
+              "isPlenumSession": true,
+              "speakers": [],
+              "categories": [],
+              "roomId": 82803,
+              "room": "Progress",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": null,
+              "isInformed": false,
+              "isConfirmed": false
+            },
+            "index": 0
+          }
+        ]
+      },
+      {
+        "slotStart": "09:30:00",
+        "rooms": [
+          {
+            "id": 82803,
+            "name": "Progress",
+            "session": {
+              "id": "1306789",
+              "title": "kubectl apply -f european-sovereignty.yaml",
+              "description": "European cloud market share dropped from 16% to 13% between 2020 and 2022 — while the market nearly doubled. The reason isn't quality. It's integration cost: without shared API standards, every new provider is a rewrite.\r\n\r\nNeoNephos Foundation launched in April 2025 under Linux Foundation Europe as the open-source answer to this problem — a neutral home for 13 production-proven cloud infrastructure projects, where founding members StackIT, SAP, Deutsche Telekom, and others donated full IP so no single company can close the door.\r\n\r\nThe EU Technological Sovereignty Package (June 2026) now mandates what engineers already knew: you can't regulate your way to sovereignty on a proprietary stack.\r\n\r\nWhat NeoNephos is, why Europe needs it, and how its projects map directly to the EC's requirements — signed supply chain integrity via OCM, Kubernetes-native IaaS via IronCore, machine-readable service discovery via ORD, and cross-provider interoperability via Platform Mesh.\r\n\r\nSovereignty isn't a data center location. It's a verifiable stack property. \r\n\r\nCome and and build it with us!",
+              "startsAt": "2026-10-30T09:30:00Z",
+              "endsAt": "2026-10-30T09:45:00Z",
+              "isServiceSession": false,
+              "isPlenumSession": false,
+              "speakers": [
+                {
+                  "id": "bbf16dd9-0741-4a11-abdd-2ed308489674",
+                  "name": "Orlin Vasilev"
+                }
+              ],
+              "categories": [],
+              "roomId": 82803,
+              "room": "Progress",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": "Accepted",
+              "isInformed": true,
+              "isConfirmed": true
+            },
+            "index": 0
+          }
+        ]
+      },
+      {
+        "slotStart": "09:45:00",
+        "rooms": [
+          {
+            "id": 82803,
+            "name": "Progress",
+            "session": {
+              "id": "80445c61-a33c-4f9a-9732-08ad17a0667a",
+              "title": "Coffee break (snacks)",
+              "description": null,
+              "startsAt": "2026-10-30T09:45:00Z",
+              "endsAt": "2026-10-30T10:05:00Z",
+              "isServiceSession": true,
+              "isPlenumSession": true,
+              "speakers": [],
+              "categories": [],
+              "roomId": 82803,
+              "room": "Progress",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": null,
+              "isInformed": false,
+              "isConfirmed": false
+            },
+            "index": 0
+          }
+        ]
+      },
+      {
+        "slotStart": "10:05:00",
+        "rooms": [
+          {
+            "id": 82803,
+            "name": "Progress",
+            "session": {
+              "id": "1243612",
+              "title": "From GPUs to Endpoints: A Crossplane Control Plane for Self-Hosted Inference",
+              "description": "Running your own models instead of paying for a SaaS API sounds simple until you actually have to do it. You have a fleet of GPU clusters spread across regions, providers, and hardware generations. Someone has to decide which model lands on which hardware, how capacity is shared, and what happens when a cluster fills up. Application developers, AI product engineers, and ML teams alike just want a single endpoint they can point their app at. The platform team wants to manage the fleet without becoming an on-call inference helpdesk for the rest of the company. The result is usually a pile of bespoke scripts, hand-rolled operators, and a lot of Slack messages asking \"who owns this cluster again?\"\r\n\r\nIn this session, we'll explore Modelplane, an open source control plane that extends Crossplane to manage AI model inference across a fleet of GPU clusters. The pitch comes down to three things.\r\n\r\nFirst, **a unified inference endpoint across a heterogeneous fleet.** OpenAI-compatible APIs are already a de facto standard; what's missing is one endpoint that sits in front of many clusters and many hardware classes, with traffic routed to the right replicas automatically through Envoy Gateway. Consumers don't care which cluster their request lands on, and they don't have to.\r\n\r\nSecond, **platform teams as internal service providers.** Platform engineers describe their GPU fleet through `InferenceClusters` and define hardware recipes (GPU type, count, topology) as `InferenceClasses`. They set the rules of the road — what hardware exists, where, in which tier — without becoming the bottleneck for every model deployment.\r\n\r\nThird, **self-service self-hosted inference for anyone who needs it.** Anyone in the org can create a `ModelDeployment` and get back a working endpoint: ML teams, AI product engineers, backend developers building AI features, internal tooling teams, research groups — anyone who wants the model running on the company's infrastructure instead of someone else's. They don't need to know the difference between an H100 and an A100, which cluster has capacity, or how to wire Envoy. Modelplane's scheduler picks where each replica lands based on capacity and topology and composes the resources underneath.\r\n\r\nModelplane doesn't try to reinvent the per-cluster serving layer. On each workload cluster it composes a KServe `LLMInferenceService`, which in turn runs an inference engine like vLLM (and LeaderWorkerSet for multi-node topologies). The fleet, scheduling, and unified endpoint are what Modelplane adds on top.\r\n\r\nThrough live demos, we'll provision a multi-cluster GPU fleet, deploy a model across it with a few lines of YAML, and watch traffic land on the right hardware automatically. We'll cover the design decisions behind the API, how Crossplane composition makes the architecture extensible, and how Modelplane relates to projects like KServe, vLLM, and Dynamo — composing the per-cluster stack rather than replacing it, and adding the fleet-level layer that nobody else ships today.",
+              "startsAt": "2026-10-30T10:05:00Z",
+              "endsAt": "2026-10-30T10:35:00Z",
+              "isServiceSession": false,
+              "isPlenumSession": false,
+              "speakers": [
+                {
+                  "id": "97fd9697-d280-4391-8e99-0e4698bc76db",
+                  "name": "Viktor Farcic"
+                }
+              ],
+              "categories": [],
+              "roomId": 82803,
+              "room": "Progress",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": "Accepted",
+              "isInformed": true,
+              "isConfirmed": true
+            },
+            "index": 0
+          },
+          {
+            "id": 82805,
+            "name": "Mission 2",
+            "session": {
+              "id": "1268593",
+              "title": "Beyond a Minimum Viable Platform: The Cover Whale Story",
+              "description": "This platform-building case study explores how Cover Whale, a U.S.-based firm specializing in truck insurance, built its internal developer platform (IDP) on Kubernetes and AWS, and the challenges it faced as it scaled beyond an MVP.\r\n\r\nThe talk will highlight some usual MVP limitations, such as scalability, limited integration with non-Kubernetes resources and backend-frontend integration struggles.\r\n\r\nFinally, it will present where platform orchestration tools like Kratix provide a middle ground between writing custom operators and stitching together scripts to build your platform. Key takeaways include:\r\n- Be wary of Helm sprawl; a CRD-driven approach may provide clearer boundaries and reduce complexity.\r\n- Embrace challenges that developers push on you; addressing them will drive adoption.\r\n- Secrets management remains a thorny area; reconciliation and rotation strategies must be tested under real conditions.\r\n",
+              "startsAt": "2026-10-30T10:05:00Z",
+              "endsAt": "2026-10-30T10:35:00Z",
+              "isServiceSession": false,
+              "isPlenumSession": false,
+              "speakers": [
+                {
+                  "id": "7aa6ca8b-a54e-41e5-89cd-ac927dccf9c2",
+                  "name": "Laurent Sibilla"
+                }
+              ],
+              "categories": [],
+              "roomId": 82805,
+              "room": "Mission 2",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": "Accepted",
+              "isInformed": true,
+              "isConfirmed": true
+            },
+            "index": 1
+          },
+          {
+            "id": 82804,
+            "name": "Mission 1",
+            "session": {
+              "id": "1268481",
+              "title": "Worktrace: Real-Time Threat Detection for Kubernetes Workspaces Using eBPF",
+              "description": "Most developer tooling treats Kubernetes as a deployment target for application workloads - but what if it became the development environment itself? Running interactive workspaces natively on Kubernetes offers compelling advantages: developers work in environments that mirror production, teams share cluster resources more efficiently, and ephemeral workspaces can be spun up and torn down on demand. This is the vision driving k8shell, our Kubernetes-native workspace project.\r\n\r\nBut as these environments mature, they introduce a security challenge the ecosystem has yet to fully address. Interactive workspaces are long-lived and user-driven, and they often require elevated privileges by design - making them a high-value target once an attacker gains access to the cluster. Traditional perimeter security offers little protection at this layer.\r\n\r\nThis session introduces Worktrace, a real-time threat detection system we built to address exactly this gap. Worktrace uses eBPF-based kernel observability to identify malicious activity inside live Kubernetes workspaces. It combines three detection strategies: rule-based matching for known attack signatures, multi-step attack path correlation, and behavioral anomaly detection. Detection rules are defined declaratively in YAML, capturing both the detection logic and the instrumentation scope in one place. The system deploys as a Kubernetes DaemonSet alongside Cilium Tetragon and integrates natively into standard monitoring infrastructure.\r\n\r\nWe'll walk through controlled penetration testing results across ten distinct attack techniques, including container escapes via privileged mode, kernel module injection, ptrace-based process injection, and Kubernetes-level privilege escalation. They were all successfully detected at under 3% node CPU overhead and less than 14 MiB of memory per node.",
+              "startsAt": "2026-10-30T10:05:00Z",
+              "endsAt": "2026-10-30T10:35:00Z",
+              "isServiceSession": false,
+              "isPlenumSession": false,
+              "speakers": [
+                {
+                  "id": "0f594cf4-d3a0-425e-8322-da7433d45e17",
+                  "name": "Tomas Vitvar"
+                },
+                {
+                  "id": "2b92af53-5b07-427a-8b42-64bfce4721f4",
+                  "name": "Jan Hlaváč"
+                }
+              ],
+              "categories": [],
+              "roomId": 82804,
+              "room": "Mission 1",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": "Accepted",
+              "isInformed": true,
+              "isConfirmed": true
+            },
+            "index": 2
+          }
+        ]
+      },
+      {
+        "slotStart": "10:45:00",
+        "rooms": [
+          {
+            "id": 82803,
+            "name": "Progress",
+            "session": {
+              "id": "1262036",
+              "title": "No Token Budget: What Breaks When Agentic Software Factories Run on Kubernetes",
+              "description": "A technical case study from OpenAI on using Kubernetes and CNCF-stack patterns to operate agentic software factories across the full SDLC when token budget is entirely removed as a constraint.\r\n\r\nAt OpenAI, we explored what happens when agentic software factories process tens of millions of tokens per minute across the full software development lifecycle: design, planning, implementation, testing, review, release, production monitoring, incident triage, and remediation.\r\n\r\nAt this scale, agentic software development stops looking like a chatbot and starts looking like a distributed cloud-native control plane. Agents do not just write code; they explore designs, implement changes, run tests, review diffs, coordinate releases, inspect production signals, explain failures, and propose remediations. The development model changes from sequential human execution to massively parallel, hermetic, continuously evaluated software delivery.\r\n\r\nThis talk shares a technical case study of running these systems on Kubernetes and CNCF ecosystem components: workflow orchestration, event-driven queues, Kubernetes workers, hermetic sandboxes, MCP-style tool gateways, workload identity, policy gates, eval systems, release controls, trace pipelines, production-monitoring integrations, and human approval flows.\r\n\r\nOnce token budget disappears as a constraint, the bottlenecks move to cluster capacity, queue fairness, sandbox isolation, repository contention, flaky tests, release safety, production feedback loops, agent alignment, multi-agent consensus, and human review. Attendees will learn what breaks after tokens stop being scarce, and how to design cloud-native agent platforms that prioritize development velocity without sacrificing isolation, observability, policy, or production safety.",
+              "startsAt": "2026-10-30T10:45:00Z",
+              "endsAt": "2026-10-30T11:15:00Z",
+              "isServiceSession": false,
+              "isPlenumSession": false,
+              "speakers": [
+                {
+                  "id": "9c4ba405-5f72-441e-ac27-586a96ae5fc6",
+                  "name": "Alex Kotliarskyi"
+                }
+              ],
+              "categories": [],
+              "roomId": 82803,
+              "room": "Progress",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": "Accepted",
+              "isInformed": true,
+              "isConfirmed": false
+            },
+            "index": 0
+          },
+          {
+            "id": 82805,
+            "name": "Mission 2",
+            "session": {
+              "id": "1266201",
+              "title": "If You Feel Behind, You’re Probably Paying Attention",
+              "description": "Impostor syndrome is usually framed as a personal failing: a lack of confidence, a mindset problem, something you need to “work through.” But what if the problem isn't you?\r\n\r\nYou’re not inexperienced. You’re not lazy. You're not bad at your job. I realized something else was going on: no one’s real experience matches the cloud-native story we tell in public.\r\n\r\nIn the cloud-native world, operators and admins are surrounded by a constant narrative of effortless success: platforms that scale cleanly, teams that “just adopt Kubernetes,” architectures that assume infinite time, talent, and budget. Conference talks are polished. Case studies are sanitized. Failure is implied to be a 'you' problem.\r\n\r\nYet privately, most practitioners are struggling. Technology is complex. Platforms and systems are brittle. Toolchains are overwhelming. Upgrades are painful projects. On-call is exhausting. And almost no one’s lived experience matches what the industry claims is normal.\r\n\r\nThis talk argues that what we’re experiencing isn’t just impostor syndrome — it’s pluralistic ignorance amplified by burnout. Everyone is struggling to keep up, but no one admits it, because admitting it feels like failure. So we stay quiet. We internalize the gap. We blame ourselves. We work harder and harder, up to, and beyond our breaking point.\r\n\r\nAt this event, I want to say the quiet part out loud and break that silence together.\r\n\r\nThis talk is for operators who keep real systems running, who are tired of pretending and who want honesty instead of hype. We’ll examine how hype amplifies self-doubt, why feeling “behind” is often a sign of realism, and how collective honesty—not more expertise—is the missing ingredient in the cloud-native ecosystem.\r\n\r\nIf you’ve ever thought “everyone else seems to have this figured out” — this talk is for you.",
+              "startsAt": "2026-10-30T10:45:00Z",
+              "endsAt": "2026-10-30T11:15:00Z",
+              "isServiceSession": false,
+              "isPlenumSession": false,
+              "speakers": [
+                {
+                  "id": "5f9b1204-bfa3-4a14-befe-8574a0a38729",
+                  "name": "Joep Piscaer"
+                }
+              ],
+              "categories": [],
+              "roomId": 82805,
+              "room": "Mission 2",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": "Accepted",
+              "isInformed": true,
+              "isConfirmed": true
+            },
+            "index": 1
+          },
+          {
+            "id": 82804,
+            "name": "Mission 1",
+            "session": {
+              "id": "1236569",
+              "title": "GitOps is not enough: taming environment promotion in Kubernetes with Kargo",
+              "description": "You adopted GitOps.\r\n\r\nYour deployments are declarative, auditable and reproducible. And yet promoting a release from dev to staging to production is still a mess of shell scripts, manual PRs and Slack messages.\r\n\r\nSound familiar?\r\n\r\nGitOps solves the \"how do I deploy\" problem brilliantly. What it does not solve is the \"how do I safely move an artefact across environments\" problem and that gap is where most teams quietly give up and reintroduce the manual steps they were trying to eliminate.\r\n\r\nIn this talk we will look at why environment promotion is genuinely hard in a GitOps world, and then explore the tools that are finally starting to solve it properly.\r\n\r\nWe will start with the patterns: what does a healthy promotion pipeline actually look like? Single Git repo vs multi-repo, image tags vs digests, who owns the promotion decision and how do you enforce gates (tests, approvals, metrics thresholds)?\r\n\r\nThen we will introduce Kargo (by Akuity, the team behind Argo CD), the first tool designed specifically for Kubernetes-native environment promotion.\r\n\r\nLive demo included\r\n\r\nWe will also briefly compare the Kargo approach against other alternative so you can make an informed choice for your own setup.",
+              "startsAt": "2026-10-30T10:45:00Z",
+              "endsAt": "2026-10-30T11:15:00Z",
+              "isServiceSession": false,
+              "isPlenumSession": false,
+              "speakers": [
+                {
+                  "id": "359154c4-1418-48f2-bb6f-b4ed1a27042c",
+                  "name": "Evangelista Tragni"
+                }
+              ],
+              "categories": [],
+              "roomId": 82804,
+              "room": "Mission 1",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": "Accepted",
+              "isInformed": true,
+              "isConfirmed": true
+            },
+            "index": 2
+          }
+        ]
+      },
+      {
+        "slotStart": "11:25:00",
+        "rooms": [
+          {
+            "id": 82803,
+            "name": "Progress",
+            "session": {
+              "id": "1269243",
+              "title": "Running Out of IPs Before You Run Out of GPUs: IPv6 for AI-Scale Kubernetes",
+              "description": "You've provisioned the GPU nodes and sized the power, cooling, and storage. But have you planned the IP addresses? In a dense AI cluster, with dozens of pods per GPU node across a large fleet, a private range that looked endless on the whiteboard runs dry fast.\r\n\r\nIt usually isn't public IPv4 scarcity that forces the move. It's the quiet exhaustion of RFC1918 space inside the flat, multi-account networks AI platforms grow into. Add autoscaling and constant rebuilds, and your address plan becomes what caps your scale.\r\nSo is IPv6 the answer, and is it worth the cost? This talk argues that for AI-scale Kubernetes, IPv6 is the substrate that makes the architecture work. We'll look at teams running it in production, stay honest about the sharp edges, and close with a live demo: IPv6 IP pools advertised over BGP, plus the capacity math to size it yourself.",
+              "startsAt": "2026-10-30T11:25:00Z",
+              "endsAt": "2026-10-30T11:55:00Z",
+              "isServiceSession": false,
+              "isPlenumSession": false,
+              "speakers": [
+                {
+                  "id": "d7100338-7ea1-4f10-84fe-758b7ecbe1e7",
+                  "name": "Marino Wijay"
+                }
+              ],
+              "categories": [],
+              "roomId": 82803,
+              "room": "Progress",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": "Accepted",
+              "isInformed": true,
+              "isConfirmed": true
+            },
+            "index": 0
+          },
+          {
+            "id": 82805,
+            "name": "Mission 2",
+            "session": {
+              "id": "1265303",
+              "title": "SBOMbastic: Getting Ready for Upcoming EU Cybersecurity Regulation in Software Supply Chains",
+              "description": "A supply chain attack is a cyber-attack that targets vulnerabilities in the software supply chain to harm organizations or individuals. One recent example is “Shai-Hulud” – a computer worm that managed to spread malware across thousands of npm packages on GitHub. To address the  increasing threat, the EU has introduced a new regulation in the form of the Cyber Resilience Act (CRA), which aims to improve the security posture of all products with digital elements throughout their whole lifecycle.\r\n\r\nIn this talk, Erika & Petteri walk through what new requirements the CRA imposes on companies targeting the EU market already this September. This boils down to improving visibility into what packages, libraries etc. go into your software, as well as continuously monitoring for and reporting actively exploited vulnerabilities.\r\n\r\nTo achieve supply chain visibility, one can utilize standardized and open Software Bill Of Materials (SBOM) formats, such as SPDX and CycloneDX. Erika & Petteri show exactly how open-source tooling and SBOMs help combat supply chain attacks and fulfill the requirements of the CRA in a live demo.",
+              "startsAt": "2026-10-30T11:25:00Z",
+              "endsAt": "2026-10-30T11:55:00Z",
+              "isServiceSession": false,
+              "isPlenumSession": false,
+              "speakers": [
+                {
+                  "id": "5cc769db-6993-4dca-8567-451ed3ccd7a2",
+                  "name": "Petteri Pulkkinen"
+                },
+                {
+                  "id": "03be71f1-577a-46b2-a73e-b6c2d24a6ba1",
+                  "name": "Erika Marttinen"
+                }
+              ],
+              "categories": [],
+              "roomId": 82805,
+              "room": "Mission 2",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": "Accepted",
+              "isInformed": true,
+              "isConfirmed": true
+            },
+            "index": 1
+          },
+          {
+            "id": 82804,
+            "name": "Mission 1",
+            "session": {
+              "id": "1254337",
+              "title": "AI Broke Your DevOps Assumptions: Privacy, IP and $40k Idle GPUs",
+              "description": "The rise of AI workloads quietly invalidated a set of habits DevOps has relied on for years. Here's the honest version of the argument, though: most of these were never genuinely safe. They were corners we could afford to cut while the rate, cost and exposure stayed low, and what AI changed is the price of cutting them. This talk works through three, and what we have to change in response, kept deliberately vendor-neutral so the takeaways apply whatever you run.\r\n\r\n\"We can patch on a comfortable schedule.\" Slow patching was always a gamble; we got away with it because vulnerabilities arrived at a human pace. AI compressed the clock at both ends. On discovery: in April 2026 Theori's AI tooling found Copy Fail (CVE-2026-31431), a root-level flaw in the kernel crypto subsystem, in roughly an hour of scanning. On exploitation: Dirty Frag (CVE-2026-43284/43500) had working exploits circulating within hours of disclosure, so the gap from disclosure to in-the-wild attack is collapsing from weeks to hours. And the volume is systemic: the kernel security mailing list has gone from a few reports a week to 5-10 a day, much of it AI-generated, which in May 2026 Linus Torvalds called \"almost entirely unmanageable.\" When vulnerabilities are both found and weaponised faster than humans can hand-patch a fleet, a relaxed cadence stops being survivable, and a fast one is only safe when OS upgrades are atomic and reversible.\r\n\r\n\"Our crown jewels live in a datacenter we control.\" Unlike the others, this is one AI genuinely changed: it raises the stakes of two things attackers want, user data (privacy) and trained model weights (expensive intellectual property), and for the many teams who cannot keep everything in a datacenter they control (edge sites, colos, or GPUs rented from a neocloud), it puts those on hardware they do not physically own. That raises the bar on trusted boot, encryption at rest on untrusted sites, workload isolation, and the ability to recover a node to a known-good state after compromise. Rented hardware goes one step further, because the infrastructure provider itself is now in your threat model, and that is the case confidential computing exists to address.\r\n\r\n\"An idle node is no big deal.\" It was never actually fine to leave hardware idling; it was just cheap enough to ignore. AI ended that: accelerators are scarce and costly, so an idle node is now real money. When workloads change you need to re-purpose, reset, and reinstall machines remotely and quickly, without someone driving to a rack.\r\n\r\nFor each, we'll look at the answers the cloud native ecosystem already offers (immutable, image-based operating systems chief among them, alongside other open source tooling), and end with one open source project, Kairos, that brings them together. We'll also be honest about where the line sits: huge, fast-changing model weights don't belong inside the immutable OS image. They stay versioned on their own axis (an OCI artifact, or a volume) and get pulled onto the node at runtime, which is exactly how immutable infrastructure is meant to separate the system layer from state.\r\n\r\nThe conclusion is not so much about tooling. Open source infrastructure-management software is mostly ready for the AI era; what really needs to keep adapting is our mentality.",
+              "startsAt": "2026-10-30T11:25:00Z",
+              "endsAt": "2026-10-30T11:55:00Z",
+              "isServiceSession": false,
+              "isPlenumSession": false,
+              "speakers": [
+                {
+                  "id": "731f75c8-c156-48e5-b420-6523ca1ec939",
+                  "name": "Dimitris Karakasilis"
+                }
+              ],
+              "categories": [],
+              "roomId": 82804,
+              "room": "Mission 1",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": "Accepted",
+              "isInformed": true,
+              "isConfirmed": true
+            },
+            "index": 2
+          }
+        ]
+      },
+      {
+        "slotStart": "11:55:00",
+        "rooms": [
+          {
+            "id": 82803,
+            "name": "Progress",
+            "session": {
+              "id": "4225011e-3009-46a6-94a4-28efd3f07e33",
+              "title": "Lunch break",
+              "description": "Meat, vegetarian and vegan options available",
+              "startsAt": "2026-10-30T11:55:00Z",
+              "endsAt": "2026-10-30T13:00:00Z",
+              "isServiceSession": true,
+              "isPlenumSession": true,
+              "speakers": [],
+              "categories": [],
+              "roomId": 82803,
+              "room": "Progress",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": null,
+              "isInformed": false,
+              "isConfirmed": false
+            },
+            "index": 0
+          }
+        ]
+      },
+      {
+        "slotStart": "13:00:00",
+        "rooms": [
+          {
+            "id": 82803,
+            "name": "Progress",
+            "session": {
+              "id": "1266203",
+              "title": "How We Operate VISTA: ING’s Self-Service Data, AI, and Agentic Platform",
+              "description": "How do you move fast with data and AI in a heavily regulated enterprise, without compromising governance, security, or reliability?\r\n\r\nIntroducing VISTA: ING’s Google Cloud-based Data and AI platform designed to give teams true self-service with guardrails by default. Instead of every team rebuilding platform capabilities, VISTA offers reusable building blocks and paved roads that accelerate delivery of data, analytics, machine learning, and emerging agentic AI use cases.\r\n\r\nIn this session, we will show how VISTA works end-to-end: from self-service tenant provisioning and standardized deployment templates to data ingestion and persistent storage, including how Data Scientists and Data Engineers are enabled to securely and responsibly access production data. We will share how we enable dozens of tenant teams to deliver consistently at scale, what worked immediately, and where we had to rethink our platform assumptions as new requirements introduced new operational and risk patterns.\r\n\r\nWe will also cover how ING governance is codified directly into platform automation, including IAM compliance enforcement and automated detection of unauthorized security events.\r\n",
+              "startsAt": "2026-10-30T13:00:00Z",
+              "endsAt": "2026-10-30T13:30:00Z",
+              "isServiceSession": false,
+              "isPlenumSession": false,
+              "speakers": [
+                {
+                  "id": "105bdef9-00ed-4cdd-b104-3c3321b5d217",
+                  "name": "Avinash Pancham"
+                },
+                {
+                  "id": "d11da01d-d4b4-442a-97d3-78ea81b07b1f",
+                  "name": "Yeachan Park"
+                }
+              ],
+              "categories": [],
+              "roomId": 82803,
+              "room": "Progress",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": "Accepted",
+              "isInformed": true,
+              "isConfirmed": true
+            },
+            "index": 0
+          },
+          {
+            "id": 82805,
+            "name": "Mission 2",
+            "session": {
+              "id": "1222055",
+              "title": "Talk - Building Interoperable Agents: When A2A meets MCP",
+              "description": "It is time to move from isolated chatbots to ecosystems of collaborating agents. But how do we ensure agents can talk to each other without building proprietary silos?\r\n\r\nIn this session, we will break down interoperable AI using two powerful open standards recently donated to the Linux Foundation: the Agent-to-Agent (A2A) protocol and the Model Context Protocol (MCP).\r\n\r\nWe will start with a live demo of a deployed multi agent system, where an orchestrator agent coordinates the collaboration of multiple agents using A2A, while some of those agents share an MCP server. After the demo, we will deconstruct the system architecture. While explaining these Apache 2.0 licensed protocols, we will walk through the engineering process to rebuild the presented agentic system from scratch.\r\n\r\nJoin to see how A2A and MCP work hand in hand to create a new, open platform for Agentic AI, and why you should jump right in!\r\n\r\nDeployed app: https://www.carneiro.dev/ducktaipe\r\nGitHub: https://github.com/carneiroDotDev/ducktAIpe",
+              "startsAt": "2026-10-30T13:00:00Z",
+              "endsAt": "2026-10-30T13:30:00Z",
+              "isServiceSession": false,
+              "isPlenumSession": false,
+              "speakers": [
+                {
+                  "id": "2874dccd-57d6-4281-80ad-8c2461f7b957",
+                  "name": "Luiz Carneiro"
+                }
+              ],
+              "categories": [],
+              "roomId": 82805,
+              "room": "Mission 2",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": "Accepted",
+              "isInformed": true,
+              "isConfirmed": true
+            },
+            "index": 1
+          },
+          {
+            "id": 82804,
+            "name": "Mission 1",
+            "session": {
+              "id": "1268797",
+              "title": "Stop Merging Blind: Argo CD Previews That Make a DIFFerence!",
+              "description": "As organizations adopt GitOps, visualizing manifest changes before they merge has become crucial. Yet many teams still review pull requests by mentally parsing Helm templates and Kustomize patches, effectively merging blind and risking deployment errors.\r\n\r\nThis talk shows how to render accurate Argo CD deployment previews directly on your pull requests. Instead of guessing what a change will do, reviewers can see the exact diff Argo CD will apply before approving a merge.\r\n\r\nBased on experiences from DPG Media and Egmont, two of Northern Europe's largest media companies, we will show how deployment previews enable safer automation, including AI-assisted code reviews and automated Helm chart upgrades with Renovate. We will also compare argocd-diff-preview with Argo CD Source Hydrator and GitOps Promoter, discussing their tradeoffs.\r\n\r\nPlatform and DevOps engineers will learn how to set up Argo CD diff previews and create shorter feedback loops, safer automation, and fewer failed deployments.",
+              "startsAt": "2026-10-30T13:00:00Z",
+              "endsAt": "2026-10-30T13:30:00Z",
+              "isServiceSession": false,
+              "isPlenumSession": false,
+              "speakers": [
+                {
+                  "id": "8ede12d4-12f1-4e7b-af7e-488e307091af",
+                  "name": "Dag Bjerre Andersen"
+                },
+                {
+                  "id": "4d7ede49-da43-4238-befc-8b07f354bb1d",
+                  "name": "Tibo Beijen"
+                }
+              ],
+              "categories": [],
+              "roomId": 82804,
+              "room": "Mission 1",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": "Accepted",
+              "isInformed": true,
+              "isConfirmed": true
+            },
+            "index": 2
+          }
+        ]
+      },
+      {
+        "slotStart": "13:40:00",
+        "rooms": [
+          {
+            "id": 82803,
+            "name": "Progress",
+            "session": {
+              "id": "1253689",
+              "title": "Platform Engineering in the Agentic Engineering Era at RTL Netherlands",
+              "description": "Agentic engineering is accelerating delivery at an unprecedented pace: more code, more services, more deployments. At RTL NL, platform engineering is the key to transforming that velocity into safe, repeatable outcomes. We've built a software delivery system for both developers and autonomous agents using open source foundations: ArgoCD, Crossplane, Kyverno, Helm, Terraform, and the LGTM observability stack. Our architecture delivers four critical capabilities. Coding agents generate production-ready code from task descriptions, accelerating feature development from hours to minutes. Blue-green AKS deployments (powered by dual clusters + Terraform workspaces) enable zero-downtime production flips in seconds. Ephemeral preview environments (via ArgoCD ApplicationSet PR generators + Crossplane Compositions) spin up fully isolated ephemeral environments per pull request where agents and developers test in parallel. Automated first-pass code reviews across every PR free human reviewers from routine checks to focus on architecture and design. Join us for hard-won lessons from scaling platform engineering for an agentic future: what worked, what surprised us, and how to accelerate safely.",
+              "startsAt": "2026-10-30T13:40:00Z",
+              "endsAt": "2026-10-30T14:10:00Z",
+              "isServiceSession": false,
+              "isPlenumSession": false,
+              "speakers": [
+                {
+                  "id": "5369d0c4-1473-4aa1-8f75-aae128131d17",
+                  "name": "Anna Kosek"
+                }
+              ],
+              "categories": [],
+              "roomId": 82803,
+              "room": "Progress",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": "Accepted",
+              "isInformed": true,
+              "isConfirmed": true
+            },
+            "index": 0
+          },
+          {
+            "id": 82805,
+            "name": "Mission 2",
+            "session": {
+              "id": "1266603",
+              "title": "We GitOps'd Everything Except the Settings That Break Production",
+              "description": "Software teams have a delivery process for code. But what about the runtime configuration around that code? It is often self-service for end users, hidden behind admin screens and custom database tables, and changed outside the delivery process. Feature flags, business rules, and specific domain settings can change production behavior just as much as new code.\r\n\r\nThis talk starts with application settings that broke production. Each one led to the same uncomfortable questions: who made the change, where was it validated, and how do we stop the next one?\r\n\r\nCould the same delivery discipline help application teams too? Could important product configuration live in a separate Git repo, reviewed and promoted like code, while the people who change it never see Git and just use a nice settings screen?\r\n\r\nI built an open source tool to explore this. I'll show the design and where it gets hard: conflicts, concurrency, and putting real authors on Git commits. Then a live demo: a coffee-ordering app, the whole audience as admins, changing settings from their phones. Will you help me find its boundaries?\r\n",
+              "startsAt": "2026-10-30T13:40:00Z",
+              "endsAt": "2026-10-30T14:10:00Z",
+              "isServiceSession": false,
+              "isPlenumSession": false,
+              "speakers": [
+                {
+                  "id": "da064424-8d62-40e7-bdf9-c0f082f422e9",
+                  "name": "Simon Koudijs"
+                }
+              ],
+              "categories": [],
+              "roomId": 82805,
+              "room": "Mission 2",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": "Accepted",
+              "isInformed": true,
+              "isConfirmed": true
+            },
+            "index": 1
+          },
+          {
+            "id": 82804,
+            "name": "Mission 1",
+            "session": {
+              "id": "1258753",
+              "title": "Let it be CHAOS!?",
+              "description": "We build on Kubernetes for scale, but how do we know our clusters can survive a network partition, a \"noisy neighbour,\" or a pod that simply refuses to stay alive? \r\nWe will begin with the \"Theory of Chaos\" defining steady states and hypotheses and move on into the \"controlled destruction\" phase. We will go through 2-3 live experiments designed to test common architectural weaknesses.\r\n\r\n1. Network Chaos: Simulating latency and packet loss to test timeout configurations.\r\n2. Pod Faults: Testing service discovery and auto-scaling under sudden pod failure.\r\n3. Stress Scenarios: Forcing CPU/Memory exhaustion to validate resource limits and monitoring.\r\n\r\nFinally, by using Chaos Mesh to minimize the blast radius with surgical precision, we will learn to hunt vulnerabilities on our own terms. This session marks the transition from reactive firefighting to a proactive resilience helping you stop reacting to outages and start preventing them.",
+              "startsAt": "2026-10-30T13:40:00Z",
+              "endsAt": "2026-10-30T14:10:00Z",
+              "isServiceSession": false,
+              "isPlenumSession": false,
+              "speakers": [
+                {
+                  "id": "0173b85b-0597-4bb9-86c5-360ac416794d",
+                  "name": "Bogdan Stan"
+                }
+              ],
+              "categories": [],
+              "roomId": 82804,
+              "room": "Mission 1",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": "Accepted",
+              "isInformed": true,
+              "isConfirmed": true
+            },
+            "index": 2
+          }
+        ]
+      },
+      {
+        "slotStart": "14:10:00",
+        "rooms": [
+          {
+            "id": 82803,
+            "name": "Progress",
+            "session": {
+              "id": "f24dc94e-02ed-4244-83df-e6e2f145dbe5",
+              "title": "Coffe break (snacks)",
+              "description": null,
+              "startsAt": "2026-10-30T14:10:00Z",
+              "endsAt": "2026-10-30T14:30:00Z",
+              "isServiceSession": true,
+              "isPlenumSession": true,
+              "speakers": [],
+              "categories": [],
+              "roomId": 82803,
+              "room": "Progress",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": null,
+              "isInformed": false,
+              "isConfirmed": false
+            },
+            "index": 0
+          }
+        ]
+      },
+      {
+        "slotStart": "14:30:00",
+        "rooms": [
+          {
+            "id": 82803,
+            "name": "Progress",
+            "session": {
+              "id": "1227140",
+              "title": "Sit. Stay. Deploy! Teaching a Robot Dog with AI",
+              "description": "Imagine a guiding dog that doesn’t just follow commands, but understands human gestures and acts on them in real time. In this session, we’ll show how we built Project Q9, a cloud-native MLOps platform that trains and deploys gesture-recognition models for a real robot dog (Unitree G2 Pro).\r\n\r\nBehind the demo lies a fully open-source backend: Kubernetes orchestrates GPU workloads, ArgoCD manages GitOps-driven training pipelines, and KServe serves models with low-latency inference. We use Prometheus and Grafana to monitor GPU utilization, system load, and latency — all critical when the difference between success and failure is measured in milliseconds.\r\n\r\nAttendees will learn how to bring advanced AI workloads into production with CNCF projects, how to optimize for real-world robotics use cases, and how cloud-native patterns make these workflows reproducible and portable across environments.",
+              "startsAt": "2026-10-30T14:30:00Z",
+              "endsAt": "2026-10-30T15:00:00Z",
+              "isServiceSession": false,
+              "isPlenumSession": false,
+              "speakers": [
+                {
+                  "id": "16b6c0ae-9862-4bf1-8d5d-16c461a3bbc1",
+                  "name": "Johan van Amersfoort"
+                }
+              ],
+              "categories": [],
+              "roomId": 82803,
+              "room": "Progress",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": "Accepted",
+              "isInformed": true,
+              "isConfirmed": true
+            },
+            "index": 0
+          },
+          {
+            "id": 82805,
+            "name": "Mission 2",
+            "session": {
+              "id": "1216165",
+              "title": "Your Backstage, Your Problems, Your Metrics",
+              "description": "Backstage is often proposed as the solution to all platform problems. Just deploy it and watch the magic happen. Too good to be true? Exactly. Let's take a step back: which problems are you actually trying to solve? Service discovery? Onboarding? Tool sprawl? Documentation chaos? Your problems are unique. Just as the metrics for your developer portal should be.\r\n\r\nA developer portal without a purpose is only just another piece of software, causing toil and maintenance effort. In this talk, we'll show you how to apply a product mindset to your platform (and Backstage): starting with identifying the specific problems you want to solve before implementing Backstage, define metrics for those problems, and measure whether Backstage actually delivers value and how it can be improved. Think DORA metrics, but for your internal developer portal.\r\n\r\nWe’ll equip you with a framework to validate your platform decisions with data, whether you're considering Backstage or already running it in production.",
+              "startsAt": "2026-10-30T14:30:00Z",
+              "endsAt": "2026-10-30T15:00:00Z",
+              "isServiceSession": false,
+              "isPlenumSession": false,
+              "speakers": [
+                {
+                  "id": "0979c01c-b27b-4c4a-be3b-b1d0a927bd6a",
+                  "name": "Katharina Sick"
+                },
+                {
+                  "id": "2bcb0685-559a-4697-ae6c-0fd55f60e358",
+                  "name": "Thomas Schuetz"
+                }
+              ],
+              "categories": [],
+              "roomId": 82805,
+              "room": "Mission 2",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": "Accepted",
+              "isInformed": true,
+              "isConfirmed": true
+            },
+            "index": 1
+          },
+          {
+            "id": 82804,
+            "name": "Mission 1",
+            "session": {
+              "id": "1251576",
+              "title": "The human side of platform engineering",
+              "description": "Description\r\nWhat is the most important part of your platform? The infra-code? Or the people working on it?\r\n\r\nAlready in the '80s, people realized that the value of a system is not in the code itself. Knowledge can’t be transferred through code and documentation alone. It lives in the brains of the people working on a system. Look at all the \"legacy\" systems, hard to change, not because the docs are missing, but because the people that know them are no longer around and now nobody has the confidence to touch them. Yet as an industry, even though we are suffering badly from this, we insists on finding solutions in tech and tooling, while treating the humans as interchangeable cogs in a machine.\r\n\r\nIf we want to create systems that lasts, we need to encourage human collaboration across disciplines, backgrounds and personalities (including our new AI buddies). Learn how to use your human power skills to better understand the problems you're facing and build systems that last!",
+              "startsAt": "2026-10-30T14:30:00Z",
+              "endsAt": "2026-10-30T15:00:00Z",
+              "isServiceSession": false,
+              "isPlenumSession": false,
+              "speakers": [
+                {
+                  "id": "b1065803-74a9-4c8a-b809-8c3b8bf72206",
+                  "name": "Jurgen Allewijn"
+                },
+                {
+                  "id": "a16df0ee-c590-4503-b584-d2f867cbe369",
+                  "name": "Nico Krijnen"
+                }
+              ],
+              "categories": [],
+              "roomId": 82804,
+              "room": "Mission 1",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": "Accepted",
+              "isInformed": true,
+              "isConfirmed": true
+            },
+            "index": 2
+          }
+        ]
+      },
+      {
+        "slotStart": "15:10:00",
+        "rooms": [
+          {
+            "id": 82803,
+            "name": "Progress",
+            "session": {
+              "id": "1219988",
+              "title": "Data Sovereignty Is Built, Not Bought",
+              "description": "For two decades, hyperscalers have claimed that using modern cloud services requires moving all your data into their datacenters, subjecting it to foreign jurisdictions like the US CLOUD Act.\r\n\r\nThis talk challenges that assumption. We show how cloud-native technologies enable managed cloud services to be delivered where the data already lives: on-premises, in a private cloud, or with trusted public providers.\r\n\r\nUsing Kubernetes and CNCF projects such as Crossplane, Prometheus, and Grafana, we present a platform model where databases, queues, caches, and DevOps tools are delivered as self-service managed services without data relocation or provider lock-in. Data sovereignty, we argue, is not a contract; it’s an architectural decision.",
+              "startsAt": "2026-10-30T15:10:00Z",
+              "endsAt": "2026-10-30T15:40:00Z",
+              "isServiceSession": false,
+              "isPlenumSession": false,
+              "speakers": [
+                {
+                  "id": "88bfd3c3-9f0e-40c0-9468-319bf1b40eb6",
+                  "name": "Aarno Aukia"
+                }
+              ],
+              "categories": [],
+              "roomId": 82803,
+              "room": "Progress",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": "Accepted",
+              "isInformed": true,
+              "isConfirmed": true
+            },
+            "index": 0
+          },
+          {
+            "id": 82805,
+            "name": "Mission 2",
+            "session": {
+              "id": "1216601",
+              "title": "Airport Digital Twin - Quickly deploying test environments",
+              "description": "Vanderlande Industries is well known for baggage handling systems at airports. An important part of this is the high level control software that determines the flow of bags through the airport. Given the high complexity of these systems, advanced test tooling with hardware emulation have been developed. \r\n\r\nThe current environment consists a mix of virtual machines (windows+linux) and kubernetes. In production this is running on premise. However, setting up an on-premise deployment is quite time consuming, involving different parts of the organisation and hand-overs, resulting in a total turnaround time of weeks.\r\n\r\nTherefore, we are setting up these environments in a more automated way and using the flexibiilty of kubernetes to set up these environments a lot quicker. This reduces the time it takes to around 30 minutes instead of weeks. \r\n\r\nThis talk will discuss the challenges and experiences in doing this. The techniques used are generally applicable. ",
+              "startsAt": "2026-10-30T15:10:00Z",
+              "endsAt": "2026-10-30T15:40:00Z",
+              "isServiceSession": false,
+              "isPlenumSession": false,
+              "speakers": [
+                {
+                  "id": "d3ca0005-a062-44a5-8ad7-77af33899a2d",
+                  "name": "Erik Brakkee"
+                },
+                {
+                  "id": "7322ff93-d5b3-40f5-bcd1-c75baa3d7371",
+                  "name": "Jeroen van der Meulen"
+                }
+              ],
+              "categories": [],
+              "roomId": 82805,
+              "room": "Mission 2",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": "Accepted",
+              "isInformed": true,
+              "isConfirmed": true
+            },
+            "index": 1
+          }
+        ]
+      },
+      {
+        "slotStart": "15:55:00",
+        "rooms": [
+          {
+            "id": 82803,
+            "name": "Progress",
+            "session": {
+              "id": "f20adb33-5e1f-4772-8cc4-899648abaa30",
+              "title": "Raffles and Closing remarks",
+              "description": "All raffles will happen on the main stage",
+              "startsAt": "2026-10-30T15:55:00Z",
+              "endsAt": "2026-10-30T16:25:00Z",
+              "isServiceSession": true,
+              "isPlenumSession": true,
+              "speakers": [],
+              "categories": [],
+              "roomId": 82803,
+              "room": "Progress",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": null,
+              "isInformed": false,
+              "isConfirmed": false
+            },
+            "index": 0
+          }
+        ]
+      },
+      {
+        "slotStart": "16:30:00",
+        "rooms": [
+          {
+            "id": 82803,
+            "name": "Progress",
+            "session": {
+              "id": "88fd3e23-5be1-477d-9379-319c9e947117",
+              "title": "Drinks (at the venue)",
+              "description": "Closing reception",
+              "startsAt": "2026-10-30T16:30:00Z",
+              "endsAt": "2026-10-30T17:00:00Z",
+              "isServiceSession": true,
+              "isPlenumSession": true,
+              "speakers": [],
+              "categories": [],
+              "roomId": 82803,
+              "room": "Progress",
+              "liveUrl": null,
+              "recordingUrl": null,
+              "status": null,
+              "isInformed": false,
+              "isConfirmed": false
+            },
+            "index": 0
+          }
+        ]
+      }
+    ]
+  }
+]

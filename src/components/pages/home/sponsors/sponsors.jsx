@@ -333,10 +333,10 @@ const Sponsors = () => {
   // Show the full sponsors section when SHOW_SPONSORS is true
   return (
     <section id="sponsors" className="mx-auto max-w-7xl px-4 py-16">
-      <h2 className="section-title">Our sponsors</h2>
+      <h2 className="section-title">Our 2026 sponsors</h2>
       <div className="mb-10 text-center">
         <p className="mb-8 text-lg text-gray-500">
-          Thank you to the organizations supporting Dutch Cloud Native Day 2026.
+          Thank you to the organizations that supported Dutch Cloud Native Day 2026.
         </p>
       </div>
 

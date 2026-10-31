@@ -102,7 +102,8 @@ const CookieConsent = ({ children }) => {
       });
     }
 
-    const savedConsent = writeStoredConsent(nextConsent);
+    // Ticket checkout is paused. Do not grant Eventbrite consent while it is unavailable.
+    const savedConsent = writeStoredConsent({ ...nextConsent, eventbrite: false });
     consentRef.current = savedConsent;
     setConsent(savedConsent);
 
@@ -142,7 +143,7 @@ const CookieConsent = ({ children }) => {
   }, [saveConsent, selectedConsent]);
 
   const acceptAll = useCallback(() => {
-    saveConsent({ googleAnalytics: true, linkedInAds: true, eventbrite: true });
+    saveConsent({ googleAnalytics: true, linkedInAds: true, eventbrite: false });
   }, [saveConsent]);
 
   const openCookiePreferences = useCallback(() => {
@@ -200,7 +201,7 @@ const CookieConsent = ({ children }) => {
             <p>
               We use GoatCounter for limited, cookie-free aggregate traffic statistics. You can
               separately choose whether to enable additional Google Analytics, LinkedIn marketing
-              cookies and the embedded Eventbrite ticket checkout. See our{' '}
+              cookies. See our{' '}
               <a href="/privacy">privacy page</a>.
             </p>
           </div>
@@ -297,6 +298,7 @@ const CookieConsent = ({ children }) => {
               </span>
             </label>
 
+            {/* Ticket checkout is paused; keep this control for a future edition.
             <label className="cookie-modal__section cookie-modal__choice">
               <input
                 aria-label="Ticket checkout"
@@ -313,7 +315,7 @@ const CookieConsent = ({ children }) => {
                   security, analytics and related services.
                 </p>
               </span>
-            </label>
+            </label> */}
 
             <div className="cookie-modal__actions">
               <button

@@ -1,0 +1,713 @@
+[
+  {
+    "id": "2a4960b0-36d8-439f-ae6e-925b749ff65f",
+    "firstName": "Aakansha",
+    "lastName": "Priya",
+    "fullName": "Aakansha Priya",
+    "bio": "Aakansha Priya is a Solution Architect at Dash0 and a CNCF Ambassador. She loves championing her customers and serving as a bridge between them and engineering, ensuring technology delivers real value. \r\n\r\nAakansha has spoken at conferences on DevOps and the human side of tech, and is passionate about helping teams unlock the value of observability with OpenTelemetry. Beyond work, she enjoys painting, singing, reading, and spontaneous travel, and you’ll often find her at meetups and conferences.",
+    "tagLine": "Solution Architect at Dash0 | CNCF Ambassador",
+    "profilePicture": "https://cdn.sessionize.com/image/4a3a-400o400o1-7hSVipMZJGdfb1xs874Fvh.jpg",
+    "sessions": [
+      {
+        "id": 1363002,
+        "name": "From One Request to One Trace: Hands-On OpenTelemetry - Geertjan Wielenga / Aakansha Priya (Dash0)"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "88bfd3c3-9f0e-40c0-9468-319bf1b40eb6",
+    "firstName": "Aarno",
+    "lastName": "Aukia",
+    "fullName": "Aarno Aukia",
+    "bio": "Aarno is a co-founder and partner of VSHN - The DevOps Company in Zürich, Switzerland. He has been working on DevOps and Platform engineering using Kubernetes and open-source software for over ten years.",
+    "tagLine": "Partner at VSHN - The DevOps Company",
+    "profilePicture": "https://cdn.sessionize.com/image/0f21-400o400o1-Y4p8mCrtszCzsDxC8Zx13U.jpg",
+    "sessions": [
+      {
+        "id": 1219988,
+        "name": "Data Sovereignty Is Built, Not Bought"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "9c4ba405-5f72-441e-ac27-586a96ae5fc6",
+    "firstName": "Alex",
+    "lastName": "Kotliarskyi",
+    "fullName": "Alex Kotliarskyi",
+    "bio": "Alex has been building software for more than 20 years: from desktop and mobile apps to websites and distributed systems.",
+    "tagLine": "Dark Factories @ OpenAI",
+    "profilePicture": "https://cdn.sessionize.com/image/6789-400o400o1-JuBtEuL6xQuQZqv4SfYmZ3.png",
+    "sessions": [
+      {
+        "id": 1262036,
+        "name": "No Token Budget: What Breaks When Agentic Software Factories Run on Kubernetes"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "5369d0c4-1473-4aa1-8f75-aae128131d17",
+    "firstName": "Anna",
+    "lastName": "Kosek",
+    "fullName": "Anna Kosek",
+    "bio": "Anna Kosek is Engineering Manager for Cloud & Data Platform at RTL Nederland, with 10 years of experience leading teams in emerging technologies: platform engineering, Kubernetes, and agentic engineering enablement. She leads platform teams focused on empowering engineers to deliver fast, secure, and cost-efficient products. A regular voice in the cloud native community, Anna has spoken at KubeCon + CloudNativeCon Europe and DevOpsDays Amsterdam.",
+    "tagLine": "Engineering Manager, Cloud and Data Platform ",
+    "profilePicture": "https://cdn.sessionize.com/image/030d-400o400o1-fQvz4sR5BQWoBKyGRBWZms.jpg",
+    "sessions": [
+      {
+        "id": 1253689,
+        "name": "Platform Engineering in the Agentic Engineering Era at RTL Netherlands"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "274f02db-3992-47d4-a88a-8fd3e42b162f",
+    "firstName": "Arthur",
+    "lastName": "Picerna",
+    "fullName": "Arthur Picerna",
+    "bio": "42",
+    "tagLine": "Sr Observability Architect @ Grafana Labs",
+    "profilePicture": "https://cdn.sessionize.com/image/6699-400o400o1-GpMVtYbxR8QahLCwdZEehS.jpg",
+    "sessions": [
+      {
+        "id": 1269410,
+        "name": "Getting started with OpenTelemetry instrumentation: A practical playbook"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "105bdef9-00ed-4cdd-b104-3c3321b5d217",
+    "firstName": "Avinash",
+    "lastName": "Pancham",
+    "fullName": "Avinash Pancham",
+    "bio": "Area Tech Lead for the Data Analytics Platform (VISTA) at ING, focusing on infrastructure and services on Google Cloud.\u2028\r\n\r\nAs a staff engineer for our data platform, I focus on building a scalable, secure, and self-service data solution. At work, I am driven by curiosity, creative problem-solving, and collaboration to get the best out of myself and my team. Outside of work, you’ll probably find me bouldering or geeking out over the latest in Formula 1.",
+    "tagLine": "Area Tech Lead - AI services, ING",
+    "profilePicture": "https://cdn.sessionize.com/image/0ed0-400o400o1-XMVYrDYmvnQPgdwRobikMV.jpg",
+    "sessions": [
+      {
+        "id": 1266203,
+        "name": "How We Operate VISTA: ING’s Self-Service Data, AI, and Agentic Platform"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "0173b85b-0597-4bb9-86c5-360ac416794d",
+    "firstName": "Bogdan",
+    "lastName": "Stan",
+    "fullName": "Bogdan Stan",
+    "bio": "Bogdan Stan is a Senior Software Developer with five years of experience dedicated to building robust, scalable backend systems. He is deeply passionate about the cloud-native ecosystem and is currently in a phase of continuous learning, constantly seeking to push the boundaries of how modern applications reside in the cloud. Bogdan thrives on the challenge of evolving alongside the industry, with a long-term commitment to mastering resilient architecture and security-first development.",
+    "tagLine": "ING Hubs - Software Engineer",
+    "profilePicture": "https://cdn.sessionize.com/image/5b01-400o400o1-aZhXmBGhy48HopPcAPNHyY.jpg",
+    "sessions": [
+      {
+        "id": 1258753,
+        "name": "Let it be CHAOS!?"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "8ede12d4-12f1-4e7b-af7e-488e307091af",
+    "firstName": "Dag",
+    "lastName": "Bjerre Andersen",
+    "fullName": "Dag Bjerre Andersen",
+    "bio": "I’m passionate about almost everything related to Kubernetes, and I’ve worked extensively with GitOps over the past few years 🔄 | Speaker at KubeCon, ArgoCon, KCD, and Cloud Native Denmark 🗣️ | Kubestronaut 🚀",
+    "tagLine": "Senior Platform Engineer, Egmont",
+    "profilePicture": "https://cdn.sessionize.com/image/632c-400o400o1-axteC4HL5oteXUV6DJtSUp.jpg",
+    "sessions": [
+      {
+        "id": 1268797,
+        "name": "Stop Merging Blind: Argo CD Previews That Make a DIFFerence!"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "83922b4e-080d-4c6c-a400-9542ecdc4fc3",
+    "firstName": "Dario",
+    "lastName": "Tranchitella",
+    "fullName": "Dario Tranchitella",
+    "bio": "Software Engineer turned SRE to get paged in the middle of the night for multi-cluster setups and thousands of worker nodes on bare-metal: been there, done that.\r\nBesides the primary working role as memes author on X around Kubernetes and Cloud Native, working at HAProxy Technologies for Kubernetes-based projects, and maintainer and technical advisor for CLASTIX, an open source start-up focused on multi-tenancy.",
+    "tagLine": "Open Source Developer",
+    "profilePicture": "https://cdn.sessionize.com/image/b39b-400o400o1-ZcKURPJNQyg6y465cpcxT.jpg",
+    "sessions": [
+      {
+        "id": 1225906,
+        "name": "Building a Managed Kubernetes Service from scratch with Cluster API and Kamaji"
+      },
+      {
+        "id": 1363005,
+        "name": "Out of the Mosh Pit: Bare-Metal Kubernetes Without the Hypervisor Tax"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "731f75c8-c156-48e5-b420-6523ca1ec939",
+    "firstName": "Dimitris",
+    "lastName": "Karakasilis",
+    "fullName": "Dimitris Karakasilis",
+    "bio": "With over 20 years of experience as a developer, I'm deeply passionate about open source technologies. I've worked with startups and enterprises alike, using open source solutions to tackle real-world problems. Currently, my focus is on edge computing and Kubernetes. I'm excited to share my knowledge with other people.",
+    "tagLine": "Open Source Principal Software Engineer at SpectroCloud",
+    "profilePicture": "https://cdn.sessionize.com/image/5b7e-400o400o1-RkdyauaDWCNX4JvYuKEBwz.jpg",
+    "sessions": [
+      {
+        "id": 1254337,
+        "name": "AI Broke Your DevOps Assumptions: Privacy, IP and $40k Idle GPUs"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "d3ca0005-a062-44a5-8ad7-77af33899a2d",
+    "firstName": "Erik",
+    "lastName": "Brakkee",
+    "fullName": "Erik Brakkee",
+    "bio": "Erik Brakkee is a System Architect at Vanderlande focusing on the the 'cloud native journey' of Vanderlande. Erik's past experience includes working for SAAS company where he had major contributions to the setup of the infrastructure and tooling around it. ",
+    "tagLine": "Vanderlande Industries - System Architect",
+    "profilePicture": "https://cdn.sessionize.com/image/4813-400o400o1-WKyFU99Vz7vJMJrWewN6NK.jpg",
+    "sessions": [
+      {
+        "id": 1216601,
+        "name": "Airport Digital Twin - Quickly deploying test environments"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "03be71f1-577a-46b2-a73e-b6c2d24a6ba1",
+    "firstName": "Erika",
+    "lastName": "Marttinen",
+    "fullName": "Erika Marttinen",
+    "bio": "Erika is a multitalented software developer working on cloud-native microservice architecture at CRACI. She has a Master's Degree in Computer Science from Aalto University, with a focus on Algorithms, Logic and Computation. Erika has broad professional experience ranging from device drivers and control software to DevOps and Kubernetes. She has also captained her university's team for the ISC'25 SCC competition in supercomputing/HPC.",
+    "tagLine": "Software Engineer @ CRACI",
+    "profilePicture": "https://cdn.sessionize.com/image/8923-400o400o1-VUTdAGtNrndnjXFx73saHk.jpg",
+    "sessions": [
+      {
+        "id": 1265303,
+        "name": "SBOMbastic: Getting Ready for Upcoming EU Cybersecurity Regulation in Software Supply Chains"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "359154c4-1418-48f2-bb6f-b4ed1a27042c",
+    "firstName": "Evangelista",
+    "lastName": "Tragni",
+    "fullName": "Evangelista Tragni",
+    "bio": "vExpert 2024 - AWS Champion Instructor\r\nLinux Foundation Authorized Instructor - VMware Cert Instructor - AWS Authorized Instructor.\r\nBuilding on my technical knowledge of software, hardware and computing standards. \r\nI like to be part of the learning path of each one of my students, so i like the most to leave a mark on each one of them merging the course with their day to day action. \r\nLoving also to build knowledge sharing my consideration and my expertise and gaining knowledge from the students. \r\n\r\nHope to see you soon, keep studying.",
+    "tagLine": "Devoteam , Lead DevOps Engineer",
+    "profilePicture": "https://cdn.sessionize.com/image/d883-400o400o1-VbvMXcqZzbFPx98Nze3J5n.jpg",
+    "sessions": [
+      {
+        "id": 1236569,
+        "name": "GitOps is not enough: taming environment promotion in Kubernetes with Kargo"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "62dc60e2-6f5e-49ab-8442-5fdd16fd97d9",
+    "firstName": "GeertJan",
+    "lastName": "Wielenga",
+    "fullName": "GeertJan Wielenga",
+    "bio": null,
+    "tagLine": "Technical Content Advisor @Dash0",
+    "profilePicture": "https://cdn.sessionize.com/image/85cd-400o400o1-iXwm2fAEE1tEWLLgjcuFu.jpg",
+    "sessions": [
+      {
+        "id": 1363002,
+        "name": "From One Request to One Trace: Hands-On OpenTelemetry - Geertjan Wielenga / Aakansha Priya (Dash0)"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "1cad993c-d21b-446a-99b6-9f93e6598448",
+    "firstName": "Hugo",
+    "lastName": "de Vries",
+    "fullName": "Hugo de Vries",
+    "bio": null,
+    "tagLine": "Solution Architecht @ SUSE",
+    "profilePicture": "https://cdn.sessionize.com/image/c178-400o400o1-XMgAAKkcUNDqSDMVFM6MHz.jpg",
+    "sessions": [
+      {
+        "id": 1362997,
+        "name": "SUSE Virtualization Rodeo Hands-On Workshop"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "f3cc6737-75bd-408d-9097-0fe33f27cc83",
+    "firstName": "Imma",
+    "lastName": "Valls",
+    "fullName": "Imma Valls",
+    "bio": "Imma is a Staff Developer Advocate at Grafana Labs with over 25 years in tech and is passionate about simplifying Observability, OpenTelemetry, and Cloud-Native architectures. She focuses on creating deep technical content and driving best practices within the community. \r\n\r\nShe is also a passionate community builder and ally who advocates for underrepresented groups. \r\n\r\nYou will find her organizing Grafana, AI Socratic, Cloud Native, DevOpsDays, and TechFems community events in Barcelona.\r\n\r\nShe is an aquafitness enthusiast and a Bruce Springsteen fan. No surrender!",
+    "tagLine": "Grafana Labs, Staff Developer Advocate",
+    "profilePicture": "https://cdn.sessionize.com/image/97c4-400o400o1-f7EWeRyzNVv5XhXpGTw1TE.jpg",
+    "sessions": [
+      {
+        "id": 1269410,
+        "name": "Getting started with OpenTelemetry instrumentation: A practical playbook"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "2b92af53-5b07-427a-8b42-64bfce4721f4",
+    "firstName": "Jan",
+    "lastName": "Hlaváč",
+    "fullName": "Jan Hlaváč",
+    "bio": "I'm a recent graduate and newly starting Software Engineer. I recently wrapped up my academic journey at the Faculty of Information Technology at Czech Technical University, where I earned my Master's in Cyber Security, following a Bachelor's in Software Engineering. During my undergrad, I also spent a semester abroad at the Technical University Munich (TUM), where I dove deep into security and Distributed Systems. That experience really shaped my graduate studies and my Master's thesis, which focused on detecting malicious activity in Cloud Development Environments.",
+    "tagLine": "Software Engineer (specializing in Cyber Security)",
+    "profilePicture": "https://cdn.sessionize.com/image/fd0c-400o400o1-R6G4T6txJG7KEqD47X4oFr.jpg",
+    "sessions": [
+      {
+        "id": 1268481,
+        "name": "Worktrace: Real-Time Threat Detection for Kubernetes Workspaces Using eBPF"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "7322ff93-d5b3-40f5-bcd1-c75baa3d7371",
+    "firstName": "Jeroen",
+    "lastName": "van der Meulen",
+    "fullName": "Jeroen van der Meulen",
+    "bio": "Working at Vanderlande for 20+ years in various roles (software developer, software architect, product owner, integrator, deployment engineer) in the baggage handling domain, with the focus on delivering value to airports.",
+    "tagLine": "Vanderlande Industries - Software Architect",
+    "profilePicture": "https://cdn.sessionize.com/image/39ec-400o400o1-JUmtAvErWLAHduQcawG39u.png",
+    "sessions": [
+      {
+        "id": 1216601,
+        "name": "Airport Digital Twin - Quickly deploying test environments"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "5f9b1204-bfa3-4a14-befe-8574a0a38729",
+    "firstName": "Joep",
+    "lastName": "Piscaer",
+    "fullName": "Joep Piscaer",
+    "bio": "Joep works at the overlap of socio-technical design, technical story-telling and platform engineering technologies. Driven by empathy to reduce burnout caused by platform obesity/complexity and tech industry hype. Organizer of devopsdays Amsterdam, FastFlowConf NL. Field CTO at Portainer.io",
+    "tagLine": "Field CTO at Portainer.io",
+    "profilePicture": "https://cdn.sessionize.com/image/03cc-400o400o1-WW8wkdXs9N2MbiQx2DnKxQ.JPG",
+    "sessions": [
+      {
+        "id": 1266201,
+        "name": "If You Feel Behind, You’re Probably Paying Attention"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "16b6c0ae-9862-4bf1-8d5d-16c461a3bbc1",
+    "firstName": "Johan",
+    "lastName": "van Amersfoort",
+    "fullName": "Johan van Amersfoort",
+    "bio": "Johan van Amersfoort is the Chief Evangelist and AI Lead at ITQ where he is responsible for ITQs advocacy and tech marketing initiatives, but also for the continuous development of ITQs AI Practice. He is a published author, Podcast Host, and a regular speaker on events like NVIDIA GTC, VMworld/VMware Explore, and meetups, and loves to use a combination Story Telling, Cutting-Edge technology, and (preferably live) demos to show the \"Art of the Possible\"!",
+    "tagLine": "Chief Evangelist and AI Lead @ ITQ",
+    "profilePicture": "https://cdn.sessionize.com/image/8fce-400o400o1-M2AV8mpP4yDGihNnuQzweZ.jpg",
+    "sessions": [
+      {
+        "id": 1227140,
+        "name": "Sit. Stay. Deploy! Teaching a Robot Dog with AI"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "b1065803-74a9-4c8a-b809-8c3b8bf72206",
+    "firstName": "Jurgen",
+    "lastName": "Allewijn",
+    "fullName": "Jurgen Allewijn",
+    "bio": "Jurgen is an experienced and enthusiastic IT architect at Yuma. Over the last 20+ years, he has accumulated extensive knowledge and experience in IT. He likes to operate at the intersection of IT and the business, where his added value lies in translating business requirements into technical solutions.  He maintains a positive critical attitude throughout the process to achieve optimal results for each customer. Jurgen values knowledge sharing. He puts his knowledge into practice by sharing it through training courses and workshops and by organizing meetups. \r\n",
+    "tagLine": "Cloud Architect | Microsoft MVP @ Yuma",
+    "profilePicture": "https://cdn.sessionize.com/image/815f-400o400o1-Ups9J2pwx9gDWf8ZZBeFPz.jpg",
+    "sessions": [
+      {
+        "id": 1251576,
+        "name": "The human side of platform engineering"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "0979c01c-b27b-4c4a-be3b-b1d0a927bd6a",
+    "firstName": "Katharina",
+    "lastName": "Sick",
+    "fullName": "Katharina Sick",
+    "bio": "I'm all about making things user-friendly, especially when it comes to Cloud Native and Kubernetes.\r\n\r\nI've done a fair share of mobile app and backend work, but lately, I'm really into Cloud Native computing and enjoy it a lot.\r\n\r\nOutside of work, you'll find me hanging out in tech and sports communities, cruising on inline skates, exploring new places, or challenging myself with quizzes and games.",
+    "tagLine": "Software Engineer at Dynatrace",
+    "profilePicture": "https://cdn.sessionize.com/image/7aa6-400o400o1-YBTp7dF7xfej9ijKQcRWB8.jpg",
+    "sessions": [
+      {
+        "id": 1216165,
+        "name": "Your Backstage, Your Problems, Your Metrics"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "7aa6ca8b-a54e-41e5-89cd-ac927dccf9c2",
+    "firstName": "Laurent",
+    "lastName": "Sibilla",
+    "fullName": "Laurent Sibilla",
+    "bio": "Laurent Sibilla is a CNCF Kubestronaut and Freelance DevOps & Platform Engineering Consultant with 10+ years of experience, specializing in Cloud Native strategies and Internal Developer Platforms.\r\n\r\nPassionate about bridging technology and best practices, he helps teams build scalable, secure, and efficient systems.\r\n\r\nWhen not optimizing infrastructure, he loves hiking, skiing, or enjoying time with his wife and two children.",
+    "tagLine": "Freelance DevOps and Platform Engineering Consultant",
+    "profilePicture": "https://cdn.sessionize.com/image/60a9-400o400o1-JCYYY1GKgTs4V7ZUKiyoff.jpg",
+    "sessions": [
+      {
+        "id": 1268593,
+        "name": "Beyond a Minimum Viable Platform: The Cover Whale Story"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "1559cccc-ed7c-4296-973d-3b05f3c3d25e",
+    "firstName": "Lian",
+    "lastName": "Li",
+    "fullName": "Lian Li",
+    "bio": "Lian always wanted to save the world. After leaving law school, she decided to work with computers instead. \r\nWhile in Web Dev, she started attending tech events, and soon fell in love with the community. In her roles as Consultant and DevRel, Lian combined technical knowledge with a focus on the human side.\r\nCurrently, Lian works as freelance Platform Engineer in Amsterdam and is the Chief Karaoke Officer for Kuberoke, the first and only Kubernetes Karaoke Community. She also enjoys performing in musical improvisation theatre and standup comedy shows.",
+    "tagLine": "Cloud Native Human",
+    "profilePicture": "https://cdn.sessionize.com/image/2c07-400o400o1-TCMG7zbfMRDi8MhRxVroR4.png",
+    "sessions": [
+      {
+        "id": 1260822,
+        "name": "From Building Presentations to Owning the Stage"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "2874dccd-57d6-4281-80ad-8c2461f7b957",
+    "firstName": "Luiz",
+    "lastName": "Carneiro",
+    "fullName": "Luiz Carneiro",
+    "bio": "Luiz is an accomplished Cloud Engineer with extensive experience in scalable solutions and software development. His technical depth is uniquely supported by a strong background in research, holding a Ph.D. in Physics. Luiz closely follows the AI Engineering revolution, with a special dedication to AI agent systems architecture. Beyond his professional roles, he is a dedicated community leader, actively organizing the GDG Cloud Munich community.",
+    "tagLine": "Phd, Solution Engineer @ smapiot , GDE Cloud-AI",
+    "profilePicture": "https://cdn.sessionize.com/image/4f59-400o400o1-3rL6uUbAGQzLRP1VcAg3np.png",
+    "sessions": [
+      {
+        "id": 1222055,
+        "name": "Talk - Building Interoperable Agents: When A2A meets MCP"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "d7100338-7ea1-4f10-84fe-758b7ecbe1e7",
+    "firstName": "Marino",
+    "lastName": "Wijay",
+    "fullName": "Marino Wijay",
+    "bio": "Marino Wijay is a Canadian, Traveller, International Speaker, and Open Source Advocate and Architect for AI, API Platforms, Service Mesh, Kubernetes, and Networking. He is a CNCF Ambassador,  Organizer for KCD Toronto, and Founder of EmpathyOps. He is passionate about technology and modern distributed systems. He will always fall back to the patterns of Networking and the ways of the OSI. Community building is his driving force; A modern Jedi Academy.",
+    "tagLine": "Engineered Solutions - Networking, APIs, Kubernetes, AI",
+    "profilePicture": "https://cdn.sessionize.com/image/3d37-400o400o1-EU2LoreeGtwH7d5dUPKZdn.jpg",
+    "sessions": [
+      {
+        "id": 1269528,
+        "name": "Kubernetes, Can You Please Speak BGP To Me?"
+      },
+      {
+        "id": 1269243,
+        "name": "Running Out of IPs Before You Run Out of GPUs: IPv6 for AI-Scale Kubernetes"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "a16df0ee-c590-4503-b584-d2f867cbe369",
+    "firstName": "Nico",
+    "lastName": "Krijnen",
+    "fullName": "Nico Krijnen",
+    "bio": "An explorer at heart, Nico loves to navigate the ever changing technology landscape and find practical solutions to complex problems. For a big chunk of his career, he disrupted the DAM space by building an innovative file management solution called Elvis, which is being used by media organizations all over the world. Besides leading and supporting teams and giving direction, he likes to roll up his sleeves and experience first-hand how (and whether) the latest technologies work in the real world. He is never shy of making unconventional choices to achieve radical results.\r\n\r\nMeetup host for DDD NL: http://meetup.com/domain-driven-design-nederland/\r\nHost for Luminis Podcast: https://app.springcast.fm/podcast/luminis-tech-talks\r\nRecordings:  https://youtube.com/playlist?list=PLpsPwCgJlHhyONy7_4fb-AfYcmAS0oD7P\r\nSlides: https://speakerdeck.com/nicokrijnen\r\n\r\nExperienced speaker and workshop facilitator. Gave conference talks at:\r\n2026: DDD Europe (upcoming), Dutch AI Conference;\r\n2025: KotlinDevDay, Apeldoorn IT Congres, AWS Community Day NL, Appdevcon;\r\n2024: Global Domain‑Driven Day, AxonIQ Con, DDD Europe,  Future Tech, World Information Architecture Day;\r\n2023: Kubernetes Community Day Utrecht, Blipz on the Radar, Devoxx Belgium, AWS Community Day NL, DDD Europe, AWS Summit Amsterdam;\r\n2022: Blipz on the Radar, Devoxx Belgium, ContainerDays Hamburg, FortX, DDD Europe, Kotlin Dev Day Amsterdam, TEQnation;\r\n2021: Kotlin Dev Day.\r\n\r\nRegular speaker at meetups: DDD NL, ArnhemJUG, ApeldoornJUG, AWS Meetup, Kotlin.amsterdam, NLKUG Kotlin Meetup.",
+    "tagLine": "Tech Lead, bridging strategy, technology & organization | Speaker on DDD, Code Quality, DevOps | Architect at Yuma",
+    "profilePicture": "https://cdn.sessionize.com/image/2a26-400o400o1-M7ejxsUzoDyoq8X1bEfRRM.jpg",
+    "sessions": [
+      {
+        "id": 1251576,
+        "name": "The human side of platform engineering"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "bbf16dd9-0741-4a11-abdd-2ed308489674",
+    "firstName": "Orlin",
+    "lastName": "Vasilev",
+    "fullName": "Orlin Vasilev",
+    "bio": "Orlin Vasilev is  Open Source and Cloud Native Technology Advocate at SAP. Community and Governing Board Chair for NeoNephos Foundation. Community Manager for Project Harbor and Project K3s as part of the Cloud Native team. CNCF Ambassador and driving the biggest Meetup Group in Bulgaria and Kubernetes Community Days Sofia organizer.. KubeCon CfP review board member and co-chair for Track 101 and Community.  Previously SysAdmin/Dev/SRE/System engineering roles for over 15 years! Located in Bulgaria, Europe! Father of two - a girl and a boy! Passionate snowboarder, DIY and semi-professional BBQ Pitmaster and baker.\r\n",
+    "tagLine": "Open Source Technology Advocate",
+    "profilePicture": "https://cdn.sessionize.com/image/8dcb-400o400o1-9d2ttahPkgZv3mcB6KhbtQ.jpg",
+    "sessions": [
+      {
+        "id": 1306789,
+        "name": "kubectl apply -f european-sovereignty.yaml"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "5cc769db-6993-4dca-8567-451ed3ccd7a2",
+    "firstName": "Petteri",
+    "lastName": "Pulkkinen",
+    "fullName": "Petteri Pulkkinen",
+    "bio": "Petteri is a product development specialist, currently studying in Aalto University CCIS Master's Programme with Security and Cloud Computing as his major. He has multiple years of experience in cloud-native software development and Kubernetes architecture.",
+    "tagLine": "Computer, Communication and Information Sciences Master Student in Aalto University",
+    "profilePicture": "https://cdn.sessionize.com/image/3b69-400o400o1-YQpwjxVtYaEE14QPf6a3jG.png",
+    "sessions": [
+      {
+        "id": 1265303,
+        "name": "SBOMbastic: Getting Ready for Upcoming EU Cybersecurity Regulation in Software Supply Chains"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "8f398417-82f0-467a-b234-08e82f7f9acd",
+    "firstName": "Pini",
+    "lastName": "Reznik",
+    "fullName": "Pini Reznik",
+    "bio": "Pini Reznik is a seasoned technology leader with extensive experience in the software industry. He is the CEO and Co-Founder of re:cinq, experts in Cloud Native and AI platform engineering. Former software engineer, Co-Founder of a Cloud Native consultancy and O’Reilly author. ",
+    "tagLine": "CEO at re-cinq.com",
+    "profilePicture": "https://cdn.sessionize.com/image/5914-400o400o1-wfprQwAsCGXkXft1scTkiV.png",
+    "sessions": [
+      {
+        "id": 1245630,
+        "name": "The AI Adoption Ladder: From First Licences to the Dark Factory"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "da064424-8d62-40e7-bdf9-c0f082f422e9",
+    "firstName": "Simon",
+    "lastName": "Koudijs",
+    "fullName": "Simon Koudijs",
+    "bio": "Simon Koudijs is a software engineer and trainer working at the boundary between software, infrastructure, and configuration. He has worked across startups and the pension industry, with a focus on improvements that are measurable and useful in practice.\r\n\r\nHe speaks and teaches about Git workflows, Kubernetes, configuration, and internal platforms, with a particular focus on how shared infrastructure shapes software behavior. He is currently building the open-source `gitops-reverser` operator (github.com/ConfigButler/gitops-reverser).\r\n",
+    "tagLine": "Software Engineer, Trainer, and Open-Source Builder",
+    "profilePicture": "https://cdn.sessionize.com/image/bc65-400o400o1-M86ufGzQp48BXZ16wRgJ1X.jpg",
+    "sessions": [
+      {
+        "id": 1266603,
+        "name": "We GitOps'd Everything Except the Settings That Break Production"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "5260003f-39d6-48ac-8ec9-a49197f3c691",
+    "firstName": "Simon",
+    "lastName": "Schrottner",
+    "fullName": "Simon Schrottner",
+    "bio": "I help teams release faster and with more confidence — through open standards, feature flagging, and the communities that make both possible.\r\n\r\nI am a software engineer and CNCF Ambassador based in Austria, and a maintainer of OpenFeature — the CNCF vendor-neutral standard for feature flagging. I contribute across the full organisation in Java, Python, Go, and JavaScript, spanning the open standard itself, testing automation across a polyglot environment, and guiding teams and individuals in adopting OpenFeature in production.\r\n\r\nI am passionate about developer experience, open standards, and building communities where people help each other grow. I regularly speak at conferences and mentor individuals taking their first steps in the open source world.\r\n\r\nOpen to conversations about open source, feature flagging, observability, and what comes next.",
+    "tagLine": "CNCF Ambassador | OpenFeature Maintainer",
+    "profilePicture": "https://cdn.sessionize.com/image/74e8-400o400o1-VWWvDieVHJ3jQpK5u3EUaT.jpg",
+    "sessions": [
+      {
+        "id": 1268587,
+        "name": "Two Standards Walk Into an Agent: Runtime Agent Control with OpenTelemetry and OpenFeature"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "2bcb0685-559a-4697-ae6c-0fd55f60e358",
+    "firstName": "Thomas",
+    "lastName": "Schuetz",
+    "fullName": "Thomas Schuetz",
+    "bio": "Thomas is a Cloud Native Trainer, Architect and owner of TSC Labs and a CNCF Ambassador. He helps organizations embrace cloud native by upskilling teams and designing developer platforms that improve the developer experience. Passionate about accessibility and community, Thomas contributes to open source projects and actively supports the growth of cloud native communities worldwide.",
+    "tagLine": "Cloud Native Educator & Enterprise Architect",
+    "profilePicture": "https://cdn.sessionize.com/image/e84a-400o400o1-JjCSbW7dhft5myy4gVvaU.jpg",
+    "sessions": [
+      {
+        "id": 1216165,
+        "name": "Your Backstage, Your Problems, Your Metrics"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "4d7ede49-da43-4238-befc-8b07f354bb1d",
+    "firstName": "Tibo",
+    "lastName": "Beijen",
+    "fullName": "Tibo Beijen",
+    "bio": "Tibo Beijen is a mixed bag of DevOps consultant, engineer and architect. He loves to learn and educate and is always looking for the ‘why’ beyond the ‘what’. \r\n\r\n'Industrial Design Engineer' gone tech, he is always keen on bringing simplicity into complex systems or processes.\r\n",
+    "tagLine": "Platform Engineer",
+    "profilePicture": "https://cdn.sessionize.com/image/1690-400o400o1-HRLdEnGzkRFVrsr2FGhXeL.jpg",
+    "sessions": [
+      {
+        "id": 1268797,
+        "name": "Stop Merging Blind: Argo CD Previews That Make a DIFFerence!"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "0f594cf4-d3a0-425e-8322-da7433d45e17",
+    "firstName": "Tomas",
+    "lastName": "Vitvar",
+    "fullName": "Tomas Vitvar",
+    "bio": "Tomas Vitvar is an Associate Professor at the Czech Technical University in Prague and a technology leader with over 20 years of experience in software engineering, DevOps, and cloud-native infrastructure. He collaborates with organizations such as Vodafone UK, IKEA, and Volvo on designing and operating Kubernetes-based and service-oriented platforms. His work spans full-stack development, infrastructure design, troubleshooting, and performance tuning. Tomas has contributed to numerous research and development projects in service-oriented computing and web engineering and has published over 40 papers in international venues such as IEEE Internet Computing and IEEE Software. He co-authored a book on Web and SOA technologies for e-government and has co-organized several research events, including the AAAI Spring Symposium at Stanford University. Tomas holds a Ph.D. in Computer Science from the Czech Technical University in Prague and combines academic research with practical experience in large-scale system design and operations.",
+    "tagLine": "Software Engineer and Lecturer",
+    "profilePicture": "https://cdn.sessionize.com/image/5e33-400o400o1-fi58UoFPGMVvN4sMeZxgen.png",
+    "sessions": [
+      {
+        "id": 1268481,
+        "name": "Worktrace: Real-Time Threat Detection for Kubernetes Workspaces Using eBPF"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "97fd9697-d280-4391-8e99-0e4698bc76db",
+    "firstName": "Viktor",
+    "lastName": "Farcic",
+    "fullName": "Viktor Farcic",
+    "bio": "Viktor Farcic is a lead rapscallion at Upbound, a member of the CNCF Ambassadors, Google Developer Experts, CDF Ambassadors, and GitHub Stars groups, and a published author.\r\n\r\nHe is a host of the YouTube channel DevOps Toolkit and a co-host of DevOps Paradox.",
+    "tagLine": "Developer Advocate",
+    "profilePicture": "https://cdn.sessionize.com/image/174d-400o400o1-EymqjTEMaPDM8B3FpQrfx5.png",
+    "sessions": [
+      {
+        "id": 1243612,
+        "name": "From GPUs to Endpoints: A Crossplane Control Plane for Self-Hosted Inference"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "d11da01d-d4b4-442a-97d3-78ea81b07b1f",
+    "firstName": "Yeachan",
+    "lastName": "Park",
+    "fullName": "Yeachan Park",
+    "bio": "Squad Tech Lead for ING's Data Analytics Platform (VISTA) at ING, building and running a self‑service data and AI platform on Google Cloud",
+    "tagLine": "Squad Tech Lead - AI Services, ING",
+    "profilePicture": "https://cdn.sessionize.com/image/fa5c-400o400o1-3MjkiCt3Ge2f95g8M5UP5e.jpg",
+    "sessions": [
+      {
+        "id": 1266203,
+        "name": "How We Operate VISTA: ING’s Self-Service Data, AI, and Agentic Platform"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [],
+    "categories": []
+  }
+]

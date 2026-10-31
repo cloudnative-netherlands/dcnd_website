@@ -2,12 +2,12 @@ import LINKS from 'constants/links.js';
 
 const MENUS = {
   header: [
-    { text: 'Tickets', ...LINKS.tickets },
-    { text: 'Workshops', ...LINKS.workshops },
-    { text: 'Agenda', ...LINKS.program },
-    { text: 'Speakers', ...LINKS.speakers },
+    // { text: 'Tickets', ...LINKS.tickets },
     { text: 'Sponsors', ...LINKS.sponsors },
     { text: 'Team', ...LINKS.team },
+    { text: 'Agenda', ...LINKS.program },
+    { text: 'Workshops', ...LINKS.workshops },
+    { text: 'Speakers', ...LINKS.speakers },
     {
       text: 'Past editions',
       children: [{ text: '2025', ...LINKS.past2025 }],
@@ -15,7 +15,7 @@ const MENUS = {
   ],
   footer: {
     conference: [
-      { text: 'Tickets', ...LINKS.tickets },
+      // { text: 'Tickets', ...LINKS.tickets },
       { text: 'Workshops', ...LINKS.workshops },
       { text: 'Agenda', ...LINKS.program },
       { text: 'Speakers', ...LINKS.speakers },
@@ -31,12 +31,12 @@ const MENUS = {
     legal: [{ text: 'Privacy', ...LINKS.privacy }],
   },
   mobile: [
-    { text: 'Tickets', ...LINKS.tickets },
-    { text: 'Workshops', ...LINKS.workshops },
-    { text: 'Agenda', ...LINKS.program },
-    { text: 'Speakers', ...LINKS.speakers },
+    // { text: 'Tickets', ...LINKS.tickets },
     { text: 'Sponsors', ...LINKS.sponsors },
     { text: 'Team', ...LINKS.team },
+    { text: 'Agenda', ...LINKS.program },
+    { text: 'Workshops', ...LINKS.workshops },
+    { text: 'Speakers', ...LINKS.speakers },
     {
       text: 'Past editions',
       children: [{ text: '2025', ...LINKS.past2025 }],

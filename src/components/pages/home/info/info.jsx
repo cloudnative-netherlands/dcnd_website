@@ -32,8 +32,8 @@ const Info = () => (
           <div className="about-text">
             <p>
               The event is supported by Stichting Cloud Native Netherlands and remains vendor
-              neutral, inclusive and community first. Expect practical content, open space sessions
-              and plenty of room to meet peers across the cloud native ecosystem.
+              neutral, inclusive and community first. The 2026 edition featured practical content,
+              open space sessions and plenty of room to meet peers across the cloud native ecosystem.
             </p>
           </div>
         </div>
@@ -44,7 +44,7 @@ const Info = () => (
 
       {/* What to Expect Section */}
       <div className="expect-section">
-        <h2 className="section-title">What is included</h2>
+        <h2 className="section-title">What the 2026 edition included</h2>
         <div className="features-grid">
           <div className="feature-item">
             <Calendar className="feature-icon" />
@@ -62,7 +62,8 @@ const Info = () => (
             <div className="feature-content">
               <h3 className="feature-title">Conference day</h3>
               <p className="feature-text">
-                Practical talks, panels and community sessions on Friday 30 October
+                Practical talks, panels and community sessions on Friday 30 October.{' '}
+                <strong className="text-[#AE1C28]">Sold out.</strong>
               </p>
             </div>
           </div>

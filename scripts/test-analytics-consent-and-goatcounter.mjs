@@ -146,7 +146,7 @@ assert.match(read('docs/analytics.md'), /9678148/);
 assert.match(read('docs/analytics.md'), /GoatCounter does not need a repository variable/);
 assert.match(read('docs/analytics.md'), /Google Tag Manager is disabled when `GATSBY_GTM_ID` is not set/);
 assert.match(cookieConsent, /updateGoogleConsent\(/);
-assert.match(cookieConsent, /writeStoredConsent\(nextConsent\)/);
+assert.match(cookieConsent, /writeStoredConsent\(\{ \.\.\.nextConsent, eventbrite: false \}\)/);
 assert.match(cookieConsent, /removeGoogleAnalyticsCookies\(\)/);
 assert.match(cookieConsent, /window\.location\.reload\(\)/);
 assert.match(
