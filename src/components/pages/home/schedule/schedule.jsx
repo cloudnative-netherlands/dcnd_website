@@ -9,9 +9,9 @@ import ScheduleCard from '../../schedule/schedule/ScheduleCard';
 
 import './schedule.css';
 
-const TITLE = 'Schedule';
+const TITLE = '2026 schedule';
 const DESCRIPTION =
-  "Get ready for two action-packed days. With multiple tracks and a diverse range of sessions to choose from, you'll have plenty of opportunities to learn from experts in the field.";
+  'Explore the 2026 schedule: two action-packed days of workshops and talks across multiple tracks, with a diverse range of sessions from experts in the field.';
 
 const VISIBLE_EVENT_TYPES = ['talk', 'workshop'];
 
@@ -181,7 +181,7 @@ const Schedule = () => {
                   window.location.href = '/agenda';
                 }}
               >
-                View full schedule
+                View 2026 schedule
               </button>
             </div>
 

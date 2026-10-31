@@ -120,17 +120,20 @@ const ImageSlider = ({ images }) => {
 };
 
 const VENUE_IMAGES = [venue1, venue2, venue3, venue4, venue5, venue6, venue7, venue8, venue9];
+const SHOW_2025_GALLERY = false;
 
 const Venue = () => {
   const images = VENUE_IMAGES;
   return (
     <div className="mx-auto max-w-7xl p-4">
-      <h2 className="section-title">DCND 2025 Vibe</h2>
+      {SHOW_2025_GALLERY && <h2 className="section-title">DCND 2025 Vibe</h2>}
       <div className="gap-8 ">
         <div className="flex flex-col gap-6">
-          <div className="relative aspect-video overflow-hidden rounded-xl bg-gray-100">
-            <ImageSlider images={images} />
-          </div>
+          {SHOW_2025_GALLERY && (
+            <div className="relative aspect-video overflow-hidden rounded-xl bg-gray-100">
+              <ImageSlider images={images} />
+            </div>
+          )}
           <Card>
             <div
               className="p-6"

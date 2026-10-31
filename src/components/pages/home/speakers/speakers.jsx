@@ -203,7 +203,7 @@ const Speakers = () => {
   return (
     <section id="speakers" className="py-12 sm:py-20" style={{ marginBottom: "2rem" }}>
       <div className="container mx-auto px-4">
-        <h2 className="section-title">Meet Our Speakers</h2>
+        <h2 className="section-title">Meet Our 2026 Speakers</h2>
 
         <div className="grid grid-cols-5 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6">
           {displaySpeakers.map((speaker) => (
@@ -225,7 +225,7 @@ const Speakers = () => {
               window.location.href = '/speakers';
             }}
           >
-            All Speakers
+            All 2026 Speakers
           </button>
         </div>
 

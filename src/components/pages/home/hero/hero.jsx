@@ -33,13 +33,13 @@ const Hero = () => (
               is changing the way we build, run and scale modern platforms.
             </p>
 
-            {/* Sold out */}
+            {/* Post-event thank you */}
             <div className="hero-sold-out-banner">
-              <span className="hero-sold-out-banner-label">Sold out</span>
-              <p className="hero-sold-out-banner-title">Thank you, and see you in Utrecht!</p>
+              <span className="hero-sold-out-banner-label">Thank you</span>
+              <p className="hero-sold-out-banner-title">Thank you for making DCND 2026 happen!</p>
               <p className="hero-sold-out-banner-text">
-                Both the workshop day on 29 October and the conference day on 30 October are
-                completely sold out.
+                To everyone who joined us, shared their knowledge, volunteered, organized and
+                supported the event: thank you for two wonderful days of learning and connection.
               </p>
             </div>
 
@@ -51,17 +51,17 @@ const Hero = () => (
                 data-goatcounter-click="program-click"
                 data-goatcounter-title="Program click"
               >
-                View Agenda
+                View 2026 agenda
               </a>
             </div>
             <p className="hero-description hero-detail-description">
-              On 29–30 October 2026, the cloud native community will gather at Jaarbeurs in Utrecht
-              for two full days of talks, workshops and hallway conversations. Come and join us!
+              On 29–30 October 2026, the cloud native community gathered at Jaarbeurs in Utrecht
+              for two days of talks, workshops and hallway conversations.
             </p>
 
             <p className="hero-description">
-              Expect sessions on using AI tools and agents to develop, operate, secure and
-              troubleshoot cloud-native production infrastructure, alongside practical lessons on
+              Sessions explored the use of AI tools and agents to develop, operate, secure and
+              troubleshoot cloud native production infrastructure, alongside practical lessons on
               running modern AI workloads.
             </p>
           </div>

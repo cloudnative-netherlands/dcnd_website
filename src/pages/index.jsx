@@ -6,8 +6,8 @@ import Info from 'components/pages/home/info';
 import Schedule from 'components/pages/home/schedule';
 import Speakers from 'components/pages/home/speakers';
 import Sponsors from 'components/pages/home/sponsors';
-import Tickets from 'components/pages/home/tickets';
-import Venue from 'components/pages/home/venue';
+// import Tickets from 'components/pages/home/tickets';
+// import Venue from 'components/pages/home/venue';
 import Layout from 'components/shared/layout';
 import SEO from 'components/shared/seo';
 
@@ -17,8 +17,8 @@ const HomePage = () => (
     <Info />
     <Speakers />
     <Schedule />
-    <Tickets />
-    <Venue />
+    {/* <Tickets /> */}
+    {/* <Venue /> */}
     <Sponsors />
   </Layout>
 );

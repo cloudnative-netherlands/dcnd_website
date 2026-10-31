@@ -23,7 +23,7 @@ You can decline Google Analytics without losing access to the website, and you c
 
 GoatCounter and Google Analytics use different measurement models. Their traffic totals are not expected to match. GoatCounter is the broader aggregate baseline, while Google Analytics includes only visitors who consent to additional analytics and are not otherwise blocked.
 
-Rejecting optional services disables Google Analytics and Eventbrite, but not the limited GoatCounter statistics.
+Rejecting optional services disables Google Analytics and LinkedIn marketing, but not the limited GoatCounter statistics.
 
 See [Google's privacy information](https://policies.google.com/privacy) and [Google Analytics information](https://support.google.com/analytics/answer/12159447) for details.
 
@@ -41,7 +41,7 @@ See [LinkedIn's privacy policy](https://www.linkedin.com/legal/privacy-policy) a
 
 ## Tickets and Eventbrite
 
-We use Eventbrite for ticket checkout. The embedded Eventbrite checkout is loaded only after you allow the ticket checkout service in the cookie/settings banner. You can also use the fallback link to open Eventbrite directly.
+We used Eventbrite for ticket checkout for the 2026 edition. The embedded checkout is currently unavailable and is not loaded on this website.
 
 Eventbrite may process your personal data and use cookies or similar technologies for checkout, payment, security, analytics, and related services. See [Eventbrite's privacy policy](https://www.eventbrite.com/help/en-us/articles/460838/eventbrite-privacy-policy/) and [Eventbrite's cookie information](https://www.eventbrite.com/help/en-us/articles/460838/eventbrite-privacy-policy/) for details.
 
@@ -53,6 +53,6 @@ If you allow additional analytics, Google Analytics may set optional first-party
 
 If you allow LinkedIn marketing, the LinkedIn Insight Tag may set first-party cookies such as `li_fat_id` and LinkedIn may set cookies on its own domain. These are created only after LinkedIn marketing consent is granted. If you withdraw that consent, the website removes known first-party LinkedIn cookies where technically possible and reloads the page to apply the denial fully.
 
-If you allow the embedded ticket checkout, Eventbrite may use cookies or similar technologies for checkout, payment, security, analytics, and related services. The Eventbrite checkout is not loaded unless you allow it.
+The Eventbrite checkout is currently unavailable and does not set checkout cookies on this website.
 
 You can reopen Privacy and cookie settings from the website footer. If you withdraw Google Analytics consent, the website saves the new choice immediately and removes known first-party Google Analytics cookies where technically possible. Google Analytics that has already run in the current page cannot reliably be unloaded from the document, so reloading the page applies the denial fully. Withdrawing consent does not retract information that was already transmitted before the withdrawal.
